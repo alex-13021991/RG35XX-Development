@@ -1,0 +1,181 @@
+--- /proc/bus/input/devices
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="atc260x_onoff"
+P: Phys=atc260x_onoff/input0
+S: Sysfs=/devices/b0174000.i2c/i2c-1/1-0065/atc2603c-onoff.0/input/input0
+U: Uniq=
+H: Handlers=kbd event0 evbug 
+B: PROP=0
+B: EV=3
+B: KEY=100000 0 0 0
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="RG35XX Gamepad"
+P: Phys=gpio-keys-polled/input0
+S: Sysfs=/devices/platform/gpio-keys-polled.0/input/input1
+U: Uniq=
+H: Handlers=js0 event1 evbug 
+B: PROP=0
+B: EV=b
+B: KEY=7cfb0000 0 0 0 0 0 0 0 0 0
+B: ABS=3003f
+
+
+--- /sys/class/input/input0/name
+atc260x_onoff
+
+--- /sys/class/input/input1/name
+RG35XX Gamepad
+
+--- /sys/class/input/input0/capabilities/abs
+0
+
+--- /sys/class/input/input0/capabilities/ev
+3
+
+--- /sys/class/input/input0/capabilities/ff
+0
+
+--- /sys/class/input/input0/capabilities/key
+100000 0 0 0
+
+--- /sys/class/input/input0/capabilities/led
+0
+
+--- /sys/class/input/input0/capabilities/msc
+0
+
+--- /sys/class/input/input0/capabilities/rel
+0
+
+--- /sys/class/input/input0/capabilities/snd
+0
+
+--- /sys/class/input/input0/capabilities/sw
+0
+
+--- /sys/class/input/input1/capabilities/abs
+3003f
+
+--- /sys/class/input/input1/capabilities/ev
+b
+
+--- /sys/class/input/input1/capabilities/ff
+0
+
+--- /sys/class/input/input1/capabilities/key
+7cfb0000 0 0 0 0 0 0 0 0 0
+
+--- /sys/class/input/input1/capabilities/led
+0
+
+--- /sys/class/input/input1/capabilities/msc
+0
+
+--- /sys/class/input/input1/capabilities/rel
+0
+
+--- /sys/class/input/input1/capabilities/snd
+0
+
+--- /sys/class/input/input1/capabilities/sw
+0
+
+--- /dev/input
+event0
+event1
+js0
+add device 1: /dev/input/event1
+  name:     "RG35XX Gamepad"
+  events:
+    KEY (0001): 0130  0131  0133  0134  0135  0136  0137  013a 
+                013b  013c  013d  013e 
+    ABS (0003): 0000  : value 0, min -32768, max 32767, fuzz 16, flat 128, resolution 0
+                0001  : value 0, min -32768, max 32767, fuzz 16, flat 128, resolution 0
+                0002  : value 0, min 0, max 255, fuzz 0, flat 0, resolution 0
+                0003  : value 0, min -32768, max 32767, fuzz 16, flat 128, resolution 0
+                0004  : value 0, min -32768, max 32767, fuzz 16, flat 128, resolution 0
+                0005  : value 0, min 0, max 255, fuzz 0, flat 0, resolution 0
+                0010  : value 0, min -1, max 1, fuzz 0, flat 0, resolution 0
+                0011  : value 0, min -1, max 1, fuzz 0, flat 0, resolution 0
+  input props:
+    <none>
+could not get driver version for /dev/input/js0, Invalid argument
+add device 2: /dev/input/event0
+  name:     "atc260x_onoff"
+  events:
+    KEY (0001): 0074 
+  input props:
+    <none>
+input_player1_a_axis = "nul"
+input_player1_a_btn = "0"
+input_player1_b_axis = "nul"
+input_player1_b_btn = "1"
+input_player1_down_axis = "nul"
+input_player1_down_btn = "h0down"
+input_player1_gun_aux_a_axis = "nul"
+input_player1_gun_aux_a_btn = "nul"
+input_player1_gun_aux_b_axis = "nul"
+input_player1_gun_aux_b_btn = "nul"
+input_player1_gun_aux_c_axis = "nul"
+input_player1_gun_aux_c_btn = "nul"
+input_player1_gun_dpad_down_axis = "nul"
+input_player1_gun_dpad_down_btn = "nul"
+input_player1_gun_dpad_left_axis = "nul"
+input_player1_gun_dpad_left_btn = "nul"
+input_player1_gun_dpad_right_axis = "nul"
+input_player1_gun_dpad_right_btn = "nul"
+input_player1_gun_dpad_up_axis = "nul"
+input_player1_gun_dpad_up_btn = "nul"
+input_player1_gun_offscreen_shot_axis = "nul"
+input_player1_gun_offscreen_shot_btn = "nul"
+input_player1_gun_select_axis = "nul"
+input_player1_gun_select_btn = "nul"
+input_player1_gun_start_axis = "nul"
+input_player1_gun_start_btn = "nul"
+input_player1_gun_trigger_axis = "nul"
+input_player1_gun_trigger_btn = "nul"
+input_player1_l2_axis = "+2"
+input_player1_l2_btn = "nul"
+input_player1_l3_axis = "nul"
+input_player1_l3_btn = "nul"
+input_player1_l_axis = "nul"
+input_player1_l_btn = "5"
+input_player1_l_x_minus_axis = "nul"
+input_player1_l_x_minus_btn = "nul"
+input_player1_l_x_plus_axis = "nul"
+input_player1_l_x_plus_btn = "nul"
+input_player1_l_y_minus_axis = "nul"
+input_player1_l_y_minus_btn = "nul"
+input_player1_l_y_plus_axis = "nul"
+input_player1_l_y_plus_btn = "nul"
+input_player1_left_axis = "nul"
+input_player1_left_btn = "h0left"
+input_player1_r2_axis = "+5"
+input_player1_r2_btn = "nul"
+input_player1_r3_axis = "nul"
+input_player1_r3_btn = "nul"
+input_player1_r_axis = "nul"
+input_player1_r_btn = "6"
+input_player1_r_x_minus_axis = "nul"
+input_player1_r_x_minus_btn = "nul"
+input_player1_r_x_plus_axis = "nul"
+input_player1_r_x_plus_btn = "nul"
+input_player1_r_y_minus_axis = "nul"
+input_player1_r_y_minus_btn = "nul"
+input_player1_r_y_plus_axis = "nul"
+input_player1_r_y_plus_btn = "nul"
+input_player1_right_axis = "nul"
+input_player1_right_btn = "h0right"
+input_player1_select_axis = "nul"
+input_player1_select_btn = "7"
+input_player1_start_axis = "nul"
+input_player1_start_btn = "8"
+input_player1_turbo_axis = "nul"
+input_player1_turbo_btn = "nul"
+input_player1_up_axis = "nul"
+input_player1_up_btn = "h0up"
+input_player1_x_axis = "nul"
+input_player1_x_btn = "2"
+input_player1_y_axis = "nul"
+input_player1_y_btn = "3"

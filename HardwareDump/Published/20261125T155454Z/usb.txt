@@ -1,0 +1,73 @@
+--- /sys/class/android_usb/android0/functions
+mtp,adb
+
+--- /sys/class/android_usb/android0/enable
+1
+
+--- /sys/class/android_usb/android0/state
+CONFIGURED
+
+--- /sys/class/android_usb/android0/idVendor
+10d6
+
+--- /sys/class/android_usb/android0/idProduct
+4e42
+
+--- /sys/class/android_usb
+android0
+f_accessory
+f_acm
+f_adb
+f_audio_source
+f_ffs
+f_mass_storage
+f_mtp
+f_ptp
+f_rndis
+f_stub
+--- /sys/class/udc
+dwc3.0
+  125 0         4984 S    /system/bin/adbd 
+  155 0        15908 S    ./mtp-server 
+--- /misc/usb.sh
+#!/system/bin/sh
+
+if [ ! -f /misc/enableMTP ] && [ ! -f /misc/enableADB ]; then
+  exit 0;
+fi
+
+usb_gandroid0="/sys/class/android_usb/android0"
+
+echo 0 > /sys/monitor/usb_port/config/run
+echo 1 > /sys/monitor/usb_port/config/idpin_debug
+echo "USB_A_OUT" > /sys/monitor/usb_port/config/usb_con_msg
+echo "USB_B_IN" > /sys/monitor/usb_port/config/usb_con_msg
+
+echo '0' > "$usb_gandroid0/enable"
+echo "Anbernic" > "$usb_gandroid0/iManufacturer"
+echo "RG35XX" > "$usb_gandroid0/iProduct"
+echo "10d6" > "$usb_gandroid0/idVendor"
+
+if [ -f /misc/enableADB ]; then
+    echo "4e42" > "$usb_gandroid0/idProduct"
+    if [ -f /misc/enableMTP ]; then
+        echo "mtp,adb" > "$usb_gandroid0/functions"
+    else
+        echo "adb" > "$usb_gandroid0/functions"
+    fi
+else
+    echo "4e41" > "$usb_gandroid0/idProduct"
+    echo "mtp" > "$usb_gandroid0/functions"
+fi
+
+echo '1' > "$usb_gandroid0/enable"
+
+# Enable ADB for debugging
+if [ -f /misc/enableADB ]; then
+    /system/bin/start adbd
+fi
+
+--- /mnt/mmc/CFW/autostart/mtp.sh
+#!/bin/sh
+cd /mnt/mmc/CFW/mtp/
+sh ./run.sh &

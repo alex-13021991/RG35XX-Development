@@ -1,0 +1,4 @@
+*.so.* binary
+*.gz binary
+*.sh text eol=lf
+SHA256SUMS text eol=lf

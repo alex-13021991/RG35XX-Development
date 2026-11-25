@@ -1,0 +1,67 @@
+--- /proc/fb
+0 owlfb
+1 owlfb
+
+--- /sys/class/graphics/fb0/name
+owlfb
+
+--- /sys/class/graphics/fb1/name
+owlfb
+
+--- /sys/class/graphics/fb0/bits_per_pixel
+16
+
+--- /sys/class/graphics/fb1/bits_per_pixel
+32
+
+--- /sys/class/graphics/fb0/stride
+1280
+
+--- /sys/class/graphics/fb1/stride
+5120
+
+--- /sys/class/graphics/fb0/virtual_size
+640,1440
+
+--- /sys/class/graphics/fb1/virtual_size
+1280,1440
+
+--- /sys/class/graphics/fb0/mode
+
+--- /sys/class/graphics/fb1/mode
+
+--- /sys/class/graphics/fb0/modes
+U:8x8p-5408
+U:640x480p-75
+U:640x480p-56
+
+--- /sys/class/graphics/fb1/modes
+U:1280x720p-60
+
+lrwxrwxrwx    1 0        0              17 Nov 25 20:35 /dev/fb0 -> /dev/graphics/fb0
+lrwxrwxrwx    1 0        0              17 Nov 25 20:35 /dev/fb1 -> /dev/graphics/fb1
+crw-rw----    1 0        1003      29,   0 Nov 25 20:35 /dev/graphics/fb0
+crw-rw----    1 0        1003      29,   1 Nov 25 20:35 /dev/graphics/fb1
+--- /proc/device-tree/gpu@b0300000/compatible
+616374696f6e732c61746d37303339632d67707500
+--- /proc/device-tree/gpu@b0300000/status
+64697361626c656400
+--- /sys/devices/platform
+alarmtimer
+atm7059-hdmi-audio
+atm7059-pcm-audio
+gl5201_vout.0
+gpio-keys-polled.0
+ion-owl
+owl-dynamic-cpu-hotplug
+owl-serial.0
+owldss
+power
+reg-dummy
+regulatory.0
+snd-soc-dummy
+soc-audio
+uevent
+--- /sys/kernel/debug/owl
+reg
+regs

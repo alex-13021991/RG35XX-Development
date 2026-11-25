@@ -1,0 +1,38 @@
+READY RG35XX Gamepad
+0.10 volume=40
+20.56 type=3 code=0x0011 value=-1
+20.74 type=3 code=0x0011 value=0
+22.66 type=3 code=0x0011 value=1
+23.04 type=3 code=0x0011 value=0
+25.12 type=3 code=0x0010 value=-1
+25.40 type=3 code=0x0010 value=0
+26.94 type=3 code=0x0010 value=1
+27.16 type=3 code=0x0010 value=0
+28.98 type=1 code=0x0130 value=1
+29.14 type=1 code=0x0130 value=0
+30.88 type=1 code=0x0131 value=1
+31.10 type=1 code=0x0131 value=0
+32.78 type=1 code=0x0133 value=1
+32.96 type=1 code=0x0133 value=0
+34.73 type=1 code=0x0134 value=1
+34.99 type=1 code=0x0134 value=0
+37.31 type=1 code=0x0136 value=1
+37.49 type=1 code=0x0136 value=0
+40.77 type=1 code=0x0137 value=1
+40.95 type=1 code=0x0137 value=0
+43.13 type=3 code=0x0002 value=255
+43.33 type=3 code=0x0002 value=0
+45.51 type=3 code=0x0005 value=255
+45.73 type=3 code=0x0005 value=0
+47.95 type=1 code=0x013a value=1
+48.15 type=1 code=0x013a value=0
+50.40 type=1 code=0x013b value=1
+50.62 type=1 code=0x013b value=0
+53.35 type=1 code=0x013c value=1
+53.55 type=1 code=0x013c value=0
+56.78 type=1 code=0x013d value=1
+57.00 type=1 code=0x013d value=0
+58.46 type=1 code=0x013e value=1
+58.70 type=1 code=0x013e value=0
+DONE
+__RG_EXIT=0

@@ -1,0 +1,1014 @@
+root	path	type	link	bytes	sha256	SONAME	NEEDED	ARM float ABI
+garlic	/lib/libmount.so.1.1.0	ELF		269512	43dd5aed2986885ca0754796304536b5d18f0b4b43f397d73e65d074b157e7fa	libmount.so.1	libblkid.so.1,libuuid.so.1,libc.so.0,ld-uClibc.so.1	soft
+garlic	/lib/ld-uClibc-1.0.28.so	ELF		32656	a2b6c2f0a3caa13cee5645589fc0897c6039fd53f60b8e78d8fa20e55b890581	ld-uClibc.so.1		soft
+garlic	/lib/libblkid.so.1.1.0	ELF		240364	44d45cbc83f301392af8a3385fe2a4879a7d76cf2069753fcd0f8080d1b94e4a	libblkid.so.1	libuuid.so.1,libc.so.0,ld-uClibc.so.1	soft
+garlic	/lib/libatomic.so	link	libatomic.so.1.2.0					
+garlic	/lib/libmount.so.1	link	libmount.so.1.1.0					
+garlic	/lib/libc.so.1	link	libuClibc-1.0.28.so					
+garlic	/lib/libuClibc-1.0.28.so	ELF		489384	efeae572ed5300c77ebe11f818c8aa4e3748cc1d3266b82bba06d9167aa2d7b9	libc.so.0	ld-uClibc.so.1	soft
+garlic	/lib/libblkid.so.1	link	libblkid.so.1.1.0					
+garlic	/lib/libgcc_s.so.1	ELF		132640	a0910184fd17079e27dba378da7eeba24d869edd30ffdd78c6fe0e784827c758	libgcc_s.so.1	libc.so.0	soft
+garlic	/lib/libgcc_s.so	file		132	69a56a9993b7729b29b274e65016031c81f2397f176ed5ad44d59bd50425e0bd			
+garlic	/lib/libatomic.so.1	link	libatomic.so.1.2.0					
+garlic	/lib/ld-uClibc.so.1	link	ld-uClibc-1.0.28.so					
+garlic	/lib/libuuid.so.1	link	libuuid.so.1.3.0					
+garlic	/lib/libc.so.0	link	libuClibc-1.0.28.so					
+garlic	/lib/libuuid.so.1.3.0	ELF		22004	53ae103b9d393e768bb72c5fbdd4b80d31a4390aec7345dc06e12d9b26d6ffa0	libuuid.so.1	libc.so.0,ld-uClibc.so.1	soft
+garlic	/lib/libatomic.so.1.2.0	ELF		21648	48847050a037b0db053c7e17d6be27177317d267a22c22ad28fdc307fd21e427	libatomic.so.1	libc.so.0	soft
+garlic	/lib/modules/4.14.0-miyoo/modules.softdep	file		55	ac2de753255c506934be29e69261f1485f51ee9cf9c2bf467bcc0c4cf95f8713			
+garlic	/lib/modules/4.14.0-miyoo/source	link	/home/steward/Github/f1c500s_kernel					
+garlic	/lib/modules/4.14.0-miyoo/modules.devname	file		0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855			
+garlic	/lib/modules/4.14.0-miyoo/modules.symbols	file		162	6278940651ff6c51fc8b0c03b6a8eab7ded2d34d1e9f133341247da4e871f174			
+garlic	/lib/modules/4.14.0-miyoo/modules.dep	file		348	5d275bc8f09a8dc13f78b07aa1142544cb16cdc74efa14d71a6119333898ab5b			
+garlic	/lib/modules/4.14.0-miyoo/modules.alias.bin	file		203	24f346265026e2e15f3e0aa9468be8898f136dc7dc8082892898abd166745072			
+garlic	/lib/modules/4.14.0-miyoo/modules.alias	file		210	5f6284d04946cc4628bbb86ac4b005b8e4470a6bc54dd726063bfd3de48421ed			
+garlic	/lib/modules/4.14.0-miyoo/build	link	/home/steward/Github/f1c500s_kernel					
+garlic	/lib/modules/4.14.0-miyoo/kernel/drivers/video/fbdev/r61520fb.ko	link	/mnt/kernel/r61520fb.ko					
+garlic	/lib/modules/4.14.0-miyoo/kernel/drivers/video/fbdev/core/sysimgblt.ko	ELF		4296	dca17c1d8c190c2fec8e4315ad6e30317297eb8331fe6f725c1f72ae2301b3ad			
+garlic	/lib/modules/4.14.0-miyoo/kernel/drivers/video/fbdev/core/sysfillrect.ko	ELF		5992	f3cee61ee0d3611824556a62b59ba22d443cb1534ff94ed2bf50be6468269f5e			
+garlic	/lib/modules/4.14.0-miyoo/kernel/drivers/video/fbdev/core/syscopyarea.ko	ELF		4924	d59427af3a36b39bc66a636f0402bb0165507e4873b643ec991e206c822efaa1			
+garlic	/lib/modules/4.14.0-miyoo/kernel/crypto/echainiv.ko	ELF		5284	8c909cc6b66bba2796072b3f219fd7e12ebd9678243a84b0b585d51c8d22e090			
+garlic	/lib/modules/4.14.0-miyoo/modules.builtin	file		3374	306a3dedd9739d195f91b8ed691465137cb860c41ab7fe520ea3630c5c0405b8			
+garlic	/lib/modules/4.14.0-miyoo/modules.order	file		204	7f2d0f8f01f5fd9f3e45ff2e0ab129d907ea57f35ef80b8d52f42017191fcbf6			
+garlic	/lib/modules/4.14.0-miyoo/modules.builtin.bin	file		4726	f3c0084dad4561af841c4840397793faada0245115b831cd1d594003ac0bba83			
+garlic	/lib/modules/4.14.0-miyoo/modules.dep.bin	file		533	ed4f484e3ad6ee6fe8d8e24e4f3e5e44c2d2cf1365c780775f8cc1c8d0698843			
+garlic	/lib/modules/4.14.0-miyoo/modules.symbols.bin	file		142	77524a3af67f9e6da162a7fbd63d00df96dfb998df3c43a6853884a97802abfe			
+garlic	/lib/ld-uClibc.so.0	link	ld-uClibc.so.1					
+garlic	/usr/lib/libfribidi.so.0	link	libfribidi.so.0.3.6					
+garlic	/usr/lib/libpng16.so.16	link	libpng16.so.16.34.0					
+garlic	/usr/lib/libX11-xcb.so.1	link	libX11-xcb.so.1.0.0					
+garlic	/usr/lib/libXdamage.so	link	libXdamage.so.1.1.0					
+garlic	/usr/lib/libgstapp-0.10.so.0	link	libgstapp-0.10.so.0.25.0					
+garlic	/usr/lib/libopenal.so.1	link	libopenal.so.1.18.1					
+garlic	/usr/lib/libmod_sort.so	ELF		20364	4b231c4a662a59204e45f6c70e8a8a7b721786787ebef41eb69a4ec373b37696	libmod_sort.so	libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libgstaudio-0.10.so	link	libgstaudio-0.10.so.0.25.0					
+garlic	/usr/lib/libpng16.so.16.34.0	ELF		157528	7fcca55d5b7e2b38a345950e42613aed4bf7b9fc1404c32930290b3925c12348	libpng16.so.16	libz.so.1,libc.so.0	soft
+garlic	/usr/lib/libXcursor.so	link	libXcursor.so.1.0.2					
+garlic	/usr/lib/libmod_path.so	ELF		15384	dd49d8f516b42d1632a58d69d307463b8a8f1b81b14975f2b65c6c1ca3a44e1c	libmod_path.so	libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libwebp.so.7.0.1	ELF		231416	c12059f99e3cd60afc30c4009bd88d4df9a2d92652e2f9698a72bf92d5c915b8	libwebp.so.7	libc.so.0	soft
+garlic	/usr/lib/libgstnetbuffer-0.10.so.0	link	libgstnetbuffer-0.10.so.0.25.0					
+garlic	/usr/lib/libxmlrpc_abyss++.so.8	link	libxmlrpc_abyss++.so.8.39					
+garlic	/usr/lib/libSDL_mixer-1.2.so.0	link	libSDL_mixer-1.2.so.0.12.1					
+garlic	/usr/lib/libpangocairo-1.0.so.0	link	libpangocairo-1.0.so.0.4000.14					
+garlic	/usr/lib/libgstcheck-0.10.so	link	libgstcheck-0.10.so.0.30.0					
+garlic	/usr/lib/libmod_text.so	ELF		13100	dfccde5e335ef7c2e9f2bf84b6b831b5dac270163853d45aebd3dfb7c51c52fa	libmod_text.so	libtext.so,librender.so,libvideo.so,libblit.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libfont.so,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libpanel.so.6	link	libpanel.so.6.0					
+garlic	/usr/lib/libhistory.so	link	libhistory.so.7					
+garlic	/usr/lib/libX11.so.6	link	libX11.so.6.3.0					
+garlic	/usr/lib/libxmlrpc_cpp.so.8.39	ELF		22072	e004e36dbb187278a5d3fcabf88f316393f892b0bc6a356880b7c439a8e0c7b9	libxmlrpc_cpp.so.8	libxmlrpc_server.so.3,libxmlrpc.so.3,libxmlrpc_xmlparse.so.3,libxmlrpc_xmltok.so.3,libxmlrpc_util.so.3,libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libXmuu.so.1	link	libXmuu.so.1.0.0					
+garlic	/usr/lib/libffi.so.6.0.4	ELF		13688	8cce870ecc379304da97094b3af27e2dbc7699b9ea8e7c8a8cb902bfb71ecf54	libffi.so.6	libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libncurses.so.6	link	libncurses.so.6.0					
+garlic	/usr/lib/libX11-xcb.so	link	libX11-xcb.so.1.0.0					
+garlic	/usr/lib/libLinearMath.so.2.86	ELF		103904	4492a4256d67f7aeaca3bb61ae7c64da95a4dce6c440ff30d6cddd5e3e9bfd13	libLinearMath.so.2.86	libstdc++.so.6,libgcc_s.so.1,libc.so.0,ld-uClibc.so.1	soft
+garlic	/usr/lib/libsvg.so	link	libsvg.so.1.0.0					
+garlic	/usr/lib/libmod_flic.so	ELF		19480	d295637016933fbe26b489192d5b18b9537a383117293739e9c5baeac80ae5a8	libmod_flic.so	librender.so,libvideo.so,libblit.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libgrbase.so,libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libxml++-2.6.so.2	link	libxml++-2.6.so.2.0.7					
+garlic	/usr/lib/libfreetype.so	link	libfreetype.so.6.15.0					
+garlic	/usr/lib/libXtst.so.6	link	libXtst.so.6.1.0					
+garlic	/usr/lib/libpango-1.0.so.0.4000.14	ELF		255904	5dd5747c4a504cac3b46a958bea9f374d2d1c0d2605aefa4840694a6917ee5a1	libpango-1.0.so.0	libgobject-2.0.so.0,libffi.so.6,libgthread-2.0.so.0,libglib-2.0.so.0,libiconv.so.2,libpcre.so.1,libc.so.0	soft
+garlic	/usr/lib/libxcb-randr.so	link	libxcb-randr.so.0.1.0					
+garlic	/usr/lib/libexpat.so.1	link	libexpat.so.1.6.7					
+garlic	/usr/lib/elfutils/libebl_sparc-0.169.so	ELF		18152	68f5b2d2e40749b171ce0b985049886e908e36b0fe356eb50ef12b3f741a9298		libelf.so.1,libdw.so.1,libc.so.0	soft
+garlic	/usr/lib/elfutils/libebl_arm.so	link	libebl_arm-0.169.so					
+garlic	/usr/lib/elfutils/libebl_m68k.so	link	libebl_m68k-0.169.so					
+garlic	/usr/lib/elfutils/libebl_alpha-0.169.so	ELF		13780	59132a29109a3286f4da6d121b9cb0fbd4f453e8895f38c1bc59a0e192740557		libelf.so.1,libdw.so.1,libc.so.0	soft
+garlic	/usr/lib/elfutils/libebl_ppc.so	link	libebl_ppc-0.169.so					
+garlic	/usr/lib/elfutils/libebl_ppc-0.169.so	ELF		17908	caa7f01bf4e367c69a0646d1119bec3d6d8129b293ff0078c29c2439af328957		libelf.so.1,libdw.so.1,libc.so.0	soft
+garlic	/usr/lib/elfutils/libebl_ppc64.so	link	libebl_ppc64-0.169.so					
+garlic	/usr/lib/elfutils/libebl_tilegx.so	link	libebl_tilegx-0.169.so					
+garlic	/usr/lib/elfutils/libebl_i386.so	link	libebl_i386-0.169.so					
+garlic	/usr/lib/elfutils/libebl_ia64-0.169.so	ELF		17800	1b049c27ba71aafd9509359a01207aace5d36e13d95bc8fda8198ae73315ca51		libelf.so.1,libdw.so.1,libc.so.0	soft
+garlic	/usr/lib/elfutils/libebl_aarch64.so	link	libebl_aarch64-0.169.so					
+garlic	/usr/lib/elfutils/libebl_i386-0.169.so	ELF		46524	b5bc83f71420943c81ab5a3d0175c0a472e2672da9466184a3725c7a53a4eb2d		libelf.so.1,libdw.so.1,libc.so.0	soft
+garlic	/usr/lib/elfutils/libebl_ia64.so	link	libebl_ia64-0.169.so					
+garlic	/usr/lib/elfutils/libebl_sh.so	link	libebl_sh-0.169.so					
+garlic	/usr/lib/elfutils/libebl_arm-0.169.so	ELF		17824	7d5b4270468c85d9d6594f1265536b30470c84023f0a7435121569e02a94ad3e		libelf.so.1,libdw.so.1,libc.so.0	soft
+garlic	/usr/lib/elfutils/libebl_sparc.so	link	libebl_sparc-0.169.so					
+garlic	/usr/lib/elfutils/libebl_x86_64.so	link	libebl_x86_64-0.169.so					
+garlic	/usr/lib/elfutils/libebl_s390.so	link	libebl_s390-0.169.so					
+garlic	/usr/lib/elfutils/libebl_ppc64-0.169.so	ELF		17860	25c1b45687f93ab7c95829a2ca0c5ba11190b6c0044b06c5e04a08d6a47fb556		libelf.so.1,libdw.so.1,libc.so.0	soft
+garlic	/usr/lib/elfutils/libebl_alpha.so	link	libebl_alpha-0.169.so					
+garlic	/usr/lib/elfutils/libebl_aarch64-0.169.so	ELF		26072	0921ee72bb8192d4fda5c338a556851c52d44cf7e1e69ad49948f7087395aaae		libelf.so.1,libdw.so.1,libc.so.0	soft
+garlic	/usr/lib/elfutils/libebl_bpf-0.169.so	ELF		9492	2dd596adfc7e8a1198ce00068be8d69b47ccd6cdfde5d4e711e5ffaefe3685d4		libelf.so.1,libc.so.0	soft
+garlic	/usr/lib/elfutils/libebl_tilegx-0.169.so	ELF		13684	761424253c89c2fe56a273a4e52c4f5f4fb4031c6163c885f7fd21ef8e0292df		libelf.so.1,libdw.so.1,libc.so.0	soft
+garlic	/usr/lib/elfutils/libebl_sh-0.169.so	ELF		9584	66219d5cf2e7cdb3cfda185b14d324a8c7657f5cf1743d04304b1859ed7987ee		libelf.so.1,libdw.so.1,libc.so.0	soft
+garlic	/usr/lib/elfutils/libebl_m68k-0.169.so	ELF		9580	9a073d5f41e6cd3a26dcbd859b815d7f12e4154f7190ddfdac676796069de0d0		libelf.so.1,libdw.so.1,libc.so.0	soft
+garlic	/usr/lib/elfutils/libebl_bpf.so	link	libebl_bpf-0.169.so					
+garlic	/usr/lib/elfutils/libebl_x86_64-0.169.so	ELF		50612	fb92dfbae896be9764782271ad0f98674e5af5972ba316db11b55e2e4d7f7479		libelf.so.1,libdw.so.1,libc.so.0	soft
+garlic	/usr/lib/elfutils/libebl_s390-0.169.so	ELF		13704	376880967afa7dc02451ed62a96b27356f6cfe7daff5b4f0c6e8400bfaa484c2		libelf.so.1,libdw.so.1,libc.so.0	soft
+garlic	/usr/lib/libwebp.so.7	link	libwebp.so.7.0.1					
+garlic	/usr/lib/libXmuu.so.1.0.0	ELF		13504	ad2113c791c5d6983816049e123fba4fb3324e856ef72980acee7658170ef487	libXmuu.so.1	libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libxml2.so	link	libxml2.so.2.9.7					
+garlic	/usr/lib/libfontenc.so.1.0.0	ELF		19792	1610c88bbc4444336a976ef6759243848cea0399657e500df6439c2223dffd83	libfontenc.so.1	libz.so.1,libc.so.0	soft
+garlic	/usr/lib/libSDL2_image-2.0.so.0.0.1	link	libSDL2_image-2.0.so.0.2.1					
+garlic	/usr/lib/libxcb-res.so	link	libxcb-res.so.0.0.0					
+garlic	/usr/lib/libtinyxml2.so.4	link	libtinyxml2.so.4.0.1					
+garlic	/usr/lib/libasound.so.2.0.0	ELF		844964	00caa11ad6c443ae8650605e60f2b71a480cbe46bc8e59fc4008cc010437b08d	libasound.so.2	libc.so.0,ld-uClibc.so.1	soft
+garlic	/usr/lib/libICE.so.6.3.0	ELF		71880	fd826b707dd35f7f7c29cf0348bb297cf6fa54b58a9d0f43ffa45cfa3b138943	libICE.so.6	libc.so.0	soft
+garlic	/usr/lib/libpanel.so	link	libpanel.so.6					
+garlic	/usr/lib/libxmlrpc_server_abyss++.so.8.39	ELF		30464	10f633a72581b2afd7b37d61a9c9c0694749b6a4f85cb4a6741a1514637051a0	libxmlrpc_server_abyss++.so.8	libxmlrpc_server++.so.8,libxmlrpc++.so.8,libxmlrpc_server_abyss.so.3,libxmlrpc_server.so.3,libxmlrpc.so.3,libxmlrpc_xmlparse.so.3,libxmlrpc_xmltok.so.3,libxmlrpc_abyss.so.3,libxmlrpc_util++.so.8,libxmlrpc_util.so.3,libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libpcreposix.so.0	link	libpcreposix.so.0.0.5					
+garlic	/usr/lib/libXfixes.so	link	libXfixes.so.3.1.0					
+garlic	/usr/lib/libXss.so	link	libXss.so.1.0.0					
+garlic	/usr/lib/libX11-xcb.so.1.0.0	ELF		5140	6210952677cd8a085098de2448dd6febe844586e842e109ed2d190982ad34083	libX11-xcb.so.1	libc.so.0	soft
+garlic	/usr/lib/libdw.so	link	libdw.so.1					
+garlic	/usr/lib/libSDL_ttf.so	link	libSDL_ttf-2.0.so.0.10.1					
+garlic	/usr/lib/libmod_key.so	ELF		7336	bf1cbf05af2fcb9450481aa0d00e0442c639f7fb52323d22af737198cec79eab	libmod_key.so	libkey.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libncurses.so	link	libncurses.so.6					
+garlic	/usr/lib/libGLESv2.so.2	link	libGLESv2.so.2.0.0					
+garlic	/usr/lib/libglibmm-2.4.so.1	link	libglibmm-2.4.so.1.3.0					
+garlic	/usr/lib/libxcb-screensaver.so.0	link	libxcb-screensaver.so.0.0.0					
+garlic	/usr/lib/libgif.so	link	libgif.so.7.0.0					
+garlic	/usr/lib/libcharset.so.1	link	libcharset.so.1.0.0					
+garlic	/usr/lib/libxcb-shape.so.0.0.0	ELF		9352	6511b734c56642a2250461cdae4796a584bf4313301bc9c12cf3976cfb9839c2	libxcb-shape.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libxmlrpc_client.so	link	libxmlrpc_client.so.3					
+garlic	/usr/lib/libass.so.9	link	libass.so.9.0.1					
+garlic	/usr/lib/libSDL_mixer-1.2.so.0.12.1	ELF		163760	367362741ac242b72e6333fab9c182e188aac673cb44d40d47a4cd40b93b6f45	libSDL_mixer-1.2.so.0	libSDL-1.2.so.0,libiconv.so.2,libc.so.0	soft
+garlic	/usr/lib/libxmlrpc_util.so.3.39	ELF		17652	0715bd7b9207c8b3ea8cc568f6beaa622541618b80da21e671ed93e1c7ace0ae	libxmlrpc_util.so.3	libc.so.0	soft
+garlic	/usr/lib/libreadline.so.7	link	libreadline.so.7.0					
+garlic	/usr/lib/libgobject-2.0.so.0.5400.2	ELF		244628	604f72b315558199664aa8136444ffb11f18121a77e448dabd9c0e1f884bbbd6	libgobject-2.0.so.0	libglib-2.0.so.0,libiconv.so.2,libpcre.so.1,libffi.so.6,libc.so.0	soft
+garlic	/usr/lib/libXrandr.so	link	libXrandr.so.2.2.0					
+garlic	/usr/lib/libmod_crypt.so	ELF		7644	f4d1a7e072017ccf424d62d37889bb86c3de848ced0802e0e661cdeac012651e	libmod_crypt.so	libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libcairo.so.2	link	libcairo.so.2.11400.10					
+garlic	/usr/lib/libxmlrpc.so	link	libxmlrpc.so.3					
+garlic	/usr/lib/libao.so.4.1.0	ELF		26408	a69ddf7068e1b89ab1c6efe44f45b53225df3796b7cc6bcf1144d6b0af78d1ea	libao.so.4	libc.so.0	soft
+garlic	/usr/lib/libXrandr.so.2.2.0	ELF		34032	797b51ca0d9a9d6cfaabf0f78a3be3ddab87e5f88e34d7d78a3117a802f38e84	libXrandr.so.2	libXext.so.6,libXrender.so.1,libX11.so.6,libc.so.0	soft
+garlic	/usr/lib/liblua.so.5.1.5	ELF		124832	0a43f06d8747dc41b0681e09edf3a0343233d37a5cadf687ee16dbcf78f2bc90	liblua.so.5.1.5	libc.so.0	soft
+garlic	/usr/lib/libvorbisidec.so	link	libvorbisidec.so.1.0.3					
+garlic	/usr/lib/libxcb-dri3.so	link	libxcb-dri3.so.0.0.0					
+garlic	/usr/lib/libXcomposite.so.1.0.0	ELF		9340	e0d443ea55f64a93f696e9bb632e3f18628c5e548b47d6241601b20fdb6ee58c	libXcomposite.so.1	libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libdw.so.1	link	libdw-0.169.so					
+garlic	/usr/lib/libmod_m7.so	ELF		34504	ab8713f0896a220137dd617a4b4844ea4553fa49f9237d72dbb65d94063aee0e	libmod_m7.so	librender.so,libvideo.so,libblit.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libxmlrpc_server_cgi++.so.8	link	libxmlrpc_server_cgi++.so.8.39					
+garlic	/usr/lib/libxcb-present.so.0.0.0	ELF		9352	e7b2624dbb806086bea63aa1862bf23a9070d5049791d95d866652ef449c786b	libxcb-present.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libgstreamer-0.10.so.0.30.0	ELF		816208	19a26497204c644c1223b3578a9574223a1509630af110c04e624d18a554f69b	libgstreamer-0.10.so.0	libffi.so.6,libglib-2.0.so.0,libiconv.so.2,libpcre.so.1,libgobject-2.0.so.0,libgthread-2.0.so.0,libgmodule-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/os-release	file		95	86bb012e7bbf66347da14834afce06f55801f00401b6e9fc21d3158ec0ae76f6			
+garlic	/usr/lib/libfontenc.so.1	link	libfontenc.so.1.0.0					
+garlic	/usr/lib/libxmlrpc_server.so.3.39	ELF		21748	051033b465d08755d009ab955b2375e43539e2ebd1a8cfda53c5759e97eef866	libxmlrpc_server.so.3	libxmlrpc.so.3,libxmlrpc_xmlparse.so.3,libxmlrpc_xmltok.so.3,libxmlrpc_util.so.3,libc.so.0	soft
+garlic	/usr/lib/libspeexdsp.so.1.5.0	ELF		64136	b82eca925cdd1867426e5666321bdd5bd510eba84fd0f6da804004eb946c5a8d	libspeexdsp.so.1	libc.so.0	soft
+garlic	/usr/lib/libmod_proc.so	ELF		17168	6ecf096063cc15106f980d84396ddca5035efc7ff6ebe11d821a53be64be0bbb	libmod_proc.so	libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libreadline.so.7.0	ELF		219276	9ad21f20a32c16f02c8abe20a9ea98ac0fde638c9a93d28850d7d74f1f90b097	libreadline.so.7	libncurses.so.6,libc.so.0	soft
+garlic	/usr/lib/libgio-2.0.so.0.5400.2	ELF		1329000	354a9ab05c6a9cd95bbcbd903cd18882b14b6cfa666197fc8a621593e9aeaf19	libgio-2.0.so.0	libgobject-2.0.so.0,libffi.so.6,libgmodule-2.0.so.0,libglib-2.0.so.0,libiconv.so.2,libpcre.so.1,libz.so.1,libmount.so.1,libblkid.so.1,libuuid.so.1,libc.so.0	soft
+garlic	/usr/lib/libxcb-glx.so	link	libxcb-glx.so.0.0.0					
+garlic	/usr/lib/libogg.so.0	link	libogg.so.0.8.3					
+garlic	/usr/lib/libxcb-xinerama.so	link	libxcb-xinerama.so.0.0.0					
+garlic	/usr/lib/libxmlrpc_server_abyss++.so.8	link	libxmlrpc_server_abyss++.so.8.39					
+garlic	/usr/lib/libXdamage.so.1	link	libXdamage.so.1.1.0					
+garlic	/usr/lib/libharfbuzz.so.0.10701.0	ELF		419948	e90217e9920d073e8d5cc4487e4d41859f9afb3a2526d21544c95f4c3ddb130e	libharfbuzz.so.0	libglib-2.0.so.0,libfreetype.so.6,libc.so.0	soft
+garlic	/usr/lib/libgiomm-2.4.so	link	libgiomm-2.4.so.1.3.0					
+garlic	/usr/lib/libXcursor.so.1.0.2	ELF		30160	a0192d79f0a8a108d07cab081814389123d42729a561240b2715caf4f929e1b7	libXcursor.so.1	libXrender.so.1,libXfixes.so.3,libX11.so.6,libc.so.0	soft
+garlic	/usr/lib/libxcb-xtest.so.0.0.0	ELF		5256	558a59e699858b0793dafe1642b0c3e391d666b3ddfd86d8eef22094e844124d	libxcb-xtest.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libfreetype.so.6.15.0	ELF		485284	ec3317aed446412e10ff4ee32cc6b37e2e7b0c66484376505dd9211648b66680	libfreetype.so.6	libbz2.so.1.0,libpng16.so.16,libz.so.1,libc.so.0	soft
+garlic	/usr/lib/libXcomposite.so	link	libXcomposite.so.1.0.0					
+garlic	/usr/lib/libGL.so.1.2.0	ELF		366896	fbe07c55a01cf602c1d6302e6a53677595b281da6edd5d5ea9cb8918e744446e	libGL.so.1	libz.so.1,libatomic.so.1,libexpat.so.1,libglapi.so.0,libXdamage.so.1,libXfixes.so.3,libX11-xcb.so.1,libxcb-glx.so.0,libxcb-dri2.so.0,libxcb.so.1,libXxf86vm.so.1,libXext.so.6,libX11.so.6,libXau.so.6,libXdmcp.so.6,libdrm.so.2,libc.so.0	soft
+garlic	/usr/lib/libogg.so	link	libogg.so.0.8.3					
+garlic	/usr/lib/libxcb-present.so.0	link	libxcb-present.so.0.0.0					
+garlic	/usr/lib/libgstnetbuffer-0.10.so	link	libgstnetbuffer-0.10.so.0.25.0					
+garlic	/usr/lib/libgstdataprotocol-0.10.so	link	libgstdataprotocol-0.10.so.0.30.0					
+garlic	/usr/lib/libz.so.1	link	libz.so.1.2.11					
+garlic	/usr/lib/libSDL2-2.0.so.0.7.0	link	libSDL2-2.0.so.0.8.0					
+garlic	/usr/lib/libjoy.so	ELF		13720	b4bdcbb6191e9c4d90784cc7b2ba9aa309a95c646502192c45c8c33b0d8e373f	libjoy.so	libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libpixman-1.so.0.34.0	ELF		456288	fef67e82ecebdbadc68c961a74b99c8310c5903f0998da6fc4d3fb04293403c9	libpixman-1.so.0	libc.so.0,ld-uClibc.so.1	soft
+garlic	/usr/lib/libXt.so.6.0.0	ELF		293592	5d4e8460d933459e3b00467cddc179b483e594d1de2acce77270805e83d63faf	libXt.so.6	libSM.so.6,libICE.so.6,libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libasound.so	link	libasound.so.2.0.0					
+garlic	/usr/lib/libgstriff-0.10.so.0.25.0	ELF		50416	c3af216d7fc4028bea3ee0fba1073cde31b0bf6910ea441dee9d6ccd1f48bb9c	libgstriff-0.10.so.0	libgstaudio-0.10.so.0,libgsttag-0.10.so.0,libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libmod_effects.so	ELF		25664	de340813250a3ae10404d3bb3d0954630d9d8f36d129b6ddd59cb085ce68a732	libmod_effects.so	libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libpcreposix.so.0.0.5	ELF		9372	dc021b8ce71d6a567c0bfa1d5ba17e717870279a774f17808c63e4ce206ced28	libpcreposix.so.0	libpcre.so.1,libc.so.0	soft
+garlic	/usr/lib/libspeex.so.1.5.0	ELF		87332	e040081a7c6cf8c4a390705ed96d43bfdfa6e5f1d3fe14d0bb0b0a3b4c546177	libspeex.so.1	libc.so.0	soft
+garlic	/usr/lib/libXxf86vm.so	link	libXxf86vm.so.1.0.0					
+garlic	/usr/lib/libxmlrpc_packetsocket.so.8	link	libxmlrpc_packetsocket.so.8.39					
+garlic	/usr/lib/libyaml-cpp.so.0.5.2	ELF		216876	a0acab41cace8b84f1605dc39ef84c61171465173a3395c47c284c693a10e9f5	libyaml-cpp.so.0.5	libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libfont.so	ELF		15512	09fae39fa002b2c4a6d462d2684f587f212208b0b4682813a6a7e091bd951262	libfont.so	libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libxcb.so	link	libxcb.so.1.1.0					
+garlic	/usr/lib/libmod_mouse.so	ELF		7148	41784466a554df10aa428be871f2ab30533b52f2adb66df4b6a03becc95581b0	libmod_mouse.so	libc.so.0,libdes.so	soft
+garlic	/usr/lib/libgstsignalprocessor-0.10.so	link	libgstsignalprocessor-0.10.so.23.0.0					
+garlic	/usr/lib/libspeexdsp.so.1	link	libspeexdsp.so.1.5.0					
+garlic	/usr/lib/sigc++-2.0/include/sigc++config.h	file		2758	bde0e387ad3e6b76745dd6f3f76aae5f577f6ee8db066ecf168002c98b6a0a04			
+garlic	/usr/lib/libSDL_ttf-2.0.so.0.10.1	ELF		32108	305eab2439dc838dd3d19d9ef4cd8386f18cfcbe8a752882c9771bca19393370	libSDL_ttf-2.0.so.0	libfreetype.so.6,libbz2.so.1.0,libpng16.so.16,libz.so.1,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libc.so.0	soft
+garlic	/usr/lib/libpangoxft-1.0.so.0.4000.14	ELF		30180	f2336bcc5f049d93cd8b36449fae48a4421163bf5db81fb71607941dc1163434	libpangoxft-1.0.so.0	libpangoft2-1.0.so.0,libpango-1.0.so.0,libharfbuzz.so.0,libgobject-2.0.so.0,libffi.so.6,libgthread-2.0.so.0,libglib-2.0.so.0,libiconv.so.2,libpcre.so.1,libXft.so.2,libXrender.so.1,libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libfontconfig.so.1,libexpat.so.1,libfreetype.so.6,libbz2.so.1.0,libpng16.so.16,libz.so.1,libc.so.0	soft
+garlic	/usr/lib/libdbus-1.so	link	libdbus-1.so.3.19.4					
+garlic	/usr/lib/libgbm.so.1.0.0	ELF		42628	e350088fa8bdb1d63c2dad6265b2e2940ca506ba2c184474c26ad79166c2de38	libgbm.so.1	libz.so.1,libatomic.so.1,libexpat.so.1,libdrm.so.2,libc.so.0	soft
+garlic	/usr/lib/libSDL2_gfx-1.0.so.0.0.1	ELF		77772	baad89d2e5a54a0de67123113d2e0da7bcddc859e4dcb1fc05236476159f5967	libSDL2_gfx-1.0.so.0	libSDL2-2.0.so.0,libts.so.0,libc.so.0	soft
+garlic	/usr/lib/libgstsdp-0.10.so.0.25.0	ELF		25772	c2794cce2a8bce3619461f1913b731200545b7e38392c645864c38110562d61e	libgstsdp-0.10.so.0	libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libxcb-sync.so	link	libxcb-sync.so.1.0.0					
+garlic	/usr/lib/libsndfile.so.1	link	libsndfile.so.1.0.28					
+garlic	/usr/lib/libSDL2_image-2.0.so.0.2.1	ELF		130492	3c57006fbde69a861182e269813aefeec72104108e528e03b5dc2b8a14876e89	libSDL2_image-2.0.so.0	libSDL2-2.0.so.0,libts.so.0,libc.so.0	soft
+garlic	/usr/lib/libsvg.so.1.0.0	ELF		63576	14d3bc7d7096acf92d6502e4ea51a16d3ee63413e7be6e4180e009becdc0d413	libsvg.so.1	libexpat.so.1,libc.so.0	soft
+garlic	/usr/lib/libXinerama.so	link	libXinerama.so.1.0.0					
+garlic	/usr/lib/libz.so.1.2.11	ELF		75212	bc1413e7e0597438f5add38ee9b00a2e3c179113ad3ca9b1b7fe7d6b274366e8	libz.so.1	libc.so.0	soft
+garlic	/usr/lib/libxcb-shm.so	link	libxcb-shm.so.0.0.0					
+garlic	/usr/lib/libgstsignalprocessor-0.10.so.23	link	libgstsignalprocessor-0.10.so.23.0.0					
+garlic	/usr/lib/libtheora.so	link	libtheora.so.0.3.10					
+garlic	/usr/lib/libxmlrpc_server_pstream++.so.8	link	libxmlrpc_server_pstream++.so.8.39					
+garlic	/usr/lib/libxcb-shape.so.0	link	libxcb-shape.so.0.0.0					
+garlic	/usr/lib/libpanel.so.6.0	ELF		9288	e8b518e696880269e1b2a1a57d5e10783adcba2c1ce8201750ee6c2038da0934	libpanel.so.6	libc.so.0,libncurses.so.6	soft
+garlic	/usr/lib/libgstcodecparsers-0.10.so.23	link	libgstcodecparsers-0.10.so.23.0.0					
+garlic	/usr/lib/libxmlrpc_util++.so.8	link	libxmlrpc_util++.so.8.39					
+garlic	/usr/lib/liblz4.so.1.7.5	ELF		66828	5a3a6359664293d3a58ee2b4cc132efc3e85bf58b387482eb6e7939c531f1479	liblz4.so.1	libc.so.0	soft
+garlic	/usr/lib/libvorbisenc.so	link	libvorbisenc.so.2.0.11					
+garlic	/usr/lib/libglibmm-2.4.so	link	libglibmm-2.4.so.1.3.0					
+garlic	/usr/lib/libgstbasevideo-0.10.so.23.0.0	ELF		71524	b917a57868f7803f785df24dd5c1fa4ab5460d2d3afba1534c5453f7183adafd	libgstbasevideo-0.10.so.23	libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libgstvideo-0.10.so.0,libc.so.0	soft
+garlic	/usr/lib/libltdl.so.7.3.1	ELF		30128	38f475028a32c3c70aa43690f4923c8f4a36b3c5ef3d3140ead6160b0731fd31	libltdl.so.7	libc.so.0	soft
+garlic	/usr/lib/libcairo-gobject.so.2.11400.10	ELF		25816	47865ba237f13409bfccc443aaf90368bfc1e2c0b6d6cf2f01c7439ce450778e	libcairo-gobject.so.2	libcairo.so.2,libpixman-1.so.0,libfontconfig.so.1,libfreetype.so.6,libbz2.so.1.0,libEGL.so.1,libxcb-xfixes.so.0,libgbm.so.1,libpng16.so.16,libxcb-shm.so.0,libxcb-render.so.0,libXrender.so.1,libGL.so.1,libz.so.1,libexpat.so.1,libglapi.so.0,libXdamage.so.1,libXfixes.so.3,libX11-xcb.so.1,libxcb-glx.so.0,libxcb-dri2.so.0,libxcb.so.1,libXxf86vm.so.1,libXext.so.6,libX11.so.6,libXau.so.6,libXdmcp.so.6,libdrm.so.2,libgobject-2.0.so.0,libglib-2.0.so.0,libffi.so.6,libiconv.so.2,libpcre.so.1,libatomic.so.1,libc.so.0	soft
+garlic	/usr/lib/libSDL2_ttf-2.0.so.0	link	libSDL2_ttf-2.0.so.0.14.0					
+garlic	/usr/lib/libspeex.so.1	link	libspeex.so.1.5.0					
+garlic	/usr/lib/libmod_sound.so	ELF		26948	965903ab2ff562fdd0f5845921193eadf2f43dc8119b4c0cb92c629cbf5e5d61	libmod_sound.so	libbgload.so,libbgdrtm.so,libc.so.0,libdes.so,libz.so.1,libSDL_mixer-1.2.so.0,libmad.so.0,libSDL-1.2.so.0,libiconv.so.2,libts.so.0	soft
+garlic	/usr/lib/libGLESv2.so	link	libGLESv2.so.2.0.0					
+garlic	/usr/lib/libgstcdda-0.10.so	link	libgstcdda-0.10.so.0.25.0					
+garlic	/usr/lib/libSDL2.so	link	libSDL2-2.0.so.0.7.0					
+garlic	/usr/lib/libstdc++.so.6	link	libstdc++.so.6.0.24					
+garlic	/usr/lib/libtinyxml.so	link	libtinyxml.so.0.0.0					
+garlic	/usr/lib/libglibmm_generate_extra_defs-2.4.so	link	libglibmm_generate_extra_defs-2.4.so.1.3.0					
+garlic	/usr/lib/libgstvideo-0.10.so	link	libgstvideo-0.10.so.0.25.0					
+garlic	/usr/lib/libpciaccess.so.0.11.1	ELF		26044	19f3b4fed4034f339556be02d61b07e079fab6379ba1e8e79083cf9a8952e3d4	libpciaccess.so.0	libz.so.1,libc.so.0	soft
+garlic	/usr/lib/libBulletDynamics.so.2.86	ELF		392844	56f9371ae1dbf86fc5ba485c6c32ea8c8d0328d98dc7c5ec3cae30e83355ae31	libBulletDynamics.so.2.86	libBulletCollision.so.2.86,libLinearMath.so.2.86,libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libXt.so	link	libXt.so.6.0.0					
+garlic	/usr/lib/libmod_sys.so	ELF		7652	fa9e31ae8e847bf362be31a9430c91cdc05212adc870ec95f83d2296bc9b2794	libmod_sys.so	libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libxcb-xkb.so.1	link	libxcb-xkb.so.1.0.0					
+garlic	/usr/lib/libxcb-res.so.0	link	libxcb-res.so.0.0.0					
+garlic	/usr/lib/libgstinterfaces-0.10.so.0	link	libgstinterfaces-0.10.so.0.25.0					
+garlic	/usr/lib/libXfont2.so.2	link	libXfont2.so.2.0.0					
+garlic	/usr/lib/libxmlrpc_abyss++.so	link	libxmlrpc_abyss++.so.8					
+garlic	/usr/lib/libgstriff-0.10.so	link	libgstriff-0.10.so.0.25.0					
+garlic	/usr/lib/libvorbis.so.0	link	libvorbis.so.0.4.8					
+garlic	/usr/lib/libgstpbutils-0.10.so.0.25.0	ELF		121060	632f085de036970fe03dca9727af09a0fc6e797dbb4503e03040bad17a803850	libgstpbutils-0.10.so.0	libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libgstdataprotocol-0.10.so.0.30.0	ELF		17644	e4ace0624622a26d36c841deedbbf98788faba0af1a77e21413d4d0832a47fd3	libgstdataprotocol-0.10.so.0	libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgthread-2.0.so.0,libgmodule-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libgstvideo-0.10.so.0.25.0	ELF		75480	f2cfa5497ac376f0b470b9c1938e53715722a72ceedf79c1ee88e6feadc74b37	libgstvideo-0.10.so.0	libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libxmlrpc_server++.so	link	libxmlrpc_server++.so.8					
+garlic	/usr/lib/libsvg.so.1	link	libsvg.so.1.0.0					
+garlic	/usr/lib/libxcb-xv.so.0	link	libxcb-xv.so.0.0.0					
+garlic	/usr/lib/libgstapp-0.10.so.0.25.0	ELF		42744	d6ca2bec5aaf5d434c6faaddf40a125454bd5df08f07fddeb7d7734a0b9acaba	libgstapp-0.10.so.0	libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libmod_say.so	ELF		7420	530fc8c8a38941e38e547c27b1b5605eaa46e4e956bbc32b9bde07599888b9d0	libmod_say.so	libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libGLU.so	link	libGLU.so.1.3.1					
+garlic	/usr/lib/libxmlrpc_client.so.3	link	libxmlrpc_client.so.3.39					
+garlic	/usr/lib/libpciaccess.so	link	libpciaccess.so.0.11.1					
+garlic	/usr/lib/libxmlrpc_xmlparse.so.3.39	ELF		54528	e7596c9bc40a18bd39fdde2f6348c1c9a5218f002699048fcc94f87e3c024af9	libxmlrpc_xmlparse.so.3	libxmlrpc_xmltok.so.3,libxmlrpc_util.so.3,libc.so.0	soft
+garlic	/usr/lib/libxcb-res.so.0.0.0	ELF		9368	c207cb8885e4556d387de189001b1ef5317f210fcb4904d41e297b1a94febe4b	libxcb-res.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libasound.so.2	link	libasound.so.2.0.0					
+garlic	/usr/lib/libbz2.so.1.0.6	ELF		53556	c72f8a39e6cc2148887a5d54d0b0e13ba1f57654654ef4fa503afdc1d3e78257	libbz2.so.1.0	libc.so.0	soft
+garlic	/usr/lib/libgif.so.7	link	libgif.so.7.0.0					
+garlic	/usr/lib/libgstrtsp-0.10.so	link	libgstrtsp-0.10.so.0.25.0					
+garlic	/usr/lib/libXau.so.6	link	libXau.so.6.0.0					
+garlic	/usr/lib/libxcb-screensaver.so.0.0.0	ELF		9376	24e51531e4e8a62aa140b2c58f6d2045fd64b4b1865501475f6f7a4521db1fb3	libxcb-screensaver.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libharfbuzz.so	link	libharfbuzz.so.0.10701.0					
+garlic	/usr/lib/libmpg123.so.0.44.8	ELF		236324	89e6f17c11fafe3f836f1a3b6847c4f859aa1bb192a59626e9d0832e03be09c5	libmpg123.so.0	libasound.so.2,libc.so.0	soft
+garlic	/usr/lib/libXrender.so.1	link	libXrender.so.1.3.0					
+garlic	/usr/lib/libpixman-1.so.0	link	libpixman-1.so.0.34.0					
+garlic	/usr/lib/libconfuse.so.1.1.0	ELF		38452	7b6af0ed8f36869c0ca920e3890203605a9c8de350890739ae615fbb4492e5dc	libconfuse.so.1	libc.so.0	soft
+garlic	/usr/lib/libdrm.so	link	libdrm.so.2.4.0					
+garlic	/usr/lib/libxmlrpc_cpp.so.8	link	libxmlrpc_cpp.so.8.39					
+garlic	/usr/lib/libgsttag-0.10.so	link	libgsttag-0.10.so.0.25.0					
+garlic	/usr/lib/libfontconfig.so.1.9.4	ELF		215012	713d6b331cb22cf85ee476eba81c4d04e74377155d743e8ebeb4bcd72995d9b9	libfontconfig.so.1	libfreetype.so.6,libbz2.so.1.0,libpng16.so.16,libz.so.1,libexpat.so.1,libc.so.0	soft
+garlic	/usr/lib/libSDL_image-1.2.so.0	link	libSDL_image-1.2.so.0.8.4					
+garlic	/usr/lib/libjson-c.so.3	link	libjson-c.so.3.0.1					
+garlic	/usr/lib/libxcb-xf86dri.so	link	libxcb-xf86dri.so.0.0.0					
+garlic	/usr/lib/libSDL2_ttf.so	link	libSDL2_ttf-2.0.so.0.14.0					
+garlic	/usr/lib/libopenal.so.1.18.1	ELF		489452	dff5efaf5c24ea067a1e653a6362dbcee2daf65db586cee1f288779ab936466a	libopenal.so.1	libatomic.so.1,libc.so.0	soft
+garlic	/usr/lib/libSDL2-2.0.so.0	link	libSDL2-2.0.so.0.8.0					
+garlic	/usr/lib/libgstphotography-0.10.so.23.0.0	ELF		21728	4fa8b5777e41ce2bab5931004df7eb14257bc182951ac2de8150452e3031dd3b	libgstphotography-0.10.so.23	libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libSDL2-2.0.so.0.8.0	ELF		988400	4f9ef848fe1947b6876ebeb2f011eda47440acf0c223ba439945a141ea691a06	libSDL2-2.0.so.0	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/libxcb-xv.so.0.0.0	ELF		21688	796711499ef5af580b4a72f906c727ace3fa39ee92aa292ca4ab5f0be7368c13	libxcb-xv.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libxmlrpc_xmltok.so.3	link	libxmlrpc_xmltok.so.3.39					
+garlic	/usr/lib/libid3tag.so.0.3.0	ELF		63144	1adfb10656f4c3e1ee9da3e97bbcbc35abfcc3f3795b7ea694e76e5a4d9d1793	libid3tag.so.0	libz.so.1,libc.so.0	soft
+garlic	/usr/lib/libXau.so.6.0.0	ELF		9396	15d63e458ce42fa6c9d1e1ece239e550054ba70bb242c6ca1c97f20f4a66608d	libXau.so.6	libc.so.0	soft
+garlic	/usr/lib/libBulletSoftBody.so	link	libBulletSoftBody.so.2.86					
+garlic	/usr/lib/libSDL_gfx.so.13.9.1	ELF		100948	1236e44e62ce94db2b97312752c56e2ea6c6b1700d57da0aba87c68e9c84bd54	libSDL_gfx.so.13	libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libc.so.0	soft
+garlic	/usr/lib/libscroll.so	ELF		18360	63048c0292fe5b43c547130c111814e67891d1bb3a8fc9b1ea96b6692642208f	libscroll.so	librender.so,libblit.so,libvideo.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libSDL_ttf-2.0.so.0	link	libSDL_ttf-2.0.so.0.10.1					
+garlic	/usr/lib/libmod_joy.so	ELF		13400	d0676f0bf790418ca442350101419403ea904f9ddb1727daf0a9eb02271544c4	libmod_joy.so	libjoy.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libgstbasecamerabinsrc-0.10.so.23.0.0	ELF		22172	ef91cbeda99f0e0cba1ae89fdfa2e2bb39d1781397ebc0e64f0aedd016671716	libgstbasecamerabinsrc-0.10.so.23	libgstapp-0.10.so.0,libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libfontconfig.so	link	libfontconfig.so.1.9.4					
+garlic	/usr/lib/libyaml-cpp.so	link	libyaml-cpp.so.0.5					
+garlic	/usr/lib/libX11.so.6.3.0	ELF		1071540	e6233002bceb1cc0f161dcaeaaa25b9d1ff92bc580b863255e5002ece38d56da	libX11.so.6	libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libxmlrpc_server_abyss++.so	link	libxmlrpc_server_abyss++.so.8					
+garlic	/usr/lib/libform.so	link	libform.so.6					
+garlic	/usr/lib/libfontconfig.so.1	link	libfontconfig.so.1.9.4					
+garlic	/usr/lib/libexpat.so.1.6.7	ELF		112104	b99387dfac030ebb04a27e6aef995e16328b3a014e0d78eec5b41bb0ae6045e3	libexpat.so.1	libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libpcre.so	link	libpcre.so.1.2.9					
+garlic	/usr/lib/libts.so.0.9.0	ELF		9504	cdb33e25949b3aac104448b39cc028bc8a9899f56e8650a433fd249ae7514ff5	libts.so.0	libc.so.0	soft
+garlic	/usr/lib/libxcb-composite.so	link	libxcb-composite.so.0.0.0					
+garlic	/usr/lib/libblit.so	ELF		51388	961beadc02291fb1d12fd633c07b0187c6c76158dd35f7981ceb666a7c29b9b6	libblit.so	libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libBulletDynamics.so	link	libBulletDynamics.so.2.86					
+garlic	/usr/lib/libfribidi.so	link	libfribidi.so.0.3.6					
+garlic	/usr/lib/libGL.so	link	libGL.so.1.2.0					
+garlic	/usr/lib/libwebp.so	link	libwebp.so.7.0.1					
+garlic	/usr/lib/libgthread-2.0.so.0.5400.2	ELF		5196	fafe27b449dffc55e11e18938943952e36761c160077fd0c487c71ccd99d25ed	libgthread-2.0.so.0	libglib-2.0.so.0,libiconv.so.2,libpcre.so.1,libc.so.0	soft
+garlic	/usr/lib/libxcb-present.so	link	libxcb-present.so.0.0.0					
+garlic	/usr/lib/libsdlhandler.so	ELF		7400	4a693975ac9fbea147931946fa9e25aafc35448e1bef10879a63eb7d2203a504	libsdlhandler.so	libc.so.0,libdes.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0	soft
+garlic	/usr/lib/libfreetype.so.6	link	libfreetype.so.6.15.0					
+garlic	/usr/lib/libgstbase-0.10.so	link	libgstbase-0.10.so.0.30.0					
+garlic	/usr/lib/libxcb.so.1.1.0	ELF		108132	0554dd8998daf25276d3490f4f9a0e878a56c83fd999262cb673082ff35e0681	libxcb.so.1	libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libXdamage.so.1.1.0	ELF		9352	168bd0dfe3e2131568b44a3313cdf1d653b1e7f2a275dbcdbfd6fe0604824baa	libXdamage.so.1	libXfixes.so.3,libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libglibmm_generate_extra_defs-2.4.so.1.3.0	ELF		126256	ff08a35043288951efb4c4b8a04a570d4a4443fcc9aa84b5d7001d99e2357650	libglibmm_generate_extra_defs-2.4.so.1	libsigc-2.0.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libglib-2.0.so.0,libstdc++.so.6,libc.so.0,libgcc_s.so.1	soft
+garlic	/usr/lib/libgrbase.so	ELF		43996	fba982c2f9d1523ef22b6838f2f6c7047206e44e47c1beff60ca96442f44be24	libgrbase.so	libc.so.0,libdes.so	soft
+garlic	/usr/lib/libSDL2_image-2.0.so.0	link	libSDL2_image-2.0.so.0.2.1					
+garlic	/usr/lib/libSDL-1.2.so.0	link	libSDL-1.2.so.0.11.4					
+garlic	/usr/lib/libcurl.so.4.5.0	ELF		259964	295bb05686fb52d3427191804912d543f89c954c2010047e5971038f9f8128e3	libcurl.so.4	libz.so.1,libc.so.0	soft
+garlic	/usr/lib/libform.so.6.0	ELF		42952	3d51c9eedf422c9d70e2016b5263ebb79b6f1fe64b5587fd74270ef82ffa49c3	libform.so.6	libc.so.0,libncurses.so.6	soft
+garlic	/usr/lib/libpcre.so.1.2.9	ELF		242980	2240bb726cabdd5444a7d07f880c8f2e1921e3700a5ac249ebdf7b2f5408433e	libpcre.so.1	libc.so.0	soft
+garlic	/usr/lib/libXft.so	link	libXft.so.2.3.2					
+garlic	/usr/lib/libass.so	link	libass.so.9.0.1					
+garlic	/usr/lib/libxmlrpc_abyss.so.3.39	ELF		75788	8214719f08fd221ff4dd3f7328adeb7198c1c842bf429c349dac9b87b2fdf76d	libxmlrpc_abyss.so.3	libxmlrpc_util.so.3,libc.so.0	soft
+garlic	/usr/lib/libSDL_sound.so	link	libSDL_sound-1.0.so.1.0.2					
+garlic	/usr/lib/libXft.so.2	link	libXft.so.2.3.2					
+garlic	/usr/lib/libdbus-1.so.3	link	libdbus-1.so.3.19.4					
+garlic	/usr/lib/libXinerama.so.1.0.0	ELF		9380	e9028d83416602a1a0800315b6e70473a09ade3413e4597a595a6c92eb94c7f7	libXinerama.so.1	libXext.so.6,libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libgstreamer-0.10.so.0	link	libgstreamer-0.10.so.0.30.0					
+garlic	/usr/lib/libsvg-cairo.so	link	libsvg-cairo.so.1.0.1					
+garlic	/usr/lib/libopenal.so	link	libopenal.so.1					
+garlic	/usr/lib/libpixman-1.so	link	libpixman-1.so.0.34.0					
+garlic	/usr/lib/libkms.so.1	link	libkms.so.1.0.0					
+garlic	/usr/lib/libxcb-glx.so.0	link	libxcb-glx.so.0.0.0					
+garlic	/usr/lib/libfontenc.so	link	libfontenc.so.1.0.0					
+garlic	/usr/lib/libass.so.9.0.1	ELF		137160	78f394da3a493d21a2fa877b891c39a13d7cb16104441ef2570d64cf238758be	libass.so.9	libiconv.so.2,libfribidi.so.0,libfontconfig.so.1,libfreetype.so.6,libharfbuzz.so.0,libc.so.0	soft
+garlic	/usr/lib/libGLESv2.so.2.0.0	ELF		37916	73df7c2d3c823033fa7f3bc0bca5f64fbff93db9ab4dd8077949f64a1ff9352e	libGLESv2.so.2	libdrm.so.2,libglapi.so.0,libc.so.0	soft
+garlic	/usr/lib/libasm-0.169.so	ELF		22132	789e2e8255393b21613740e89f6d76551706815a1dc1f54759ba62e94bd6315e	libasm.so.1	libelf.so.1,libdw.so.1,libc.so.0,ld-uClibc.so.1	soft
+garlic	/usr/lib/libgstsdp-0.10.so	link	libgstsdp-0.10.so.0.25.0					
+garlic	/usr/lib/libmpg123.so	link	libmpg123.so.0.44.8					
+garlic	/usr/lib/libjpeg.so.9.2.0	ELF		190260	c617225ca6f845d2b29212167439fd30d41e1b2a078a39ad47bfd5a31f91bc58	libjpeg.so.9	libc.so.0	soft
+garlic	/usr/lib/libffi.so	link	libffi.so.6.0.4					
+garlic	/usr/lib/libxmlrpc.so.3	link	libxmlrpc.so.3.39					
+garlic	/usr/lib/libspeexdsp.so	link	libspeexdsp.so.1.5.0					
+garlic	/usr/lib/libdw-0.169.so	ELF		227680	53b494cdbfe1620aec22521a9fed612fa480909d29d9a22d87d6eb84dff397bc	libdw.so.1	libelf.so.1,libz.so.1,libbz2.so.1.0,libc.so.0,ld-uClibc.so.1	soft
+garlic	/usr/lib/libSDL2_gfx-1.0.so.0	link	libSDL2_gfx-1.0.so.0.0.1					
+garlic	/usr/lib/libharfbuzz.so.0	link	libharfbuzz.so.0.10701.0					
+garlic	/usr/lib/libogg.so.0.8.3	ELF		17628	3ee0b3f38a263500358470eda722c11cfa9aea0e9e8858dfd3752403e89f29b3	libogg.so.0	libc.so.0	soft
+garlic	/usr/lib/libwm.so	ELF		7444	0e20fc9fc07b336a2cc8101ba23cfd2b8edff9a464e0bf037d4cebd7baaf5c6d	libwm.so	libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libdes.so	ELF		53192	5e4002522fa06c3a83ebbb54a01e574ee23b46f0bb38f0a25efb511b5005bacf		libc.so.0	soft
+garlic	/usr/lib/libmount.so	link	../../lib/libmount.so.1.1.0					
+garlic	/usr/lib/libexpat.so	link	libexpat.so.1.6.7					
+garlic	/usr/lib/libxcb.so.1	link	libxcb.so.1.1.0					
+garlic	/usr/lib/libmod_math.so	ELF		17676	73c98e4d387c452dc1aeb2d007a9b782727f54128431f44380522f11fd379a0f	libmod_math.so	libc.so.0,libdes.so	soft
+garlic	/usr/lib/libXxf86vm.so.1.0.0	ELF		21688	4a2ac39fc658fd71d332c695bc3d9e58474a8ffaff896ae6ec268e70321b3d39	libXxf86vm.so.1	libXext.so.6,libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libtinyxml2.so.4.0.1	ELF		55248	719570a983e47181ecd44f4d0921d30b34d5529067ebe481e1a0aa942cac55c0	libtinyxml2.so.4	libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libgstnet-0.10.so.0.30.0	ELF		26004	5ff3ce8d3999385c125d7a80e4c0ac9546fe955c264c34c38f3cbf4b707500e3	libgstnet-0.10.so.0	libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgthread-2.0.so.0,libgmodule-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libcurl.so	link	libcurl.so.4.5.0					
+garlic	/usr/lib/libiconv.so	link	libiconv.so.2.6.0					
+garlic	/usr/lib/libxcb-xinerama.so.0.0.0	ELF		9352	000d593aada4027263186cf534a311a9e3074b9b818c47c5299f0f22760ff6ad	libxcb-xinerama.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libncurses.so.6.0	ELF		207964	d2da8803b68155c286632a855d774b2adf69bfb2a0add00534c02f879a91d606	libncurses.so.6	libc.so.0	soft
+garlic	/usr/lib/libXfixes.so.3.1.0	ELF		17540	a4bf409f548d18c1671ee9fa2491575e7576404f5c1bcb5869a3126f8d79cd09	libXfixes.so.3	libX11.so.6,libc.so.0	soft
+garlic	/usr/lib/libXss.so.1.0.0	ELF		9396	63df99960941c2c7c21b78b537f62a1cadd8381d5d1142e1685775d1223ff0b7	libXss.so.1	libXext.so.6,libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libXfont2.so	link	libXfont2.so.2.0.0					
+garlic	/usr/lib/libxmlrpc_server_pstream++.so	link	libxmlrpc_server_pstream++.so.8					
+garlic	/usr/lib/libkms.so	link	libkms.so.1.0.0					
+garlic	/usr/lib/libxcb-render.so.0.0.0	ELF		38136	b8a7f1256590468e0097acc5a177af6215bed9bacf47045277528ec2a7db8ace	libxcb-render.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libxcb-glx.so.0.0.0	ELF		70808	179f0b9c3e02fdea917dc7cc1b5ad22bdfbd69fac4bed6befa378d39e6190c67	libxcb-glx.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libmenu.so	link	libmenu.so.6					
+garlic	/usr/lib/libelf.so	link	libelf.so.1					
+garlic	/usr/lib/libpango-1.0.so	link	libpango-1.0.so.0.4000.14					
+garlic	/usr/lib/libSDL_sound-1.0.so.1.0.2	ELF		175036	c527ad32a99b3b2caa9587065882666e0d1ee7d689dab3a671da2a42c5944c9c	libSDL_sound-1.0.so.1	libiconv.so.2,libts.so.0,libvorbis.so.0,libogg.so.0,libSDL-1.2.so.0,libvorbisfile.so.3,libFLAC.so.8,libspeex.so.1,libc.so.0	soft
+garlic	/usr/lib/libxmlrpc.so.3.39	ELF		95988	87a1692acd5c154d50eceb2355d9e858c84032846f7007d0fec355c6d0917922	libxmlrpc.so.3	libxmlrpc_util.so.3,libxmlrpc_xmlparse.so.3,libxmlrpc_xmltok.so.3,libc.so.0	soft
+garlic	/usr/lib/libGLU.so.1.3.1	ELF		415660	bccfb14e592ad86a982b44730a85e0c274065b8db6120416fa69c0cc899ca41f	libGLU.so.1	libGL.so.1,libz.so.1,libatomic.so.1,libexpat.so.1,libglapi.so.0,libXdamage.so.1,libXfixes.so.3,libX11-xcb.so.1,libxcb-glx.so.0,libxcb-dri2.so.0,libxcb.so.1,libXxf86vm.so.1,libXext.so.6,libX11.so.6,libXau.so.6,libXdmcp.so.6,libdrm.so.2,libstdc++.so.6,libc.so.0,libgcc_s.so.1	soft
+garlic	/usr/lib/libxcb-dri3.so.0.0.0	ELF		9360	b7e2c9353828ed962257d8e4554e83df53b68e410ba8f0c1a102a91f32a4cce6	libxcb-dri3.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libtheoraenc.so	link	libtheoraenc.so.1.1.2					
+garlic	/usr/lib/libuuid.so	link	../../lib/libuuid.so.1.3.0					
+garlic	/usr/lib/libXft.so.2.3.2	ELF		63332	86a4cb553b5274d2f842ab5bf1148bf897cb38f50df1f2ec43acb24f0d580348	libXft.so.2	libfontconfig.so.1,libexpat.so.1,libfreetype.so.6,libbz2.so.1.0,libpng16.so.16,libz.so.1,libXrender.so.1,libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libgstbase-0.10.so.0.30.0	ELF		326020	3dbacf2294e844269bf3745be7f5b910fff25228ccacaef4dba5ead92903a8d7	libgstbase-0.10.so.0	libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgthread-2.0.so.0,libgmodule-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libvorbisfile.so	link	libvorbisfile.so.3.3.7					
+garlic	/usr/lib/libXRes.so.1	link	libXRes.so.1.0.0					
+garlic	/usr/lib/libEGL.so	link	libEGL.so.1.0.0					
+garlic	/usr/lib/libyaml-cpp.so.0.5	link	libyaml-cpp.so.0.5.2					
+garlic	/usr/lib/libXss.so.1	link	libXss.so.1.0.0					
+garlic	/usr/lib/libxcb-xinerama.so.0	link	libxcb-xinerama.so.0.0.0					
+garlic	/usr/lib/libvorbisidec.so.1	link	libvorbisidec.so.1.0.3					
+garlic	/usr/lib/libXext.so.6.4.0	ELF		55236	51568372af2565d1e711c1d8ee80d8c53dee351d45a215b28660996e0c93fe29	libXext.so.6	libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libxcb-damage.so	link	libxcb-damage.so.0.0.0					
+garlic	/usr/lib/libglut.so.3.10.0	ELF		237400	02b319d6771840f9f255bd83ffd28ed133476aeaaac9f490fabdae8e6e9cf9a9	libglut.so.3	libGL.so.1,libSM.so.6,libICE.so.6,libX11.so.6,libXext.so.6,libXrandr.so.2,libXxf86vm.so.1,libXi.so.6,libc.so.0	soft
+garlic	/usr/lib/libgstcdda-0.10.so.0.25.0	ELF		34424	c5fcf58f47570981ab9b281be1fa7bbce661b96152eadffdac3bdcab55819b01	libgstcdda-0.10.so.0	libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libgsttag-0.10.so.0,libc.so.0	soft
+garlic	/usr/lib/libSDL_net.so	link	libSDL_net-1.2.so.0.8.0					
+garlic	/usr/lib/libxmlrpc_client++.so	link	libxmlrpc_client++.so.8					
+garlic	/usr/lib/libglut.so.3	link	libglut.so.3.10.0					
+garlic	/usr/lib/libxcb-dri2.so.0.0.0	ELF		13456	7d188d3f2fb5b965430f72a581aed5b53ecd7f7ea04b9b6d5e1b085c5c4f9ef2	libxcb-dri2.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libgmodule-2.0.so	link	libgmodule-2.0.so.0.5400.2					
+garlic	/usr/lib/libconfuse.so.1	link	libconfuse.so.1.1.0					
+garlic	/usr/lib/libgstnet-0.10.so.0	link	libgstnet-0.10.so.0.30.0					
+garlic	/usr/lib/libgstriff-0.10.so.0	link	libgstriff-0.10.so.0.25.0					
+garlic	/usr/lib/libgstdataprotocol-0.10.so.0	link	libgstdataprotocol-0.10.so.0.30.0					
+garlic	/usr/lib/libvorbisfile.so.3.3.7	ELF		30068	6a94a50f2de27e17432ca0dd2107f1bb2b51af8e2be741c9960fa44668ea4d01	libvorbisfile.so.3	libvorbis.so.0,libogg.so.0,libc.so.0	soft
+garlic	/usr/lib/libgstsignalprocessor-0.10.so.23.0.0	ELF		21844	d9df9e003a2b3387e6519496879a0d0622605d2ac8a41e5178a2a662ff21ed9d	libgstsignalprocessor-0.10.so.23	libgstaudio-0.10.so.0,libgstcontroller-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libxmlrpc_client++.so.8.39	ELF		125632	3a174bc807b05d973946b94e6a41f4645a911dbd1cff12ee2736126aac5b27a8	libxmlrpc_client++.so.8	libxmlrpc++.so.8,libxmlrpc_packetsocket.so.8,libxmlrpc_client.so.3,libxmlrpc.so.3,libxmlrpc_util.so.3,libxmlrpc_xmlparse.so.3,libxmlrpc_xmltok.so.3,libxmlrpc_util++.so.8,libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libvorbisidec.so.1.0.3	ELF		95924	88e13e330897661cba815e0a2cd0bec6901170200b4c592ba56cace19f885f09	libvorbisidec.so.1	libogg.so.0,libc.so.0	soft
+garlic	/usr/lib/libvorbisenc.so.2.0.11	ELF		533688	71227d96b9f60f3be666e9c6e60086849b7e009fd62bbf31b053381628e59bf4	libvorbisenc.so.2	libvorbis.so.0,libogg.so.0,libc.so.0	soft
+garlic	/usr/lib/libdbus-1.so.3.19.4	ELF		244940	b4bce9f090443dfcf6981ff8911a5b5e3518f7ea8febc78db5fe485a40315a8c	libdbus-1.so.3	libc.so.0	soft
+garlic	/usr/lib/libSM.so.6	link	libSM.so.6.0.1					
+garlic	/usr/lib/libxcb-xfixes.so	link	libxcb-xfixes.so.0.0.0					
+garlic	/usr/lib/libcairo-gobject.so.2	link	libcairo-gobject.so.2.11400.10					
+garlic	/usr/lib/libXtst.so.6.1.0	ELF		17680	a10a1a3aa96b0f53027817a010ff4ca7f6c3d68cb5bb656beafe26810601b665	libXtst.so.6	libX11.so.6,libXext.so.6,libXi.so.6,libc.so.0	soft
+garlic	/usr/lib/libgstapp-0.10.so	link	libgstapp-0.10.so.0.25.0					
+garlic	/usr/lib/libgstfft-0.10.so.0	link	libgstfft-0.10.so.0.25.0					
+garlic	/usr/lib/libXi.so	link	libXi.so.6.1.0					
+garlic	/usr/lib/libintl.so.8.1.5	ELF		30164	8b2558b10b9de8432d8c9c1c61ee7badea1ce90b90ab65bd900af7b7a89dbb46	libintl.so.8	libiconv.so.2,libc.so.0	soft
+garlic	/usr/lib/libtinyxml2.so	link	libtinyxml2.so.4					
+garlic	/usr/lib/libxcb-dri2.so.0	link	libxcb-dri2.so.0.0.0					
+garlic	/usr/lib/libxmlrpc_client++.so.8	link	libxmlrpc_client++.so.8.39					
+garlic	/usr/lib/libgstrtsp-0.10.so.0.25.0	ELF		79556	612582e4391354d85b278272f679db576f932578e1461119afae9ecea8274755	libgstrtsp-0.10.so.0	libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libxcb-xfixes.so.0.0.0	ELF		21644	36de96630f481073593a5257078df0d6df213b661dd65b18a7d0149db8cc369b	libxcb-xfixes.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libkey.so	ELF		14944	c5558ba235f0ce91516e03e91cc49b40c769c48631babeb10163f1d8c0d78e86	libkey.so	libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libmod_debug.so	ELF		96492	5c131ed282f05f94d61dd851ae006788c5d479ea17c422732ba9169ecd9b6e7f	libmod_debug.so	libkey.so,librender.so,libvideo.so,libblit.so,libgrbase.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libxmlrpc_xmltok.so.3.39	ELF		136380	8855109e684a63860d3dbb4b8dc05a797c566c1710e6af35bc6a6b6bb67bcda8	libxmlrpc_xmltok.so.3	libc.so.0	soft
+garlic	/usr/lib/libgstrtsp-0.10.so.0	link	libgstrtsp-0.10.so.0.25.0					
+garlic	/usr/lib/ao/plugins-4/libalsa.so	ELF		21960	fcdbb6e39b54fca9c52cef1450f1d884e955e63082df9db2407a567330ab987f	libalsa.so	libasound.so.2,libao.so.4,libc.so.0	soft
+garlic	/usr/lib/libBulletSoftBody.so.2.86	ELF		199492	4ed4bab9a5363ac482b9d575541591d90a856a81be0a265cdd92e5908e39b94b	libBulletSoftBody.so.2.86	libBulletDynamics.so.2.86,libBulletCollision.so.2.86,libLinearMath.so.2.86,libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libvorbisenc.so.2	link	libvorbisenc.so.2.0.11					
+garlic	/usr/lib/libxmlrpc_abyss++.so.8.39	ELF		80256	d2b3fedf8ead319a159db550eb9f530f789e266fe52bdd896549f6aca520fcaf	libxmlrpc_abyss++.so.8	libxmlrpc_abyss.so.3,libxmlrpc_util++.so.8,libxmlrpc_util.so.3,libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libts.so.0	link	libts.so.0.9.0					
+garlic	/usr/lib/libcairo-gobject.so	link	libcairo-gobject.so.2.11400.10					
+garlic	/usr/lib/libgstaudio-0.10.so.0	link	libgstaudio-0.10.so.0.25.0					
+garlic	/usr/lib/libgthread-2.0.so.0	link	libgthread-2.0.so.0.5400.2					
+garlic	/usr/lib/libXt.so.6	link	libXt.so.6.0.0					
+garlic	/usr/lib/libXv.so.1.0.0	ELF		13568	55798f07935092a1312f5139a405014ad5303515edc4294134b56a201cecc5d5	libXv.so.1	libX11.so.6,libXext.so.6,libc.so.0	soft
+garlic	/usr/lib/libxmlrpc_cpp.so	link	libxmlrpc_cpp.so.8					
+garlic	/usr/lib/libtheora.so.0.3.10	ELF		161268	fef287a74bc341000c3d6a7ef35a22b166cb42d1348e3a8923b7c26dd66f7f3f	libtheora.so.0	libogg.so.0,libc.so.0	soft
+garlic	/usr/lib/libgio-2.0.so.0	link	libgio-2.0.so.0.5400.2					
+garlic	/usr/lib/libfribidi.so.0.3.6	ELF		91368	2367b8d7c84d9de7b6fd8d853b189088db75d90edd26dda7619d6f61492064aa	libfribidi.so.0	libc.so.0	soft
+garlic	/usr/lib/libpangoft2-1.0.so.0	link	libpangoft2-1.0.so.0.4000.14					
+garlic	/usr/lib/libpciaccess.so.0	link	libpciaccess.so.0.11.1					
+garlic	/usr/lib/libxmlrpc_xmltok.so	link	libxmlrpc_xmltok.so.3					
+garlic	/usr/lib/libxmlrpc_util.so	link	libxmlrpc_util.so.3					
+garlic	/usr/lib/libmod_map.so	ELF		51644	b9f2b48ae5bb164cc69eee701a5a0493b34a25d61e61c02f583b82443af5385e	libmod_map.so	libbgload.so,librender.so,libfont.so,libblit.so,libvideo.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libgrbase.so,libc.so.0,libdes.so,libpng16.so.16,libz.so.1	soft
+garlic	/usr/lib/libXau.so	link	libXau.so.6.0.0					
+garlic	/usr/lib/libgstcheck-0.10.so.0	link	libgstcheck-0.10.so.0.30.0					
+garlic	/usr/lib/libform.so.6	link	libform.so.6.0					
+garlic	/usr/lib/libglib-2.0.so.0.5400.2	ELF		936852	9fbb7d9da82c71b72cd412e842b7af406c72bfc0b4a4947f0c09012eb725df79	libglib-2.0.so.0	libiconv.so.2,libpcre.so.1,libc.so.0	soft
+garlic	/usr/lib/libmouse.so	ELF		20180	a46d79eb2267ee184cf64efece1efb2c5c9cb90c09b9974703c5e6670a080642	libmouse.so	libdraw.so,librender.so,libblit.so,libvideo.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libx264.so	link	libx264.so.152					
+garlic	/usr/lib/libxmlrpc_server_cgi.so.3.39	ELF		9400	3f5dcb797d3f70822e7d919240be113f39bd4f7b519ec87725ca02b9cf87cb5d	libxmlrpc_server_cgi.so.3	libxmlrpc_server.so.3,libxmlrpc.so.3,libxmlrpc_xmlparse.so.3,libxmlrpc_xmltok.so.3,libxmlrpc_util.so.3,libc.so.0	soft
+garlic	/usr/lib/libzip.so.5	link	libzip.so.5.0					
+garlic	/usr/lib/libhistory.so.7	link	libhistory.so.7.0					
+garlic	/usr/lib/glibmm-2.4/proc/m4/base.m4	file		13245	c28071cdee1405c26d287c52259489320b027a7b58b365c7aeb0fa80aa6cf100			
+garlic	/usr/lib/glibmm-2.4/proc/m4/doc.m4	file		21	3a74e82dad7fded26c8eb2f00f2a283ceeb687afaa6290a65e6e4fa73f72b6d9			
+garlic	/usr/lib/glibmm-2.4/proc/m4/class_boxedtype.m4	file		5560	700a0b7f0e9b32771a15c7e1d5342a228e6ab2ef0705f7d3c4cd9d9b5658c73d			
+garlic	/usr/lib/glibmm-2.4/proc/m4/property.m4	file		1100	4af1f73b998a40086ba4fed21378fc9865f1ead0e8bed8dc36192a4225f845f5			
+garlic	/usr/lib/glibmm-2.4/proc/m4/convert_glib.m4	file		7095	0872eb0de40f59ca69b2925685a8a76f61769aa88b4f153af8628447c650e860			
+garlic	/usr/lib/glibmm-2.4/proc/m4/method.m4	file		6913	36abb289de38b4c0f4cd745279ab48a57ac4810c922c81452c2c8c28ebecabbe			
+garlic	/usr/lib/glibmm-2.4/proc/m4/class_shared.m4	file		9728	0aa9dd85fa1c018c431bfdf6319190fe6e9583004b0ab6a1bc6a0b7462bb5111			
+garlic	/usr/lib/glibmm-2.4/proc/m4/initialize.m4	file		175	4b657f05d78ef38259c2ab58f4934429269b3f7f9e2e6d3df0db8ba43ffc96b7			
+garlic	/usr/lib/glibmm-2.4/proc/m4/class_opaque_copyable.m4	file		5117	3f37542d48cb5ff69e9553c20bdd7c16237653e0c91ebe1d1eed193b88bf6b7c			
+garlic	/usr/lib/glibmm-2.4/proc/m4/class_opaque_refcounted.m4	file		4919	3a6c2c7b521aa3af7dc7a0481541265c860de8a63a611d13a2f06fa3c71d4831			
+garlic	/usr/lib/glibmm-2.4/proc/m4/convert_glibmm.m4	file		85	66a5eceb64b055b31933d15f5a154e5260086109633d24b0d976f00f21b29117			
+garlic	/usr/lib/glibmm-2.4/proc/m4/class_boxedtype_static.m4	file		4446	2f3bea95aea1997a8cbeba392736a30e2706db0446f569513c02bc56a45b12ec			
+garlic	/usr/lib/glibmm-2.4/proc/m4/compare.m4	file		2574	b7d2530f465648bd9ac1177b6bef963f0cb96a6bfcd296fe57f88d388c9b5827			
+garlic	/usr/lib/glibmm-2.4/proc/m4/class_generic.m4	file		792	91441843ab03665a44a77f7cd0b75f6ca2e881c39288a84877257f5874665fb5			
+garlic	/usr/lib/glibmm-2.4/proc/m4/convert.m4	file		175	b80d7a759e8d97ea0960b4aee3831a69b85823719064db6d068b73075b90b297			
+garlic	/usr/lib/glibmm-2.4/proc/m4/class_gobject.m4	file		7805	34f1038fc73d00c1273050d021d5149878b324b4a760315e60bccfcf9d29e5ed			
+garlic	/usr/lib/glibmm-2.4/proc/m4/convert_base.m4	file		3127	beba27a05adafe9944187f75c23cba0fd11ffdbb18a4700c92378c5692829793			
+garlic	/usr/lib/glibmm-2.4/proc/m4/class_interface.m4	file		7593	71db51be7c3cd4dab6002d7f2b57f6cc9b6d49573e0a3e143bb567a2b5e8de2a			
+garlic	/usr/lib/glibmm-2.4/proc/m4/signal.m4	file		9829	e764912a543f1df3e6d539987d1c0c332d5e04302aca3ee2e0af4feeff670a3f			
+garlic	/usr/lib/glibmm-2.4/proc/m4/initialize_glib.m4	file		480	fb338afcb4ca367fdd89e21c8e581e2826682391afc3d6184e4c67774eded957			
+garlic	/usr/lib/glibmm-2.4/proc/m4/initialize_glibmm.m4	file		94	0bf5d8b0439ff44508cf969c3645124ac76616a28a5f9a4949c92a17ffc0a835			
+garlic	/usr/lib/glibmm-2.4/proc/m4/enum.m4	file		3926	64d33bb0ea4cd1691a3e06074c218cf648bef3e4a62064f293698bb31b889628			
+garlic	/usr/lib/glibmm-2.4/proc/m4/convert_gio.m4	file		15610	62190d5049dc394d1ee05211a2dd04ccbdaa1e78e2d6d0b27be2a4091565cac2			
+garlic	/usr/lib/glibmm-2.4/proc/m4/member.m4	file		3701	10b16399d8ebdac09d51b52b9210e96a596fbbf8e583b9e3d21cb63d8c647507			
+garlic	/usr/lib/glibmm-2.4/proc/m4/initialize_base.m4	file		1872	562e63f75ffc0922bfc0259ae0fc9483f5be1291cf9b3164e8b626bdbbbe1c40			
+garlic	/usr/lib/glibmm-2.4/proc/m4/gerror.m4	file		2408	72507cdd3c2aae477851418ae82f8fba0619a3cbeea42c4a477a1c5638d6a7f4			
+garlic	/usr/lib/glibmm-2.4/proc/m4/ctor.m4	file		2017	3c285687a9da4941ea40edc00dc921237cf24d124fc37f6ed7447b2dc05f7f39			
+garlic	/usr/lib/glibmm-2.4/proc/m4/initialize_gio.m4	file		165	ae6cc9a078ff75ab72d650ce801beddd72774ff6d1111a9ada38bece0df0a06e			
+garlic	/usr/lib/glibmm-2.4/proc/m4/vfunc.m4	file		7033	df1bbb0f6bb3447c55381243f140ec62464635542eeb488d6ef6af3c1d5d9add			
+garlic	/usr/lib/glibmm-2.4/proc/pm/Enum.pm	file		7801	f37b7e3ebd1564aae04798d206fa5ba0145bd4cd7eb99c0b41dadfcf1bab30cf			
+garlic	/usr/lib/glibmm-2.4/proc/pm/FunctionBase.pm	file		7251	86c2c8024db9bdf00dda1b2cf1be46fbc7f739075169588b4412d71c632564a2			
+garlic	/usr/lib/glibmm-2.4/proc/pm/Function.pm	file		13334	90f9d03da348d6836f040eeaf399e726cb4d6f3d9205c0519b31f329a7e3ffe0			
+garlic	/usr/lib/glibmm-2.4/proc/pm/WrapParser.pm	file		48275	4ad3bbd8d0f68b06db4a3de16622cc27954fcee07be087944e70764045f42d75			
+garlic	/usr/lib/glibmm-2.4/proc/pm/GtkDefs.pm	file		21906	0339ac1e357749fe0db3dc3dc54d42ccbc6151109e20a0ba12b72dae7613cf04			
+garlic	/usr/lib/glibmm-2.4/proc/pm/DocsParser.pm	file		30599	46197a6d463f289a2ce046707dbeacb51210aa5d6d6ecddd7b951ae00efc4815			
+garlic	/usr/lib/glibmm-2.4/proc/pm/Property.pm	file		3432	c8973e691b9b5cd5c4e9eec37a6706619f575924ecf6da0e65fbdcfd2c524fda			
+garlic	/usr/lib/glibmm-2.4/proc/pm/Object.pm	file		1320	5df8e44d8bf7cc299a335357c51c41278d3acddacab33f243747b7eb6a89402a			
+garlic	/usr/lib/glibmm-2.4/proc/pm/Output.pm	file		52167	ffc8d1825afe519c0e9c4e01cf4cb2c7cb16ed6c78ff4689690443283f8bb773			
+garlic	/usr/lib/glibmm-2.4/proc/pm/Util.pm	file		2565	64d80cce36c3c56c5a388c024571a7c0fc3e55917dea026ec4000f42c80c87ea			
+garlic	/usr/lib/glibmm-2.4/proc/generate_wrap_init.pl	file		13502	7972d17122837a02abb03595a53b5c15a4d7acb40fe97018b68cfbc03f4e57d3			
+garlic	/usr/lib/glibmm-2.4/proc/gmmproc	file		6626	f847fb0e6c8d46a5025268c2d2b432c7dc5b56465e0ebd900c5d25dd6e32981d			
+garlic	/usr/lib/glibmm-2.4/include/glibmmconfig.h	file		5151	a7f481cb738424709487b395744e262996fd36458a9c768dba80bc83261782c8			
+garlic	/usr/lib/libbz2.so.1.0	link	libbz2.so.1.0.6					
+garlic	/usr/lib/libtheoradec.so.1.1.4	ELF		42392	2722cbd220c824ff80952f2996cb6dd821ad8d1b128344022affa35a69027f8c	libtheoradec.so.1	libc.so.0	soft
+garlic	/usr/lib/libgmodule-2.0.so.0	link	libgmodule-2.0.so.0.5400.2					
+garlic	/usr/lib/libSDL_mixer.so	link	libSDL_mixer-1.2.so.0.12.0					
+garlic	/usr/lib/libgsttag-0.10.so.0.25.0	ELF		190908	f4753729ffe03a0716c0c669737231b5a71f026b4d522df766fae845ca41bb9e	libgsttag-0.10.so.0	libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libz.so.1,libc.so.0	soft
+garlic	/usr/lib/libxcb-sync.so.1	link	libxcb-sync.so.1.0.0					
+garlic	/usr/lib/libxmlrpc_server_cgi.so	link	libxmlrpc_server_cgi.so.3					
+garlic	/usr/lib/libSDL2_gfx.so	link	libSDL2_gfx-1.0.so.0.0.1					
+garlic	/usr/lib/libpangoxft-1.0.so	link	libpangoxft-1.0.so.0.4000.14					
+garlic	/usr/lib/libgstaudio-0.10.so.0.25.0	ELF		213188	bf5af9960fd42f28ee9fbabb3ff9028dfdface9ce40a906f779f4a595e91e89d	libgstaudio-0.10.so.0	libgstpbutils-0.10.so.0,libgstinterfaces-0.10.so.0,libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libXfixes.so.3	link	libXfixes.so.3.1.0					
+garlic	/usr/lib/libgobject-2.0.so	link	libgobject-2.0.so.0.5400.2					
+garlic	/usr/lib/libxcb-xtest.so	link	libxcb-xtest.so.0.0.0					
+garlic	/usr/lib/libpng.so	link	libpng16.so					
+garlic	/usr/lib/libxcb-damage.so.0.0.0	ELF		5256	21de9d87a6e2b05b3fee83bc4c10256ab434b5e5eb853f9777263b41c419937a	libxcb-damage.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libXmu.so.6	link	libXmu.so.6.2.0					
+garlic	/usr/lib/libbz2.so	link	libbz2.so.1.0.6					
+garlic	/usr/lib/libxmlrpc++.so.8	link	libxmlrpc++.so.8.39					
+garlic	/usr/lib/libXmuu.so	link	libXmuu.so.1.0.0					
+garlic	/usr/lib/libxmlrpc_xmlparse.so.3	link	libxmlrpc_xmlparse.so.3.39					
+garlic	/usr/lib/libxmlrpc_abyss.so	link	libxmlrpc_abyss.so.3					
+garlic	/usr/lib/libintl.so.8	link	libintl.so.8.1.5					
+garlic	/usr/lib/libjpeg.so	link	libjpeg.so.9.2.0					
+garlic	/usr/lib/xml2Conf.sh	file		276	471157cc08e1566555fde07444a73a39758f6516a31c76fda49161eb5c185d36			
+garlic	/usr/lib/charset.alias	file		252	4dc0170dc0bb912c5cacda24550ad39c1cbbc8c40e365cbc78b56cbd5f5d180d			
+garlic	/usr/lib/libXv.so	link	libXv.so.1.0.0					
+garlic	/usr/lib/libblkid.so	link	../../lib/libblkid.so.1.1.0					
+garlic	/usr/lib/libxcb-dri3.so.0	link	libxcb-dri3.so.0.0.0					
+garlic	/usr/lib/libid3tag.so.0	link	libid3tag.so.0.3.0					
+garlic	/usr/lib/libid3tag.so	link	libid3tag.so.0.3.0					
+garlic	/usr/lib/libGL.so.1	link	libGL.so.1.2.0					
+garlic	/usr/lib/libgstinterfaces-0.10.so	link	libgstinterfaces-0.10.so.0.25.0					
+garlic	/usr/lib/libxmlrpc_util++.so	link	libxmlrpc_util++.so.8					
+garlic	/usr/lib/libpcrecpp.so	link	libpcrecpp.so.0.0.1					
+garlic	/usr/lib/libxcb-xfixes.so.0	link	libxcb-xfixes.so.0.0.0					
+garlic	/usr/lib/libxmlrpc_server_abyss.so.3.39	ELF		21952	94809b15bcc4a9681e1547d41be26d2ec2a84d2d3082e4d3bd7d5384fc1667d7	libxmlrpc_server_abyss.so.3	libxmlrpc_server.so.3,libxmlrpc_abyss.so.3,libxmlrpc.so.3,libxmlrpc_xmlparse.so.3,libxmlrpc_xmltok.so.3,libxmlrpc_util.so.3,libc.so.0	soft
+garlic	/usr/lib/libXinerama.so.1	link	libXinerama.so.1.0.0					
+garlic	/usr/lib/libglapi.so	link	libglapi.so.0.0.0					
+garlic	/usr/lib/python2.7/site-packages/xcbgen/state.pyo	file		7083	e7d2c56c1e6653cd1a2ffa1b3e841bd68b1850e2fc74b58827457d48a2e1721d			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/__init__.py	file		1	01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/state.pyc	file		7083	e7d2c56c1e6653cd1a2ffa1b3e841bd68b1850e2fc74b58827457d48a2e1721d			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/matcher.pyc	file		5201	7977108c8f07214cce52bf5ea089bab4d946dd6e37c6aeee8c0f83ae7b025d89			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/error.pyo	file		435	81183ac9662b741aa85e3595fa4f680c294dea15d23310304073eaeb8a7a146f			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/state.py	file		5473	43b043e5677229c08db296efe214045958db6e34e3bcfdb3214e9eb5fe68c7bd			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/__init__.pyc	file		138	92cf2f4efd71f2f0278bcb05164e9a2ee3edf3c26d8211ff14260feb4bb65cc4			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/__init__.pyo	file		138	92cf2f4efd71f2f0278bcb05164e9a2ee3edf3c26d8211ff14260feb4bb65cc4			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/matcher.pyo	file		5201	7977108c8f07214cce52bf5ea089bab4d946dd6e37c6aeee8c0f83ae7b025d89			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/error.py	file		116	6e0f71f1655bade4bd53da50e5ed0b40fc0b99c4212f46c719a5dd959e7e37b7			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/expr.py	file		6435	3b727a3ffaa6c7e5d2f2dc6c423807b5066f207f0546b67089c03cdf1e4ba967			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/align.pyc	file		5799	ed271793ede128e0146175a7dbcf334e11427a46bbd834c06f7655218418ef49			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/align.py	file		6377	25bafed5b8978e9080ddfb8fe074659c06c3afe8596ccb21bfe47925006dfb9c			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/align.pyo	file		5760	873aad4c28b4a71bfc4e4ccd2c0a8f094fd51d65c8758a96d13ba9d9ddf6d376			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/expr.pyc	file		5410	e81aced953a26177104c4ed77216e4fdaada98aece58e0e39a0469e565a58874			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/error.pyc	file		435	81183ac9662b741aa85e3595fa4f680c294dea15d23310304073eaeb8a7a146f			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/xtypes.py	file		48259	7ce6e0366f1c0085e89ae47def1b6311406e30ed7d2f03580dad6fae023f3872			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/expr.pyo	file		5410	e81aced953a26177104c4ed77216e4fdaada98aece58e0e39a0469e565a58874			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/xtypes.pyc	file		39287	ff243bf3fe4b2deb483bab6a994406132198acda433fbfd7cbbbf7fdfb59902d			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/xtypes.pyo	file		39169	406c928ef48a906259b73ebe04d1b8ebda91385a231779b30418ecfc46ecf8db			
+garlic	/usr/lib/python2.7/site-packages/xcbgen/matcher.py	file		3694	78dbeb3503256da914c4d4605bfb74c9993e62c9f6a24b229a0f20cd3788b58a			
+garlic	/usr/lib/libxml2.so.2.9.7	ELF		1081288	5c5f2c85f1c71b3ed3e4b8196e446f82bfca276e6d5df1c05012be89afd50d98	libxml2.so.2	libz.so.1,libiconv.so.2,libc.so.0	soft
+garlic	/usr/lib/terminfo	link	../share/terminfo					
+garlic	/usr/lib/libglapi.so.0.0.0	ELF		169248	97e102b515dffde0c5a50054faa7314b044c815d21e4978cabc3f5e6a7bfee26	libglapi.so.0	libc.so.0	soft
+garlic	/usr/lib/libgstphotography-0.10.so	link	libgstphotography-0.10.so.23.0.0					
+garlic	/usr/lib/libICE.so	link	libICE.so.6.3.0					
+garlic	/usr/lib/libSDL_image-1.2.so.0.8.4	ELF		52200	3da65cae7efbfa6ea1a80a3a6bf375d68def21995730e2f79dd074b3f87e1967	libSDL_image-1.2.so.0	libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libc.so.0	soft
+garlic	/usr/lib/libsha1.so.0.0.0	ELF		9252	0805bda4b58403f716449cc663a74de4ae64d172e5dbb703375500d1ff359d85	libsha1.so.0	libc.so.0	soft
+garlic	/usr/lib/libxmlrpc_xmlparse.so	link	libxmlrpc_xmlparse.so.3					
+garlic	/usr/lib/libGLU.so.1	link	libGLU.so.1.3.1					
+garlic	/usr/lib/libcairo.so.2.11400.10	ELF		806784	bbe4ba861b6b474296c709a841ea653386058ce3f62d2b10a7a3fcd8dd8671af	libcairo.so.2	libpixman-1.so.0,libfontconfig.so.1,libfreetype.so.6,libbz2.so.1.0,libEGL.so.1,libxcb-xfixes.so.0,libgbm.so.1,libpng16.so.16,libxcb-shm.so.0,libxcb-render.so.0,libXrender.so.1,libGL.so.1,libz.so.1,libexpat.so.1,libglapi.so.0,libXdamage.so.1,libXfixes.so.3,libX11-xcb.so.1,libxcb-glx.so.0,libxcb-dri2.so.0,libxcb.so.1,libXxf86vm.so.1,libXext.so.6,libX11.so.6,libXau.so.6,libXdmcp.so.6,libdrm.so.2,libatomic.so.1,libc.so.0	soft
+garlic	/usr/lib/libICE.so.6	link	libICE.so.6.3.0					
+garlic	/usr/lib/libz.so	link	libz.so.1.2.11					
+garlic	/usr/lib/libpangocairo-1.0.so.0.4000.14	ELF		46880	c236854e459b8fd2a2a22b0f693e4ab76f9e7b58fcddbc531d60d3eb4ef6e3e0	libpangocairo-1.0.so.0	libpango-1.0.so.0,libcairo.so.2,libpixman-1.so.0,libEGL.so.1,libxcb-xfixes.so.0,libgbm.so.1,libxcb-shm.so.0,libxcb-render.so.0,libXrender.so.1,libGL.so.1,libglapi.so.0,libXdamage.so.1,libXfixes.so.3,libX11-xcb.so.1,libxcb-glx.so.0,libxcb-dri2.so.0,libxcb.so.1,libXxf86vm.so.1,libXext.so.6,libX11.so.6,libXau.so.6,libXdmcp.so.6,libdrm.so.2,libatomic.so.1,libpangoft2-1.0.so.0,libgobject-2.0.so.0,libffi.so.6,libgthread-2.0.so.0,libglib-2.0.so.0,libharfbuzz.so.0,libiconv.so.2,libpcre.so.1,libfontconfig.so.1,libexpat.so.1,libfreetype.so.6,libbz2.so.1.0,libpng16.so.16,libz.so.1,libc.so.0	soft
+garlic	/usr/lib/libtheoraenc.so.1	link	libtheoraenc.so.1.1.2					
+garlic	/usr/lib/libtinyxml.so.0	link	libtinyxml.so.0.0.0					
+garlic	/usr/lib/libmod_mem.so	ELF		8176	d96c3d92d317df71f74df7f893242e58e0ba4a170f3b33e34354c019073b940e	libmod_mem.so	libc.so.0,libdes.so	soft
+garlic	/usr/lib/libffi.so.6	link	libffi.so.6.0.4					
+garlic	/usr/lib/libgstbasecamerabinsrc-0.10.so	link	libgstbasecamerabinsrc-0.10.so.23.0.0					
+garlic	/usr/lib/libltdl.so	link	libltdl.so.7.3.1					
+garlic	/usr/lib/libglibmm-2.4.so.1.3.0	ELF		404592	a4b7ca69e56a6a47c3573e794ef58480de918a782a7fa784c1a47169ad7d57a8	libglibmm-2.4.so.1	libsigc-2.0.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libglib-2.0.so.0,libstdc++.so.6,libc.so.0,libgcc_s.so.1	soft
+garlic	/usr/lib/libmod_screen.so	ELF		12700	8182c15a9a693ce5dc71a42951bfe04bbb6344818bc32b185d99a8cf6a712403	libmod_screen.so	librender.so,libvideo.so,libblit.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libmod_blendop.so	ELF		8104	e5df0f54838d6acd49569a23fc18113d9afd6210cc3998c47426d6b3c604e877	libmod_blendop.so	libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libSDL-1.2.so.0.11.4	ELF		1198220	614217818b07d388ed74578a2b3ae3e3a45f37a4b87a5165d74329bba7531570	libSDL-1.2.so.0	libiconv.so.2,libc.so.0	soft
+garlic	/usr/lib/libxmlrpc_util.so.3	link	libxmlrpc_util.so.3.39					
+garlic	/usr/lib/libvorbisfile.so.3	link	libvorbisfile.so.3.3.7					
+garlic	/usr/lib/libgstpbutils-0.10.so	link	libgstpbutils-0.10.so.0.25.0					
+garlic	/usr/lib/libmod_timers.so	ELF		7508	e2a1bedede27f5e4b35c28250b3a3819f6137593737b589be547c77ea660e749	libmod_timers.so	libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libSDL.so	link	libSDL-1.2.so.0.11.4					
+garlic	/usr/lib/libXi.so.6	link	libXi.so.6.1.0					
+garlic	/usr/lib/libxcb-composite.so.0	link	libxcb-composite.so.0.0.0					
+garlic	/usr/lib/libsndfile.so	link	libsndfile.so.1.0.28					
+garlic	/usr/lib/libgstrtp-0.10.so.0.25.0	ELF		79600	b2413efecb90762d45561c94f56cbddea71aca751bc773dab808cd7a7b924839	libgstrtp-0.10.so.0	libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libmod_regex.so	ELF		37944	6900e6392420e7ef057ab61f63945d5ef6e1a3ecfa552badb2fe35738c7e4dab	libmod_regex.so	libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libxkbfile.so.1	link	libxkbfile.so.1.0.2					
+garlic	/usr/lib/libxcb-xf86dri.so.0	link	libxcb-xf86dri.so.0.0.0					
+garlic	/usr/lib/libtheoraenc.so.1.1.2	ELF		140884	cedadcba254ff3b5f67c35fd97f5dd6b1f2254413499780b5b4b654185377d82	libtheoraenc.so.1	libogg.so.0,libtheoradec.so.1,libc.so.0	soft
+garlic	/usr/lib/libxmlrpc_client.so.3.39	ELF		34272	5069ccf6eb37f2450a26b7dc4036003d4b2a1850e6220e2170d1ba2c3d6c91cd	libxmlrpc_client.so.3	libxmlrpc.so.3,libxmlrpc_util.so.3,libxmlrpc_xmlparse.so.3,libxmlrpc_xmltok.so.3,libc.so.0	soft
+garlic	/usr/lib/libmod_draw.so	ELF		13416	813edc9d380f89a8f5fd78f4389ed62e2ce48706bfe1f2e7d98795f9e261969d	libmod_draw.so	libdraw.so,librender.so,libvideo.so,libblit.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libgiomm-2.4.so.1.3.0	ELF		1338984	ca55888b79c7e1b76a9f95d0631e63e97dab3f3976be135d50f17faaf0b36de1	libgiomm-2.4.so.1	libsigc-2.0.so.0,libgmodule-2.0.so.0,libgio-2.0.so.0,libgobject-2.0.so.0,libglib-2.0.so.0,libglibmm-2.4.so.1,libstdc++.so.6,libc.so.0,libgcc_s.so.1	soft
+garlic	/usr/lib/libXcomposite.so.1	link	libXcomposite.so.1.0.0					
+garlic	/usr/lib/libxmlrpc_util++.so.8.39	ELF		34632	ba8f59e2aafe3cafba2bf15424308eecf4abea9fa5216434cb4a71f0d5efac8d	libxmlrpc_util++.so.8	libxmlrpc_util.so.3,libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libcurl.so.4	link	libcurl.so.4.5.0					
+garlic	/usr/lib/libgbm.so.1	link	libgbm.so.1.0.0					
+garlic	/usr/lib/libmod_dir.so	ELF		12468	70afe16a07d456f54c557ab657f3bdc2a982013f4ef6c45cfcfa61e8e478ee15	libmod_dir.so	libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libmod_string.so	ELF		14860	77f6fcbb6ed5297c6c75d8f79d5b8a9d21723d9a756f823e9d8361f1575ef06f	libmod_string.so	libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libXrender.so.1.3.0	ELF		34212	13fa2acbf505ebc2287781222461c8f913c21e51ee28cc6773bdd4f26e9bc570	libXrender.so.1	libX11.so.6,libc.so.0	soft
+garlic	/usr/lib/libkms.so.1.0.0	ELF		9344	d160fea0fda48790cbd3716df0b76c1f6da7da0932ee00a0eea469a3a3d334ff	libkms.so.1	libdrm.so.2,libc.so.0	soft
+garlic	/usr/lib/libtheoradec.so.1	link	libtheoradec.so.1.1.4					
+garlic	/usr/lib/libasm.so.1	link	libasm-0.169.so					
+garlic	/usr/lib/libelf-0.169.so	ELF		83488	c4e790bea07f7f7d36e2192ba6c6b52f3fd841c1c83edbc3d9886e99731bcacd	libelf.so.1	libz.so.1,libc.so.0,ld-uClibc.so.1	soft
+garlic	/usr/lib/libdrm.so.2	link	libdrm.so.2.4.0					
+garlic	/usr/lib/libtiff.so	link	libtiff.so.5.2.6					
+garlic	/usr/lib/libcharset.so.1.0.0	ELF		5260	5142feb566e8b20f55288a48612896fec9e45b5013b2dcb70bea57d030293495	libcharset.so.1	libc.so.0	soft
+garlic	/usr/lib/libpangoxft-1.0.so.0	link	libpangoxft-1.0.so.0.4000.14					
+garlic	/usr/lib/libLinearMath.so	link	libLinearMath.so.2.86					
+garlic	/usr/lib/libsigc-2.0.so	link	libsigc-2.0.so.0.0.0					
+garlic	/usr/lib/libgstcdda-0.10.so.0	link	libgstcdda-0.10.so.0.25.0					
+garlic	/usr/lib/libGLESv1_CM.so	link	libGLESv1_CM.so.1.1.0					
+garlic	/usr/lib/libxcb-xkb.so.1.0.0	ELF		79240	5ebb3e92a580f605dbcd4214160c96f290552c5d00fdb166a4aa153ac35bd147	libxcb-xkb.so.1	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libXRes.so	link	libXRes.so.1.0.0					
+garlic	/usr/lib/liblz4.so.1	link	liblz4.so.1.7.5					
+garlic	/usr/lib/libtext.so	ELF		23692	ad50940bc1ed5ee3f67ac380581e6136566f6e0507d89624e8075eaeb9a22e33	libtext.so	libfont.so,librender.so,libvideo.so,libblit.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libconfuse.so	link	libconfuse.so.1.1.0					
+garlic	/usr/lib/libgstfft-0.10.so.0.25.0	ELF		46204	b94c233bc41010fbad5fd2baf5a0eec90c0b1823ff0f7d6badc0bf9d76b545e4	libgstfft-0.10.so.0	libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libsha1.so	link	libsha1.so.0.0.0					
+garlic	/usr/lib/libXi.so.6.1.0	ELF		50476	d465c53074431c6bb597750e95808a8af9027b74d5a834ed9291c717ce4847e2	libXi.so.6	libXext.so.6,libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libgstvideo-0.10.so.0	link	libgstvideo-0.10.so.0.25.0					
+garlic	/usr/lib/libXext.so.6	link	libXext.so.6.4.0					
+garlic	/usr/lib/libSDL_net-1.2.so.0.8.0	ELF		19612	d06fe8c57da3c105cf7a560682ff4f42186d175359173cc9108e3d9047b11ff8	libSDL_net-1.2.so.0	libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libc.so.0	soft
+garlic	/usr/lib/libgsttag-0.10.so.0	link	libgsttag-0.10.so.0.25.0					
+garlic	/usr/lib/libxcb-xkb.so	link	libxcb-xkb.so.1.0.0					
+garlic	/usr/lib/libgobject-2.0.so.0	link	libgobject-2.0.so.0.5400.2					
+garlic	/usr/lib/libxmlrpc_server_abyss.so	link	libxmlrpc_server_abyss.so.3					
+garlic	/usr/lib/libxkbfile.so.1.0.2	ELF		116916	78b768eaad8b4d5891714f90586529091145068ee7439b6e274c78f8887e064b	libxkbfile.so.1	libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libjson-c.so.3.0.1	ELF		46632	36d9cc8ea699e02e1b9a51100a36c699d0b8493c5a3fae2a861b58cda9f676d2	libjson-c.so.3	libc.so.0,ld-uClibc.so.1	soft
+garlic	/usr/lib/libxmlrpc_packetsocket.so.8.39	ELF		38864	5b735f38ec2ac535e5784355492af58932dd9049f9956b0a2e8e0ad96e941555	libxmlrpc_packetsocket.so.8	libxmlrpc++.so.8,libxmlrpc.so.3,libxmlrpc_xmlparse.so.3,libxmlrpc_xmltok.so.3,libxmlrpc_util++.so.8,libxmlrpc_util.so.3,libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libmod_grproc.so	ELF		32480	238a06ddee4aad1cbd32d14bc7b4f30fe57f1cafad7b0ccc3cf134098dc65efc	libmod_grproc.so	librender.so,libblit.so,libvideo.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libsvg-cairo.so.1.0.1	ELF		26232	00971528031095d2663d1f4e9d74af1c6a92929f32116d7f51c2ff459bc10aea	libsvg-cairo.so.1	libsvg.so.1,libpng16.so.16,libjpeg.so.9,libz.so.1,libcairo.so.2,libc.so.0	soft
+garlic	/usr/lib/libxml2.so.2	link	libxml2.so.2.9.7					
+garlic	/usr/lib/libglapi.so.0	link	libglapi.so.0.0.0					
+garlic	/usr/lib/libXdmcp.so.6	link	libXdmcp.so.6.0.0					
+garlic	/usr/lib/libXrandr.so.2	link	libXrandr.so.2.2.0					
+garlic	/usr/lib/libgstreamer-0.10.so	link	libgstreamer-0.10.so.0.30.0					
+garlic	/usr/lib/libiconv.so.2	link	libiconv.so.2.6.0					
+garlic	/usr/lib/libiconv.so.2.6.0	ELF		906460	3b063e6e1d1389c4f2a51cd2863d721b379c1feea8849220605a4e26ed88f03e	libiconv.so.2	libc.so.0	soft
+garlic	/usr/lib/libtheoradec.so	link	libtheoradec.so.1.1.4					
+garlic	/usr/lib/libxcb-xtest.so.0	link	libxcb-xtest.so.0.0.0					
+garlic	/usr/lib/libxcb-record.so	link	libxcb-record.so.0.0.0					
+garlic	/usr/lib/libxcb-shm.so.0	link	libxcb-shm.so.0.0.0					
+garlic	/usr/lib/libgstbasecamerabinsrc-0.10.so.23	link	libgstbasecamerabinsrc-0.10.so.23.0.0					
+garlic	/usr/lib/libgstnetbuffer-0.10.so.0.25.0	ELF		9360	52daa81d94b69ea02165d2c7169327d778919905bc668671cccd05021f464ba6	libgstnetbuffer-0.10.so.0	libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libmod_time.so	ELF		7792	ef69b12e3cf6433fd0bea68d463dfff9cce49952f303131eb817ac668aa77526	libmod_time.so	libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libxmlrpc_server_cgi++.so	link	libxmlrpc_server_cgi++.so.8					
+garlic	/usr/lib/libxcb-record.so.0	link	libxcb-record.so.0.0.0					
+garlic	/usr/lib/libxml++-2.6/include/libxml++config.h	file		1110	1352736dc0a3679db5f9b9b20ae99d7b04b55eea18646ce037e90595156aafb1			
+garlic	/usr/lib/libmad.so.0.2.1	ELF		83240	7ed549148b6e1b2b016e60c2f40715cf1173207a9a86a6dd3baba51582d70531	libmad.so.0	libc.so.0	soft
+garlic	/usr/lib/libXRes.so.1.0.0	ELF		9400	9c3ff8715ef4b18aeeb7a1ebdb72f896aba53e31bcc1c547376242b40d2bac16	libXRes.so.1	libXext.so.6,libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libxmlrpc++.so.8.39	ELF		134112	1ae70fe41d3b87d9bb4234498ab9d74eca56f3a04155e643413d70645f1c0fee	libxmlrpc++.so.8	libxmlrpc.so.3,libxmlrpc_xmlparse.so.3,libxmlrpc_xmltok.so.3,libxmlrpc_util++.so.8,libxmlrpc_util.so.3,libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libGLESv1_CM.so.1.1.0	ELF		17436	4f5c2460871c5e37a2b466c440d1b5a2c1b2fb8c3785037017980587477e7aa5	libGLESv1_CM.so.1	libdrm.so.2,libglapi.so.0,libc.so.0	soft
+garlic	/usr/lib/libSDL_net-1.2.so.0	link	libSDL_net-1.2.so.0.8.0					
+garlic	/usr/lib/libxcb-dpms.so.0	link	libxcb-dpms.so.0.0.0					
+garlic	/usr/lib/libXmu.so.6.2.0	ELF		80356	5b4550c9d598ea8919a5353a18758fb22829258925287d281d4a768778916fc0	libXmu.so.6	libXt.so.6,libSM.so.6,libICE.so.6,libXext.so.6,libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libc.so.0	soft
+garlic	/usr/lib/libgstcontroller-0.10.so	link	libgstcontroller-0.10.so.0.30.0					
+garlic	/usr/lib/libdrm.so.2.4.0	ELF		50680	986f05b6525983e4fd09b70faeb1184c54977af38136e524ab198256eb044f14	libdrm.so.2	libc.so.0	soft
+garlic	/usr/lib/libEGL.so.1	link	libEGL.so.1.0.0					
+garlic	/usr/lib/dri/swrast_dri.so	ELF		3107824	17c588cb0d25dbbe27f8f156a1227720b5804899b3163ef3081d4efc0cd0b329	mesa_dri_drivers.so	libz.so.1,libatomic.so.1,libstdc++.so.6,libglapi.so.0,libdrm.so.2,libexpat.so.1,libc.so.0,libgcc_s.so.1	soft
+garlic	/usr/lib/libgmodule-2.0.so.0.5400.2	ELF		9444	b56edbf7ab22301ea743f05ab4d75117e7bf942de7159aaf8ea85f9a27d9b747	libgmodule-2.0.so.0	libglib-2.0.so.0,libiconv.so.2,libpcre.so.1,libc.so.0	soft
+garlic	/usr/lib/libgstbase-0.10.so.0	link	libgstbase-0.10.so.0.30.0					
+garlic	/usr/lib/libdraw.so	ELF		27436	eb1d40a26c3b15ef4d31b53ff341ea50c8c3eb725cd48a97115388839d526753	libdraw.so	libblit.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libstdc++.so.6.0.24	ELF		1021456	dafdadc525a3c72a1e5d4a5f7ea87de9ac1f6f84b9652022172d4e51c9246fd6	libstdc++.so.6	libc.so.0,ld-uClibc.so.1,libgcc_s.so.1	soft
+garlic	/usr/lib/libBulletCollision.so.2.86	ELF		607228	2b23a88ec8074e3ee57ce2345534edb534bd00fbbc748ef5c9950b5a6f164d40	libBulletCollision.so.2.86	libLinearMath.so.2.86,libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libSDL2_image.so	link	libSDL2_image-2.0.so.0.2.1					
+garlic	/usr/lib/libtheora.so.0	link	libtheora.so.0.3.10					
+garlic	/usr/lib/gstreamer-0.10/libgstgio.so	ELF		42608	ea1a216e28f2e88316bf09796a34725e22fe95f21f4c0c86dd2cd9c84332b130	libgstgio.so	libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libgio-2.0.so.0,libgobject-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstcoreindexers.so	ELF		9476	7ed0d615d3d6ec360247cc38449d21430c33b17be68f992da697634cc36a5c15	libgstcoreindexers.so	libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgthread-2.0.so.0,libgmodule-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstivorbisdec.so	ELF		18032	653d842de676b1892d8bb8cab5a909b72cd5874758102e04adf8cac85ea8ef37	libgstivorbisdec.so	libgsttag-0.10.so.0,libgstaudio-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libvorbisidec.so.1,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstximagesink.so	ELF		46884	94b7ca10fddb1899c6968094cf9a0eec10ab373e923bf0527961fd3f3427066e	libgstximagesink.so	libgstinterfaces-0.10.so.0,libgstvideo-0.10.so.0,libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libSM.so.6,libICE.so.6,libX11.so.6,libXext.so.6,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstvideoscale.so	ELF		89156	979cd7a61b27ad43a4a8e0cee2c980a915fdda7ad8e5e10ca70930d7061b0c21	libgstvideoscale.so	libgstvideo-0.10.so.0,libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstaudioconvert.so	ELF		59080	534e5148ce19efffe3a9dcc32bc31263d15a2b72424d1ebad9361468237fff43	libgstaudioconvert.so	libgstaudio-0.10.so.0,libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstavi.so	ELF		141904	9b6e77a403ada7f593d7fa0f9e976f08c1a6c000895dfc269a380d1429ad7360	libgstavi.so	libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libgstriff-0.10.so.0,libgstaudio-0.10.so.0,libgsttag-0.10.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgsttheora.so	ELF		68080	c5ddaafd17e95fcd243bda03b9757c71609a654d7890423fb51945c014249125	libgsttheora.so	libgsttag-0.10.so.0,libgstvideo-0.10.so.0,libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libtheoraenc.so.1,libtheoradec.so.1,libogg.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstaudioresample.so	ELF		59220	99d6cc9dbca509826024cd8ed8eda84608b62ece8c5d7516dff5467d66d0fffe	libgstaudioresample.so	libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstffmpegcolorspace.so	ELF		178664	5eadb7ab21a9e8bbbc7aaa51c9d2a69726a1c2c5c4bbda140bbafd1b33f5e339	libgstffmpegcolorspace.so	libgstvideo-0.10.so.0,libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgsttypefindfunctions.so	ELF		76320	dab0b6cc22a88f9d955725fec3c956b4a7e44bc62eea76b1f6eb4037f1895066	libgsttypefindfunctions.so	libgstpbutils-0.10.so.0,libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libgio-2.0.so.0,libgobject-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstplaybin.so	ELF		257776	3e1f506d09b0da3cb1f2e48ef81697ced4720eb8374e412d85ad5cf79d2ff110	libgstplaybin.so	libgstpbutils-0.10.so.0,libgstinterfaces-0.10.so.0,libgstvideo-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstcog.so	ELF		89724	efca431195289c77f29c958363cb13d246de4eb0332892810c660bbf2404e27b	libgstcog.so	libgstvideo-0.10.so.0,libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libpng16.so.16,libz.so.1,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstvolume.so	ELF		26060	f7ea466de4809167dc748b0601d07860d62db92c5ebf0bb2887254b2011abb35	libgstvolume.so	libgstinterfaces-0.10.so.0,libgstaudio-0.10.so.0,libgstbase-0.10.so.0,libgstcontroller-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstogg.so	ELF		189292	6a7ea5363c85a7d74dfd77ea1e32ed8d82c8bef53c53fdb4f1f57e6438a89b10	libgstogg.so	libgstriff-0.10.so.0,libgsttag-0.10.so.0,libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libogg.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstwavparse.so	ELF		50900	79d16334abb60cd0e8b84ae5c1623b945a9c3fd0f4d4e91382e8f3ba63cd6b2e	libgstwavparse.so	libgstriff-0.10.so.0,libgstaudio-0.10.so.0,libgsttag-0.10.so.0,libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstdecodebin2.so	ELF		109136	c1dd7d663378b2b1bd47022de74e261501337fd031d6202fc6c71735c594e11a	libgstdecodebin2.so	libgstpbutils-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstcoreelements.so	ELF		254760	a194a1fbc51bba3106f59b3b9d6c831aaf6e51b89b2764fc9b9e3b025db01146	libgstcoreelements.so	libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgthread-2.0.so.0,libgmodule-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstxvimagesink.so	ELF		67576	73f1da5849b56ae85ec69ae60e808037fa108e6f95c99506f726150dee92d2bc	libgstxvimagesink.so	libgstinterfaces-0.10.so.0,libgstvideo-0.10.so.0,libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libSM.so.6,libICE.so.6,libX11.so.6,libXv.so.1,libXext.so.6,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstshm.so	ELF		34460	0cefc33ec95ad092ba6e3131bb106f8d0f256e8735e361001da6f79a41246030	libgstshm.so	libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstximagesrc.so	ELF		38620	566512de774de83bf1e2d4961540817e7561299adc6f34b5838a82c2be8d71c4	libgstximagesrc.so	libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libSM.so.6,libICE.so.6,libX11.so.6,libXext.so.6,libXdamage.so.1,libXfixes.so.3,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstdecodebin.so	ELF		38692	1f8e1f1a0bf910378f4138d9f70a205ccf18ae83998e1e7fbdd55d292bd0de37	libgstdecodebin.so	libgstpbutils-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstvorbis.so	ELF		43236	7ebb7782bdf0d92c7afe527750f5aea9902547547b91ff6e4552abd7620a78e4	libgstvorbis.so	libgsttag-0.10.so.0,libgstaudio-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libvorbis.so.0,libvorbisenc.so.2,libc.so.0	soft
+garlic	/usr/lib/gstreamer-0.10/libgstpango.so	ELF		63804	0f891ffe2679b45cab7fc4a380c2008cab17c1203c7aa3251403feb3dbedd05b	libgstpango.so	libgstvideo-0.10.so.0,libgstbase-0.10.so.0,libgstcontroller-0.10.so.0,libgstreamer-0.10.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libpangocairo-1.0.so.0,libpango-1.0.so.0,libgobject-2.0.so.0,libglib-2.0.so.0,libcairo.so.2,libc.so.0	soft
+garlic	/usr/lib/libpango-1.0.so.0	link	libpango-1.0.so.0.4000.14					
+garlic	/usr/lib/libxcb-dpms.so	link	libxcb-dpms.so.0.0.0					
+garlic	/usr/lib/libcairo.so	link	libcairo.so.2.11400.10					
+garlic	/usr/lib/libXmu.so	link	libXmu.so.6.2.0					
+garlic	/usr/lib/libmod_mathi.so	ELF		17680	9cd980161f2302e6accf11b81c5497694fdb7c5454df3f3f4c0a7f01e60b6894	libmod_mathi.so	libc.so.0,libdes.so	soft
+garlic	/usr/lib/libxmlrpc_server++.so.8.39	ELF		42968	55d68491332993586aaf526b7d6d8f6821b712b7ee2f7b4912baa8be7b3f27d0	libxmlrpc_server++.so.8	libxmlrpc++.so.8,libxmlrpc_server.so.3,libxmlrpc.so.3,libxmlrpc_xmlparse.so.3,libxmlrpc_xmltok.so.3,libxmlrpc_util++.so.8,libxmlrpc_util.so.3,libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libSDL_mixer-1.2.so.0.12.0	ELF		81272	b1c96aef6f6bf9a87c3be90573b12f2bdc8a6959f352925a185568f0913ec134	libSDL_mixer-1.2.so.0	libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libmad.so.0,libc.so.0	soft
+garlic	/usr/lib/libmad.so	link	libmad.so.0.2.1					
+garlic	/usr/lib/libgstcontroller-0.10.so.0	link	libgstcontroller-0.10.so.0.30.0					
+garlic	/usr/lib/libpcreposix.so	link	libpcreposix.so.0.0.5					
+garlic	/usr/lib/libxcb-damage.so.0	link	libxcb-damage.so.0.0.0					
+garlic	/usr/lib/libxcb-randr.so.0	link	libxcb-randr.so.0.1.0					
+garlic	/usr/lib/libstdc++.so	link	libstdc++.so.6.0.24					
+garlic	/usr/lib/libxcb-xvmc.so	link	libxcb-xvmc.so.0.0.0					
+garlic	/usr/lib/libmpg123.so.0	link	libmpg123.so.0.44.8					
+garlic	/usr/lib/libgiomm-2.4.so.1	link	libgiomm-2.4.so.1.3.0					
+garlic	/usr/lib/libpng16.so	link	libpng16.so.16.34.0					
+garlic	/usr/lib/libjpeg.so.9	link	libjpeg.so.9.2.0					
+garlic	/usr/lib/libSM.so.6.0.1	ELF		25904	bade7c42da336fae9ee97dc21559687f01d1267e4d3a8462847f27daa703b655	libSM.so.6	libICE.so.6,libc.so.0	soft
+garlic	/usr/lib/libXdmcp.so	link	libXdmcp.so.6.0.0					
+garlic	/usr/lib/libSDL_sound-1.0.so.1	link	libSDL_sound-1.0.so.1.0.2					
+garlic	/usr/lib/libxkbfile.so	link	libxkbfile.so.1.0.2					
+garlic	/usr/lib/libzip.so.5.0	ELF		104648	d6d407ac2af5b61dc69c20d2745b09cd5805208981baa72f225b811403c2df68	libzip.so.5	libz.so.1,libbz2.so.1.0,libc.so.0	soft
+garlic	/usr/lib/libSDL_gfx.so	link	libSDL_gfx.so.13.9.1					
+garlic	/usr/lib/libao.so	link	libao.so.4.1.0					
+garlic	/usr/lib/giomm-2.4/include/giommconfig.h	file		1094	f583b0b2bf5089a8be7a777e63caa7dea3aceedca4d50f74073044b084efb8bb			
+garlic	/usr/lib/libzip.so	link	libzip.so.5					
+garlic	/usr/lib/libgio-2.0.so	link	libgio-2.0.so.0.5400.2					
+garlic	/usr/lib/libSM.so	link	libSM.so.6.0.1					
+garlic	/usr/lib/libxmlrpc_server.so.3	link	libxmlrpc_server.so.3.39					
+garlic	/usr/lib/libtiff.so.5.2.6	ELF		395660	f250f37b93a32a2b12ff76ec42a9889109b12a4c9fc4fc5d14c7b69572ffaf86	libtiff.so.5	libjpeg.so.9,libz.so.1,libc.so.0	soft
+garlic	/usr/lib/liblua.so	link	liblua.so.5.1.5					
+garlic	/usr/lib/libgstnet-0.10.so	link	libgstnet-0.10.so.0.30.0					
+garlic	/usr/lib/libgbm.so	link	libgbm.so.1.0.0					
+garlic	/usr/lib/libxcb-xvmc.so.0.0.0	ELF		9352	00b78a59c24540db6276746aa2e5d893356b37184b28cbefb1f537cbc1217ac6	libxcb-xvmc.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libspeex.so	link	libspeex.so.1.5.0					
+garlic	/usr/lib/libglut.so	link	libglut.so.3					
+garlic	/usr/lib/libmod_wm.so	ELF		7812	6c8a01c6e99898ad90401393a096571b78f8610ee75011ab2b0d6c923f0c7e0f	libmod_wm.so	libX11.so.6,libxcb.so.1,libXau.so.6,libXdmcp.so.6,libvideo.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libgstrtp-0.10.so	link	libgstrtp-0.10.so.0.25.0					
+garlic	/usr/lib/libmod_scroll.so	ELF		7560	8a0f8918d6502ff968c20be529dfa67e1c6190461e047174d24ca6b1db180df2	libmod_scroll.so	libscroll.so,librender.so,libblit.so,libvideo.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libmenu.so.6	link	libmenu.so.6.0					
+garlic	/usr/lib/libgstbasevideo-0.10.so	link	libgstbasevideo-0.10.so.23.0.0					
+garlic	/usr/lib/libelf.so.1	link	libelf-0.169.so					
+garlic	/usr/lib/libglib-2.0.so.0	link	libglib-2.0.so.0.5400.2					
+garlic	/usr/lib/libcurses.so	link	libncurses.so.6.0					
+garlic	/usr/lib/libxmlrpc_server_pstream++.so.8.39	ELF		26292	99486c3d4b1cd2a633331efd9524ce2a7b8efe04d346b6d55e2b7371ed2b79f9	libxmlrpc_server_pstream++.so.8	libxmlrpc_server++.so.8,libxmlrpc++.so.8,libxmlrpc_packetsocket.so.8,libxmlrpc_server.so.3,libxmlrpc.so.3,libxmlrpc_xmlparse.so.3,libxmlrpc_xmltok.so.3,libxmlrpc_util++.so.8,libxmlrpc_util.so.3,libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libgstbasevideo-0.10.so.23	link	libgstbasevideo-0.10.so.23.0.0					
+garlic	/usr/lib/libxcb-record.so.0.0.0	ELF		13464	0f54d05e39b9697bcc85a75255e6d47325efc553aca4d2be92bc898bf3f17ecc	libxcb-record.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libstdc++.so.6.0.24-gdb.py	file		2418	af4652c40d779b0a1985336ca2ca1c093abe3ec7903e8221eb2a38c280092f85			
+garlic	/usr/lib/libXcursor.so.1	link	libXcursor.so.1.0.2					
+garlic	/usr/lib/libtinyxml.so.0.0.0	ELF		63492	158f9ca8b92015c85a2bc667108103e3d1f0a499fc340224c6d88fdf4f7f8ac1	libtinyxml.so.0	libstdc++.so.6,libc.so.0,libgcc_s.so.1	soft
+garlic	/usr/lib/libX11.so	link	libX11.so.6.3.0					
+garlic	/usr/lib/libSDL2_ttf-2.0.so.0.14.0	ELF		36976	e685f2cc67f486747a8db3b86607231a3fba88175eb30fbd7308c1f28b6db6a3	libSDL2_ttf-2.0.so.0	libfreetype.so.6,libbz2.so.1.0,libpng16.so.16,libz.so.1,libSDL2-2.0.so.0,libts.so.0,libc.so.0	soft
+garlic	/usr/lib/libltdl.so.7	link	libltdl.so.7.3.1					
+garlic	/usr/lib/libgstcodecparsers-0.10.so	link	libgstcodecparsers-0.10.so.23.0.0					
+garlic	/usr/lib/libxmlrpc_abyss.so.3	link	libxmlrpc_abyss.so.3.39					
+garlic	/usr/lib/libgstrtp-0.10.so.0	link	libgstrtp-0.10.so.0.25.0					
+garlic	/usr/lib/libglib-2.0.so	link	libglib-2.0.so.0.5400.2					
+garlic	/usr/lib/libgstcheck-0.10.so.0.30.0	ELF		46832	63f557e58c182f8707e61440f41cc19d3b55f4ec1cc760a8d544a15000bc4d46	libgstcheck-0.10.so.0	libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgthread-2.0.so.0,libgmodule-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libtiff.so.5	link	libtiff.so.5.2.6					
+garlic	/usr/lib/libsvg-cairo.so.1	link	libsvg-cairo.so.1.0.1					
+garlic	/usr/lib/libgif.so.7.0.0	ELF		25896	59cdadfb2c1f382b9799964bbd374d00b354a0cfb5be1e43a6ffacb5d5e73b63	libgif.so.7	libc.so.0	soft
+garlic	/usr/lib/libsigc-2.0.so.0.0.0	ELF		17856	f60db52c06c42d00f6232a519db12931ba94121174f6b103bfc599a651c9fc7a	libsigc-2.0.so.0	libstdc++.so.6,libc.so.0,libgcc_s.so.1	soft
+garlic	/usr/lib/libEGL.so.1.0.0	ELF		125032	70f08811e735817c7781d37a5073223c68e117154a94c4a9c0f04b7d8b0cb2d0	libEGL.so.1	libX11-xcb.so.1,libX11.so.6,libxcb.so.1,libxcb-dri2.so.0,libxcb-xfixes.so.0,libXau.so.6,libXdmcp.so.6,libgbm.so.1,libz.so.1,libatomic.so.1,libexpat.so.1,libdrm.so.2,libglapi.so.0,libc.so.0	soft
+garlic	/usr/lib/libXrender.so	link	libXrender.so.1.3.0					
+garlic	/usr/lib/libxmlrpc_server_cgi.so.3	link	libxmlrpc_server_cgi.so.3.39					
+garlic	/usr/lib/libgstcontroller-0.10.so.0.30.0	ELF		125196	275b509fac37aa916c171c1dadf21a64fdc654ff7c453d3d323a4a6436c09b97	libgstcontroller-0.10.so.0	libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgthread-2.0.so.0,libgmodule-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libreadline.so	link	libreadline.so.7					
+garlic	/usr/lib/libxcb-dri2.so	link	libxcb-dri2.so.0.0.0					
+garlic	/usr/lib/libxcb-xf86dri.so.0.0.0	ELF		13456	50ecf86b15d3dde097056dfde5775910481275400e4a7be06118a3fd107dd995	libxcb-xf86dri.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libxcb-composite.so.0.0.0	ELF		9352	85f4e61bea629113494410cda387b40495fbbbb8a405627614d0a4382038a550	libxcb-composite.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libx264.so.152	ELF		513904	dacaa596fd4ded8e2d76ae8c3804b6b9bfec2114d5f7bea0a0b3929e3f055952	libx264.so.152	libc.so.0	soft
+garlic	/usr/lib/libpcre.so.1	link	libpcre.so.1.2.9					
+garlic	/usr/lib/libsha1.so.0	link	libsha1.so.0.0.0					
+garlic	/usr/lib/libxcb-xvmc.so.0	link	libxcb-xvmc.so.0.0.0					
+garlic	/usr/lib/libsndfile.so.1.0.28	ELF		370912	701e8f2d562f39e3205f22b37de9283a37004d716a74c4c10f5248e2fee499b6	libsndfile.so.1	libc.so.0	soft
+garlic	/usr/lib/xorg/protocol.txt	file		25672	26975b8acc1ffd79632aa0a1f28c4eaa37a8b451b61e39fbf9103cb0e15be5d7			
+garlic	/usr/lib/xorg/modules/libint10.so	ELF		5256	4c2ed3db35896b1cff12740ff2009d1a1a2b7cb9058c9771feca2c74821f78ee	libint10.so	libts.so.0,libpciaccess.so.0,libz.so.1,libc.so.0	soft
+garlic	/usr/lib/xorg/modules/libfbdevhw.so	ELF		17684	8c7f8f499d30b04f2005953ee055c40203128ab177f09a7b3dc20d4661c67279	libfbdevhw.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/xorg/modules/extensions/libglx.so	ELF		204520	05a34118f50a781d0f942c2b54fca0963901ee34eb4c063c1828fbad52156332	libglx.so	libGL.so.1,libz.so.1,libatomic.so.1,libexpat.so.1,libglapi.so.0,libXdamage.so.1,libXfixes.so.3,libX11-xcb.so.1,libxcb-glx.so.0,libxcb-dri2.so.0,libxcb.so.1,libXxf86vm.so.1,libXext.so.6,libX11.so.6,libXau.so.6,libXdmcp.so.6,libdrm.so.2,libts.so.0,libc.so.0	soft
+garlic	/usr/lib/xorg/modules/libshadow.so	ELF		29908	353cb0e3b32e3748d5a4ff66dd5242b647713a6e5d15db3210d3f473bd0371ac	libshadow.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/xorg/modules/drivers/modesetting_drv.so	ELF		51188	b34c1ea0752fc55fe30aba5a5e373f3ef4f75ef128a596944647b0b0b79ec189	modesetting_drv.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/xorg/modules/libexa.so	ELF		79508	7b796f1021e071be1406208197d49f279168b6df42862fe1962117c74b806e05	libexa.so	libts.so.0,libpixman-1.so.0,libc.so.0	soft
+garlic	/usr/lib/xorg/modules/libwfb.so	ELF		157688	80a533f4e5d0df5e5891806aa75e48931e101ddde340bb628a92dc325131d851	libwfb.so	libts.so.0,libpixman-1.so.0,libc.so.0	soft
+garlic	/usr/lib/xorg/modules/libshadowfb.so	ELF		5292	1e076cc1b938dd1f33692c1618cb21d8bc78dbf07ea7ecd67385e5489f38f77e	libshadowfb.so	libts.so.0,libpixman-1.so.0,libc.so.0	soft
+garlic	/usr/lib/xorg/modules/libvbe.so	ELF		25932	042a30ac8ccc2844024b88290a305c5373416cbaa59b8cb0bf36fae1afff8646	libvbe.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/xorg/modules/libvgahw.so	ELF		26672	f6147fe9e6aced2fc804382241260cb779141927be13e1da21b6568d12cb6621	libvgahw.so	libts.so.0,libpciaccess.so.0,libz.so.1,libc.so.0	soft
+garlic	/usr/lib/xorg/modules/libfb.so	ELF		116724	756063b45f2559e8bff5c27a4564dc8092fe39ecd1a182ac05a9c66ead60c510	libfb.so	libts.so.0,libpixman-1.so.0,libc.so.0	soft
+garlic	/usr/lib/libXxf86vm.so.1	link	libXxf86vm.so.1.0.0					
+garlic	/usr/lib/libxmlrpc_server_cgi++.so.8.39	ELF		17992	7258f48cec1a7cc973b373a8799e72872924d1a4b8f35da3ecc922edb84344a5	libxmlrpc_server_cgi++.so.8	libxmlrpc_server++.so.8,libxmlrpc++.so.8,libxmlrpc_server.so.3,libxmlrpc.so.3,libxmlrpc_xmlparse.so.3,libxmlrpc_xmltok.so.3,libxmlrpc_util++.so.8,libxmlrpc_util.so.3,libstdc++.so.6,libgcc_s.so.1,libc.so.0	soft
+garlic	/usr/lib/libbgload.so	ELF		7260	d8db9c6158134bd54281a1544dd42a359d69cd0a3acd11a5267f59b812e672c7	libbgload.so	libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libXfont2.so.2.0.0	ELF		171460	fd31c87814745112cb17322fce9cd5abec593eba3c341f686316f18b44f6a821	libXfont2.so.2	libz.so.1,libfontenc.so.1,libfreetype.so.6,libc.so.0	soft
+garlic	/usr/lib/libgstsdp-0.10.so.0	link	libgstsdp-0.10.so.0.25.0					
+garlic	/usr/lib/libxcb-shape.so	link	libxcb-shape.so.0.0.0					
+garlic	/usr/lib/libcharset.so	link	libcharset.so.1.0.0					
+garlic	/usr/lib/libxcb-screensaver.so	link	libxcb-screensaver.so.0.0.0					
+garlic	/usr/lib/libgstinterfaces-0.10.so.0.25.0	ELF		58860	bb65cdb86b91ebaec04b37ecd5fc1599c52c541e37d6786c4aec47d2fa187eb3	libgstinterfaces-0.10.so.0	libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libmod_file.so	ELF		13344	3b8a2b8d993ee86c24c2ffddbc69bb6fa67c555142ecf8615071b0ed4041ef76	libmod_file.so	libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libxcb-dpms.so.0.0.0	ELF		9352	3235dd923f42c5ca4b711023eb9fa9ef71471f33384e0fb1493170f259b828d3	libxcb-dpms.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libpcrecpp.so.0.0.1	ELF		26152	1cfa61eac8cdc8c8c27ea83f7a34da6fbc531430df8ec6ef8068f95e9bf2e4df	libpcrecpp.so.0	libpcre.so.1,libstdc++.so.6,libc.so.0,libgcc_s.so.1	soft
+garlic	/usr/lib/libxmlrpc_server.so	link	libxmlrpc_server.so.3					
+garlic	/usr/lib/libSDL_gfx.so.13	link	libSDL_gfx.so.13.9.1					
+garlic	/usr/lib/libbgdrtm.so	ELF		215256	bad45c803590c81cd1a57475918396c3fe783d6a4605682cf2b8d7e248c4a491	libbgdrtm.so	libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libao.so.4	link	libao.so.4.1.0					
+garlic	/usr/lib/libmod_rand.so	ELF		8688	59ed7f17da783cb73766a0f2c069ee004787c371ba1c9f3c415667258aba961d	libmod_rand.so	libc.so.0,libdes.so	soft
+garlic	/usr/lib/ts/iir.so	ELF		5280	57b8a1b097860d8c7b7331abb2b80a7d9d8ab05a552ca61edc1736a7415f4c44	iir.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/ts/lowpass.so	ELF		9376	8428cb078520ffff4e06a4762eff2083a5821ad8302d7c9ea30787c97cae4c1f	lowpass.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/ts/waveshare.so	ELF		5304	1f51f7c3ef4e210d8bd56c09fd7b9ac495f6f4540b913a4967474a9bff5ae1cd	waveshare.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/ts/pthres.so	ELF		5272	0d968ce729a371e755a1b86ccd05e99c70593a548d2a536a3811dd27e26abe3e	pthres.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/ts/touchkit.so	ELF		5220	0a6b9b0482adaf2e540848f8b64874905ba1478dc2b315689a1033aa0af77cda	touchkit.so	libc.so.0	soft
+garlic	/usr/lib/ts/skip.so	ELF		9372	d91accc83ffec6f53551a9d4a7ea7715d6ac1b59c38d77072c713467317730f7	skip.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/ts/input.so	ELF		9392	6c4d21559aeaf896863b1cabca5e98a3fc302c6531dd01e7d22cc94500320e05	input.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/ts/dejitter.so	ELF		5272	da781752b7e35d1c70cbcff51b180faea78c4edc48755dfcf47002d17843493d	dejitter.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/ts/debounce.so	ELF		9372	da6ad674df354e301c0a14f6d3f07ed8525583ec9242b471fc6106f7896bc78e	debounce.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/ts/variance.so	ELF		9372	ba87ef1cc92a792cd935ec6cc4a129d68f135f743c011bd7fc563974ee8d56c8	variance.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/ts/median.so	ELF		9392	5f488093417960f1870e880433b314f68ff55b233e85188f384c0a5de688c6c9	median.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/ts/tatung.so	ELF		5208	7e83b36102f534d7be3aefc886bd2369f7f70345c5157526cb2650eeab8852ab	tatung.so	libc.so.0	soft
+garlic	/usr/lib/ts/linear.so	ELF		9396	44f677c318dee1cb817def57795e087790f7209d2c76e3180210d1c4ef6de8b8	linear.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/ts/invert.so	ELF		5268	e639f46cc0d912679b1f9e65a90693d7195e8fc67e7f82a0514ed81de78ce993	invert.so	libts.so.0,libc.so.0	soft
+garlic	/usr/lib/libxml++-2.6.so.2.0.7	ELF		159024	c68e268860fbf24162654c1cf52fe88706891ba6b346c179cf61d33f973fe90e	libxml++-2.6.so.2	libxml2.so.2,libglibmm-2.4.so.1,libgobject-2.0.so.0,libglib-2.0.so.0,libsigc-2.0.so.0,libstdc++.so.6,libc.so.0,libgcc_s.so.1	soft
+garlic	/usr/lib/libXdmcp.so.6.0.0	ELF		17584	0abc7a6f138b6247a9c1b75391d4f1b761e0176ec2019533a095f0b1197e32ed	libXdmcp.so.6	libc.so.0	soft
+garlic	/usr/lib/libmenu.so.6.0	ELF		21952	a2c274ef310e544d99ab7c2434a27386555fca476c62bd7fb6169ff21062fc0d	libmenu.so.6	libc.so.0,libncurses.so.6	soft
+garlic	/usr/lib/libxcb-shm.so.0.0.0	ELF		9360	81a94a5fc0d55e3b2abd08dab5628863aa0b9b7c5608cd26f73ef60703d6ec9e	libxcb-shm.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libxcb-xv.so	link	libxcb-xv.so.0.0.0					
+garlic	/usr/lib/libvideo.so	ELF		26400	c6d77b3df99e3028256f31f2fea855af2e71a2a4fd32a44d7d079d57a837adc0	libvideo.so	libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libmod_video.so	ELF		7992	17f2bb9835cb84059c6e50bdb8685d940f050b5b1e50b24b6cd6891caf95f15b	libmod_video.so	librender.so,libblit.so,libvideo.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libxcb-sync.so.1.0.0	ELF		17588	ca7935a578f15b8c6c8669d3b950f5181d160964ff973acbe7e281510094263d	libxcb-sync.so.1	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libxmlrpc_server_abyss.so.3	link	libxmlrpc_server_abyss.so.3.39					
+garlic	/usr/lib/libxmlrpc++.so	link	libxmlrpc++.so.8					
+garlic	/usr/lib/libxml++-2.6.so	link	libxml++-2.6.so.2.0.7					
+garlic	/usr/lib/libglibmm_generate_extra_defs-2.4.so.1	link	libglibmm_generate_extra_defs-2.4.so.1.3.0					
+garlic	/usr/lib/libhistory.so.7.0	ELF		30124	e6116f74ef15ee79d3001522271d251eda32f5a32b8b8d4c6f7a7edb849e0acc	libhistory.so.7	libncurses.so.6,libc.so.0	soft
+garlic	/usr/lib/libvorbis.so	link	libvorbis.so.0.4.8					
+garlic	/usr/lib/libgstfft-0.10.so	link	libgstfft-0.10.so.0.25.0					
+garlic	/usr/lib/liblz4.so	link	liblz4.so.1.7.5					
+garlic	/usr/lib/libpcrecpp.so.0	link	libpcrecpp.so.0.0.1					
+garlic	/usr/lib/libpangocairo-1.0.so	link	libpangocairo-1.0.so.0.4000.14					
+garlic	/usr/lib/libSDL_image.so	link	libSDL_image-1.2.so.0.8.4					
+garlic	/usr/lib/librender.so	ELF		102924	0a17f3366162d70be665bce92ad9d41d2a72f5bb6ffc0edd381070f394363b44	librender.so	libvideo.so,libblit.so,libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libz.so.1,libgrbase.so,libc.so.0,libdes.so	soft
+garlic	/usr/lib/libgthread-2.0.so	link	libgthread-2.0.so.0.5400.2					
+garlic	/usr/lib/libxcb-render.so	link	libxcb-render.so.0.0.0					
+garlic	/usr/lib/libmad.so.0	link	libmad.so.0.2.1					
+garlic	/usr/lib/libGLESv1_CM.so.1	link	libGLESv1_CM.so.1.1.0					
+garlic	/usr/lib/libgstpbutils-0.10.so.0	link	libgstpbutils-0.10.so.0.25.0					
+garlic	/usr/lib/libXv.so.1	link	libXv.so.1.0.0					
+garlic	/usr/lib/ckport/db/libao.ckport	file		491	7cf90abbaa972f5bec2641287c3be028657bee67913998b783285f327135fcfc			
+garlic	/usr/lib/libXtst.so	link	libXtst.so.6.1.0					
+garlic	/usr/lib/libpangoft2-1.0.so.0.4000.14	ELF		67692	0d4510f8c7ae993cd99032542cdc10d8d5ba9bb0a2b12af3054a7d458caa7ebf	libpangoft2-1.0.so.0	libpango-1.0.so.0,libgobject-2.0.so.0,libffi.so.6,libgthread-2.0.so.0,libglib-2.0.so.0,libharfbuzz.so.0,libiconv.so.2,libpcre.so.1,libfontconfig.so.1,libexpat.so.1,libfreetype.so.6,libbz2.so.1.0,libpng16.so.16,libz.so.1,libc.so.0	soft
+garlic	/usr/lib/libxmlrpc_packetsocket.so	link	libxmlrpc_packetsocket.so.8					
+garlic	/usr/lib/libgstcodecparsers-0.10.so.23.0.0	ELF		132292	bdf2305ccc7756c022bc57f787f71076e32417179992eb2b23b3e126416dc48b	libgstcodecparsers-0.10.so.23	libgstbase-0.10.so.0,libgstreamer-0.10.so.0,libgobject-2.0.so.0,libgmodule-2.0.so.0,libgthread-2.0.so.0,libglib-2.0.so.0,libc.so.0	soft
+garlic	/usr/lib/libvorbis.so.0.4.8	ELF		161288	31fc747333a100d139333e465daf6f3846e0bad482c43de4cef9cb4b6ec1dc30	libvorbis.so.0	libogg.so.0,libc.so.0	soft
+garlic	/usr/lib/libasm.so	link	libasm.so.1					
+garlic	/usr/lib/libpangoft2-1.0.so	link	libpangoft2-1.0.so.0.4000.14					
+garlic	/usr/lib/libts.so	link	libts.so.0.9.0					
+garlic	/usr/lib/libxcb-render.so.0	link	libxcb-render.so.0.0.0					
+garlic	/usr/lib/libmod_cd.so	ELF		12992	a7e6cc4740991cecdf47e42faae5cb64d694971252b4726bafed3847e15fd72e	libmod_cd.so	libSDL-1.2.so.0,libiconv.so.2,libts.so.0,libbgdrtm.so,libc.so.0,libdes.so,libz.so.1	soft
+garlic	/usr/lib/libsigc-2.0.so.0	link	libsigc-2.0.so.0.0.0					
+garlic	/usr/lib/libBulletCollision.so	link	libBulletCollision.so.2.86					
+garlic	/usr/lib/libxcb-randr.so.0.1.0	ELF		42240	78dea0b32e53af20c6861007839eee8b1484aa0b85e4b484848fe6d8ba2ef5e4	libxcb-randr.so.0	libxcb.so.1,libc.so.0	soft
+garlic	/usr/lib/libXext.so	link	libXext.so.6.4.0					
+garlic	/usr/lib/libxmlrpc_server++.so.8	link	libxmlrpc_server++.so.8.39					
+garlic	/usr/lib/libgstphotography-0.10.so.23	link	libgstphotography-0.10.so.23.0.0					
+base	/lib/arm-linux-gnueabihf/libBrokenLocale.so.1	link	libBrokenLocale-2.15.so					
+base	/lib/arm-linux-gnueabihf/libcidn-2.15.so	ELF		177792	ac2d5ab99ab2302b1c3b07aba1a102528cf65c058a61c3dc82effe1ae6b02c50	libcidn.so.1	libc.so.6	
+base	/lib/arm-linux-gnueabihf/libthread_db.so.1	link	libthread_db-1.0.so					
+base	/lib/arm-linux-gnueabihf/libcidn.so.1	link	libcidn-2.15.so					
+base	/lib/arm-linux-gnueabihf/libpcprofile.so	ELF		5592	497bfb59f920a0e2ba48d66f696e4d9a53312029ff63dd91cd62b0f1dfc1b0cb	libpcprofile.so	libc.so.6	
+base	/lib/arm-linux-gnueabihf/libnss_nis.so.2	link	libnss_nis-2.15.so					
+base	/lib/arm-linux-gnueabihf/librt.so.1	link	librt-2.15.so					
+base	/lib/arm-linux-gnueabihf/ld-linux.so.3	link	ld-linux-armhf.so.3					
+base	/lib/arm-linux-gnueabihf/libattr.so.1.1.0	ELF		13776	44efdfeafb8546f6ebcd9fd35fa3840870c541b6db21503a6c131111c0345c0e	libattr.so.1	libc.so.6,ld-linux.so.3	
+base	/lib/arm-linux-gnueabihf/libnss_nisplus.so.2	link	libnss_nisplus-2.15.so					
+base	/lib/arm-linux-gnueabihf/libnss_dns.so.2	link	libnss_dns-2.15.so					
+base	/lib/arm-linux-gnueabihf/libutil.so.1	link	libutil-2.15.so					
+base	/lib/arm-linux-gnueabihf/libattr.so.1	link	libattr.so.1.1.0					
+base	/lib/arm-linux-gnueabihf/libnss_files-2.15.so	ELF		34756	ae965202047306f0379896edb44b5d3cadb82834513b0f732d6be3d584722df5	libnss_files.so.2	libc.so.6	
+base	/lib/arm-linux-gnueabihf/libanl.so.1	link	libanl-2.15.so					
+base	/lib/arm-linux-gnueabihf/libresolv-2.15.so	ELF		55156	b6699a0cf3c0602077456afb92ac575e8e8a3f8758df6a8ac8884e236b174b92	libresolv.so.2	libc.so.6,ld-linux-armhf.so.3	
+base	/lib/arm-linux-gnueabihf/ld-2.15.so	ELF		97580	f80cb83989c2c60353abbb9adef8d9f3ec5aaec979d0c6aa24f84deb81c5b53a	ld-linux-armhf.so.3		
+base	/lib/arm-linux-gnueabihf/libc-2.15.so	ELF		881932	46140190b6bea73257c654c24767a0d01e55f35816059aaae3e3df535b75e65e	libc.so.6	ld-linux-armhf.so.3	
+base	/lib/arm-linux-gnueabihf/libnsl-2.15.so	ELF		55244	dcb39a4f6c8b0639d09bb44527b0663480d773f1f0c79301f4c11beb2ee3240a	libnsl.so.1	libc.so.6	
+base	/lib/arm-linux-gnueabihf/libm.so.6	link	libm-2.15.so					
+base	/lib/arm-linux-gnueabihf/libnss_files.so.2	link	libnss_files-2.15.so					
+base	/lib/arm-linux-gnueabihf/libresolv.so.2	link	libresolv-2.15.so					
+base	/lib/arm-linux-gnueabihf/libutil-2.15.so	ELF		9852	286f1816081a8a7282097c110d001b10df5f5e599cb68e35f829504458f4d60a	libutil.so.1	libc.so.6	
+base	/lib/arm-linux-gnueabihf/libpthread-2.15.so	ELF		100802	0f1159cea9ef46c35b927af28970f5eae2f1bbc2508b6139bc83ce87ccb880e5	libpthread.so.0	libc.so.6,ld-linux-armhf.so.3	
+base	/lib/arm-linux-gnueabihf/libnss_nis-2.15.so	ELF		30420	23e5158a69fbae3386bbe0062536a5715cbb1e7120cc62af70fd91a7ea36fece	libnss_nis.so.2	libnsl.so.1,libnss_files.so.2,libc.so.6	
+base	/lib/arm-linux-gnueabihf/libmemusage.so	ELF		13920	cc7876cddd59965725ff7954dd2245a1a1d87e07035ef4ca19f022bf8bbfe430	libmemusage.so	libdl.so.2,ld-linux-armhf.so.3,libc.so.6	
+base	/lib/arm-linux-gnueabihf/libanl-2.15.so	ELF		14204	d37e6bd057d6d3ff3f50bbd660d5d842543ba567cad1275025432f947fc49cc0	libanl.so.1	libc.so.6,libpthread.so.0	
+base	/lib/arm-linux-gnueabihf/libnss_hesiod.so.2	link	libnss_hesiod-2.15.so					
+base	/lib/arm-linux-gnueabihf/libdl.so.2	link	libdl-2.15.so					
+base	/lib/arm-linux-gnueabihf/libthread_db-1.0.so	ELF		22312	e016fdbd075252a72c415ba3e24de5a521b5add106bc5bcb754c81bd6b3114cb	libthread_db.so.1	libc.so.6	
+base	/lib/arm-linux-gnueabihf/libnss_hesiod-2.15.so	ELF		13960	c9f66488c807580cd9cdd03b8f4e3e6ec2569768acdafcdab19654417de3a826	libnss_hesiod.so.2	libresolv.so.2,libc.so.6	
+base	/lib/arm-linux-gnueabihf/libacl.so.1	link	libacl.so.1.1.0					
+base	/lib/arm-linux-gnueabihf/libnss_nisplus-2.15.so	ELF		34504	bb4d8390cacd5593b321ee4b4ede82d99a5e46e1e4ef3d1b814b87aac44198c7	libnss_nisplus.so.2	libnsl.so.1,libc.so.6	
+base	/lib/arm-linux-gnueabihf/libnss_dns-2.15.so	ELF		13948	69a3cc9c73941c823c6eba6e055dc38d2f068c358d1935a704f3d14c55982edc	libnss_dns.so.2	libresolv.so.2,libc.so.6	
+base	/lib/arm-linux-gnueabihf/librt-2.15.so	ELF		22548	907613e8449ae9b664bfa9652eed25f82e97f2938c124c0113b830bbc6b27aeb	librt.so.1	libc.so.6,libpthread.so.0	
+base	/lib/arm-linux-gnueabihf/libBrokenLocale-2.15.so	ELF		5640	d345e36ef3597be8f292db15fe716165e50a891eff7f6d4a99901f5b579c4bb2	libBrokenLocale.so.1	libc.so.6	
+base	/lib/arm-linux-gnueabihf/libnss_compat.so.2	link	libnss_compat-2.15.so					
+base	/lib/arm-linux-gnueabihf/libpthread.so.0	link	libpthread-2.15.so					
+base	/lib/arm-linux-gnueabihf/ld-linux-armhf.so.3	link	ld-2.15.so					
+base	/lib/arm-linux-gnueabihf/libSegFault.so	ELF		9756	98873cdd6468785939d673a812b12f711b0719ca8f00af233f76773f2b7986e4	libSegFault.so	libc.so.6	
+base	/lib/arm-linux-gnueabihf/libm-2.15.so	ELF		398928	db61779ed10c91d8b9f434e6c34035d0c0b073152858294c2d327dceade8a542	libm.so.6	ld-linux-armhf.so.3,libc.so.6	
+base	/lib/arm-linux-gnueabihf/libcrypt-2.15.so	ELF		26184	0eaa2db92e6f97d38796d811ec74c6d851c8762cb50d263ce3c102495229a013	libcrypt.so.1	libc.so.6	
+base	/lib/arm-linux-gnueabihf/libnsl.so.1	link	libnsl-2.15.so					
+base	/lib/arm-linux-gnueabihf/libnss_compat-2.15.so	ELF		22392	3d33573dd5825b54325356656b3a59b48635222637cb1a0bfe00805754b158c0	libnss_compat.so.2	libnsl.so.1,libc.so.6	
+base	/lib/arm-linux-gnueabihf/libdl-2.15.so	ELF		9816	c1765ad92436e73bda84f1c7c29e8326968bb02e21decd11054cd571e669aae1	libdl.so.2	libc.so.6,ld-linux-armhf.so.3	
+base	/lib/arm-linux-gnueabihf/libacl.so.1.1.0	ELF		22108	12ce1a5c8720b03af7f334634adf3a4e384022d2bee1edfd7e56c1305448b90c	libacl.so.1	libattr.so.1,libc.so.6,ld-linux.so.3	
+base	/lib/arm-linux-gnueabihf/libcrypt.so.1	link	libcrypt-2.15.so					
+base	/lib/arm-linux-gnueabihf/libc.so.6	link	libc-2.15.so					
+base	/lib/ld-linux-armhf.so.3	link	arm-linux-gnueabihf/ld-2.15.so					
+base	/system/lib/libpng.so.3.35.0	ELF		105328	731944d6c29b9b483e55f4f8b1e81439515b3fa92768af1f04900ed34a4f6a7a	libpng.so.3	libz.so.1,libm.so.6,libc.so.6	
+base	/system/lib/libjpeg.so.9	link	libjpeg.so.9.3.0					
+base	/system/lib/libSDL_gfx.la	file		1092	f4011330bdcea02aa245f8774ef892a2b52bb79f7b08c35ac57ae5b474898e05			
+base	/system/lib/libpng12.so	link	libpng12.so.0.35.0					
+base	/system/lib/libpng.so	link	libpng12.so					
+base	/system/lib/libdl.so	ELF		9224	d5bb7690113bed5d75c6af6cb7fd6c522b3d7b9a9330d6d7b0ad2d0a736480de	libdl.so		
+base	/system/lib/libiconv.so	link	libiconv.so.2.6.0					
+base	/system/lib/libz.so	link	libz.so.1.2.11					
+base	/system/lib/libcharset.so.1	link	libcharset.so.1.0.0					
+base	/system/lib/libSDL-1.2.so.0	link	libSDL-1.2.so.0.11.4					
+base	/system/lib/libSDL_ttf.la	file		1201	266a666d03cba22e8ecc7aa52e04eaa62f79be7cff3fbff3ed4aed88ec43e7c8			
+base	/system/lib/libpng12.so.0	link	libpng12.so.0.35.0					
+base	/system/lib/libz.so.1.2.11	ELF		75040	7bd68841cb117402e2e3d6a064c74115d89251b25301c2cfe3c94acb841fa3e8	libz.so.1	libc.so.6,libgcc_s.so.1	
+base	/system/lib/preloadable_libiconv.so	ELF		881600	12f52acb1cebd1f6d0f7545821670fb9e1a477a7460495ba0e2efa75fcdb804d	libiconv.so.0	libc.so.6	
+base	/system/lib/libpng12.la	file		1045	329a838e220b65dfe5c96627e2400559aa30d250f30f38e8ad320fc15c49258d			
+base	/system/lib/libSDLmain.la	file		925	e4d990e5963fc35f7459c414a81d06e5f1ed2df11351adec5f21d094247508de			
+base	/system/lib/libcharset.so	link	libcharset.so.1.0.0					
+base	/system/lib/libSDL_image.la	file		1279	870b1b0250bcc55c3abf0fa573250a60e27a648876b960ede32828e752f19b31			
+base	/system/lib/libpng12.so.0.35.0	ELF		94668	f121952005cbbef103f104a86bdfb4322b26ae515a43c216cf41f8191e968b11	libpng12.so.0	libz.so.1,libm.so.6,libc.so.6	
+base	/system/lib/libiconv.la	file		941	cb076f6ae933a8217e26de67bb376b5b4306b53be9dcc10e22699441f3870110			
+base	/system/lib/libpng.so.3	link	libpng.so.3.35.0					
+base	/system/lib/libfreetype.so	link	libfreetype.so.6.8.0					
+base	/system/lib/libSDL_ttf-2.0.so.0	link	libSDL_ttf-2.0.so.0.10.1					
+base	/system/lib/liblog.so	ELF		13432	409c3cf7879607a8b65b17dca4c5b4e6fb0ab091000a0bd9182a416309a851d8	liblog.so	libc.so	
+base	/system/lib/libstdc++.so	ELF		5228	062ab6deabee9d58b9c97ad5fb7703c11e718e73a2f3c0782b299a87761c70b9	libstdc++.so	libc.so	
+base	/system/lib/libiconv.so.2.6.0	ELF		885484	d1ae9a92fae20642379074e9bc83ee32b5c8464c90da78a7db94448a7c1f78c6	libiconv.so.2	libc.so.6	
+base	/system/lib/libcharset.la	file		953	397f808411e04cd87f2b9570e2b9988adae794424f1dbb0fcdcf62f7123e39d1			
+base	/system/lib/libSDL_ttf-2.0.so.0.10.1	ELF		20708	c54c2fb7add72d9dc4a66867fef97c65c74dddf0d5028b7bc3a75f44a8ad68f8	libSDL_ttf-2.0.so.0	libiconv.so.2,libfreetype.so.6,libSDL-1.2.so.0,libm.so.6,libdl.so.2,libpthread.so.0,libc.so.6	
+base	/system/lib/libSDL_image-1.2.so.0	link	libSDL_image-1.2.so.0.8.4					
+base	/system/lib/libjpeg.so.9.3.0	ELF		152668	6d347a46eb5700c052bca76f0f58ccf64f12f9a54616e49dc3d9f2390ba84d8d	libjpeg.so.9	libc.so.6	
+base	/system/lib/libm.so	ELF		103732	3b52551f31e36e8ba6443214c841cdb43623fca6d90df3bf41e8be3cc34dcceb	libm.so	libc.so	
+base	/system/lib/charset.alias	file		227	1556144717af1d632a93f3467b69426b5fcc4a9d0b3d119a3f7d8df072f1a66c			
+base	/system/lib/libpng.la	link	libpng12.la					
+base	/system/lib/libSDL_image.so	link	libSDL_image-1.2.so.0.8.4					
+base	/system/lib/libSDL_gfx.so	link	libSDL_gfx.so.15.9.1					
+base	/system/lib/libcharset.so.1.0.0	ELF		4900	b44d0cd7b76269d41987ca2621ca38530b1cf12beb3c72bc637024e23be11ecd	libcharset.so.1	libc.so.6	
+base	/system/lib/libcutils.so	ELF		42216	de4d596296c8dba746f4211eefe341d7bf7fd512f4f62adfff38eb9801609d7c	libcutils.so	liblog.so,libc.so	
+base	/system/lib/libSDL_gfx.so.15	link	libSDL_gfx.so.15.9.1					
+base	/system/lib/libSDL_image-1.2.so.0.8.4	ELF		26624	b57e9bc67ca9626c03cbd80420a214d1033c35de888be443a0a81bd19440ae15	libSDL_image-1.2.so.0	libjpeg.so.9,libpng12.so.0,libz.so.1,libSDL-1.2.so.0,libm.so.6,libdl.so.2,libpthread.so.0,libc.so.6	
+base	/system/lib/libjpeg.so	link	libjpeg.so.9.3.0					
+base	/system/lib/libSDL-1.2.so.0.11.4	ELF		196044	d1acdfb0493b3e6533b6609ad2388cf4bb6a165692da3c09d22da768e56efab4	libSDL-1.2.so.0	libm.so.6,libdl.so.2,libpthread.so.0,libgcc_s.so.1,libc.so.6	
+base	/system/lib/libc.so	ELF		351632	09268983ed7f0cac42e9d7cb284af6e1b7baed31e5431f20e2abc031f76fe7ac	libc.so	libdl.so	
+base	/system/lib/libfreetype.so.6.8.0	ELF		343612	980d0bea4199a6f443a46779770c96830763e3439bc92ad7d15233f4a3560497	libfreetype.so.6	libc.so.6	
+base	/system/lib/libSDL.la	file		966	683f9967a281b1d5ab2c92576889c844808c5825dd2c2639253c62bd8cbe029d			
+base	/system/lib/libfreetype.so.6	link	libfreetype.so.6.8.0					
+base	/system/lib/libiconv.so.2	link	libiconv.so.2.6.0					
+base	/system/lib/libSDL_gfx.so.15.9.1	ELF		76812	0daec38d9a5b20361891a3dc52a63fd0c3ae01a16536ac51f72dd7214b6e7d81	libSDL_gfx.so.15	libm.so.6,libSDL-1.2.so.0,libpthread.so.0,libc.so.6	
+base	/system/lib/libz.so.1	link	libz.so.1.2.11					
+base	/system/lib/libpagemap.so	ELF		9272	fc1988aae37204a81d4ac0f7408d893bdee1530ec4fdede13aa62a788962e9c0	libpagemap.so	liblog.so,libc.so	
+base	/system/lib/libfreetype.la	file		959	9494fa38bf2ec44f8d29304d41e86d2776cc3e6299bef3f963b42146fdcb6762			
+base	/system/lib/libjpeg.la	file		936	0e80c6fd4afca3be3e95d9e6b1fdbe2a914896058919636942c72db67a81bb9d			
+base	/system/lib/libthread_db.so	ELF		5228	58c8e3df9565f9e36d372ee3cba2d91670232b1e8aa0785e388041bda736849e	libthread_db.so	libdl.so,libc.so	
+base	/system/lib/libSDL.so	link	libSDL-1.2.so.0.11.4					
+base	/system/lib/libSDL_ttf.so	link	libSDL_ttf-2.0.so.0.10.1					
+base	/system/usr/lib/libitm.so.1.0.0	ELF		987161	40bc8aa7810afb97901fefa4251be4d4f50c89397954b73a1e31b1ba78338f40	libitm.so.1	libgcc_s.so.1,libpthread.so.0,libc.so.6	
+base	/system/usr/lib/libssp.so.0.0.0	ELF		37788	dab9a70e4f283453040b0a02e106abe8a612961cb6a8839f1741c0bba1930a46	libssp.so.0	libc.so.6	
+base	/system/usr/lib/libstdc++.so.6	link	libstdc++.so.6.0.17					
+base	/system/usr/lib/libgomp.so	link	libgomp.so.1.0.0					
+base	/system/usr/lib/libmudflap.so	link	libmudflap.so.0.0.0					
+base	/system/usr/lib/libmudflapth.so.0.0.0	ELF		291073	aa60838cd532418d1eb954ad5f975ff70c5ba37e26ad42c070b3c7c27ebcad18	libmudflapth.so.0	libdl.so.2,libc.so.6,ld-linux-armhf.so.3	
+base	/system/usr/lib/libgomp.so.1	link	libgomp.so.1.0.0					
+base	/system/usr/lib/libmudflapth.so.0	link	libmudflapth.so.0.0.0					
+base	/system/usr/lib/libgomp.so.1.0.0	ELF		290122	8c169df6766091cb61fe8b3d5963d33309d2c0b84c346633d4975a039de38859	libgomp.so.1	librt.so.1,libgcc_s.so.1,libpthread.so.0,libc.so.6	
+base	/system/usr/lib/libmudflap.so.0.0.0	ELF		281632	958d23e6e2d17d6cc154fe8fe2be56d5adc277a63d19c9a1b84467349d36bb65	libmudflap.so.0	libdl.so.2,libc.so.6	
+base	/system/usr/lib/libssp.so.0	link	libssp.so.0.0.0					
+base	/system/usr/lib/libgfortran.so.3.0.0	ELF		3380186	81bd06762bd1795319842b4f430b04080b98db27b6b03f35dd338dc28fe9cb7f	libgfortran.so.3	libm.so.6,libgcc_s.so.1,libc.so.6	
+base	/system/usr/lib/libstdc++.so.6.0.17	ELF		4926046	0bbd60f471b268446f62c1870cc313228eb84ea5a3b03ed56872dd3a9b880a9f	libstdc++.so.6	libm.so.6,libc.so.6,ld-linux-armhf.so.3,libgcc_s.so.1	
+base	/system/usr/lib/libstdc++.so.6.0.17-gdb.py	file		2453	e9c74434218065cba57e4df303a6e501a45a20e0b5ff9cef33d7f32307cd74cf			
+base	/system/usr/lib/libstdc++.so	link	libstdc++.so.6.0.17					
+base	/system/usr/lib/libgcc_s.so	file		135	8ecba4e125a2ce55a56ce526fa9096fefe92d841ab62dbde606ba56b5c833554			
+base	/system/usr/lib/libitm.so.1	link	libitm.so.1.0.0					
+base	/system/usr/lib/libitm.so	link	libitm.so.1.0.0					
+base	/system/usr/lib/libmudflap.so.0	link	libmudflap.so.0.0.0					
+base	/system/usr/lib/libmudflapth.so	link	libmudflapth.so.0.0.0					
+base	/system/usr/lib/libssp.so	link	libssp.so.0.0.0					
+base	/system/usr/lib/libgfortran.so	link	libgfortran.so.3.0.0					
+base	/system/usr/lib/libgfortran.so.3	link	libgfortran.so.3.0.0					
+base	/system/usr/lib/libgcc_s.so.1	ELF		1473720	08da10196c5bb6ef88bd20d0ff0c80dee13ffd817b3774dc0f75f96e4f2e2451	libgcc_s.so.1	libc.so.6	
+base	/system/usr/local/lib/ld-linux-armhf.so.3	link	arm-linux-gnueabihf/ld-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libc.so.6	link	libc-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libcrypt.so.1	link	libcrypt-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libacl.so.1.1.0	ELF		22108	12ce1a5c8720b03af7f334634adf3a4e384022d2bee1edfd7e56c1305448b90c	libacl.so.1	libattr.so.1,libc.so.6,ld-linux.so.3	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libdl-2.15.so	ELF		9816	c1765ad92436e73bda84f1c7c29e8326968bb02e21decd11054cd571e669aae1	libdl.so.2	libc.so.6,ld-linux-armhf.so.3	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnss_compat-2.15.so	ELF		22392	3d33573dd5825b54325356656b3a59b48635222637cb1a0bfe00805754b158c0	libnss_compat.so.2	libnsl.so.1,libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnsl.so.1	link	libnsl-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libcrypt-2.15.so	ELF		26184	0eaa2db92e6f97d38796d811ec74c6d851c8762cb50d263ce3c102495229a013	libcrypt.so.1	libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libm-2.15.so	ELF		398928	db61779ed10c91d8b9f434e6c34035d0c0b073152858294c2d327dceade8a542	libm.so.6	ld-linux-armhf.so.3,libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libSegFault.so	ELF		9756	98873cdd6468785939d673a812b12f711b0719ca8f00af233f76773f2b7986e4	libSegFault.so	libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/ld-linux-armhf.so.3	link	ld-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libpthread.so.0	link	libpthread-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnss_compat.so.2	link	libnss_compat-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libBrokenLocale-2.15.so	ELF		5640	d345e36ef3597be8f292db15fe716165e50a891eff7f6d4a99901f5b579c4bb2	libBrokenLocale.so.1	libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/librt-2.15.so	ELF		22548	907613e8449ae9b664bfa9652eed25f82e97f2938c124c0113b830bbc6b27aeb	librt.so.1	libc.so.6,libpthread.so.0	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnss_dns-2.15.so	ELF		13948	69a3cc9c73941c823c6eba6e055dc38d2f068c358d1935a704f3d14c55982edc	libnss_dns.so.2	libresolv.so.2,libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnss_nisplus-2.15.so	ELF		34504	bb4d8390cacd5593b321ee4b4ede82d99a5e46e1e4ef3d1b814b87aac44198c7	libnss_nisplus.so.2	libnsl.so.1,libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libacl.so.1	link	libacl.so.1.1.0					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnss_hesiod-2.15.so	ELF		13960	c9f66488c807580cd9cdd03b8f4e3e6ec2569768acdafcdab19654417de3a826	libnss_hesiod.so.2	libresolv.so.2,libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libthread_db-1.0.so	ELF		22312	e016fdbd075252a72c415ba3e24de5a521b5add106bc5bcb754c81bd6b3114cb	libthread_db.so.1	libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libdl.so.2	link	libdl-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnss_hesiod.so.2	link	libnss_hesiod-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libanl-2.15.so	ELF		14204	d37e6bd057d6d3ff3f50bbd660d5d842543ba567cad1275025432f947fc49cc0	libanl.so.1	libc.so.6,libpthread.so.0	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libmemusage.so	ELF		13920	cc7876cddd59965725ff7954dd2245a1a1d87e07035ef4ca19f022bf8bbfe430	libmemusage.so	libdl.so.2,ld-linux-armhf.so.3,libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnss_nis-2.15.so	ELF		30420	23e5158a69fbae3386bbe0062536a5715cbb1e7120cc62af70fd91a7ea36fece	libnss_nis.so.2	libnsl.so.1,libnss_files.so.2,libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libpthread-2.15.so	ELF		100802	0f1159cea9ef46c35b927af28970f5eae2f1bbc2508b6139bc83ce87ccb880e5	libpthread.so.0	libc.so.6,ld-linux-armhf.so.3	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libutil-2.15.so	ELF		9852	286f1816081a8a7282097c110d001b10df5f5e599cb68e35f829504458f4d60a	libutil.so.1	libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libresolv.so.2	link	libresolv-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnss_files.so.2	link	libnss_files-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libm.so.6	link	libm-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnsl-2.15.so	ELF		55244	dcb39a4f6c8b0639d09bb44527b0663480d773f1f0c79301f4c11beb2ee3240a	libnsl.so.1	libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libc-2.15.so	ELF		881932	46140190b6bea73257c654c24767a0d01e55f35816059aaae3e3df535b75e65e	libc.so.6	ld-linux-armhf.so.3	
+base	/system/usr/local/lib/arm-linux-gnueabihf/ld-2.15.so	ELF		97580	f80cb83989c2c60353abbb9adef8d9f3ec5aaec979d0c6aa24f84deb81c5b53a	ld-linux-armhf.so.3		
+base	/system/usr/local/lib/arm-linux-gnueabihf/libresolv-2.15.so	ELF		55156	b6699a0cf3c0602077456afb92ac575e8e8a3f8758df6a8ac8884e236b174b92	libresolv.so.2	libc.so.6,ld-linux-armhf.so.3	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libanl.so.1	link	libanl-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnss_files-2.15.so	ELF		34756	ae965202047306f0379896edb44b5d3cadb82834513b0f732d6be3d584722df5	libnss_files.so.2	libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libattr.so.1	link	libattr.so.1.1.0					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libutil.so.1	link	libutil-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnss_dns.so.2	link	libnss_dns-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnss_nisplus.so.2	link	libnss_nisplus-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libattr.so.1.1.0	ELF		13776	44efdfeafb8546f6ebcd9fd35fa3840870c541b6db21503a6c131111c0345c0e	libattr.so.1	libc.so.6,ld-linux.so.3	
+base	/system/usr/local/lib/arm-linux-gnueabihf/ld-linux.so.3	link	ld-linux-armhf.so.3					
+base	/system/usr/local/lib/arm-linux-gnueabihf/librt.so.1	link	librt-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libnss_nis.so.2	link	libnss_nis-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libpcprofile.so	ELF		5592	497bfb59f920a0e2ba48d66f696e4d9a53312029ff63dd91cd62b0f1dfc1b0cb	libpcprofile.so	libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libcidn.so.1	link	libcidn-2.15.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libthread_db.so.1	link	libthread_db-1.0.so					
+base	/system/usr/local/lib/arm-linux-gnueabihf/libcidn-2.15.so	ELF		177792	ac2d5ab99ab2302b1c3b07aba1a102528cf65c058a61c3dc82effe1ae6b02c50	libcidn.so.1	libc.so.6	
+base	/system/usr/local/lib/arm-linux-gnueabihf/libBrokenLocale.so.1	link	libBrokenLocale-2.15.so					

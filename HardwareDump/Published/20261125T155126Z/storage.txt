@@ -1,0 +1,136 @@
+--- /proc/partitions
+major minor  #blocks  name
+
+   7        0     204800 loop0
+   7        7     204800 loop7
+ 179        0   30931968 mmcblk1
+ 179        1   30929920 mmcblk1p1
+ 179       16   60324864 mmcblk0
+ 179       17      10240 mmcblk0p1
+ 179       18     524288 mmcblk0p2
+ 179       19      52224 mmcblk0p3
+ 179       20   59728896 mmcblk0p4
+
+--- /proc/mounts
+rootfs / rootfs rw 0 0
+tmpfs /dev tmpfs rw,nosuid,relatime,mode=755 0 0
+devpts /dev/pts devpts rw,relatime,mode=600 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,relatime 0 0
+/dev/block/actb /misc vfat ro,noatime,nodiratime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=continue 0 0
+/dev/block/actc /system ext4 ro,nodev,noatime,nodiratime,noauto_da_alloc 0 0
+none /sys/kernel/debug debugfs rw,relatime 0 0
+/dev/block/actk /mnt/data ext4 rw,nosuid,nodev,noatime,nodiratime,discard,nodelalloc 0 0
+/dev/block/mmcblk0p4 /mnt/mmc vfat rw,noatime,nodiratime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=continue 0 0
+/dev/block/mmcblk1p1 /mnt/SDCARD vfat rw,noatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=continue 0 0
+/dev/block/loop0 /cfw ext4 rw,relatime 0 0
+tmpfs /cfw/dev tmpfs rw,nosuid,relatime,mode=755 0 0
+devpts /cfw/dev/pts devpts rw,relatime,mode=600 0 0
+proc /cfw/proc proc rw,relatime 0 0
+sysfs /cfw/sys sysfs rw,relatime 0 0
+/dev/block/actb /cfw/misc vfat ro,noatime,nodiratime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=continue 0 0
+/dev/block/mmcblk0p4 /cfw/mnt/mmc vfat rw,noatime,nodiratime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=continue 0 0
+/dev/block/mmcblk1p1 /cfw/mnt/SDCARD vfat rw,noatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=continue 0 0
+
+--- /sys/block/loop0/loop/backing_file
+/dev/block/loop7
+
+Filesystem           1K-blocks      Used Available Use% Mounted on
+tmpfs                   118812       128    118684   0% /dev
+/dev/block/actb          10202      6796      3406  67% /misc
+/dev/block/actc         516040    153832    325512  32% /system
+/dev/block/actk          50576        36     46888   0% /mnt/data
+/dev/block/mmcblk0p4  59714272  15160192  44554080  25% /mnt/mmc
+/dev/block/mmcblk1p1  30913536   4089792  26823744  13% /mnt/SDCARD
+/dev/block/loop0     18014394214723584 18014394214657886     51362  74% /cfw
+tmpfs                   118812       128    118684   0% /cfw/dev
+/dev/block/actb          10202      6796      3406  67% /cfw/misc
+/dev/block/mmcblk0p4  59714272  15160192  44554080  25% /cfw/mnt/mmc
+/dev/block/mmcblk1p1  30913536   4089792  26823744  13% /cfw/mnt/SDCARD
+--- /
+bin
+boot
+cfw
+charger
+d
+data
+default.prop
+dev
+etc
+fstab.gs705a
+home
+init
+init.extra_modules.rc
+init.rc
+init.wifi.rc
+lib
+loadapp.sh
+misc
+mnt
+proc
+res
+root
+sbin
+sys
+system
+tmp
+ueventd.rc
+usbdbg.sh
+usbmond.sh
+usbtest.sh
+usr
+var
+--- /cfw
+bin
+data
+dev
+etc
+lib
+lib32
+linuxrc
+lost+found
+media
+misc
+mnt
+opt
+proc
+retroarch
+root
+run
+sbin
+sys
+tmp
+usr
+var
+--- /mnt/mmc
+BIOS
+CFW
+Roms
+Saves
+Screenshots
+System Volume Information
+bak
+config.cfg
+--- /mnt/SDCARD
+BIOS
+Roms
+Saves
+Screenshots
+System Volume Information
+Temp
+--- /mnt/mmc/CFW
+autoresume.flag
+autostart
+brightness
+config
+cpuspeed
+font
+lang
+language.flag
+main
+main.bak
+mtp
+retroarch
+rootfs.img
+skin
+start

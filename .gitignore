@@ -1,0 +1,7 @@
+HardwareDump/*/
+!HardwareDump/Published/
+SystemLibraries/*.tar.gz
+Sysroot/*.tar.gz
+Toolchains/cache/
+build/
+__pycache__/

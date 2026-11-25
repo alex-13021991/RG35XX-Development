@@ -1,0 +1,151 @@
+--- /proc/meminfo
+MemTotal:         237624 kB
+MemFree:           96924 kB
+CmaFree:           21284 kB
+Buffers:           38800 kB
+Cached:            26676 kB
+SwapCached:            0 kB
+Active:            37372 kB
+Inactive:          44604 kB
+Active(anon):      16552 kB
+Inactive(anon):      112 kB
+Active(file):      20820 kB
+Inactive(file):    44492 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:             0 kB
+HighFree:              0 kB
+LowTotal:         237624 kB
+LowFree:           96924 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:         16724 kB
+Mapped:             3416 kB
+Shmem:               128 kB
+Slab:              27224 kB
+SReclaimable:      22176 kB
+SUnreclaim:         5048 kB
+KernelStack:         792 kB
+PageTables:          216 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      118812 kB
+Committed_AS:      30248 kB
+VmallocTotal:     761856 kB
+VmallocUsed:        7376 kB
+VmallocChunk:     645028 kB
+
+--- /proc/iomem
+00000000-0fffffff : System RAM
+  00008000-00a0d133 : Kernel code
+  00a78000-00c4ac03 : Kernel data
+b0100000-b0100033 : owl-audio-i2s
+b0110000-b011800f : pcm
+b0120000-b0120fff : owl-serial.0
+b0174000-b0177fff : b0174000.i2c
+b0178000-b017bfff : b0178000.i2c
+b01b00e8-b01b00ef : /thermal
+b0230000-b0230037 : b0230000.mmc
+b0238000-b0238037 : b0238000.mmc
+b0260000-b0260cff : /dma@b0260000
+b02c0000-b02c015f : /hdmi@b02c0000
+b02e0000-b02e100d : /de@b02e0000
+b0400000-b040ccff : /usb@b0400000
+  b040c100-b040ccff : dwc3.0
+b040cd00-b040cd58 : b0400000.usb
+
+--- /sys/kernel/debug/memblock/memory
+   0: 0x00000000..0x0fffffff
+
+--- /sys/kernel/debug/memblock/reserved
+   0: 0x00000000..0x00007fff
+   1: 0x00008300..0x00c4ac03
+   2: 0x02000000..0x020a35ff
+   3: 0x03800000..0x0380707f
+   4: 0x0bc00000..0x0d3fffff
+   5: 0x0d5dc000..0x0d5fefff
+   6: 0x0d5fff60..0x0fffffff
+
+--- /proc/device-tree/memory/reg
+od: invalid option -- 'A'
+BusyBox v1.14.3 (2013-09-30 14:44:01 CST) multi-call binary
+
+Usage: od [-aBbcDdeFfHhIiLlOovXx] [FILE]
+
+Write an unambiguous representation, octal bytes by default, of FILE
+to standard output. With no FILE or when FILE is -, read standard input.
+
+--- /proc/device-tree/reserved/normal/carveout_heap_size
+od: invalid option -- 'A'
+BusyBox v1.14.3 (2013-09-30 14:44:01 CST) multi-call binary
+
+Usage: od [-aBbcDdeFfHhIiLlOovXx] [FILE]
+
+Write an unambiguous representation, octal bytes by default, of FILE
+to standard output. With no FILE or when FILE is -, read standard input.
+
+--- /proc/device-tree/reserved/normal/dma_heap_size
+od: invalid option -- 'A'
+BusyBox v1.14.3 (2013-09-30 14:44:01 CST) multi-call binary
+
+Usage: od [-aBbcDdeFfHhIiLlOovXx] [FILE]
+
+Write an unambiguous representation, octal bytes by default, of FILE
+to standard output. With no FILE or when FILE is -, read standard input.
+
+--- /proc/device-tree/reserved/normal/fb_heap_size
+od: invalid option -- 'A'
+BusyBox v1.14.3 (2013-09-30 14:44:01 CST) multi-call binary
+
+Usage: od [-aBbcDdeFfHhIiLlOovXx] [FILE]
+
+Write an unambiguous representation, octal bytes by default, of FILE
+to standard output. With no FILE or when FILE is -, read standard input.
+
+--- /proc/device-tree/reserved/normal/kinfo_heap_size
+od: invalid option -- 'A'
+BusyBox v1.14.3 (2013-09-30 14:44:01 CST) multi-call binary
+
+Usage: od [-aBbcDdeFfHhIiLlOovXx] [FILE]
+
+Write an unambiguous representation, octal bytes by default, of FILE
+to standard output. With no FILE or when FILE is -, read standard input.
+
+--- /proc/device-tree/reserved/tiny/carveout_heap_size
+od: invalid option -- 'A'
+BusyBox v1.14.3 (2013-09-30 14:44:01 CST) multi-call binary
+
+Usage: od [-aBbcDdeFfHhIiLlOovXx] [FILE]
+
+Write an unambiguous representation, octal bytes by default, of FILE
+to standard output. With no FILE or when FILE is -, read standard input.
+
+--- /proc/device-tree/reserved/tiny/dma_heap_size
+od: invalid option -- 'A'
+BusyBox v1.14.3 (2013-09-30 14:44:01 CST) multi-call binary
+
+Usage: od [-aBbcDdeFfHhIiLlOovXx] [FILE]
+
+Write an unambiguous representation, octal bytes by default, of FILE
+to standard output. With no FILE or when FILE is -, read standard input.
+
+--- /proc/device-tree/reserved/tiny/fb_heap_size
+od: invalid option -- 'A'
+BusyBox v1.14.3 (2013-09-30 14:44:01 CST) multi-call binary
+
+Usage: od [-aBbcDdeFfHhIiLlOovXx] [FILE]
+
+Write an unambiguous representation, octal bytes by default, of FILE
+to standard output. With no FILE or when FILE is -, read standard input.
+
+--- /proc/device-tree/reserved/tiny/kinfo_heap_size
+od: invalid option -- 'A'
+BusyBox v1.14.3 (2013-09-30 14:44:01 CST) multi-call binary
+
+Usage: od [-aBbcDdeFfHhIiLlOovXx] [FILE]
+
+Write an unambiguous representation, octal bytes by default, of FILE
+to standard output. With no FILE or when FILE is -, read standard input.

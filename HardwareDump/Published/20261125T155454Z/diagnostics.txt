@@ -1,0 +1,11 @@
+[  714.184626] EXT4-fs error (device loop0): ext4_iget:4193: inode #818: comm busybox: checksum invalid
+[  714.197141] EXT4-fs error (device loop0): ext4_iget:4193: inode #817: comm busybox: checksum invalid
+[  746.092695] EXT4-fs error (device loop0): ext4_iget:4193: inode #817: comm busybox: checksum invalid
+[  746.102374] EXT4-fs error (device loop0): ext4_iget:4193: inode #818: comm busybox: checksum invalid
+[  746.114208] EXT4-fs error (device loop0): ext4_iget:4193: inode #817: comm busybox: checksum invalid
+[  775.920928] EXT4-fs error (device loop0): ext4_iget:4193: inode #818: comm busybox: checksum invalid
+[  775.931647] EXT4-fs error (device loop0): ext4_iget:4193: inode #817: comm busybox: checksum invalid
+[  829.101606] EXT4-fs error (device loop0): ext4_iget:4193: inode #818: comm busybox: checksum invalid
+[  829.112054] EXT4-fs error (device loop0): ext4_iget:4193: inode #817: comm busybox: checksum invalid
+[  969.202501] EXT4-fs error (device loop0): ext4_iget:4193: inode #818: comm busybox: checksum invalid
+[  976.539693] EXT4-fs error (device loop0): ext4_iget:4193: inode #817: comm busybox: checksum invalid

@@ -1,0 +1,52 @@
+--- /proc/version
+Linux version 3.10.37 (blackseraph@Pandemonium) (gcc version 4.7.3 20130328 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.04-20130415 - Linaro GCC 2013.04) ) #116 SMP PREEMPT Thu Apr 6 20:31:58 CEST 2023
+
+--- /proc/cmdline
+console=ttyS3 earlyprintk clk_ignore_unused selinux=0 loglevel=4 androidboot.dvfslevel=0x705x allenS500=1 androidboot.bootdev=sd boot_dev=sd2
+
+--- /proc/modules
+atc260x_cap_gauge 26067 0 - Live 0xbf005000
+gpio_keys_polled 6924 0 - Live 0xbf000000
+
+--- /proc/filesystems
+nodev	sysfs
+nodev	rootfs
+nodev	bdev
+nodev	proc
+nodev	cgroup
+nodev	tmpfs
+nodev	devtmpfs
+nodev	debugfs
+nodev	securityfs
+nodev	sockfs
+nodev	pipefs
+nodev	anon_inodefs
+nodev	rpc_pipefs
+nodev	configfs
+nodev	devpts
+	ext3
+	ext2
+	ext4
+nodev	ramfs
+	vfat
+	msdos
+nodev	nfs
+nodev	cifs
+	ntfs
+	fuseblk
+nodev	fuse
+nodev	fusectl
+nodev	pstore
+	exfat
+nodev	functionfs
+
+--- /lib/modules
+--- /misc/modules
+atc260x_cap_gauge.ko
+dc_owl.ko
+ethernet.ko
+gpio_keys_polled.ko
+pvrsrvkm.ko
+--- /cfw/lib/modules
+4.14.0-miyoo
+/proc/config.gz unavailable

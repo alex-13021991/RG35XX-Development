@@ -1,0 +1,34 @@
+{
+  "garlic": {
+    "sha256": "25076ae12bf41c5205a80152cf3e598f5c5ecf057ee62a49f9299959875e8514",
+    "members": 877,
+    "sources": [
+      "cfw/lib",
+      "cfw/usr/lib"
+    ],
+    "report": "tar: cfw/usr/lib/libjson-c.so: Input/output error\ntar: cfw/usr/lib/libintl.so: Input/output error\ntar: error exit delayed from previous errors\nTAR_RC=1"
+  },
+  "base": {
+    "sha256": "cbed19e5b2985a972d0af0b207e536d1ebc75c810999d5b63129da489eaca5c0",
+    "members": 184,
+    "sources": [
+      "lib",
+      "usr/lib",
+      "system/lib",
+      "system/usr/lib",
+      "system/usr/local/lib"
+    ],
+    "report": "TAR_RC=0"
+  },
+  "boot": {
+    "sha256": "171a437020e1d300071e07b6f5d612241967bf7fda21a970f74b1c3516557762",
+    "members": 9,
+    "sources": [
+      "misc/uImage",
+      "misc/kernel.dtb",
+      "misc/modules",
+      "mnt/mmc/CFW/main"
+    ],
+    "report": "TAR_RC=0"
+  }
+}

@@ -1,0 +1,55 @@
+--- /proc/asound/version
+Advanced Linux Sound Architecture Driver Version k3.10.37.
+
+--- /proc/asound/cards
+ 0 [atm7059link    ]: atm7059_link - atm7059_link
+                      atm7059_link
+
+--- /proc/asound/devices
+  0: [ 0]   : control
+ 16: [ 0- 0]: digital audio playback
+ 17: [ 0- 1]: digital audio playback
+ 18: [ 0- 2]: digital audio playback
+ 24: [ 0- 0]: digital audio capture
+ 26: [ 0- 2]: digital audio capture
+ 33:        : timer
+
+--- /proc/asound/pcm
+00-00: ATC2603C PCM atc2603c-dai-0 :  : playback 1 : capture 1
+00-01: HDMI PCM atm7059-hdmi-dai-1 :  : playback 1
+00-02: BLUETOOTH PCM bluetooth-pcm-dai-2 :  : playback 1 : capture 1
+
+--- /sys/class/volume/value
+40 
+
+--- /dev/snd
+controlC0
+pcmC0D0c
+pcmC0D0p
+pcmC0D1p
+pcmC0D2c
+pcmC0D2p
+timer
+--- /sys/kernel/debug/asoc
+atm7059_link
+codecs
+dais
+platforms
+**** List of PLAYBACK Hardware Devices ****
+card 0: atm7059link [atm7059_link], device 0: ATC2603C PCM atc2603c-dai-0 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: atm7059link [atm7059_link], device 1: HDMI PCM atm7059-hdmi-dai-1 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: atm7059link [atm7059_link], device 2: BLUETOOTH PCM bluetooth-pcm-dai-2 []
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+null
+    Discard all samples (playback) or generate zero samples (capture)
+default:CARD=atm7059link
+    atm7059_link, 
+    Default Audio Device
+sysdefault:CARD=atm7059link
+    atm7059_link, 
+    Default Audio Device

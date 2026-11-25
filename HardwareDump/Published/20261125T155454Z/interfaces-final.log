@@ -1,0 +1,41 @@
+/dev/fb0 owlfb 640x480 virtual=640x1440 stride=1280 bpp=16 R=11:5 G=5:6 B=0:5 A=0:0
+/dev/fb1 owlfb 1280x720 virtual=1280x1440 stride=5120 bpp=32 R=0:8 G=8:8 B=16:8 A=24:0
+ALSA runtime 1.1.5
+mixer Mic0 Mode Mux
+mixer ADC0 Digital Gain control playback=0 range=0..15
+mixer ADC0 Mux
+mixer AMP1 Gain boost Range select playback=3 range=0..7
+mixer AOUT FL FR Mixer FL FR
+mixer AOUT FL FR Mixer FM
+mixer AOUT FL FR Mixer MIC
+mixer Adc0 Digital Gain playback=0 range=0..15
+mixer Adc0 Gain playback=9 range=0..15
+mixer DAC Digital FL FR
+mixer DAC FL FR PLAYBACK
+mixer DAC FL Gain playback=181 range=0..255
+mixer DAC FR Gain playback=181 range=0..255
+mixer DAC PA playback=40 range=0..40
+mixer DAC PA OUTPUT Stage
+mixer Dummy earphone detect method
+mixer Dummy earphone gain playback=190 range=0..255
+mixer Dummy earphone volume playback=40 range=0..40
+mixer Dummy mic Gain playback=7 range=0..15
+mixer Dummy mic mode
+mixer Dummy mic num playback=1 range=0..2
+mixer Dummy speaker gain playback=180 range=0..255
+mixer Dummy speaker volume playback=40 range=0..40
+mixer External MIC Power Voltage playback=1 range=0..3
+mixer External Mic Power
+mixer Internal Mic Power
+mixer PA Output Swing Mux
+mixer audio input mode switch
+mixer audio output mode switch
+mixer speaker on off switch
+PCM plughw:0,0 S16_LE stereo 44100 Hz frames=512
+SDL1 runtime 1.2.15
+SDL1 verified driver dummy
+SDL2 runtime 2.0.8
+SDL2 driver x11
+SDL2 driver dummy
+EGL default display unavailable, error=0x3001
+__RG_EXIT=0

@@ -1,0 +1,274 @@
+--- /cfw/etc/cfw-info
+DEVICE_NAME=V90Q90
+DEVICE_REV=1
+
+--- /cfw/usr/lib/os-release
+NAME=Buildroot
+VERSION=2018.02
+ID=buildroot
+VERSION_ID=2018.02
+PRETTY_NAME="Buildroot 2018.02"
+
+--- /cfw/etc/profile
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+
+if [ "$PS1" ]; then
+	if [ "`id -u`" -eq 0 ]; then
+		export PS1='# '
+	else
+		export PS1='$ '
+	fi
+fi
+
+export PAGER='/bin/more '
+export EDITOR='/bin/vi'
+
+# Source configuration files from /etc/profile.d
+for i in /etc/profile.d/*.sh ; do
+	if [ -r "$i" ]; then
+		. $i
+	fi
+	unset i
+done
+
+--- /mnt/mmc/CFW/start
+#!/bin/sh
+
+# The kernel caches recently enumerated directories, so lets pre-cache the Roms directories for a noticeable speed-boost in the GUI
+find /mnt/mmc/Roms &
+find /mnt/SDCARD/Roms &
+
+# Restore the maximum CPU frequency
+export HOME=/mnt/mmc/CFW
+export SDL_NOMOUSE=1
+cd $HOME
+./main restorecpu
+
+# The last shutdown was dirty (as in, triggered by the reset button)
+if [ ! -f /mnt/mmc/CFW/shutdown.flag ]
+then
+	# Erase the resume command file
+	rm /mnt/mmc/CFW/retroarch/command.sh
+	rm /mnt/mmc/CFW/retroarch/gdbscript.txt
+fi
+
+# Erase the clean shutdown flag so we don't get stuck in one state
+rm /mnt/mmc/CFW/shutdown.flag
+
+# Execute all auto-start scripts
+for STARTSCRIPT in /mnt/mmc/CFW/autostart/*.sh
+do
+	sh "$STARTSCRIPT"
+done
+
+# The operation loop
+while true
+do
+	# Reset the rumble motor
+	echo 0 > /sys/class/power_supply/battery/moto
+
+	# Switch to the interactive governor (try to save battery when possible but try not to sacrifice performance too much)
+	echo interactive > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+
+	# Wait for the kernel to populare the interactive sysfs
+	sleep 0.1
+
+	# Tweak the interactive target loads
+	echo "50 504000:40 720000:40 840000:80 1008000:70 1104000:70 1200000:70 1296000:70 1392000:80 1488000:99" > /sys/devices/system/cpu/cpufreq/interactive/target_loads
+
+	# We've got no pending RetroArch commands
+	if [ ! -f /mnt/mmc/CFW/retroarch/command.sh ]
+	then
+		# Start Garlic
+		export HOME=/mnt/mmc/CFW
+		export SDL_NOMOUSE=1
+		cd $HOME
+		./main
+	fi
+
+	# Start RetroArch
+	export HOME=/mnt/mmc/CFW/retroarch
+	cd $HOME
+	/mnt/mmc/CFW/retroarch/command.sh
+	
+	# Shutdown safely (if requested)
+	if [ -f /mnt/mmc/CFW/shutdown.flag ]
+	then
+		# Sync files to disk and power off
+		sync
+		mount -o remount,ro /mnt/mmc
+		mount -o remount,ro /mnt/SDCARD
+		poweroff -f
+	else
+		# Erase the previous RetroArch command
+		rm /mnt/mmc/CFW/retroarch/command.sh
+		rm /mnt/mmc/CFW/retroarch/gdbscript.txt
+	fi
+done
+
+--- /misc/dmenu.bin
+#!/system/bin/sh
+
+# The CFW root directory
+CFWROOT=/mnt/mmc/CFW
+
+# Disable CPU hotplug
+echo 0xF > /sys/devices/system/cpu/autoplug/plug_mask
+
+# Set the governor to performance (to boost boot speed)
+echo performance > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+
+# Disable the IO scheduler (it just ends up slowing down the MicroSD cards)
+echo noop > /sys/devices/b0238000.mmc/mmc_host/mmc0/emmc_boot_card/block/mmcblk0/queue/scheduler
+echo noop > /sys/devices/b0230000.mmc/mmc_host/mmc1/sd_card/block/mmcblk1/queue/scheduler
+
+# Disable MicroSD card power-saving (helps reduce load stutter)
+echo on > /sys/devices/b0238000.mmc/mmc_host/mmc0/power/control
+echo on > /sys/devices/b0230000.mmc/mmc_host/mmc1/power/control
+
+# Update reboot flag
+REBOOT=0
+
+# Update the bootloader
+if [ -f /misc/bootloader.img ]
+then
+	mount -o remount,rw /misc
+	dd if=/misc/bootloader.img of=/dev/block/mmcblk0 bs=512 seek=4097 count=448
+	rm /misc/bootloader.img
+	sync
+	REBOOT=1
+fi
+
+# Update u-boot
+if [ -f /misc/u-boot-dtb.img ]
+then
+	mount -o remount,rw /misc
+	dd if=/misc/u-boot-dtb.img of=/dev/block/mmcblk0 bs=512 seek=6144 count=1417
+	rm /misc/u-boot-dtb.img
+	sync
+	REBOOT=1
+fi
+
+# We need to reboot after a bootloader / u-boot update
+if [ "$REBOOT" == "1" ]
+then
+	reboot
+	while true
+	do
+		sleep 5
+	done
+fi
+
+# Restore the last used brightness setting
+if [ -f /mnt/mmc/CFW/brightness ]
+then
+	cat /mnt/mmc/CFW/brightness > /sys/class/backlight/backlight.2/brightness
+fi
+
+# Create the TF1 directory structure
+mkdir -p /mnt/mmc/Screenshots
+mkdir -p /mnt/mmc/Saves/CurrentProfile/lists
+mkdir -p /mnt/mmc/Saves/CurrentProfile/saves
+mkdir -p /mnt/mmc/Saves/CurrentProfile/states
+
+# Mount the second MicroSD card
+mkdir /mnt/SDCARD
+if [ -e /dev/block/mmcblk1p1 ]
+then
+	SDCARD_DEVICE=/dev/block/mmcblk1p1
+else
+	SDCARD_DEVICE=/dev/block/mmcblk1
+fi
+mount -t vfat -o rw,utf8,noatime $SDCARD_DEVICE /mnt/SDCARD
+if [ $? -ne 0 ]
+then
+	mount -t exfat -o rw,utf8,noatime $SDCARD_DEVICE /mnt/SDCARD
+fi
+
+# Create the TF2 directory structure
+if [ $? -eq 0 ]
+then
+	mkdir -p /mnt/SDCARD/Screenshots
+	mkdir -p /mnt/SDCARD/Saves/CurrentProfile/lists
+	mkdir -p /mnt/SDCARD/Saves/CurrentProfile/saves
+	mkdir -p /mnt/SDCARD/Saves/CurrentProfile/states
+fi
+
+# Wait a bit for USB devices to enumerate (helps with gamepad detection)
+if [ -f /misc/waitForUSB ]
+then
+	sleep 5
+fi
+
+# Enable ADB for debugging
+#if [ -f /misc/enableADB ]
+#then
+#	/usbdbg.sh device
+#fi
+/misc/usb.sh
+
+# Mount the uClibc-based rootfs
+ROOTFS_IMAGE=$CFWROOT/rootfs.img
+ROOTFS_MOUNTPOINT=/cfw
+LOOPDEVICE=/dev/block/loop7
+mkdir $ROOTFS_MOUNTPOINT
+busybox losetup $LOOPDEVICE $ROOTFS_IMAGE
+mount -r -w -o loop -t ext4 $LOOPDEVICE $ROOTFS_MOUNTPOINT
+mkdir $ROOTFS_MOUNTPOINT/mnt/mmc
+mkdir $ROOTFS_MOUNTPOINT/mnt/SDCARD
+for f in dev dev/pts proc sys run misc mnt/mmc mnt/SDCARD
+do
+	mount -o bind /$f $ROOTFS_MOUNTPOINT/$f
+done
+
+# Start mirroring to HDMI
+/misc/hdmi.bin &
+HDMI_MIRROR_PID=$!
+
+# Start Garlic
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH
+export HOME=$CFWROOT
+export SHELL=/bin/sh
+export SDL_NOMOUSE=1
+cd $HOME
+busybox chroot $ROOTFS_MOUNTPOINT $HOME/start
+
+# Endless loop to keep dmenu from spawning
+while true
+do
+	# No need to waste CPU cycles on this loop
+	sleep 5
+done
+
+--- /mnt/mmc/CFW/autostart
+mtp.sh
+--- /mnt/mmc/CFW/config
+coremapping.json
+mame.csv
+GarlicOS %s
+1.4.9
+/cfw
+/cfw/mnt/mmc/CFW
+LD_LIBRARY_PATH=/mnt/sdcard/lib:/vendor/lib:/system/lib:/system/usr/lib
+HOME=/mnt/mmc/CFW
+SDL_NOMOUSE=1
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/sbin:/vendor/bin:/mnt/sdcard/bin:/system/bin:/system/usr/bin
+/cfw/dev/graphics/fb0
+/cfw/lib/ld-uClibc-1.0.28.so
+/cfw/lib/libuClibc-1.0.28.so
+/cfw/mnt/mmc/CFW/main
+/cfw/usr/lib/libSDL-1.2.so.0.11.4
+/cfw/usr/lib/libSDL_gfx.so.13.9.1
+/cfw/usr/lib/libSDL_image-1.2.so.0.8.4
+/cfw/usr/lib/libSDL_ttf-2.0.so.0.10.1
+/cfw/usr/lib/libbz2.so.1.0.6
+/cfw/usr/lib/libfreetype.so.6.15.0
+/cfw/usr/lib/libiconv.so.2.6.0
+/cfw/usr/lib/libpng16.so.16.34.0
+/cfw/usr/lib/libts.so.0.9.0
+/cfw/usr/lib/libz.so.1.2.11
+[heap]
+[sigpage]
+[stack:182]
+[stack]
+[vectors]
