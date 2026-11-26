@@ -1,0 +1,305 @@
+$ file ld-uClibc-1.0.28.so
+ld-uClibc-1.0.28.so: ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, not stripped
+
+$ readelf -h ld-uClibc-1.0.28.so
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              DYN (Shared object file)
+  Machine:                           ARM
+  Version:                           0x1
+  Entry point address:               0x132c
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          31976 (bytes into file)
+  Flags:                             0x5000200, Version5 EABI, soft-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         5
+  Size of section headers:           40 (bytes)
+  Number of section headers:         17
+  Section header string table index: 16
+
+$ readelf -A ld-uClibc-1.0.28.so
+Attribute Section: aeabi
+File Attributes
+  Tag_CPU_name: "ARM926EJ-S"
+  Tag_CPU_arch: v5TEJ
+  Tag_ARM_ISA_use: Yes
+  Tag_THUMB_ISA_use: Thumb-1
+  Tag_ABI_PCS_wchar_t: 4
+  Tag_ABI_FP_denormal: Needed
+  Tag_ABI_FP_exceptions: Needed
+  Tag_ABI_FP_number_model: IEEE 754
+  Tag_ABI_align_needed: 8-byte
+  Tag_ABI_enum_size: int
+  Tag_ABI_optimization_goals: Aggressive Size
+
+$ readelf -l ld-uClibc-1.0.28.so
+
+Elf file type is DYN (Shared object file)
+Entry point 0x132c
+There are 5 program headers, starting at offset 52
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  LOAD           0x000000 0x00000000 0x00000000 0x060bf 0x060bf R E 0x10000
+  LOAD           0x006ec4 0x00016ec4 0x00016ec4 0x00144 0x001d8 RW  0x10000
+  DYNAMIC        0x006ec8 0x00016ec8 0x00016ec8 0x000a8 0x000a8 RW  0x4
+  GNU_STACK      0x000000 0x00000000 0x00000000 0x00000 0x00000 RW  0x10
+  GNU_RELRO      0x006ec4 0x00016ec4 0x00016ec4 0x0013c 0x0013c R   0x1
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .hash .gnu.hash .dynsym .dynstr .rel.dyn .text .rodata 
+   01     .fini_array .dynamic .got .data .bss 
+   02     .dynamic 
+   03     
+   04     .fini_array .dynamic .got 
+
+$ readelf -S ld-uClibc-1.0.28.so
+There are 17 section headers, starting at offset 0x7ce8:
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .hash             HASH            000000d4 0000d4 00034c 04   A  3   0  4
+  [ 2] .gnu.hash         GNU_HASH        00000420 000420 0003a8 04   A  3   0  4
+  [ 3] .dynsym           DYNSYM          000007c8 0007c8 0004c0 10   A  4   3  4
+  [ 4] .dynstr           STRTAB          00000c88 000c88 0004e7 00   A  0   0  1
+  [ 5] .rel.dyn          REL             00001170 001170 000118 08   A  3   0  4
+  [ 6] .text             PROGBITS        00001290 001290 0049b8 00  AX  0   0 16
+  [ 7] .rodata           PROGBITS        00005c48 005c48 000477 00   A  0   0  1
+  [ 8] .fini_array       FINI_ARRAY      00016ec4 006ec4 000004 04  WA  0   0  4
+  [ 9] .dynamic          DYNAMIC         00016ec8 006ec8 0000a8 08  WA  4   0  4
+  [10] .got              PROGBITS        00016f70 006f70 000090 04  WA  0   0  4
+  [11] .data             PROGBITS        00017000 007000 000008 00  WA  0   0  4
+  [12] .bss              NOBITS          00017008 007008 000094 00  WA  0   0  4
+  [13] .ARM.attributes   ARM_ATTRIBUTES  00000000 007008 000030 00      0   0  1
+  [14] .symtab           SYMTAB          00000000 007038 000670 10     15  30  4
+  [15] .strtab           STRTAB          00000000 0076a8 0005bc 00      0   0  1
+  [16] .shstrtab         STRTAB          00000000 007c64 000081 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), y (purecode), p (processor specific)
+
+$ readelf -d ld-uClibc-1.0.28.so
+
+Dynamic section at offset 0x6ec8 contains 17 entries:
+  Tag        Type                         Name/Value
+ 0x0000000e (SONAME)                     Library soname: [ld-uClibc.so.1]
+ 0x00000010 (SYMBOLIC)                   0x0
+ 0x0000001a (FINI_ARRAY)                 0x16ec4
+ 0x0000001c (FINI_ARRAYSZ)               4 (bytes)
+ 0x00000004 (HASH)                       0xd4
+ 0x6ffffef5 (GNU_HASH)                   0x420
+ 0x00000005 (STRTAB)                     0xc88
+ 0x00000006 (SYMTAB)                     0x7c8
+ 0x0000000a (STRSZ)                      1255 (bytes)
+ 0x0000000b (SYMENT)                     16 (bytes)
+ 0x00000011 (REL)                        0x1170
+ 0x00000012 (RELSZ)                      280 (bytes)
+ 0x00000013 (RELENT)                     8 (bytes)
+ 0x00000018 (BIND_NOW)                   
+ 0x6ffffffb (FLAGS_1)                    Flags: NOW
+ 0x6ffffffa (RELCOUNT)                   35
+ 0x00000000 (NULL)                       0x0
+
+$ readelf -V ld-uClibc-1.0.28.so
+
+No version information found in this file.
+
+$ readelf -p .comment ld-uClibc-1.0.28.so
+readelf: Warning: Section '.comment' was not dumped because it does not exist
+
+$ readelf -Ws ld-uClibc-1.0.28.so
+
+Symbol table '.dynsym' contains 76 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00001290     0 SECTION LOCAL  DEFAULT    6 .text
+     2: 00017000     0 SECTION LOCAL  DEFAULT   11 .data
+     3: 0001704c     4 OBJECT  GLOBAL DEFAULT   12 _dl_errno
+     4: 0001705c     4 OBJECT  GLOBAL DEFAULT   12 _dl_memalign_function
+     5: 00002bc0   144 FUNC    GLOBAL DEFAULT    6 _dl_memalign
+     6: 00017058     4 OBJECT  GLOBAL DEFAULT   12 _dl_free_function
+     7: 000019c4   128 FUNC    GLOBAL DEFAULT    6 _dl_unsetenv
+     8: 0000137c    24 FUNC    GLOBAL DEFAULT    6 _dl_initial_error_catch_tsd
+     9: 0001707c     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_static_size
+    10: 00017090     4 OBJECT  GLOBAL DEFAULT   12 _dl_init_static_tls
+    11: 00017088     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_generation
+    12: 00003504   248 FUNC    GLOBAL DEFAULT    6 _dl_add_elf_hash_table
+    13: 00017048     4 OBJECT  GLOBAL DEFAULT   12 _dl_pagesize
+    14: 00017070     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_static_used
+    15: 00017034     4 OBJECT  GLOBAL DEFAULT   12 _dl_ldsopath
+    16: 00001da4   964 FUNC    GLOBAL DEFAULT    6 _dl_dprintf
+    17: 00017044     4 OBJECT  GLOBAL DEFAULT   12 _dl_debug_addr
+    18: 00003724   320 FUNC    GLOBAL DEFAULT    6 _dl_parse_dynamic_info
+    19: 00017060     4 OBJECT  GLOBAL DEFAULT   12 _dl_realloc_function
+    20: 00017028     4 OBJECT  GLOBAL DEFAULT   12 __libc_stack_end
+    21: 000013d0    12 FUNC    GLOBAL DEFAULT    6 _dl_debug_state
+    22: 00002230   200 FUNC    GLOBAL DEFAULT    6 _dl_linux_resolver
+    23: 00002478    44 FUNC    GLOBAL DEFAULT    6 _dl_parse_relocation_information
+    24: 00017064     4 OBJECT  GLOBAL DEFAULT   12 _dl_calloc_function
+    25: 00017008     0 NOTYPE  GLOBAL DEFAULT   12 __bss_start
+    26: 00002d18   296 FUNC    GLOBAL DEFAULT    6 init_tls
+    27: 00017080     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_dtv_slotinfo_list
+    28: 0001702c     4 OBJECT  GLOBAL DEFAULT   12 _dl_handles
+    29: 000014d4    72 FUNC    GLOBAL DEFAULT    6 _dl_realloc
+    30: 00003358   188 FUNC    GLOBAL DEFAULT    6 _dl_protect_relro
+    31: 00003414    64 FUNC    GLOBAL DEFAULT    6 _dl_strdup
+    32: 00002860   632 FUNC    GLOBAL DEFAULT    6 _dl_update_slotinfo
+    33: 000048c8  4300 FUNC    GLOBAL DEFAULT    6 _dl_get_ready_to_run
+    34: 00003864  2908 FUNC    GLOBAL DEFAULT    6 _dl_load_elf_shared_library
+    35: 0001706c     4 OBJECT  GLOBAL DEFAULT   12 _dl_error_number
+    36: 00017008     0 NOTYPE  GLOBAL DEFAULT   12 __bss_start__
+    37: 00001b38   620 FUNC    GLOBAL DEFAULT    6 _dl_find_hash
+    38: 00017050     4 OBJECT  GLOBAL DEFAULT   12 _dl_preload
+    39: 0000175c   316 FUNC    GLOBAL DEFAULT    6 _dl_allocate_tls_init
+    40: 0000171c    64 FUNC    GLOBAL DEFAULT    6 _dl_get_tls_static_info
+    41: 00017068     4 OBJECT  GLOBAL DEFAULT   12 _dl_internal_error_number
+    42: 0001709c     0 NOTYPE  GLOBAL DEFAULT   12 _end
+    43: 0001709c     0 NOTYPE  GLOBAL DEFAULT   12 __end__
+    44: 00017030     4 OBJECT  GLOBAL DEFAULT   12 _dl_symbol_tables
+    45: 0001708c     4 OBJECT  GLOBAL DEFAULT   12 _dl_initial_dtv
+    46: 00017038     4 OBJECT  GLOBAL DEFAULT   12 _dl_loaded_modules
+    47: 00017004     4 OBJECT  GLOBAL DEFAULT   11 _dl_progname
+    48: 000025ec   320 FUNC    GLOBAL DEFAULT    6 _dl_malloc
+    49: 00002440    56 FUNC    GLOBAL DEFAULT    6 _dl_parse_lazy_relocation_information
+    50: 0001709c     0 NOTYPE  GLOBAL DEFAULT   12 __bss_end__
+    51: 00005c20    32 FUNC    GLOBAL DEFAULT    6 _dl_linux_resolve
+    52: 00017040     4 OBJECT  GLOBAL DEFAULT   12 _dl_malloc_function
+    53: 0001709c     0 NOTYPE  GLOBAL DEFAULT   12 _bss_end__
+    54: 00002cf0    40 FUNC    GLOBAL DEFAULT    6 _dl_allocate_tls
+    55: 00017094     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_static_nelem
+    56: 000031ec   364 FUNC    GLOBAL DEFAULT    6 __tls_get_addr
+    57: 00001970    84 FUNC    GLOBAL DEFAULT    6 _dl_getenv
+    58: 00017078     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_max_dtv_idx
+    59: 00017098     1 OBJECT  GLOBAL DEFAULT   12 _dl_tls_dtv_gaps
+    60: 000030e8   260 FUNC    GLOBAL DEFAULT    6 _dl_add_to_slotinfo
+    61: 000018d4    48 FUNC    GLOBAL DEFAULT    6 _dl_app_init_array
+    62: 00017084     4 OBJECT  GLOBAL DEFAULT   12 _dl_error_catch_tsd
+    63: 00001a44    68 FUNC    GLOBAL DEFAULT    6 _dl_free
+    64: 00017054     4 OBJECT  GLOBAL DEFAULT   12 _dl_library_path
+    65: 0000272c   108 FUNC    GLOBAL DEFAULT    6 _dl_calloc
+    66: 00001940    48 FUNC    GLOBAL DEFAULT    6 _dl_app_fini_array
+    67: 00001898    60 FUNC    GLOBAL DEFAULT    6 _dl_run_init_array
+    68: 00001a88   176 FUNC    GLOBAL DEFAULT    6 _dl_deallocate_tls
+    69: 00017074     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_static_align
+    70: 00001904    60 FUNC    GLOBAL DEFAULT    6 _dl_run_fini_array
+    71: 00017008     0 NOTYPE  GLOBAL DEFAULT   11 _edata
+    72: 000024a4   328 FUNC    GLOBAL DEFAULT    6 _dl_fixup
+    73: 0000460c   700 FUNC    GLOBAL DEFAULT    6 _dl_load_shared_library
+    74: 00002798   120 FUNC    GLOBAL DEFAULT    6 _dl_tls_setup
+    75: 00017000     4 OBJECT  GLOBAL DEFAULT   11 _dl_secure
+
+Symbol table '.symtab' contains 103 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00005c40     8 FUNC    LOCAL  DEFAULT    6 __aeabi_read_tp
+     2: 00002d18   296 FUNC    LOCAL  DEFAULT    6 __GI_init_tls
+     3: 00016ec8     0 OBJECT  LOCAL  DEFAULT  ABS _DYNAMIC
+     4: 00002ad8   232 FUNC    LOCAL  DEFAULT    6 _dl_try_allocate_static_tls
+     5: 00002168   200 FUNC    LOCAL  DEFAULT    6 _dl_nothread_init_static_tls
+     6: 00002c50   160 FUNC    LOCAL  DEFAULT    6 _dl_allocate_tls_storage
+     7: 0001703c     4 OBJECT  LOCAL  DEFAULT   12 _dl_skip_args
+     8: 00002798   120 FUNC    LOCAL  DEFAULT    6 __GI__dl_tls_setup
+     9: 0000132c    80 FUNC    LOCAL  DEFAULT    6 _start
+    10: 000015e0   316 FUNC    LOCAL  DEFAULT    6 _dl_determine_tlsoffset
+    11: 00002ea0    84 FUNC    LOCAL  DEFAULT    6 _dl_allocate_static_tls
+    12: 0000151c   196 FUNC    LOCAL  DEFAULT    6 _dl_next_tls_modid
+    13: 00016f70     0 OBJECT  LOCAL  DEFAULT  ABS _GLOBAL_OFFSET_TABLE_
+    14: 000013d0    12 FUNC    LOCAL  DEFAULT    6 __GI__dl_debug_state
+    15: 00005c48     0 NOTYPE  LOCAL  DEFAULT    7 $d
+    16: 00005c9c     0 NOTYPE  LOCAL  DEFAULT    7 $d
+    17: 000000d4     0 SECTION LOCAL  DEFAULT    1 .hash
+    18: 00000420     0 SECTION LOCAL  DEFAULT    2 .gnu.hash
+    19: 000007c8     0 SECTION LOCAL  DEFAULT    3 .dynsym
+    20: 00000c88     0 SECTION LOCAL  DEFAULT    4 .dynstr
+    21: 00001170     0 SECTION LOCAL  DEFAULT    5 .rel.dyn
+    22: 00001290     0 SECTION LOCAL  DEFAULT    6 .text
+    23: 00005c48     0 SECTION LOCAL  DEFAULT    7 .rodata
+    24: 00016ec4     0 SECTION LOCAL  DEFAULT    8 .fini_array
+    25: 00016ec8     0 SECTION LOCAL  DEFAULT    9 .dynamic
+    26: 00016f70     0 SECTION LOCAL  DEFAULT   10 .got
+    27: 00017000     0 SECTION LOCAL  DEFAULT   11 .data
+    28: 00017008     0 SECTION LOCAL  DEFAULT   12 .bss
+    29: 00000000     0 SECTION LOCAL  DEFAULT   13 .ARM.attributes
+    30: 0000460c   700 FUNC    GLOBAL DEFAULT    6 _dl_load_shared_library
+    31: 000019c4   128 FUNC    GLOBAL DEFAULT    6 _dl_unsetenv
+    32: 00017068     4 OBJECT  GLOBAL DEFAULT   12 _dl_internal_error_number
+    33: 00017028     4 OBJECT  GLOBAL DEFAULT   12 __libc_stack_end
+    34: 00017000     4 OBJECT  GLOBAL DEFAULT   11 _dl_secure
+    35: 0001709c     0 NOTYPE  GLOBAL DEFAULT   12 _bss_end__
+    36: 00002bc0   144 FUNC    GLOBAL DEFAULT    6 _dl_memalign
+    37: 000018d4    48 FUNC    GLOBAL DEFAULT    6 _dl_app_init_array
+    38: 0001706c     4 OBJECT  GLOBAL DEFAULT   12 _dl_error_number
+    39: 00017070     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_static_used
+    40: 00001898    60 FUNC    GLOBAL DEFAULT    6 _dl_run_init_array
+    41: 000014d4    72 FUNC    GLOBAL DEFAULT    6 _dl_realloc
+    42: 00003358   188 FUNC    GLOBAL DEFAULT    6 _dl_protect_relro
+    43: 00001a88   176 FUNC    GLOBAL DEFAULT    6 _dl_deallocate_tls
+    44: 00002860   632 FUNC    GLOBAL DEFAULT    6 _dl_update_slotinfo
+    45: 00017008     0 NOTYPE  GLOBAL DEFAULT   12 __bss_start__
+    46: 00001a44    68 FUNC    GLOBAL DEFAULT    6 _dl_free
+    47: 00003724   320 FUNC    GLOBAL DEFAULT    6 _dl_parse_dynamic_info
+    48: 00001904    60 FUNC    GLOBAL DEFAULT    6 _dl_run_fini_array
+    49: 00017034     4 OBJECT  GLOBAL DEFAULT   12 _dl_ldsopath
+    50: 00017074     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_static_align
+    51: 00017078     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_max_dtv_idx
+    52: 00017030     4 OBJECT  GLOBAL DEFAULT   12 _dl_symbol_tables
+    53: 000031ec   364 FUNC    GLOBAL DEFAULT    6 __tls_get_addr
+    54: 00017064     4 OBJECT  GLOBAL DEFAULT   12 _dl_calloc_function
+    55: 0000171c    64 FUNC    GLOBAL DEFAULT    6 _dl_get_tls_static_info
+    56: 00005c20    32 FUNC    GLOBAL DEFAULT    6 _dl_linux_resolve
+    57: 00002478    44 FUNC    GLOBAL DEFAULT    6 _dl_parse_relocation_information
+    58: 00001b38   620 FUNC    GLOBAL DEFAULT    6 _dl_find_hash
+    59: 0001704c     4 OBJECT  GLOBAL DEFAULT   12 _dl_errno
+    60: 0001707c     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_static_size
+    61: 0000272c   108 FUNC    GLOBAL DEFAULT    6 _dl_calloc
+    62: 000013d0    12 FUNC    GLOBAL DEFAULT    6 _dl_debug_state
+    63: 0000137c    24 FUNC    GLOBAL DEFAULT    6 _dl_initial_error_catch_tsd
+    64: 00002230   200 FUNC    GLOBAL DEFAULT    6 _dl_linux_resolver
+    65: 00017038     4 OBJECT  GLOBAL DEFAULT   12 _dl_loaded_modules
+    66: 00017050     4 OBJECT  GLOBAL DEFAULT   12 _dl_preload
+    67: 0001709c     0 NOTYPE  GLOBAL DEFAULT   12 __bss_end__
+    68: 00017080     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_dtv_slotinfo_list
+    69: 0000175c   316 FUNC    GLOBAL DEFAULT    6 _dl_allocate_tls_init
+    70: 00017084     4 OBJECT  GLOBAL DEFAULT   12 _dl_error_catch_tsd
+    71: 00017098     1 OBJECT  GLOBAL DEFAULT   12 _dl_tls_dtv_gaps
+    72: 000048c8  4300 FUNC    GLOBAL DEFAULT    6 _dl_get_ready_to_run
+    73: 0001702c     4 OBJECT  GLOBAL DEFAULT   12 _dl_handles
+    74: 000025ec   320 FUNC    GLOBAL DEFAULT    6 _dl_malloc
+    75: 00017008     0 NOTYPE  GLOBAL DEFAULT   12 __bss_start
+    76: 00003864  2908 FUNC    GLOBAL DEFAULT    6 _dl_load_elf_shared_library
+    77: 00017004     4 OBJECT  GLOBAL DEFAULT   11 _dl_progname
+    78: 00002798   120 FUNC    GLOBAL DEFAULT    6 _dl_tls_setup
+    79: 00017088     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_generation
+    80: 00017044     4 OBJECT  GLOBAL DEFAULT   12 _dl_debug_addr
+    81: 0001709c     0 NOTYPE  GLOBAL DEFAULT   12 __end__
+    82: 00017058     4 OBJECT  GLOBAL DEFAULT   12 _dl_free_function
+    83: 00017040     4 OBJECT  GLOBAL DEFAULT   12 _dl_malloc_function
+    84: 0001708c     4 OBJECT  GLOBAL DEFAULT   12 _dl_initial_dtv
+    85: 00017090     4 OBJECT  GLOBAL DEFAULT   12 _dl_init_static_tls
+    86: 00002cf0    40 FUNC    GLOBAL DEFAULT    6 _dl_allocate_tls
+    87: 00017094     4 OBJECT  GLOBAL DEFAULT   12 _dl_tls_static_nelem
+    88: 00001940    48 FUNC    GLOBAL DEFAULT    6 _dl_app_fini_array
+    89: 00017008     0 NOTYPE  GLOBAL DEFAULT   11 _edata
+    90: 00017054     4 OBJECT  GLOBAL DEFAULT   12 _dl_library_path
+    91: 0001709c     0 NOTYPE  GLOBAL DEFAULT   12 _end
+    92: 000024a4   328 FUNC    GLOBAL DEFAULT    6 _dl_fixup
+    93: 0001705c     4 OBJECT  GLOBAL DEFAULT   12 _dl_memalign_function
+    94: 00001da4   964 FUNC    GLOBAL DEFAULT    6 _dl_dprintf
+    95: 00002440    56 FUNC    GLOBAL DEFAULT    6 _dl_parse_lazy_relocation_information
+    96: 00017060     4 OBJECT  GLOBAL DEFAULT   12 _dl_realloc_function
+    97: 00003414    64 FUNC    GLOBAL DEFAULT    6 _dl_strdup
+    98: 000030e8   260 FUNC    GLOBAL DEFAULT    6 _dl_add_to_slotinfo
+    99: 00003504   248 FUNC    GLOBAL DEFAULT    6 _dl_add_elf_hash_table
+   100: 00001970    84 FUNC    GLOBAL DEFAULT    6 _dl_getenv
+   101: 00017048     4 OBJECT  GLOBAL DEFAULT   12 _dl_pagesize
+   102: 00002d18   296 FUNC    GLOBAL DEFAULT    6 init_tls

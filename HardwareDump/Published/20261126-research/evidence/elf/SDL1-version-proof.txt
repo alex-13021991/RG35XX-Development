@@ -1,0 +1,5 @@
+SDL_Linked_Version @ 0x5218: ldr r0,[pc,#4]; add r0,pc,r0; bx lr
+Literal at 0x5224; PC for ADD at 0x521c = 0x5224.
+Computed pointer = 0x503a0
+Bytes at pointer = 01 02 0f
+Version = 1.2.15

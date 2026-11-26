@@ -1,0 +1,27 @@
+/home/steward/Downloads/buildroot-2018.02.9/output/build/host-gcc-final-7.3.0/build/arm-miyoo-linux-uclibcgnueabi/libgcc
+/home/steward/Downloads/buildroot-2018.02.9/output/build/host-gcc-final-7.3.0/build/gcc/include
+/opt/miyoo/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/include
+/opt/miyoo/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/include/GL
+/opt/miyoo/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/include/alsa
+/opt/miyoo/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/include/asm-generic
+/opt/miyoo/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/include/bits
+/opt/miyoo/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/include/linux
+/opt/miyoo/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/include/sys
+/opt/miyoo/arm-miyoo-linux-uclibcgnueabi/sysroot/usr/lib
+/opt/miyoo/lib/gcc/arm-miyoo-linux-uclibcgnueabi/7.3.0/include
+GCC: (Buildroot 2018.02.9) 7.3.0
+GCC: (GNU) 3.3.2 20031005 (Debian prerelease)
+
+
+libSDL-1.2.so.0.11.4:	file format elf32-littlearm
+
+Disassembly of section .text:
+
+00005218 <SDL_Linked_Version>:
+    5218: e59f0004     	ldr	r0, [pc, #0x4]          @ 0x5224 <SDL_Linked_Version+0xc>
+    521c: e08f0000     	add	r0, pc, r0
+    5220: e12fff1e     	bx	lr
+/usr/local/swift/usr/bin/llvm-objdump: warning: 'libSDL-1.2.so.0.11.4': failed to disassemble missing symbol SDL_GetNumVideoDrivers_REAL
+/usr/local/swift/usr/bin/llvm-objdump: warning: 'libSDL-1.2.so.0.11.4': failed to disassemble missing symbol SDL_GetVersion_REAL
+/usr/local/swift/usr/bin/llvm-objdump: warning: 'libSDL-1.2.so.0.11.4': failed to disassemble missing symbol SDL_GetNumRenderDrivers_REAL
+/usr/local/swift/usr/bin/llvm-objdump: warning: 'libSDL-1.2.so.0.11.4': failed to disassemble missing symbol SDL_GetNumAudioDrivers_REAL

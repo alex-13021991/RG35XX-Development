@@ -1,0 +1,121 @@
+Выписки из поздних сообщений оператора, 26.11.2026 (не отдельный оригинальный файл терминала).
+
+$ debugfs -w -R "set_super_value overhead_blocks 14399" rootfs_overhead_test.img
+Overhead blocks: 14399
+Block count: 204800
+Free blocks: 69990
+Free inodes: 48485
+Checksum: 0x96448b19
+$ e2fsck -fvn rootfs_overhead_test.img
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+2715 inodes used (5.30%, out of 51200)
+1 non-contiguous file (0.0%)
+3 non-contiguous directories (0.1%)
+Extent depth histogram: 1982/1
+134810 blocks used (65.83%, out of 204800)
+0 bad blocks
+0 large files
+1747 regular files
+236 directories
+1 character device file
+0 block device files
+0 fifos
+0 links
+722 symbolic links (722 fast symbolic links)
+0 sockets
+2706 files
+Exit code: 0
+$ df -k rootfs_fixed_mount
+/dev/loop8 190401 120411 55654 69% rootfs_fixed_mount
+$ stat -f rootfs_fixed_mount
+Block size 1024; total 190401; free 69990; available 55654; inodes 51200; free 48485
+$ rsync -aHAXnci --delete --numeric-ids --exclude='/usr/lib/libintl.so' --exclude='/usr/lib/libjson-c.so' rootfs_original_mount/ rootfs_fixed_mount/
+.d..t...... usr/lib/
+rsync exit code: 0
+Оператор: приставка работает, ведёт себя как до замены, проблем не выявлено.
+
+CPUFreq (кГц):
+online: 0-3
+affected_cpus: 0 1 2 3
+related_cpus: 0 1 2 3
+cpuinfo_cur_freq: 720000
+cpuinfo_max_freq: 1488000
+cpuinfo_min_freq: 240000
+cpuinfo_transition_latency: 300350
+scaling_available_frequencies: 240000 504000 720000 840000 1008000 1104000 1200000 1296000 1392000 1488000
+scaling_available_governors: conservative ondemand userspace powersave interactive performance
+scaling_cur_freq: 720000
+scaling_driver: owl_cpu0
+scaling_governor: interactive
+scaling_max_freq: 720000
+scaling_min_freq: 240000
+scaling_setspeed: <unsupported>
+
+$ aplay -l
+card 0: atm7059link [atm7059_link], device 0: ATC2603C PCM atc2603c-dai-0 []
+card 0: atm7059link [atm7059_link], device 1: HDMI PCM atm7059-hdmi-dai-1 []
+card 0: atm7059link [atm7059_link], device 2: BLUETOOTH PCM bluetooth-pcm-dai-2 []
+Subdevices: 1/1 for each device
+$ aplay -L
+null
+default:CARD=atm7059link
+sysdefault:CARD=atm7059link
+$ ldd /usr/lib/libSDL2-2.0.so.0
+checking sub-depends for '/usr/lib/libts.so.0'
+checking sub-depends for '/lib/libc.so.0'
+ld-uClibc.so.1 => /lib/ld-uClibc.so.1 (0xb6e9b000)
+libts.so.0 => /usr/lib/libts.so.0 (0x00000000)
+libc.so.0 => /lib/libc.so.0 (0x00000000)
+/lib/ld-uClibc.so.1 => /lib/ld-uClibc.so.1 (0x00000000)
+$ ldd /usr/lib/libSDL-1.2.so.0
+checking sub-depends for '/usr/lib/libiconv.so.2'
+checking sub-depends for '/lib/libc.so.0'
+ld-uClibc.so.1 => /lib/ld-uClibc.so.1 (0xb6f6d000)
+libiconv.so.2 => /usr/lib/libiconv.so.2 (0x00000000)
+libc.so.0 => /lib/libc.so.0 (0x00000000)
+/lib/ld-uClibc.so.1 => /lib/ld-uClibc.so.1 (0x00000000)
+$ gdb --version
+GNU gdb (GDB) 8.0; configured as "arm-linux"
+$ strace -V
+strace -- version 4.20; Optional features enabled: (none)
+$ cat /etc/os-release
+NAME=Buildroot
+VERSION=2018.02
+ID=buildroot
+VERSION_ID=2018.02
+PRETTY_NAME="Buildroot 2018.02"
+$ cat /etc/issue
+Welcome to Miyoo
+$ cat /etc/ld.so.conf
+No such file or directory
+$ ls -l /dev/fb*
+/dev/fb0 -> /dev/graphics/fb0
+/dev/fb1 -> /dev/graphics/fb1
+$ ls -l /dev/dri
+No such file or directory
+$ ls -l /usr/lib/dri
+-rwxr-xr-x 1 root root 3107824 Dec 16 2022 swrast_dri.so
+$ dmesg | grep -Ei 'gpu|powervr|pvr|sgx|mali|vivante'
+(no output)
+$ /bin/busybox fbset -fb /dev/graphics/fb0 -i
+(no output)
+$ cat /sys/class/graphics/fb0/stride
+1280
+$ cat /sys/class/graphics/fb0/modes
+U:1024x896p-28
+U:320x200d-69
+U:8x8p-5408
+U:640x480p-75
+U:640x480p-56
+$ ls -l /dev/graphics
+crw-rw---- 1 root 1003 29,0 fb0
+crw-rw---- 1 root 1003 29,1 fb1
+$ amixer scontrols
+/bin/sh: amixer: not found
+$ amixer contents
+/bin/sh: amixer: not found
+which readelf / objdump / file: no confirmed path (last command interleaved with exit).

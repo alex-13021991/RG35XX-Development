@@ -1,0 +1,1140 @@
+PS C:\Users\user> cd C:\ADB
+PS C:\ADB>
+PS C:\ADB> .\adb.exe shell -t "/system/bin/busybox chroot /cfw /bin/sh"
+/ # export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+/ # .\adb.exe shell "/system/bin/busybox chroot /cfw /bin/uname -a"
+.\adb.exe shell "/system/bin/busybox chroot /cfw /bin/uname -a"
+/bin/sh: .adb.exe: not found
+/ # ls -l /lib
+ls -l /usr/lib
+ls -l /usr/bin
+ls -l /usr/sbin
+
+cat /etc/os-release
+cat /etc/issuels -l /lib
+ls -l /usr/lib
+ls -l /usr/bin
+ls -l /usr/sbin
+
+cat /etc/os-release
+total 1185
+-rwxr-xr-x    1 root     root         32656 Dec 16  2022 ld-uClibc-1.0.28.so
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 ld-uClibc.so.0 -> ld-uClibc.so.1
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 ld-uClibc.so.1 -> ld-uClibc-1.0.28.so
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libatomic.so -> libatomic.so.1.2.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libatomic.so.1 -> libatomic.so.1.2.0
+-rwxr-xr-x    1 root     root         21648 Dec 16  2022 libatomic.so.1.2.0
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libblkid.so.1 -> libblkid.so.1.1.0
+-rwxr-xr-x    1 root     root        240364 Dec 16  2022 libblkid.so.1.1.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libc.so.0 -> libuClibc-1.0.28.so
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libc.so.1 -> libuClibc-1.0.28.so
+-rw-r--r--    1 root     root           132 Dec 16  2022 libgcc_s.so
+-rw-r--r--    1 root     root        132640 Dec 16  2022 libgcc_s.so.1
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libmount.so.1 -> libmount.so.1.1.0
+-rwxr-xr-x    1 root     root        269512 Dec 16  2022 libmount.so.1.1.0
+-rwxr-xr-x    1 root     root        489384 Dec 16  2022 libuClibc-1.0.28.so
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libuuid.so.1 -> libuuid.so.1.3.0
+-rwxr-xr-x    1 root     root         22004 Dec 16  2022 libuuid.so.1.3.0
+drwxr-xr-x    3 root     root          1024 Dec 16  2022 modules
+/ # ls -l /usr/lib
+total 31420
+drwxr-xr-x    3 root     root          1024 Dec 16  2022 ao
+-rw-r--r--    1 root     root           252 Dec 16  2022 charset.alias
+drwxr-xr-x    3 root     root          1024 Dec 16  2022 ckport
+drwxr-xr-x    2 root     root          1024 Dec 16  2022 dri
+drwxr-xr-x    2 root     root          1024 Dec 16  2022 elfutils
+drwxr-xr-x    3 root     root          1024 Dec 16  2022 gio
+drwxr-xr-x    3 root     root          1024 Dec 16  2022 giomm-2.4
+drwxr-xr-x    4 root     root          1024 Dec 16  2022 glibmm-2.4
+drwxr-xr-x    2 root     root          1024 Dec 16  2022 gstreamer-0.10
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libBulletCollision.so -> libBulletCollision.so.2.86
+-rwxr-xr-x    1 root     root        607228 Dec 16  2022 libBulletCollision.so.2.86
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libBulletDynamics.so -> libBulletDynamics.so.2.86
+-rwxr-xr-x    1 root     root        392844 Dec 16  2022 libBulletDynamics.so.2.86
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libBulletSoftBody.so -> libBulletSoftBody.so.2.86
+-rwxr-xr-x    1 root     root        199492 Dec 16  2022 libBulletSoftBody.so.2.86
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libEGL.so -> libEGL.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libEGL.so.1 -> libEGL.so.1.0.0
+-rwxr-xr-x    1 root     root        125032 Dec 16  2022 libEGL.so.1.0.0
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libGL.so -> libGL.so.1.2.0
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libGL.so.1 -> libGL.so.1.2.0
+-rwxr-xr-x    1 root     root        366896 Dec 16  2022 libGL.so.1.2.0
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libGLESv1_CM.so -> libGLESv1_CM.so.1.1.0
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libGLESv1_CM.so.1 -> libGLESv1_CM.so.1.1.0
+-rwxr-xr-x    1 root     root         17436 Dec 16  2022 libGLESv1_CM.so.1.1.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libGLESv2.so -> libGLESv2.so.2.0.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libGLESv2.so.2 -> libGLESv2.so.2.0.0
+-rwxr-xr-x    1 root     root         37916 Dec 16  2022 libGLESv2.so.2.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libGLU.so -> libGLU.so.1.3.1
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libGLU.so.1 -> libGLU.so.1.3.1
+-rwxr-xr-x    1 root     root        415660 Dec 16  2022 libGLU.so.1.3.1
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libICE.so -> libICE.so.6.3.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libICE.so.6 -> libICE.so.6.3.0
+-rwxr-xr-x    1 root     root         71880 Dec 16  2022 libICE.so.6.3.0
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libLinearMath.so -> libLinearMath.so.2.86
+-rwxr-xr-x    1 root     root        103904 Dec 16  2022 libLinearMath.so.2.86
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libSDL-1.2.so.0 -> libSDL-1.2.so.0.11.4
+-rwx------    1 root     root       1198220 Jan 26  2022 libSDL-1.2.so.0.11.4
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libSDL.so -> libSDL-1.2.so.0.11.4
+lrwxrwxrwx    1 root     root            20 Dec 27  2022 libSDL2-2.0.so.0 -> libSDL2-2.0.so.0.8.0
+lrwxrwxrwx    1 root     root            20 Dec 27  2022 libSDL2-2.0.so.0.7.0 -> libSDL2-2.0.so.0.8.0
+-rwxr-xr-x    1 root     root        988400 Jan  4  2023 libSDL2-2.0.so.0.8.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libSDL2.so -> libSDL2-2.0.so.0.7.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libSDL2_gfx-1.0.so.0 -> libSDL2_gfx-1.0.so.0.0.1
+-rwxr-xr-x    1 root     root         77772 Jan  4  2023 libSDL2_gfx-1.0.so.0.0.1
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libSDL2_gfx.so -> libSDL2_gfx-1.0.so.0.0.1
+lrwxrwxrwx    1 root     root            26 Dec 27  2022 libSDL2_image-2.0.so.0 -> libSDL2_image-2.0.so.0.2.1
+lrwxrwxrwx    1 root     root            26 Dec 27  2022 libSDL2_image-2.0.so.0.0.1 -> libSDL2_image-2.0.so.0.2.1
+-rwxr-xr-x    1 root     root        130492 Jan  4  2023 libSDL2_image-2.0.so.0.2.1
+lrwxrwxrwx    1 root     root            26 Dec 27  2022 libSDL2_image.so -> libSDL2_image-2.0.so.0.2.1
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libSDL2_ttf-2.0.so.0 -> libSDL2_ttf-2.0.so.0.14.0
+-rwxr-xr-x    1 root     root         36976 Jan  4  2023 libSDL2_ttf-2.0.so.0.14.0
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libSDL2_ttf.so -> libSDL2_ttf-2.0.so.0.14.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libSDL_gfx.so -> libSDL_gfx.so.13.9.1
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libSDL_gfx.so.13 -> libSDL_gfx.so.13.9.1
+-rwxr-xr-x    1 root     root        100948 Jan  4  2023 libSDL_gfx.so.13.9.1
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libSDL_image-1.2.so.0 -> libSDL_image-1.2.so.0.8.4
+-rwxr-xr-x    1 root     root         52200 Jan  4  2023 libSDL_image-1.2.so.0.8.4
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libSDL_image.so -> libSDL_image-1.2.so.0.8.4
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libSDL_mixer-1.2.so.0 -> libSDL_mixer-1.2.so.0.12.1
+-rwxr-xr-x    1 root     root         81272 Jan  4  2023 libSDL_mixer-1.2.so.0.12.0
+-rwxr-xr-x    1 root     root        163760 Dec 16  2022 libSDL_mixer-1.2.so.0.12.1
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libSDL_mixer.so -> libSDL_mixer-1.2.so.0.12.0
+lrwxrwxrwx    1 root     root            23 Dec 16  2022 libSDL_net-1.2.so.0 -> libSDL_net-1.2.so.0.8.0
+-rwxr-xr-x    1 root     root         19612 Jan  4  2023 libSDL_net-1.2.so.0.8.0
+lrwxrwxrwx    1 root     root            23 Dec 16  2022 libSDL_net.so -> libSDL_net-1.2.so.0.8.0
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libSDL_sound-1.0.so.1 -> libSDL_sound-1.0.so.1.0.2
+-rwxr-xr-x    1 root     root        175036 Jan  4  2023 libSDL_sound-1.0.so.1.0.2
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libSDL_sound.so -> libSDL_sound-1.0.so.1.0.2
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libSDL_ttf-2.0.so.0 -> libSDL_ttf-2.0.so.0.10.1
+-rwxr-xr-x    1 root     root         32108 Jan  4  2023 libSDL_ttf-2.0.so.0.10.1
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libSDL_ttf.so -> libSDL_ttf-2.0.so.0.10.1
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libSM.so -> libSM.so.6.0.1
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libSM.so.6 -> libSM.so.6.0.1
+-rwxr-xr-x    1 root     root         25904 Dec 16  2022 libSM.so.6.0.1
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libX11-xcb.so -> libX11-xcb.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libX11-xcb.so.1 -> libX11-xcb.so.1.0.0
+-rwxr-xr-x    1 root     root          5140 Dec 16  2022 libX11-xcb.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libX11.so -> libX11.so.6.3.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libX11.so.6 -> libX11.so.6.3.0
+-rwxr-xr-x    1 root     root       1071540 Dec 16  2022 libX11.so.6.3.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libXRes.so -> libXRes.so.1.0.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libXRes.so.1 -> libXRes.so.1.0.0
+-rwxr-xr-x    1 root     root          9400 Dec 16  2022 libXRes.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libXau.so -> libXau.so.6.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libXau.so.6 -> libXau.so.6.0.0
+-rwxr-xr-x    1 root     root          9396 Dec 16  2022 libXau.so.6.0.0
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libXcomposite.so -> libXcomposite.so.1.0.0
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libXcomposite.so.1 -> libXcomposite.so.1.0.0
+-rwxr-xr-x    1 root     root          9340 Dec 16  2022 libXcomposite.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libXcursor.so -> libXcursor.so.1.0.2
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libXcursor.so.1 -> libXcursor.so.1.0.2
+-rwxr-xr-x    1 root     root         30160 Dec 16  2022 libXcursor.so.1.0.2
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libXdamage.so -> libXdamage.so.1.1.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libXdamage.so.1 -> libXdamage.so.1.1.0
+-rwxr-xr-x    1 root     root          9352 Dec 16  2022 libXdamage.so.1.1.0
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libXdmcp.so -> libXdmcp.so.6.0.0
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libXdmcp.so.6 -> libXdmcp.so.6.0.0
+-rwxr-xr-x    1 root     root         17584 Dec 16  2022 libXdmcp.so.6.0.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libXext.so -> libXext.so.6.4.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libXext.so.6 -> libXext.so.6.4.0
+-rwxr-xr-x    1 root     root         55236 Dec 16  2022 libXext.so.6.4.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libXfixes.so -> libXfixes.so.3.1.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libXfixes.so.3 -> libXfixes.so.3.1.0
+-rwxr-xr-x    1 root     root         17540 Dec 16  2022 libXfixes.so.3.1.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libXfont2.so -> libXfont2.so.2.0.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libXfont2.so.2 -> libXfont2.so.2.0.0
+-rwxr-xr-x    1 root     root        171460 Dec 16  2022 libXfont2.so.2.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libXft.so -> libXft.so.2.3.2
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libXft.so.2 -> libXft.so.2.3.2
+-rwxr-xr-x    1 root     root         63332 Dec 16  2022 libXft.so.2.3.2
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libXi.so -> libXi.so.6.1.0
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libXi.so.6 -> libXi.so.6.1.0
+-rwxr-xr-x    1 root     root         50476 Dec 16  2022 libXi.so.6.1.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libXinerama.so -> libXinerama.so.1.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libXinerama.so.1 -> libXinerama.so.1.0.0
+-rwxr-xr-x    1 root     root          9380 Dec 16  2022 libXinerama.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libXmu.so -> libXmu.so.6.2.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libXmu.so.6 -> libXmu.so.6.2.0
+-rwxr-xr-x    1 root     root         80356 Dec 16  2022 libXmu.so.6.2.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libXmuu.so -> libXmuu.so.1.0.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libXmuu.so.1 -> libXmuu.so.1.0.0
+-rwxr-xr-x    1 root     root         13504 Dec 16  2022 libXmuu.so.1.0.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libXrandr.so -> libXrandr.so.2.2.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libXrandr.so.2 -> libXrandr.so.2.2.0
+-rwxr-xr-x    1 root     root         34032 Dec 16  2022 libXrandr.so.2.2.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libXrender.so -> libXrender.so.1.3.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libXrender.so.1 -> libXrender.so.1.3.0
+-rwxr-xr-x    1 root     root         34212 Dec 16  2022 libXrender.so.1.3.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libXss.so -> libXss.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libXss.so.1 -> libXss.so.1.0.0
+-rwxr-xr-x    1 root     root          9396 Dec 16  2022 libXss.so.1.0.0
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libXt.so -> libXt.so.6.0.0
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libXt.so.6 -> libXt.so.6.0.0
+-rwxr-xr-x    1 root     root        293592 Dec 16  2022 libXt.so.6.0.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libXtst.so -> libXtst.so.6.1.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libXtst.so.6 -> libXtst.so.6.1.0
+-rwxr-xr-x    1 root     root         17680 Dec 16  2022 libXtst.so.6.1.0
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libXv.so -> libXv.so.1.0.0
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libXv.so.1 -> libXv.so.1.0.0
+-rwxr-xr-x    1 root     root         13568 Dec 16  2022 libXv.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libXxf86vm.so -> libXxf86vm.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libXxf86vm.so.1 -> libXxf86vm.so.1.0.0
+-rwxr-xr-x    1 root     root         21688 Dec 16  2022 libXxf86vm.so.1.0.0
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libao.so -> libao.so.4.1.0
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libao.so.4 -> libao.so.4.1.0
+-rwxr-xr-x    1 root     root         26408 Dec 16  2022 libao.so.4.1.0
+-rwxr-xr-x    1 root     root         22132 Dec 16  2022 libasm-0.169.so
+lrwxrwxrwx    1 root     root            11 Dec 16  2022 libasm.so -> libasm.so.1
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libasm.so.1 -> libasm-0.169.so
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libasound.so -> libasound.so.2.0.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libasound.so.2 -> libasound.so.2.0.0
+-rwxr-xr-x    1 root     root        844964 Dec 16  2022 libasound.so.2.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libass.so -> libass.so.9.0.1
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libass.so.9 -> libass.so.9.0.1
+-rwxr-xr-x    1 root     root        137160 Dec 16  2022 libass.so.9.0.1
+-rwxr-xr-x    1 root     root        215256 Dec 16  2022 libbgdrtm.so
+-rwxr-xr-x    1 root     root          7260 Dec 16  2022 libbgload.so
+-rwxr-xr-x    1 root     root         51388 Dec 16  2022 libblit.so
+lrwxrwxrwx    1 root     root            27 Dec 16  2022 libblkid.so -> ../../lib/libblkid.so.1.1.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libbz2.so -> libbz2.so.1.0.6
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libbz2.so.1.0 -> libbz2.so.1.0.6
+-rwxr-xr-x    1 root     root         53556 Dec 16  2022 libbz2.so.1.0.6
+lrwxrwxrwx    1 root     root            30 Dec 16  2022 libcairo-gobject.so -> libcairo-gobject.so.2.11400.10
+lrwxrwxrwx    1 root     root            30 Dec 16  2022 libcairo-gobject.so.2 -> libcairo-gobject.so.2.11400.10
+-rwxr-xr-x    1 root     root         25816 Dec 16  2022 libcairo-gobject.so.2.11400.10
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libcairo.so -> libcairo.so.2.11400.10
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libcairo.so.2 -> libcairo.so.2.11400.10
+-rwxr-xr-x    1 root     root        806784 Dec 16  2022 libcairo.so.2.11400.10
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libcharset.so -> libcharset.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libcharset.so.1 -> libcharset.so.1.0.0
+-rwxr-xr-x    1 root     root          5260 Dec 16  2022 libcharset.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libconfuse.so -> libconfuse.so.1.1.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libconfuse.so.1 -> libconfuse.so.1.1.0
+-rwxr-xr-x    1 root     root         38452 Dec 16  2022 libconfuse.so.1.1.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libcurl.so -> libcurl.so.4.5.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libcurl.so.4 -> libcurl.so.4.5.0
+-rwxr-xr-x    1 root     root        259964 Dec 16  2022 libcurl.so.4.5.0
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libcurses.so -> libncurses.so.6.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libdbus-1.so -> libdbus-1.so.3.19.4
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libdbus-1.so.3 -> libdbus-1.so.3.19.4
+-rwxr-xr-x    1 root     root        244940 Dec 16  2022 libdbus-1.so.3.19.4
+-rwxr-xr-x    1 root     root         53192 Dec 16  2022 libdes.so
+-rwxr-xr-x    1 root     root         27436 Dec 16  2022 libdraw.so
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libdrm.so -> libdrm.so.2.4.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libdrm.so.2 -> libdrm.so.2.4.0
+-rwxr-xr-x    1 root     root         50680 Dec 16  2022 libdrm.so.2.4.0
+-rwxr-xr-x    1 root     root        227680 Dec 16  2022 libdw-0.169.so
+lrwxrwxrwx    1 root     root            10 Dec 16  2022 libdw.so -> libdw.so.1
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libdw.so.1 -> libdw-0.169.so
+-rwxr-xr-x    1 root     root         83488 Dec 16  2022 libelf-0.169.so
+lrwxrwxrwx    1 root     root            11 Dec 16  2022 libelf.so -> libelf.so.1
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libelf.so.1 -> libelf-0.169.so
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libexpat.so -> libexpat.so.1.6.7
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libexpat.so.1 -> libexpat.so.1.6.7
+-rwxr-xr-x    1 root     root        112104 Dec 16  2022 libexpat.so.1.6.7
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libffi.so -> libffi.so.6.0.4
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libffi.so.6 -> libffi.so.6.0.4
+-rwxr-xr-x    1 root     root         13688 Dec 16  2022 libffi.so.6.0.4
+-rwxr-xr-x    1 root     root         15512 Dec 16  2022 libfont.so
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libfontconfig.so -> libfontconfig.so.1.9.4
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libfontconfig.so.1 -> libfontconfig.so.1.9.4
+-rwxr-xr-x    1 root     root        215012 Dec 16  2022 libfontconfig.so.1.9.4
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libfontenc.so -> libfontenc.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libfontenc.so.1 -> libfontenc.so.1.0.0
+-rwxr-xr-x    1 root     root         19792 Dec 16  2022 libfontenc.so.1.0.0
+lrwxrwxrwx    1 root     root            12 Dec 16  2022 libform.so -> libform.so.6
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libform.so.6 -> libform.so.6.0
+-rwxr-xr-x    1 root     root         42952 Dec 16  2022 libform.so.6.0
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libfreetype.so -> libfreetype.so.6.15.0
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libfreetype.so.6 -> libfreetype.so.6.15.0
+-rwxr-xr-x    1 root     root        485284 Dec 16  2022 libfreetype.so.6.15.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libfribidi.so -> libfribidi.so.0.3.6
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libfribidi.so.0 -> libfribidi.so.0.3.6
+-rwxr-xr-x    1 root     root         91368 Dec 16  2022 libfribidi.so.0.3.6
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libgbm.so -> libgbm.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libgbm.so.1 -> libgbm.so.1.0.0
+-rwxr-xr-x    1 root     root         42628 Dec 16  2022 libgbm.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libgif.so -> libgif.so.7.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libgif.so.7 -> libgif.so.7.0.0
+-rwxr-xr-x    1 root     root         25896 Dec 16  2022 libgif.so.7.0.0
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libgio-2.0.so -> libgio-2.0.so.0.5400.2
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libgio-2.0.so.0 -> libgio-2.0.so.0.5400.2
+-rwxr-xr-x    1 root     root       1329000 Dec 16  2022 libgio-2.0.so.0.5400.2
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libgiomm-2.4.so -> libgiomm-2.4.so.1.3.0
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libgiomm-2.4.so.1 -> libgiomm-2.4.so.1.3.0
+-rwxr-xr-x    1 root     root       1338984 Dec 16  2022 libgiomm-2.4.so.1.3.0
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libglapi.so -> libglapi.so.0.0.0
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libglapi.so.0 -> libglapi.so.0.0.0
+-rwxr-xr-x    1 root     root        169248 Dec 16  2022 libglapi.so.0.0.0
+lrwxrwxrwx    1 root     root            23 Dec 16  2022 libglib-2.0.so -> libglib-2.0.so.0.5400.2
+lrwxrwxrwx    1 root     root            23 Dec 16  2022 libglib-2.0.so.0 -> libglib-2.0.so.0.5400.2
+-rwxr-xr-x    1 root     root        936852 Dec 16  2022 libglib-2.0.so.0.5400.2
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libglibmm-2.4.so -> libglibmm-2.4.so.1.3.0
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libglibmm-2.4.so.1 -> libglibmm-2.4.so.1.3.0
+-rwxr-xr-x    1 root     root        404592 Dec 16  2022 libglibmm-2.4.so.1.3.0
+lrwxrwxrwx    1 root     root            42 Dec 16  2022 libglibmm_generate_extra_defs-2.4.so -> libglibmm_generate_extra_defs-2.4.so.1.3.0
+lrwxrwxrwx    1 root     root            42 Dec 16  2022 libglibmm_generate_extra_defs-2.4.so.1 -> libglibmm_generate_extra_defs-2.4.so.1.3.0
+-rwxr-xr-x    1 root     root        126256 Dec 16  2022 libglibmm_generate_extra_defs-2.4.so.1.3.0
+lrwxrwxrwx    1 root     root            12 Dec 16  2022 libglut.so -> libglut.so.3
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libglut.so.3 -> libglut.so.3.10.0
+-rwxr-xr-x    1 root     root        237400 Dec 16  2022 libglut.so.3.10.0
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libgmodule-2.0.so -> libgmodule-2.0.so.0.5400.2
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libgmodule-2.0.so.0 -> libgmodule-2.0.so.0.5400.2
+-rwxr-xr-x    1 root     root          9444 Dec 16  2022 libgmodule-2.0.so.0.5400.2
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libgobject-2.0.so -> libgobject-2.0.so.0.5400.2
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libgobject-2.0.so.0 -> libgobject-2.0.so.0.5400.2
+-rwxr-xr-x    1 root     root        244628 Dec 16  2022 libgobject-2.0.so.0.5400.2
+-rwxr-xr-x    1 root     root         43996 Dec 16  2022 libgrbase.so
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libgstapp-0.10.so -> libgstapp-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libgstapp-0.10.so.0 -> libgstapp-0.10.so.0.25.0
+-rwxr-xr-x    1 root     root         42744 Dec 16  2022 libgstapp-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libgstaudio-0.10.so -> libgstaudio-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libgstaudio-0.10.so.0 -> libgstaudio-0.10.so.0.25.0
+-rwxr-xr-x    1 root     root        213188 Dec 16  2022 libgstaudio-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libgstbase-0.10.so -> libgstbase-0.10.so.0.30.0
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libgstbase-0.10.so.0 -> libgstbase-0.10.so.0.30.0
+-rwxr-xr-x    1 root     root        326020 Dec 16  2022 libgstbase-0.10.so.0.30.0
+lrwxrwxrwx    1 root     root            37 Dec 16  2022 libgstbasecamerabinsrc-0.10.so -> libgstbasecamerabinsrc-0.10.so.23.0.0
+lrwxrwxrwx    1 root     root            37 Dec 16  2022 libgstbasecamerabinsrc-0.10.so.23 -> libgstbasecamerabinsrc-0.10.so.23.0.0
+-rwxr-xr-x    1 root     root         22172 Dec 16  2022 libgstbasecamerabinsrc-0.10.so.23.0.0
+lrwxrwxrwx    1 root     root            30 Dec 16  2022 libgstbasevideo-0.10.so -> libgstbasevideo-0.10.so.23.0.0
+lrwxrwxrwx    1 root     root            30 Dec 16  2022 libgstbasevideo-0.10.so.23 -> libgstbasevideo-0.10.so.23.0.0
+-rwxr-xr-x    1 root     root         71524 Dec 16  2022 libgstbasevideo-0.10.so.23.0.0
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libgstcdda-0.10.so -> libgstcdda-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libgstcdda-0.10.so.0 -> libgstcdda-0.10.so.0.25.0
+-rwxr-xr-x    1 root     root         34424 Dec 16  2022 libgstcdda-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libgstcheck-0.10.so -> libgstcheck-0.10.so.0.30.0
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libgstcheck-0.10.so.0 -> libgstcheck-0.10.so.0.30.0
+-rwxr-xr-x    1 root     root         46832 Dec 16  2022 libgstcheck-0.10.so.0.30.0
+lrwxrwxrwx    1 root     root            33 Dec 16  2022 libgstcodecparsers-0.10.so -> libgstcodecparsers-0.10.so.23.0.0
+lrwxrwxrwx    1 root     root            33 Dec 16  2022 libgstcodecparsers-0.10.so.23 -> libgstcodecparsers-0.10.so.23.0.0
+-rwxr-xr-x    1 root     root        132292 Dec 16  2022 libgstcodecparsers-0.10.so.23.0.0
+lrwxrwxrwx    1 root     root            31 Dec 16  2022 libgstcontroller-0.10.so -> libgstcontroller-0.10.so.0.30.0
+lrwxrwxrwx    1 root     root            31 Dec 16  2022 libgstcontroller-0.10.so.0 -> libgstcontroller-0.10.so.0.30.0
+-rwxr-xr-x    1 root     root        125196 Dec 16  2022 libgstcontroller-0.10.so.0.30.0
+lrwxrwxrwx    1 root     root            33 Dec 16  2022 libgstdataprotocol-0.10.so -> libgstdataprotocol-0.10.so.0.30.0
+lrwxrwxrwx    1 root     root            33 Dec 16  2022 libgstdataprotocol-0.10.so.0 -> libgstdataprotocol-0.10.so.0.30.0
+-rwxr-xr-x    1 root     root         17644 Dec 16  2022 libgstdataprotocol-0.10.so.0.30.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libgstfft-0.10.so -> libgstfft-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libgstfft-0.10.so.0 -> libgstfft-0.10.so.0.25.0
+-rwxr-xr-x    1 root     root         46204 Dec 16  2022 libgstfft-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            31 Dec 16  2022 libgstinterfaces-0.10.so -> libgstinterfaces-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            31 Dec 16  2022 libgstinterfaces-0.10.so.0 -> libgstinterfaces-0.10.so.0.25.0
+-rwxr-xr-x    1 root     root         58860 Dec 16  2022 libgstinterfaces-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libgstnet-0.10.so -> libgstnet-0.10.so.0.30.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libgstnet-0.10.so.0 -> libgstnet-0.10.so.0.30.0
+-rwxr-xr-x    1 root     root         26004 Dec 16  2022 libgstnet-0.10.so.0.30.0
+lrwxrwxrwx    1 root     root            30 Dec 16  2022 libgstnetbuffer-0.10.so -> libgstnetbuffer-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            30 Dec 16  2022 libgstnetbuffer-0.10.so.0 -> libgstnetbuffer-0.10.so.0.25.0
+-rwxr-xr-x    1 root     root          9360 Dec 16  2022 libgstnetbuffer-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            28 Dec 16  2022 libgstpbutils-0.10.so -> libgstpbutils-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            28 Dec 16  2022 libgstpbutils-0.10.so.0 -> libgstpbutils-0.10.so.0.25.0
+-rwxr-xr-x    1 root     root        121060 Dec 16  2022 libgstpbutils-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            32 Dec 16  2022 libgstphotography-0.10.so -> libgstphotography-0.10.so.23.0.0
+lrwxrwxrwx    1 root     root            32 Dec 16  2022 libgstphotography-0.10.so.23 -> libgstphotography-0.10.so.23.0.0
+-rwxr-xr-x    1 root     root         21728 Dec 16  2022 libgstphotography-0.10.so.23.0.0
+lrwxrwxrwx    1 root     root            27 Dec 16  2022 libgstreamer-0.10.so -> libgstreamer-0.10.so.0.30.0
+lrwxrwxrwx    1 root     root            27 Dec 16  2022 libgstreamer-0.10.so.0 -> libgstreamer-0.10.so.0.30.0
+-rwxr-xr-x    1 root     root        816208 Dec 16  2022 libgstreamer-0.10.so.0.30.0
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libgstriff-0.10.so -> libgstriff-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libgstriff-0.10.so.0 -> libgstriff-0.10.so.0.25.0
+-rwxr-xr-x    1 root     root         50416 Dec 16  2022 libgstriff-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libgstrtp-0.10.so -> libgstrtp-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libgstrtp-0.10.so.0 -> libgstrtp-0.10.so.0.25.0
+-rwxr-xr-x    1 root     root         79600 Dec 16  2022 libgstrtp-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libgstrtsp-0.10.so -> libgstrtsp-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libgstrtsp-0.10.so.0 -> libgstrtsp-0.10.so.0.25.0
+-rwxr-xr-x    1 root     root         79556 Dec 16  2022 libgstrtsp-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libgstsdp-0.10.so -> libgstsdp-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libgstsdp-0.10.so.0 -> libgstsdp-0.10.so.0.25.0
+-rwxr-xr-x    1 root     root         25772 Dec 16  2022 libgstsdp-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            36 Dec 16  2022 libgstsignalprocessor-0.10.so -> libgstsignalprocessor-0.10.so.23.0.0
+lrwxrwxrwx    1 root     root            36 Dec 16  2022 libgstsignalprocessor-0.10.so.23 -> libgstsignalprocessor-0.10.so.23.0.0
+-rwxr-xr-x    1 root     root         21844 Dec 16  2022 libgstsignalprocessor-0.10.so.23.0.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libgsttag-0.10.so -> libgsttag-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libgsttag-0.10.so.0 -> libgsttag-0.10.so.0.25.0
+-rwxr-xr-x    1 root     root        190908 Dec 16  2022 libgsttag-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libgstvideo-0.10.so -> libgstvideo-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libgstvideo-0.10.so.0 -> libgstvideo-0.10.so.0.25.0
+-rwxr-xr-x    1 root     root         75480 Dec 16  2022 libgstvideo-0.10.so.0.25.0
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libgthread-2.0.so -> libgthread-2.0.so.0.5400.2
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libgthread-2.0.so.0 -> libgthread-2.0.so.0.5400.2
+-rwxr-xr-x    1 root     root          5196 Dec 16  2022 libgthread-2.0.so.0.5400.2
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libharfbuzz.so -> libharfbuzz.so.0.10701.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libharfbuzz.so.0 -> libharfbuzz.so.0.10701.0
+-rwxr-xr-x    1 root     root        419948 Dec 16  2022 libharfbuzz.so.0.10701.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libhistory.so -> libhistory.so.7
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libhistory.so.7 -> libhistory.so.7.0
+-rwxr-xr-x    1 root     root         30124 Dec 16  2022 libhistory.so.7.0
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libiconv.so -> libiconv.so.2.6.0
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libiconv.so.2 -> libiconv.so.2.6.0
+-rwxr-xr-x    1 root     root        906460 Dec 16  2022 libiconv.so.2.6.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libid3tag.so -> libid3tag.so.0.3.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libid3tag.so.0 -> libid3tag.so.0.3.0
+-rwxr-xr-x    1 root     root         63144 Dec 16  2022 libid3tag.so.0.3.0
+lrwxrwxrwx    1 root     root            16 Nov 26 04:38 libintl.so -> libintl.so.8.1.5
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libintl.so.8 -> libintl.so.8.1.5
+-rw-r--r--    1 root     root         30164 Dec 16  2022 libintl.so.8.1.5
+-rwxr-xr-x    1 root     root         13720 Dec 16  2022 libjoy.so
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libjpeg.so -> libjpeg.so.9.2.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libjpeg.so.9 -> libjpeg.so.9.2.0
+-rwxr-xr-x    1 root     root        190260 Dec 16  2022 libjpeg.so.9.2.0
+lrwxrwxrwx    1 root     root            18 Nov 26 04:38 libjson-c.so -> libjson-c.so.3.0.1
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libjson-c.so.3 -> libjson-c.so.3.0.1
+-rwxr-xr-x    1 root     root         46632 Dec 16  2022 libjson-c.so.3.0.1
+-rwxr-xr-x    1 root     root         14944 Dec 16  2022 libkey.so
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libkms.so -> libkms.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libkms.so.1 -> libkms.so.1.0.0
+-rwxr-xr-x    1 root     root          9344 Dec 16  2022 libkms.so.1.0.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libltdl.so -> libltdl.so.7.3.1
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libltdl.so.7 -> libltdl.so.7.3.1
+-rwxr-xr-x    1 root     root         30128 Dec 16  2022 libltdl.so.7.3.1
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 liblua.so -> liblua.so.5.1.5
+-rwxr-xr-x    1 root     root        124832 Dec 16  2022 liblua.so.5.1.5
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 liblz4.so -> liblz4.so.1.7.5
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 liblz4.so.1 -> liblz4.so.1.7.5
+-rwxr-xr-x    1 root     root         66828 Dec 16  2022 liblz4.so.1.7.5
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libmad.so -> libmad.so.0.2.1
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libmad.so.0 -> libmad.so.0.2.1
+-rwxr-xr-x    1 root     root         83240 Dec 16  2022 libmad.so.0.2.1
+lrwxrwxrwx    1 root     root            12 Dec 16  2022 libmenu.so -> libmenu.so.6
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libmenu.so.6 -> libmenu.so.6.0
+-rwxr-xr-x    1 root     root         21952 Dec 16  2022 libmenu.so.6.0
+-rwxr-xr-x    1 root     root          8104 Dec 16  2022 libmod_blendop.so
+-rwxr-xr-x    1 root     root         12992 Dec 16  2022 libmod_cd.so
+-rwxr-xr-x    1 root     root          7644 Dec 16  2022 libmod_crypt.so
+-rwxr-xr-x    1 root     root         96492 Dec 16  2022 libmod_debug.so
+-rwxr-xr-x    1 root     root         12468 Dec 16  2022 libmod_dir.so
+-rwxr-xr-x    1 root     root         13416 Dec 16  2022 libmod_draw.so
+-rwxr-xr-x    1 root     root         25664 Dec 16  2022 libmod_effects.so
+-rwxr-xr-x    1 root     root         13344 Dec 16  2022 libmod_file.so
+-rwxr-xr-x    1 root     root         19480 Dec 16  2022 libmod_flic.so
+-rwxr-xr-x    1 root     root         32480 Dec 16  2022 libmod_grproc.so
+-rwxr-xr-x    1 root     root         13400 Dec 16  2022 libmod_joy.so
+-rwxr-xr-x    1 root     root          7336 Dec 16  2022 libmod_key.so
+-rwxr-xr-x    1 root     root         34504 Dec 16  2022 libmod_m7.so
+-rwxr-xr-x    1 root     root         51644 Dec 16  2022 libmod_map.so
+-rwxr-xr-x    1 root     root         17676 Dec 16  2022 libmod_math.so
+-rwxr-xr-x    1 root     root         17680 Dec 16  2022 libmod_mathi.so
+-rwxr-xr-x    1 root     root          8176 Dec 16  2022 libmod_mem.so
+-rwxr-xr-x    1 root     root          7148 Dec 16  2022 libmod_mouse.so
+-rwxr-xr-x    1 root     root         15384 Dec 16  2022 libmod_path.so
+-rwxr-xr-x    1 root     root         17168 Dec 16  2022 libmod_proc.so
+-rwxr-xr-x    1 root     root          8688 Dec 16  2022 libmod_rand.so
+-rwxr-xr-x    1 root     root         37944 Dec 16  2022 libmod_regex.so
+-rwxr-xr-x    1 root     root          7420 Dec 16  2022 libmod_say.so
+-rwxr-xr-x    1 root     root         12700 Dec 16  2022 libmod_screen.so
+-rwxr-xr-x    1 root     root          7560 Dec 16  2022 libmod_scroll.so
+-rwxr-xr-x    1 root     root         20364 Dec 16  2022 libmod_sort.so
+-rwxr-xr-x    1 root     root         26948 Dec 16  2022 libmod_sound.so
+-rwxr-xr-x    1 root     root         14860 Dec 16  2022 libmod_string.so
+-rwxr-xr-x    1 root     root          7652 Dec 16  2022 libmod_sys.so
+-rwxr-xr-x    1 root     root         13100 Dec 16  2022 libmod_text.so
+-rwxr-xr-x    1 root     root          7792 Dec 16  2022 libmod_time.so
+-rwxr-xr-x    1 root     root          7508 Dec 16  2022 libmod_timers.so
+-rwxr-xr-x    1 root     root          7992 Dec 16  2022 libmod_video.so
+-rwxr-xr-x    1 root     root          7812 Dec 16  2022 libmod_wm.so
+lrwxrwxrwx    1 root     root            27 Dec 16  2022 libmount.so -> ../../lib/libmount.so.1.1.0
+-rwxr-xr-x    1 root     root         20180 Dec 16  2022 libmouse.so
+lrwxrwxrwx    1 root     root            19 Dec 26  2022 libmpg123.so -> libmpg123.so.0.44.8
+lrwxrwxrwx    1 root     root            19 Dec 26  2022 libmpg123.so.0 -> libmpg123.so.0.44.8
+-rwxr-xr-x    1 root     root        236324 Dec 26  2022 libmpg123.so.0.44.8
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libncurses.so -> libncurses.so.6
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libncurses.so.6 -> libncurses.so.6.0
+-rwxr-xr-x    1 root     root        207964 Dec 16  2022 libncurses.so.6.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libogg.so -> libogg.so.0.8.3
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libogg.so.0 -> libogg.so.0.8.3
+-rwxr-xr-x    1 root     root         17628 Dec 16  2022 libogg.so.0.8.3
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libopenal.so -> libopenal.so.1
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libopenal.so.1 -> libopenal.so.1.18.1
+-rwxr-xr-x    1 root     root        489452 Dec 16  2022 libopenal.so.1.18.1
+lrwxrwxrwx    1 root     root            13 Dec 16  2022 libpanel.so -> libpanel.so.6
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libpanel.so.6 -> libpanel.so.6.0
+-rwxr-xr-x    1 root     root          9288 Dec 16  2022 libpanel.so.6.0
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libpango-1.0.so -> libpango-1.0.so.0.4000.14
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libpango-1.0.so.0 -> libpango-1.0.so.0.4000.14
+-rwxr-xr-x    1 root     root        255904 Dec 16  2022 libpango-1.0.so.0.4000.14
+lrwxrwxrwx    1 root     root            30 Dec 16  2022 libpangocairo-1.0.so -> libpangocairo-1.0.so.0.4000.14
+lrwxrwxrwx    1 root     root            30 Dec 16  2022 libpangocairo-1.0.so.0 -> libpangocairo-1.0.so.0.4000.14
+-rwxr-xr-x    1 root     root         46880 Dec 16  2022 libpangocairo-1.0.so.0.4000.14
+lrwxrwxrwx    1 root     root            28 Dec 16  2022 libpangoft2-1.0.so -> libpangoft2-1.0.so.0.4000.14
+lrwxrwxrwx    1 root     root            28 Dec 16  2022 libpangoft2-1.0.so.0 -> libpangoft2-1.0.so.0.4000.14
+-rwxr-xr-x    1 root     root         67692 Dec 16  2022 libpangoft2-1.0.so.0.4000.14
+lrwxrwxrwx    1 root     root            28 Dec 16  2022 libpangoxft-1.0.so -> libpangoxft-1.0.so.0.4000.14
+lrwxrwxrwx    1 root     root            28 Dec 16  2022 libpangoxft-1.0.so.0 -> libpangoxft-1.0.so.0.4000.14
+-rwxr-xr-x    1 root     root         30180 Dec 16  2022 libpangoxft-1.0.so.0.4000.14
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libpciaccess.so -> libpciaccess.so.0.11.1
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libpciaccess.so.0 -> libpciaccess.so.0.11.1
+-rwxr-xr-x    1 root     root         26044 Dec 16  2022 libpciaccess.so.0.11.1
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libpcre.so -> libpcre.so.1.2.9
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libpcre.so.1 -> libpcre.so.1.2.9
+-rwxr-xr-x    1 root     root        242980 Dec 16  2022 libpcre.so.1.2.9
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libpcrecpp.so -> libpcrecpp.so.0.0.1
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libpcrecpp.so.0 -> libpcrecpp.so.0.0.1
+-rwxr-xr-x    1 root     root         26152 Dec 16  2022 libpcrecpp.so.0.0.1
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libpcreposix.so -> libpcreposix.so.0.0.5
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libpcreposix.so.0 -> libpcreposix.so.0.0.5
+-rwxr-xr-x    1 root     root          9372 Dec 16  2022 libpcreposix.so.0.0.5
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libpixman-1.so -> libpixman-1.so.0.34.0
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libpixman-1.so.0 -> libpixman-1.so.0.34.0
+-rwxr-xr-x    1 root     root        456288 Dec 16  2022 libpixman-1.so.0.34.0
+lrwxrwxrwx    1 root     root            11 Dec 16  2022 libpng.so -> libpng16.so
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libpng16.so -> libpng16.so.16.34.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libpng16.so.16 -> libpng16.so.16.34.0
+-rwxr-xr-x    1 root     root        157528 Dec 16  2022 libpng16.so.16.34.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libreadline.so -> libreadline.so.7
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libreadline.so.7 -> libreadline.so.7.0
+-rwxr-xr-x    1 root     root        219276 Dec 16  2022 libreadline.so.7.0
+-rwxr-xr-x    1 root     root        102924 Dec 16  2022 librender.so
+-rwxr-xr-x    1 root     root         18360 Dec 16  2022 libscroll.so
+-rwxr-xr-x    1 root     root          7400 Dec 16  2022 libsdlhandler.so
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libsha1.so -> libsha1.so.0.0.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libsha1.so.0 -> libsha1.so.0.0.0
+-rwxr-xr-x    1 root     root          9252 Dec 16  2022 libsha1.so.0.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libsigc-2.0.so -> libsigc-2.0.so.0.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libsigc-2.0.so.0 -> libsigc-2.0.so.0.0.0
+-rwxr-xr-x    1 root     root         17856 Dec 16  2022 libsigc-2.0.so.0.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libsndfile.so -> libsndfile.so.1.0.28
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libsndfile.so.1 -> libsndfile.so.1.0.28
+-rwxr-xr-x    1 root     root        370912 Dec 16  2022 libsndfile.so.1.0.28
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libspeex.so -> libspeex.so.1.5.0
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libspeex.so.1 -> libspeex.so.1.5.0
+-rwxr-xr-x    1 root     root         87332 Dec 16  2022 libspeex.so.1.5.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libspeexdsp.so -> libspeexdsp.so.1.5.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libspeexdsp.so.1 -> libspeexdsp.so.1.5.0
+-rwxr-xr-x    1 root     root         64136 Dec 16  2022 libspeexdsp.so.1.5.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libstdc++.so -> libstdc++.so.6.0.24
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libstdc++.so.6 -> libstdc++.so.6.0.24
+-rwxr-xr-x    1 root     root       1021456 Dec 16  2022 libstdc++.so.6.0.24
+-rw-r--r--    1 root     root          2418 Dec 16  2022 libstdc++.so.6.0.24-gdb.py
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libsvg-cairo.so -> libsvg-cairo.so.1.0.1
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libsvg-cairo.so.1 -> libsvg-cairo.so.1.0.1
+-rwxr-xr-x    1 root     root         26232 Dec 16  2022 libsvg-cairo.so.1.0.1
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libsvg.so -> libsvg.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libsvg.so.1 -> libsvg.so.1.0.0
+-rwxr-xr-x    1 root     root         63576 Dec 16  2022 libsvg.so.1.0.0
+-rwxr-xr-x    1 root     root         23692 Dec 16  2022 libtext.so
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libtheora.so -> libtheora.so.0.3.10
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libtheora.so.0 -> libtheora.so.0.3.10
+-rwxr-xr-x    1 root     root        161268 Dec 16  2022 libtheora.so.0.3.10
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libtheoradec.so -> libtheoradec.so.1.1.4
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libtheoradec.so.1 -> libtheoradec.so.1.1.4
+-rwxr-xr-x    1 root     root         42392 Dec 16  2022 libtheoradec.so.1.1.4
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libtheoraenc.so -> libtheoraenc.so.1.1.2
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libtheoraenc.so.1 -> libtheoraenc.so.1.1.2
+-rwxr-xr-x    1 root     root        140884 Dec 16  2022 libtheoraenc.so.1.1.2
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libtiff.so -> libtiff.so.5.2.6
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libtiff.so.5 -> libtiff.so.5.2.6
+-rwxr-xr-x    1 root     root        395660 Dec 16  2022 libtiff.so.5.2.6
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libtinyxml.so -> libtinyxml.so.0.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libtinyxml.so.0 -> libtinyxml.so.0.0.0
+-rwxr-xr-x    1 root     root         63492 Dec 16  2022 libtinyxml.so.0.0.0
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libtinyxml2.so -> libtinyxml2.so.4
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libtinyxml2.so.4 -> libtinyxml2.so.4.0.1
+-rwxr-xr-x    1 root     root         55248 Dec 16  2022 libtinyxml2.so.4.0.1
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libts.so -> libts.so.0.9.0
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libts.so.0 -> libts.so.0.9.0
+-rwxr-xr-x    1 root     root          9504 Dec 16  2022 libts.so.0.9.0
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libuuid.so -> ../../lib/libuuid.so.1.3.0
+-rwxr-xr-x    1 root     root         26400 Dec 16  2022 libvideo.so
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libvorbis.so -> libvorbis.so.0.4.8
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libvorbis.so.0 -> libvorbis.so.0.4.8
+-rwxr-xr-x    1 root     root        161288 Dec 16  2022 libvorbis.so.0.4.8
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libvorbisenc.so -> libvorbisenc.so.2.0.11
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libvorbisenc.so.2 -> libvorbisenc.so.2.0.11
+-rwxr-xr-x    1 root     root        533688 Dec 16  2022 libvorbisenc.so.2.0.11
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libvorbisfile.so -> libvorbisfile.so.3.3.7
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libvorbisfile.so.3 -> libvorbisfile.so.3.3.7
+-rwxr-xr-x    1 root     root         30068 Dec 16  2022 libvorbisfile.so.3.3.7
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libvorbisidec.so -> libvorbisidec.so.1.0.3
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libvorbisidec.so.1 -> libvorbisidec.so.1.0.3
+-rwxr-xr-x    1 root     root         95924 Dec 16  2022 libvorbisidec.so.1.0.3
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libwebp.so -> libwebp.so.7.0.1
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libwebp.so.7 -> libwebp.so.7.0.1
+-rwxr-xr-x    1 root     root        231416 Dec 16  2022 libwebp.so.7.0.1
+-rwxr-xr-x    1 root     root          7444 Dec 16  2022 libwm.so
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libx264.so -> libx264.so.152
+-rwxr-xr-x    1 root     root        513904 Dec 16  2022 libx264.so.152
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libxcb-composite.so -> libxcb-composite.so.0.0.0
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libxcb-composite.so.0 -> libxcb-composite.so.0.0.0
+-rwxr-xr-x    1 root     root          9352 Dec 16  2022 libxcb-composite.so.0.0.0
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libxcb-damage.so -> libxcb-damage.so.0.0.0
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libxcb-damage.so.0 -> libxcb-damage.so.0.0.0
+-rwxr-xr-x    1 root     root          5256 Dec 16  2022 libxcb-damage.so.0.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libxcb-dpms.so -> libxcb-dpms.so.0.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libxcb-dpms.so.0 -> libxcb-dpms.so.0.0.0
+-rwxr-xr-x    1 root     root          9352 Dec 16  2022 libxcb-dpms.so.0.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libxcb-dri2.so -> libxcb-dri2.so.0.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libxcb-dri2.so.0 -> libxcb-dri2.so.0.0.0
+-rwxr-xr-x    1 root     root         13456 Dec 16  2022 libxcb-dri2.so.0.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libxcb-dri3.so -> libxcb-dri3.so.0.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libxcb-dri3.so.0 -> libxcb-dri3.so.0.0.0
+-rwxr-xr-x    1 root     root          9360 Dec 16  2022 libxcb-dri3.so.0.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libxcb-glx.so -> libxcb-glx.so.0.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libxcb-glx.so.0 -> libxcb-glx.so.0.0.0
+-rwxr-xr-x    1 root     root         70808 Dec 16  2022 libxcb-glx.so.0.0.0
+lrwxrwxrwx    1 root     root            23 Dec 16  2022 libxcb-present.so -> libxcb-present.so.0.0.0
+lrwxrwxrwx    1 root     root            23 Dec 16  2022 libxcb-present.so.0 -> libxcb-present.so.0.0.0
+-rwxr-xr-x    1 root     root          9352 Dec 16  2022 libxcb-present.so.0.0.0
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libxcb-randr.so -> libxcb-randr.so.0.1.0
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libxcb-randr.so.0 -> libxcb-randr.so.0.1.0
+-rwxr-xr-x    1 root     root         42240 Dec 16  2022 libxcb-randr.so.0.1.0
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libxcb-record.so -> libxcb-record.so.0.0.0
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libxcb-record.so.0 -> libxcb-record.so.0.0.0
+-rwxr-xr-x    1 root     root         13464 Dec 16  2022 libxcb-record.so.0.0.0
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libxcb-render.so -> libxcb-render.so.0.0.0
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libxcb-render.so.0 -> libxcb-render.so.0.0.0
+-rwxr-xr-x    1 root     root         38136 Dec 16  2022 libxcb-render.so.0.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libxcb-res.so -> libxcb-res.so.0.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libxcb-res.so.0 -> libxcb-res.so.0.0.0
+-rwxr-xr-x    1 root     root          9368 Dec 16  2022 libxcb-res.so.0.0.0
+lrwxrwxrwx    1 root     root            27 Dec 16  2022 libxcb-screensaver.so -> libxcb-screensaver.so.0.0.0
+lrwxrwxrwx    1 root     root            27 Dec 16  2022 libxcb-screensaver.so.0 -> libxcb-screensaver.so.0.0.0
+-rwxr-xr-x    1 root     root          9376 Dec 16  2022 libxcb-screensaver.so.0.0.0
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libxcb-shape.so -> libxcb-shape.so.0.0.0
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libxcb-shape.so.0 -> libxcb-shape.so.0.0.0
+-rwxr-xr-x    1 root     root          9352 Dec 16  2022 libxcb-shape.so.0.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libxcb-shm.so -> libxcb-shm.so.0.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libxcb-shm.so.0 -> libxcb-shm.so.0.0.0
+-rwxr-xr-x    1 root     root          9360 Dec 16  2022 libxcb-shm.so.0.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libxcb-sync.so -> libxcb-sync.so.1.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libxcb-sync.so.1 -> libxcb-sync.so.1.0.0
+-rwxr-xr-x    1 root     root         17588 Dec 16  2022 libxcb-sync.so.1.0.0
+lrwxrwxrwx    1 root     root            23 Dec 16  2022 libxcb-xf86dri.so -> libxcb-xf86dri.so.0.0.0
+lrwxrwxrwx    1 root     root            23 Dec 16  2022 libxcb-xf86dri.so.0 -> libxcb-xf86dri.so.0.0.0
+-rwxr-xr-x    1 root     root         13456 Dec 16  2022 libxcb-xf86dri.so.0.0.0
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libxcb-xfixes.so -> libxcb-xfixes.so.0.0.0
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libxcb-xfixes.so.0 -> libxcb-xfixes.so.0.0.0
+-rwxr-xr-x    1 root     root         21644 Dec 16  2022 libxcb-xfixes.so.0.0.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libxcb-xinerama.so -> libxcb-xinerama.so.0.0.0
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libxcb-xinerama.so.0 -> libxcb-xinerama.so.0.0.0
+-rwxr-xr-x    1 root     root          9352 Dec 16  2022 libxcb-xinerama.so.0.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libxcb-xkb.so -> libxcb-xkb.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libxcb-xkb.so.1 -> libxcb-xkb.so.1.0.0
+-rwxr-xr-x    1 root     root         79240 Dec 16  2022 libxcb-xkb.so.1.0.0
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libxcb-xtest.so -> libxcb-xtest.so.0.0.0
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libxcb-xtest.so.0 -> libxcb-xtest.so.0.0.0
+-rwxr-xr-x    1 root     root          5256 Dec 16  2022 libxcb-xtest.so.0.0.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libxcb-xv.so -> libxcb-xv.so.0.0.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libxcb-xv.so.0 -> libxcb-xv.so.0.0.0
+-rwxr-xr-x    1 root     root         21688 Dec 16  2022 libxcb-xv.so.0.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libxcb-xvmc.so -> libxcb-xvmc.so.0.0.0
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libxcb-xvmc.so.0 -> libxcb-xvmc.so.0.0.0
+-rwxr-xr-x    1 root     root          9352 Dec 16  2022 libxcb-xvmc.so.0.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libxcb.so -> libxcb.so.1.1.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 libxcb.so.1 -> libxcb.so.1.1.0
+-rwxr-xr-x    1 root     root        108132 Dec 16  2022 libxcb.so.1.1.0
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libxkbfile.so -> libxkbfile.so.1.0.2
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libxkbfile.so.1 -> libxkbfile.so.1.0.2
+-rwxr-xr-x    1 root     root        116916 Dec 16  2022 libxkbfile.so.1.0.2
+drwxr-xr-x    3 root     root          1024 Dec 16  2022 libxml++-2.6
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libxml++-2.6.so -> libxml++-2.6.so.2.0.7
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libxml++-2.6.so.2 -> libxml++-2.6.so.2.0.7
+-rwxr-xr-x    1 root     root        159024 Dec 16  2022 libxml++-2.6.so.2.0.7
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libxml2.so -> libxml2.so.2.9.7
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libxml2.so.2 -> libxml2.so.2.9.7
+-rwxr-xr-x    1 root     root       1081288 Dec 16  2022 libxml2.so.2.9.7
+lrwxrwxrwx    1 root     root            16 Dec 16  2022 libxmlrpc++.so -> libxmlrpc++.so.8
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libxmlrpc++.so.8 -> libxmlrpc++.so.8.39
+-rwxr-xr-x    1 root     root        134112 Dec 16  2022 libxmlrpc++.so.8.39
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libxmlrpc.so -> libxmlrpc.so.3
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 libxmlrpc.so.3 -> libxmlrpc.so.3.39
+-rwxr-xr-x    1 root     root         95988 Dec 16  2022 libxmlrpc.so.3.39
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libxmlrpc_abyss++.so -> libxmlrpc_abyss++.so.8
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libxmlrpc_abyss++.so.8 -> libxmlrpc_abyss++.so.8.39
+-rwxr-xr-x    1 root     root         80256 Dec 16  2022 libxmlrpc_abyss++.so.8.39
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libxmlrpc_abyss.so -> libxmlrpc_abyss.so.3
+lrwxrwxrwx    1 root     root            23 Dec 16  2022 libxmlrpc_abyss.so.3 -> libxmlrpc_abyss.so.3.39
+-rwxr-xr-x    1 root     root         75788 Dec 16  2022 libxmlrpc_abyss.so.3.39
+lrwxrwxrwx    1 root     root            23 Dec 16  2022 libxmlrpc_client++.so -> libxmlrpc_client++.so.8
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libxmlrpc_client++.so.8 -> libxmlrpc_client++.so.8.39
+-rwxr-xr-x    1 root     root        125632 Dec 16  2022 libxmlrpc_client++.so.8.39
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libxmlrpc_client.so -> libxmlrpc_client.so.3
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libxmlrpc_client.so.3 -> libxmlrpc_client.so.3.39
+-rwxr-xr-x    1 root     root         34272 Dec 16  2022 libxmlrpc_client.so.3.39
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libxmlrpc_cpp.so -> libxmlrpc_cpp.so.8
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libxmlrpc_cpp.so.8 -> libxmlrpc_cpp.so.8.39
+-rwxr-xr-x    1 root     root         22072 Dec 16  2022 libxmlrpc_cpp.so.8.39
+lrwxrwxrwx    1 root     root            27 Dec 16  2022 libxmlrpc_packetsocket.so -> libxmlrpc_packetsocket.so.8
+lrwxrwxrwx    1 root     root            30 Dec 16  2022 libxmlrpc_packetsocket.so.8 -> libxmlrpc_packetsocket.so.8.39
+-rwxr-xr-x    1 root     root         38864 Dec 16  2022 libxmlrpc_packetsocket.so.8.39
+lrwxrwxrwx    1 root     root            23 Dec 16  2022 libxmlrpc_server++.so -> libxmlrpc_server++.so.8
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libxmlrpc_server++.so.8 -> libxmlrpc_server++.so.8.39
+-rwxr-xr-x    1 root     root         42968 Dec 16  2022 libxmlrpc_server++.so.8.39
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libxmlrpc_server.so -> libxmlrpc_server.so.3
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libxmlrpc_server.so.3 -> libxmlrpc_server.so.3.39
+-rwxr-xr-x    1 root     root         21748 Dec 16  2022 libxmlrpc_server.so.3.39
+lrwxrwxrwx    1 root     root            29 Dec 16  2022 libxmlrpc_server_abyss++.so -> libxmlrpc_server_abyss++.so.8
+lrwxrwxrwx    1 root     root            32 Dec 16  2022 libxmlrpc_server_abyss++.so.8 -> libxmlrpc_server_abyss++.so.8.39
+-rwxr-xr-x    1 root     root         30464 Dec 16  2022 libxmlrpc_server_abyss++.so.8.39
+lrwxrwxrwx    1 root     root            27 Dec 16  2022 libxmlrpc_server_abyss.so -> libxmlrpc_server_abyss.so.3
+lrwxrwxrwx    1 root     root            30 Dec 16  2022 libxmlrpc_server_abyss.so.3 -> libxmlrpc_server_abyss.so.3.39
+-rwxr-xr-x    1 root     root         21952 Dec 16  2022 libxmlrpc_server_abyss.so.3.39
+lrwxrwxrwx    1 root     root            27 Dec 16  2022 libxmlrpc_server_cgi++.so -> libxmlrpc_server_cgi++.so.8
+lrwxrwxrwx    1 root     root            30 Dec 16  2022 libxmlrpc_server_cgi++.so.8 -> libxmlrpc_server_cgi++.so.8.39
+-rwxr-xr-x    1 root     root         17992 Dec 16  2022 libxmlrpc_server_cgi++.so.8.39
+lrwxrwxrwx    1 root     root            25 Dec 16  2022 libxmlrpc_server_cgi.so -> libxmlrpc_server_cgi.so.3
+lrwxrwxrwx    1 root     root            28 Dec 16  2022 libxmlrpc_server_cgi.so.3 -> libxmlrpc_server_cgi.so.3.39
+-rwxr-xr-x    1 root     root          9400 Dec 16  2022 libxmlrpc_server_cgi.so.3.39
+lrwxrwxrwx    1 root     root            31 Dec 16  2022 libxmlrpc_server_pstream++.so -> libxmlrpc_server_pstream++.so.8
+lrwxrwxrwx    1 root     root            34 Dec 16  2022 libxmlrpc_server_pstream++.so.8 -> libxmlrpc_server_pstream++.so.8.39
+-rwxr-xr-x    1 root     root         26292 Dec 16  2022 libxmlrpc_server_pstream++.so.8.39
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libxmlrpc_util++.so -> libxmlrpc_util++.so.8
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libxmlrpc_util++.so.8 -> libxmlrpc_util++.so.8.39
+-rwxr-xr-x    1 root     root         34632 Dec 16  2022 libxmlrpc_util++.so.8.39
+lrwxrwxrwx    1 root     root            19 Dec 16  2022 libxmlrpc_util.so -> libxmlrpc_util.so.3
+lrwxrwxrwx    1 root     root            22 Dec 16  2022 libxmlrpc_util.so.3 -> libxmlrpc_util.so.3.39
+-rwxr-xr-x    1 root     root         17652 Dec 16  2022 libxmlrpc_util.so.3.39
+lrwxrwxrwx    1 root     root            23 Dec 16  2022 libxmlrpc_xmlparse.so -> libxmlrpc_xmlparse.so.3
+lrwxrwxrwx    1 root     root            26 Dec 16  2022 libxmlrpc_xmlparse.so.3 -> libxmlrpc_xmlparse.so.3.39
+-rwxr-xr-x    1 root     root         54528 Dec 16  2022 libxmlrpc_xmlparse.so.3.39
+lrwxrwxrwx    1 root     root            21 Dec 16  2022 libxmlrpc_xmltok.so -> libxmlrpc_xmltok.so.3
+lrwxrwxrwx    1 root     root            24 Dec 16  2022 libxmlrpc_xmltok.so.3 -> libxmlrpc_xmltok.so.3.39
+-rwxr-xr-x    1 root     root        136380 Dec 16  2022 libxmlrpc_xmltok.so.3.39
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 libyaml-cpp.so -> libyaml-cpp.so.0.5
+lrwxrwxrwx    1 root     root            20 Dec 16  2022 libyaml-cpp.so.0.5 -> libyaml-cpp.so.0.5.2
+-rwxr-xr-x    1 root     root        216876 Dec 16  2022 libyaml-cpp.so.0.5.2
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libz.so -> libz.so.1.2.11
+lrwxrwxrwx    1 root     root            14 Dec 16  2022 libz.so.1 -> libz.so.1.2.11
+-rwxr-xr-x    1 root     root         75212 Dec 16  2022 libz.so.1.2.11
+lrwxrwxrwx    1 root     root            11 Dec 16  2022 libzip.so -> libzip.so.5
+lrwxrwxrwx    1 root     root            13 Dec 16  2022 libzip.so.5 -> libzip.so.5.0
+-rwxr-xr-x    1 root     root        104648 Dec 16  2022 libzip.so.5.0
+drwxr-xr-x    3 root     root          1024 Dec 16  2022 lua
+-rw-r--r--    1 root     root            95 Dec 16  2022 os-release
+drwxr-xr-x    3 root     root          1024 Dec 16  2022 python2.7
+drwxr-xr-x    3 root     root          1024 Dec 16  2022 sigc++-2.0
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 terminfo -> ../share/terminfo
+drwxr-xr-x    2 root     root          1024 Dec 16  2022 ts
+-rw-r--r--    1 root     root           276 Dec 16  2022 xml2Conf.sh
+drwxr-xr-x    3 root     root          1024 Dec 16  2022 xorg
+/ # ls -l /usr/bin
+total 49601
+-rwxr-xr-x    1 root     root        502292 Dec 16  2022 7zr
+lrwxrwxrwx    1 root     root             4 Dec 16  2022 X -> Xorg
+-rwxr-xr-x    1 root     root       1872236 Dec 16  2022 Xorg
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 [ -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 [[ -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         51152 Dec 16  2022 alsamixer
+-rwxr-xr-x    1 root     root         63292 Dec 16  2022 aplay
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 ar -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         63292 Dec 16  2022 arecord
+-rwxr-xr-x    1 root     root         22036 Dec 16  2022 aserver
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 awk -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 basename -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         69928 Dec 16  2022 bunzip2
+-rwxr-xr-x    1 root     root         69928 Dec 16  2022 bzcat
+lrwxrwxrwx    1 root     root             6 Dec 16  2022 bzcmp -> bzdiff
+-rwxr-xr-x    1 root     root          2128 Dec 16  2022 bzdiff
+lrwxrwxrwx    1 root     root             6 Dec 16  2022 bzegrep -> bzgrep
+lrwxrwxrwx    1 root     root             6 Dec 16  2022 bzfgrep -> bzgrep
+-rwxr-xr-x    1 root     root          1677 Dec 16  2022 bzgrep
+-rwxr-xr-x    1 root     root         69928 Dec 16  2022 bzip2
+-rwxr-xr-x    1 root     root          9396 Dec 16  2022 bzip2recover
+lrwxrwxrwx    1 root     root             6 Dec 16  2022 bzless -> bzmore
+-rwxr-xr-x    1 root     root          1259 Dec 16  2022 bzmore
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 chrt -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 chvt -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 cksum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 clear -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 cmp -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 crontab -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 cut -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         17588 Dec 16  2022 cvt
+-rwxr-xr-x    1 root     root         50896 Dec 16  2022 cwebp
+-rwxr-xr-x    1 root     root          9420 Dec 16  2022 dbus-cleanup-sockets
+-rwxr-xr-x    1 root     root        154380 Dec 16  2022 dbus-daemon
+-rwxr-xr-x    1 root     root         21996 Dec 16  2022 dbus-launch
+-rwxr-xr-x    1 root     root         17876 Dec 16  2022 dbus-monitor
+-rwxr-xr-x    1 root     root          9504 Dec 16  2022 dbus-run-session
+-rwxr-xr-x    1 root     root         17896 Dec 16  2022 dbus-send
+-rwxr-xr-x    1 root     root         17820 Dec 16  2022 dbus-test-tool
+-rwxr-xr-x    1 root     root          9540 Dec 16  2022 dbus-update-activation-environment
+-rwxr-xr-x    1 root     root          5388 Dec 16  2022 dbus-uuidgen
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 dc -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 deallocvt -> ../../bin/busybox
+-rwxr-xr-x    1 root     root        152360 Dec 16  2022 dialog
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 diff -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 dirname -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 dos2unix -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 du -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         26060 Dec 16  2022 dwebp
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 eject -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 env -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         30052 Dec 16  2022 envsubst
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 expr -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 factor -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 fallocate -> ../../bin/busybox
+-rwxr-xr-x    1 root     root          9488 Dec 16  2022 fc-cache
+-rwxr-xr-x    1 root     root          9464 Dec 16  2022 fc-cat
+-rwxr-xr-x    1 root     root          9400 Dec 16  2022 fc-list
+-rwxr-xr-x    1 root     root          9428 Dec 16  2022 fc-match
+-rwxr-xr-x    1 root     root          9400 Dec 16  2022 fc-pattern
+-rwxr-xr-x    1 root     root          9380 Dec 16  2022 fc-query
+-rwxr-xr-x    1 root     root          9408 Dec 16  2022 fc-scan
+-rwxr-xr-x    1 root     root          9408 Dec 16  2022 fc-validate
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 find -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 flock -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 fold -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 free -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         13952 Dec 16  2022 fribidi
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 fuser -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         13552 Dec 16  2022 gapplication
+-rwxr-xr-x    1 root     root      43712100 Dec 16  2022 gdb
+-rwxr-xr-x    1 root     root         30248 Dec 16  2022 gdbus
+-rwxr-xr-x    1 root     root         17584 Dec 16  2022 getconf
+-rwxr-xr-x    1 root     root         30044 Dec 16  2022 gettext
+-rwxr-xr-x    1 root     root          4629 Dec 16  2022 gettext.sh
+-rwxr-xr-x    1 root     root         55308 Dec 16  2022 gio
+-rwxr-xr-x    1 root     root          9392 Dec 16  2022 gio-querymodules
+-rwxr-xr-x    1 root     root         13752 Dec 16  2022 gresource
+-rwxr-xr-x    1 root     root         17812 Dec 16  2022 gsettings
+-rwxr-xr-x    1 root     root         17876 Dec 16  2022 gst-discoverer-0.10
+-rwxr-xr-x    1 root     root          9556 Dec 16  2022 gst-feedback
+-rwxr-xr-x    1 root     root          3173 Dec 16  2022 gst-feedback-0.10
+-rwxr-xr-x    1 root     root          9556 Dec 16  2022 gst-inspect
+-rwxr-xr-x    1 root     root         30328 Dec 16  2022 gst-inspect-0.10
+-rwxr-xr-x    1 root     root          9556 Dec 16  2022 gst-launch
+-rwxr-xr-x    1 root     root         30296 Dec 16  2022 gst-launch-0.10
+-rwxr-xr-x    1 root     root          9556 Dec 16  2022 gst-typefind
+-rwxr-xr-x    1 root     root          9476 Dec 16  2022 gst-typefind-0.10
+-rwxr-xr-x    1 root     root          1713 Dec 16  2022 gst-visualise-0.10
+-rwxr-xr-x    1 root     root          9556 Dec 16  2022 gst-xmlinspect
+-rwxr-xr-x    1 root     root         17744 Dec 16  2022 gst-xmlinspect-0.10
+-rwxr-xr-x    1 root     root         17568 Dec 16  2022 gtf
+-rwxr-xr-x    1 root     root         30364 Dec 16  2022 hb-ot-shape-closure
+-rwxr-xr-x    1 root     root         30396 Dec 16  2022 hb-shape
+-rwxr-xr-x    1 root     root         47136 Dec 16  2022 hb-view
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 head -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 hexdump -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 hostid -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         21748 Dec 16  2022 iconv
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 id -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 install -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 ipcrm -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 ipcs -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 killall -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 last -> ../../bin/busybox
+-rwxr-xr-x    1 root     root          9436 Dec 16  2022 ldd
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 less -> ../../bin/busybox
+-rwxr-xr-x    1 root     root        368929 Dec 16  2022 libtool
+-rwxr-xr-x    1 root     root        129187 Dec 16  2022 libtoolize
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 logger -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 logname -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 lsof -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 lspci -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 lsscsi -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 lsusb -> ../../bin/busybox
+-rwxr-xr-x    1 root     root        204856 Dec 16  2022 ltrace
+-rwxr-xr-x    1 root     root          9508 Dec 16  2022 lua
+-rwxr-xr-x    1 root     root         79212 Dec 16  2022 luac
+-rwxr-xr-x    1 root     root         99700 Dec 16  2022 lz4
+-rwxr-xr-x    1 root     root         99700 Dec 16  2022 lz4c
+lrwxrwxrwx    1 root     root             3 Dec 16  2022 lz4cat -> lz4
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 lzcat -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 lzma -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 lzopcat -> ../../bin/busybox
+-rwxr-xr-x    1 root     root          9444 Dec 16  2022 mcookie
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 md5sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 mesg -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 microcom -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 mkfifo -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 mkpasswd -> ../../bin/busybox
+-rwxr-xr-x    1 root     root        145100 Dec 16  2022 nano
+-rwxr-xr-x    1 root     root         30048 Dec 16  2022 ngettext
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 nl -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 nohup -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 nproc -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 nslookup -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 od -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         59884 Dec 16  2022 ogg123
+-rwxr-xr-x    1 root     root         13696 Dec 16  2022 oggdec
+-rwxr-xr-x    1 root     root         55732 Dec 16  2022 oggenc
+-rwxr-xr-x    1 root     root         30148 Dec 16  2022 ogginfo
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 openvt -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         38800 Dec 16  2022 pango-view
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 passwd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 paste -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 patch -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         27040 Dec 16  2022 pcregrep
+-rwxr-xr-x    1 root     root         54608 Dec 16  2022 pcretest
+-rwxr-xr-x    1 root     root         17792 Dec 16  2022 playsound
+-rwxr-xr-x    1 root     root          5292 Dec 16  2022 playsound_simple
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 printf -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 readlink -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 realpath -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 renice -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 reset -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 resize -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 seq -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 setkeycodes -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 setsid -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 sha1sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 sha256sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 sha3sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 sha512sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 shred -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 sort -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         26032 Dec 16  2022 speaker-test
+-rwxr-xr-x    1 root     root         21944 Dec 16  2022 speexdec
+-rwxr-xr-x    1 root     root         25984 Dec 16  2022 speexenc
+-rwxr-xr-x    1 root     root        460396 Dec 16  2022 strace
+-rwxr-xr-x    1 root     root           944 Dec 16  2022 strace-log-merge
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 strings -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 svc -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 tail -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 tee -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 telnet -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 test -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 tftp -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 time -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 top -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 tr -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 traceroute -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 truncate -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         23848 Dec 16  2022 ts_calibrate
+-rwxr-xr-x    1 root     root          5220 Dec 16  2022 ts_finddev
+-rwxr-xr-x    1 root     root         19732 Dec 16  2022 ts_harvest
+-rwxr-xr-x    1 root     root          5200 Dec 16  2022 ts_print
+-rwxr-xr-x    1 root     root          9408 Dec 16  2022 ts_print_mt
+-rwxr-xr-x    1 root     root          5200 Dec 16  2022 ts_print_raw
+-rwxr-xr-x    1 root     root         19740 Dec 16  2022 ts_test
+-rwxr-xr-x    1 root     root         19752 Dec 16  2022 ts_test_mt
+-rwxr-xr-x    1 root     root         13544 Dec 16  2022 ts_uinput
+-rwxr-xr-x    1 root     root         13520 Dec 16  2022 ts_verify
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 tty -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 uniq -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 unix2dos -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 unlink -> ../../bin/busybox
+lrwxrwxrwx    1 root     root             3 Dec 16  2022 unlz4 -> lz4
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 unlzma -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 unlzop -> ../../bin/busybox
+-rwxr-xr-x    1 root     root        207292 Dec 16  2022 unrar
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 unxz -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 unzip -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 uptime -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 uudecode -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 uuencode -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         13592 Dec 16  2022 vcut
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 vlock -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         22036 Dec 16  2022 vorbiscomment
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 w -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 wc -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 wget -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 which -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 who -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 whoami -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 xargs -> ../../bin/busybox
+-rwxr-xr-x    1 root     root        156332 Dec 16  2022 xkbcomp
+-rwxr-xr-x    1 root     root         13672 Dec 16  2022 xmlcatalog
+-rwxr-xr-x    1 root     root         51492 Dec 16  2022 xmllint
+-rwxr-xr-x    1 root     root         42760 Dec 16  2022 xmltest
+-rwxr-xr-x    1 root     root         22020 Dec 16  2022 xmlwf
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 xxd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 xz -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 xzcat -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 yes -> ../../bin/busybox
+-rwxr-xr-x    1 root     root        156200 Dec 16  2022 zip
+-rwxr-xr-x    1 root     root         63692 Dec 16  2022 zipcloak
+-rwxr-xr-x    1 root     root         14080 Dec 16  2022 zipcmp
+-rwxr-xr-x    1 root     root          9956 Dec 16  2022 zipmerge
+-rwxr-xr-x    1 root     root         63508 Dec 16  2022 zipnote
+-rwxr-xr-x    1 root     root         63512 Dec 16  2022 zipsplit
+-rwxr-xr-x    1 root     root         22420 Dec 16  2022 ziptool
+/ # ls -l /usr/sbin
+total 75
+lrwxrwxrwx    ls -l /usr/lib/libSDL*     17 Dec 16  2022 addgroup -> ../../bin/busybox
+ls -l /usr/lib/libEGL*   root            17 Dec 16  2022 adduser -> ../../bin/busybox
+ls -l /usr/lib/libGLES*  root         76424 Dec 16  2022 alsactl
+ls -l /usr/lib/libGL*    root            17 Dec 16  2022 arping -> ../../bin/busybox
+ls -l /usr/lib/libasound*cat /etc/issuels -l /usr/lib/libSDL*ot -> ../../bin/busybox
+ls -l /usr/lib/libEGL*   root            17 Dec 16  2022 crond -> ../../bin/busybox
+ls -l /usr/lib/libGLES*  root            17 Dec 16  2022 delgroup -> ../../bin/busybox
+ls -l /usr/lib/libGL*    root            17 Dec 16  2022 deluser -> ../../bin/busybox
+cat: invalid option -- l root            17 Dec 16  2022 dnsd -> ../../bin/busybox
+BusyBox v1.27.2 (2019-01-15 10:49:04 CST) multi-call binary.er-wake -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 fbset -> ../../bin/busybox
+Usage: cat [-nbvteA] [FILE]...           17 Dec 16  2022 fdformat -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 fsfreeze -> ../../bin/busybox
+Print FILEs to stdout    root            17 Dec 16  2022 i2cdetect -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Dec 16  2022 i2cdump -> ../../bin/busybox
+lrwxrwxr-n    1 Number output lines      17 Dec 16  2022 i2cget -> ../../bin/busybox
+lrwxrwxr-b    1 Number nonempty lines    17 Dec 16  2022 i2cset -> ../../bin/busybox
+lrwxrwxr-v    1 Show nonpcat /sys/devices/system/cpu/onlineetd -> ../../bin/busybox
+cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies./../bin/busybox
+cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governorloadfont -> ../../bin/busybox
+cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freqcat /proc/fbib/libasound*cat /sys/devices/system/cpu/online
+cat /sys/class/graphics/fb0/nameuch file or directory022 rdate -> ../../bin/busybox
+cat /sys/class/graphics/fb0/virtual_size096 Nov 26 10:31 /sys/devices/system/cpu/onlineo.1.0.0
+cat /sys/class/graphics/fb0/bits_per_pixeleq/scaling_available_frequencieso.1 -> libEGL.so.1.0.0
+cat /sys/class/graphics/fb0/stridecat /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freqcat /proc/fb
+cat /sys/class/graphics/fb0/strideu0/cpufreq/scaling_governor
+1280/sys/class/graphics/fb0/virtual_size 21 Dec 16  2022 /usr/lib/libGLESv1_CM.so -> libGLESv1_CM.so.1.1.0
+/ # /sys/class/graphics/fb0/bits_per_pixel1 Dec 16  2022 /usr/lib/libGLESv1_CM.so.1 -> libGLESv1_CM.so.1.1.0
+cat: can't open '/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freqcat': No such file or directory
+/ # lfbrwx    1 root     root            18 Dec 16  2022 /usr/lib/libGLESv2.so -> libGLESv2.so.2.0.0
+1 owlfbrwx    1 root     root            18 Dec 16  2022 /usr/lib/libGLESv2.so.2 -> libGLESv2.so.2.0.0
+/ # cat /sys/class/graphics/fb0/name  37916 Dec 16  2022 /usr/lib/libGLESv2.so.2.0.0
+owlfbs -l /usr/lib/libGL*
+/ # cat /sys/class/graphics/fb0/virtual_sizeDec 16  2022 /usr/lib/libGL.so -> libGL.so.1.2.0
+640,1440wx    1 root     root            14 Dec 16  2022 /usr/lib/libGL.so.1 -> libGL.so.1.2.0
+/ # cat /sys/class/graphics/fb0/bits_per_pixelc 16  2022 /usr/lib/libGL.so.1.2.0
+16wxrwxrwx    1 root     root            21 Dec 16  2022 /usr/lib/libGLESv1_CM.so -> libGLESv1_CM.so.1.1.0
+/ # rwxrwx    1 root     root            21 Dec 16  2022 /usr/lib/libGLESv1_CM.so.1 -> libGLESv1_CM.so.1.1.0
+-rwxr-xr-x    1 root     root         17436 Dec 16  2022 /usr/lib/libGLESv1_CM.so.1.1.0
+/ # rwxrwx    1 root     root            18 Dec 16  2022 /usr/lib/libGLESv2.so -> libGLESv2.so.2.0.0
+lrwxrwxrwx    1 root     root            18 Dec 16  2022 /usr/lib/libGLESv2.so.2 -> libGLESv2.so.2.0.0
+/ # r-xr-x    1 root     root         37916 Dec 16  2022 /usr/lib/libGLESv2.so.2.0.0
+lrwxrwxrwx    1 root     root            15 Dec 16  2022 /usr/lib/libGLU.so -> libGLU.so.1.3.1
+/ # rwxrwx    1 root     root            15 Dec 16  2022 /usr/lib/libGLU.so.1 -> libGLU.so.1.3.1
+-rwxr-xr-x    1 root     root        415660 Dec 16  2022 /usr/lib/libGLU.so.1.3.1
+/ # cat /proc/asound/cards
+cat /proc/asound/devices
+cat /proc/bus/input/devices
+
+ls -l /dev/input
+ls -l /dev/sndcat /proc/asound/cards
+cat /proc/asound/devices
+cat /proc/bus/input/devices
+
+ls -l /dev/input
+ 0 [atm7059link    ]: atm7059_link - atm7059_link
+                      atm7059_link
+/ # cat /proc/asound/devices
+  0: [ 0]   : control
+ 16: [ 0- 0]: digital audio playback
+ 17: [ 0- 1]: digital audio playback
+ 18: [ 0- 2]: digital audio playback
+ 24: [ 0- 0]: digital audio capture
+ 26: [ 0- 2]: digital audio capture
+ 33:        : timer
+/ # cat /proc/bus/input/devices
+I: Bus=0000 Vendor=0000 Product=0000 Version=0000
+N: Name="atc260x_onoff"
+P: Phys=atc260x_onoff/input0
+S: Sysfs=/devices/b0174000.i2c/i2c-1/1-0065/atc2603c-onoff.0/input/input0
+U: Uniq=
+H: Handlers=kbd event0 evbug
+B: PROP=0
+B: EV=3
+B: KEY=100000 0 0 0
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="RG35XX Gamepad"
+P: Phys=gpio-keys-polled/input0
+S: Sysfs=/devices/platform/gpio-keys-polled.0/input/input1
+U: Uniq=
+H: Handlers=js0 event1 evbug
+B: PROP=0
+B: EV=b
+B: KEY=7cfb0000 0 0 0 0 0 0 0 0 0
+B: ABS=3003f
+
+/ #
+/ # ls -l /dev/input
+total 0
+crw-rw----    1 root     1004       13,  64 Nov 26 09:52 event0
+crw-rw----    1 root     1004       13,  65 Nov 26 09:52 event1
+crw-rw----    1 root     1004       13,   0 Nov 26 09:52 js0
+/ #           printenv
+ps
+busybox --listls -l /dev/sndprintenv
+ps
+ls: /dev/sndprintenv: No such file or directory
+/ # ps
+PID   USER     COMMAND
+    1 root     /init
+    2 root     [kthreadd]
+    3 root     [ksoftirqd/0]
+    5 root     [kworker/0:0H]
+    7 root     [migration/0]
+    8 root     [rcu_preempt]
+    9 root     [rcu_bh]
+   10 root     [rcu_sched]
+   11 root     [migration/1]
+   12 root     [ksoftirqd/1]
+   13 root     [kworker/1:0]
+   14 root     [kworker/1:0H]
+   15 root     [migration/2]
+   16 root     [ksoftirqd/2]
+   17 root     [kworker/2:0]
+   18 root     [kworker/2:0H]
+   19 root     [migration/3]
+   20 root     [ksoftirqd/3]
+   21 root     [kworker/3:0]
+   22 root     [kworker/3:0H]
+   23 root     [khelper]
+   24 root     [kdevtmpfs]
+   25 root     [netns]
+   26 root     [fs_sync]
+   27 root     [suspend]
+   28 root     [kworker/3:1]
+   29 root     [kworker/2:1]
+   30 root     [kworker/1:1]
+   31 root     [kworker/0:1]
+   32 root     [kworker/u8:1]
+   37 root     [writeback]
+   38 root     [bioset]
+   39 root     [kblockd]
+   40 root     [irq/215-atc2603]
+   41 root     [b0208000.spi]
+   42 root     [b020c000.spi]
+   43 root     [khubd]
+   44 root     [ion_fb]
+   45 root     [ion_system]
+   46 root     [cfg80211]
+   47 root     [cfinteractive]
+   48 root     [rpciod]
+   49 root     [khungtaskd]
+   50 root     [kswapd0]
+   51 root     [ksmd]
+   52 root     [fsnotify_mark]
+   53 root     [nfsiod]
+   54 root     [cifsiod]
+   55 root     [crypto]
+   72 root     [atm705a-hdmi-hd]
+   73 root     [aotg_start_mon_]
+   74 root     [dm_bufio_cache]
+   75 root     [host_add_work0]
+   76 root     [host_add_work2]
+   77 root     [binder]
+   80 root     [mmcqd/1]
+   81 root     [owlfb]
+   82 root     [deferwq]
+   83 root     [f_mtp]
+   84 root     [file-storage]
+   86 root     [atc260x_charger]
+   89 root     [usb_monitor]
+   90 root     /sbin/ueventd
+   93 root     [mmcqd/0]
+   94 root     [kworker/0:1H]
+   95 root     [ext4-dio-unwrit]
+   96 root     [ext4-dio-unwrit]
+   98 root     /system/bin/logwrapper /loadapp.sh
+   99 root     [kworker/1:1H]
+  100 root     {loadapp.sh} /system/bin/sh /loadapp.sh
+  101 root     [atc260x_gauge_w]
+  103 root     [kworker/3:1H]
+  105 root     {dmenu_ln} /system/bin/sh /system/dmenu/dmenu_ln
+  107 root     {dmenu.bin} /system/bin/sh /misc/dmenu.bin
+  108 root     /system/bin/sh
+  124 root     [irq/55-dwc3]
+  126 root     /system/bin/adbd
+  132 root     [loop7]
+  134 root     [loop0]
+  135 root     [ext4-dio-unwrit]
+  146 root     {hdmi.bin} /system/bin/sh /misc/hdmi.bin
+  147 root     {start} /bin/sh /mnt/mmc/CFW/start
+  154 root     sh ./run.sh
+  156 root     ./mtp-server
+  263 root     ./main
+  378 root     /system/bin/sh -
+  632 root     [kworker/u8:0]
+  917 root     [kworker/0:0]
+ 1344 root     [kworker/0:2]
+ 1423 root     [kworker/u8:2]
+ 1453 root     /bin/sh
+ 1509 root     ps
+/ #

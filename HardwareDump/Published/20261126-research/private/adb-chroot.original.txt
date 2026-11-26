@@ -1,0 +1,450 @@
+PS C:\Users\user> cd C:\ADB
+PS C:\ADB> .\adb.exe version
+Android Debug Bridge version 1.0.41
+Version 37.0.3-16887417
+Installed as C:\ADB\adb.exe
+Running on Windows 10.0.19044
+PS C:\ADB> .\adb.exe devices -l
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+List of devices attached
+[ADB_SERIAL]       device product:Demo_7051H model:ToyCloud device:q88_hd transport_id:1
+
+PS C:\ADB> .\adb.exe shell
+root@q88_hd:/ # uname -a
+/system/bin/sh: uname: not found
+127|root@q88_hd:/ # dmesg | grep -i ext4
+<6>[    1.752793] EXT4-fs (mmcblk0p2): mounted filesystem without journal. Opts: noauto_da_alloc
+<4>[    1.830044] EXT4-fs (mmcblk0p3): warning: mounting unchecked fs, running e2fsck is recommended
+<6>[    1.832008] EXT4-fs (mmcblk0p3): mounted filesystem without journal. Opts: nodelalloc,discard
+<6>[    2.712954] EXT4-fs (loop0): mounted filesystem without journal. Opts: (null)
+root@q88_hd:/ # dmesg | grep -Ei 'error|corrupt|checksum'
+<4>[    0.328833] owl-i2c: probe of b0170000.i2c failed with error 12
+<3>[    0.495181] owl_dss LCDC: error!lcdchw_parse_params, fail to get lcd standby gpio
+<1>[    0.624882] start:0xc0008000, end:0xc0a0d134, checksum:0xe80cb33
+<4>[    1.271474] owldss_hdmi_read_edid ~~~ error hdmi not connected
+<4>[    1.272693] of_property_read_u32 is error
+<4>[    1.272701] of_property_read bootrotate is error
+<4>[    2.246034] FAT-fs (mmcblk0p4): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+<4>[    2.477003] FAT-fs (mmcblk1p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+root@q88_hd:/ # mount
+rootfs / rootfs rw 0 0
+tmpfs /dev tmpfs rw,nosuid,relatime,mode=755 0 0
+devpts /dev/pts devpts rw,relatime,mode=600 0 0
+proc /proc proc rw,relatime 0 0
+sysfs /sys sysfs rw,relatime 0 0
+/dev/block/actb /misc vfat ro,noatime,nodiratime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=continue 0 0
+/dev/block/actc /system ext4 ro,nodev,noatime,nodiratime,noauto_da_alloc 0 0
+none /sys/kernel/debug debugfs rw,relatime 0 0
+/dev/block/actk /mnt/data ext4 rw,nosuid,nodev,noatime,nodiratime,discard,nodelalloc 0 0
+/dev/block/mmcblk0p4 /mnt/mmc vfat rw,noatime,nodiratime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=continue 0 0
+/dev/block/mmcblk1p1 /mnt/SDCARD vfat rw,noatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=continue 0 0
+/dev/block/loop0 /cfw ext4 rw,relatime 0 0
+tmpfs /cfw/dev tmpfs rw,nosuid,relatime,mode=755 0 0
+devpts /cfw/dev/pts devpts rw,relatime,mode=600 0 0
+proc /cfw/proc proc rw,relatime 0 0
+sysfs /cfw/sys sysfs rw,relatime 0 0
+/dev/block/actb /cfw/misc vfat ro,noatime,nodiratime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=continue 0 0
+/dev/block/mmcblk0p4 /cfw/mnt/mmc vfat rw,noatime,nodiratime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=continue 0 0
+/dev/block/mmcblk1p1 /cfw/mnt/SDCARD vfat rw,noatime,fmask=0077,dmask=0077,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=continue 0 0
+root@q88_hd:/ # df -h
+Filesystem               Size     Used     Free   Blksize
+-h: No such file or directory
+1|root@q88_hd:/ # ls -l /usr/lib/libintl.so /usr/lib/libjson-c.so
+/usr/lib/libintl.so: No such file or directory
+/usr/lib/libjson-c.so: No such file or directory
+1|root@q88_hd:/ # ls -l /mnt/kernel/r61520fb.ko
+/mnt/kernel/r61520fb.ko: No such file or directory
+1|root@q88_hd:/ # cat /proc/version
+Linux version 3.10.37 (blackseraph@Pandemonium) (gcc version 4.7.3 20130328 (prerelease) (crosstool-NG linaro-1.13.1-4.7-2013.04-20130415 - Linaro GCC 2013.04) ) #116 SMP PREEMPT Thu Apr 6 20:31:58 CEST 2023
+root@q88_hd:/ # cat /sys/block/loop0/loop/backing_file
+/dev/block/loop7
+root@q88_hd:/ # ls -l /cfw/usr/lib/libintl.so
+ /cfw/usr/lib/libjson-c.solrwxrwxrwx root     root              2026-11-26 12:38 libintl.so -> libintl.so.8.1.5
+root@q88_hd:/ # ls -l /cfw/usr/lib/libjson-c.so
+lrwxrwxrwx root     root              2026-11-26 12:38 libjson-c.so -> libjson-c.so.3.0.1
+root@q88_hd:/ # ls /sys/fs/ext4/loop0
+delayed_allocation_blocks
+extent_max_zeroout_kb
+inode_goal
+inode_readahead_blks
+lifetime_write_kbytes
+max_writeback_mb_bump
+mb_group_prealloc
+mb_max_to_scan
+mb_min_to_scan
+mb_order2_req
+mb_stats
+mb_stream_req
+reserved_clusters
+session_write_kbytes
+trigger_fs_error
+root@q88_hd:/ # cat /sys/fs/ext4/loop0/errors_count
+/system/bin/sh: cat: /sys/fs/ext4/loop0/errors_count: No such file or directory
+1|root@q88_hd:/ # ls -l /cfw/bin
+lrwxrwxrwx root     root              2022-12-16 20:07 ash -> busybox
+-rwxr-xr-x root     root       315540 2022-12-16 20:07 bgdc
+-rwxr-xr-x root     root        12768 2022-12-16 20:07 bgdi
+-rwxr-xr-x root     root       719316 2022-12-16 20:07 busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 cat -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 chattr -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 chgrp -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 chmod -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 chown -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 cp -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 cpio -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 date -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 dd -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 df -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 dmesg -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 dnsdomainname -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 dumpkmap -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 echo -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 egrep -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 false -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 fdflush -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 fgrep -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 getopt -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 grep -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 gunzip -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 gzip -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 hostname -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 kill -> busybox
+-rwxr-xr-x root     root            0 2022-12-16 20:07 kof_path_20190320
+lrwxrwxrwx root     root              2022-12-16 20:07 link -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 linux32 -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 linux64 -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 ln -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 login -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 ls -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 lsattr -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 mkdir -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 mknod -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 mktemp -> busybox
+-rwxr-xr-x root     root        12784 2022-12-16 20:07 moddesc
+lrwxrwxrwx root     root              2022-12-16 20:07 more -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 mount -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 mountpoint -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 mt -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 mv -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 netstat -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 nice -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 pidof -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 ping -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 pipe_progress -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 printenv -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 ps -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 pwd -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 rm -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 rmdir -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 run-parts -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 sed -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 setarch -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 setpriv -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 setserial -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 sh -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 sleep -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 stty -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 su -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 sync -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 tar -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 touch -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 true -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 umount -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 uname -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 usleep -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 vi -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 watch -> busybox
+lrwxrwxrwx root     root              2022-12-16 20:07 zcat -> busybox
+root@q88_hd:/ # chroot /cfw /bin/sh
+/system/bin/sh: chroot: not found
+127|root@q88_hd:/ # /cfw/bin/busybox
+/system/bin/sh: /cfw/bin/busybox: No such file or directory
+1|root@q88_hd:/ # ls -l /cfw/lib
+-rwxr-xr-x root     root        32656 2022-12-16 20:07 ld-uClibc-1.0.28.so
+lrwxrwxrwx root     root              2022-12-16 20:07 ld-uClibc.so.0 -> ld-uClibc.so.1
+lrwxrwxrwx root     root              2022-12-16 20:07 ld-uClibc.so.1 -> ld-uClibc-1.0.28.so
+lrwxrwxrwx root     root              2022-12-16 20:07 libatomic.so -> libatomic.so.1.2.0
+lrwxrwxrwx root     root              2022-12-16 20:07 libatomic.so.1 -> libatomic.so.1.2.0
+-rwxr-xr-x root     root        21648 2022-12-16 20:07 libatomic.so.1.2.0
+lrwxrwxrwx root     root              2022-12-16 20:07 libblkid.so.1 -> libblkid.so.1.1.0
+-rwxr-xr-x root     root       240364 2022-12-16 20:07 libblkid.so.1.1.0
+lrwxrwxrwx root     root              2022-12-16 20:07 libc.so.0 -> libuClibc-1.0.28.so
+lrwxrwxrwx root     root              2022-12-16 20:07 libc.so.1 -> libuClibc-1.0.28.so
+-rw-r--r-- root     root          132 2022-12-16 20:07 libgcc_s.so
+-rw-r--r-- root     root       132640 2022-12-16 20:07 libgcc_s.so.1
+lrwxrwxrwx root     root              2022-12-16 20:07 libmount.so.1 -> libmount.so.1.1.0
+-rwxr-xr-x root     root       269512 2022-12-16 20:07 libmount.so.1.1.0
+-rwxr-xr-x root     root       489384 2022-12-16 20:07 libuClibc-1.0.28.so
+lrwxrwxrwx root     root              2022-12-16 20:07 libuuid.so.1 -> libuuid.so.1.3.0
+-rwxr-xr-x root     root        22004 2022-12-16 20:07 libuuid.so.1.3.0
+drwxr-xr-x root     root              2022-12-16 20:07 modules
+root@q88_hd:/ # ls -l /cfw/lib/ld*
+-rwxr-xr-x root     root        32656 2022-12-16 20:07 ld-uClibc-1.0.28.so
+lrwxrwxrwx root     root              2022-12-16 20:07 ld-uClibc.so.0 -> ld-uClibc.so.1
+lrwxrwxrwx root     root              2022-12-16 20:07 ld-uClibc.so.1 -> ld-uClibc-1.0.28.so
+root@q88_hd:/ # ls -l /system/bin/linker*
+-rwxr-xr-x root     root        63552 2023-04-30 23:41 linker
+root@q88_hd:/ # ls -l /system/bin
+-rwxr-xr-x root     root        30668 2023-04-30 23:41 adbd
+lrwxrwxrwx root     root              2023-04-30 23:41 alarm -> toolbox
+-rwxr-xr-x root     root      1993232 2023-04-30 23:41 busybox
+lrwxrwxrwx root     root              2023-04-30 23:41 cat -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 chmod -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 chown -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 cp -> toolbox
+-rwxr-xr-x root     root        83292 2023-04-30 23:41 curl
+lrwxrwxrwx root     root              2023-04-30 23:41 date -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 dd -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 df -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 dmesg -> toolbox
+-rwxr-xr-x root     root          216 2023-04-30 23:41 dns.sh
+-rwxr-xr-x root     root        21780 2023-04-30 23:41 dosfslabel
+lrwxrwxrwx root     root              2023-04-30 23:41 du -> toolbox
+-rwxr-xr-x root     root        17380 2023-04-30 23:41 evtest
+-rwxr-xr-x root     root         9496 2023-04-30 23:41 fbtest
+-rwxr-xr-x root     root        26200 2023-04-30 23:41 fsck_msdos
+lrwxrwxrwx root     root              2023-04-30 23:41 getevent -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 getprop -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 grep -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 id -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 ifconfig -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 iftop -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 insmod -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 ioctl -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 ionice -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 kill -> toolbox
+-rwxr-xr-x root     root        63552 2023-04-30 23:41 linker
+lrwxrwxrwx root     root              2023-04-30 23:41 ln -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 log -> toolbox
+-rwxr-xr-x root     root        13584 2023-04-30 23:41 logcat
+-rwxr-xr-x root     root         9432 2023-04-30 23:41 logwrapper
+lrwxrwxrwx root     root              2023-04-30 23:41 ls -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 lsmod -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 lsof -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 md5 -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 mkdir -> toolbox
+-rwxr-xr-x root     root       157424 2023-04-30 23:41 mksh
+lrwxrwxrwx root     root              2023-04-30 23:41 mkswap -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 mount -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 mv -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 nandread -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 netstat -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 printenv -> toolbox
+-rwxr-xr-x root     root         9432 2023-04-30 23:41 procmem
+-rwxr-xr-x root     root         9492 2023-04-30 23:41 procrank
+lrwxrwxrwx root     root              2023-04-30 23:41 ps -> toolbox
+-rwxr-xr-x root     root         5284 2023-04-30 23:41 reboot
+lrwxrwxrwx root     root              2023-04-30 23:41 renice -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 rm -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 rmdir -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 rmmod -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 route -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 schedtop -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 sendevent -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 setprop -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 sh -> mksh
+lrwxrwxrwx root     root              2023-04-30 23:41 sleep -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 start -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 stop -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 swapoff -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 swapon -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 sync -> toolbox
+-rwxr-xr-x root     root       134880 2023-04-30 23:41 toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 top -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 touch -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 umount -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 vmstat -> toolbox
+lrwxrwxrwx root     root              2023-04-30 23:41 watchprops -> toolbox
+root@q88_hd:/ # ls -l /system/xbin
+/system/xbin: No such file or directory
+1|root@q88_hd:/ # cat /proc/cpuinfo
+Processor       : ARMv7 Processor rev 1 (v7l)
+processor       : 0
+model name      : ARMv7 Processor rev 1 (v7l)
+BogoMIPS        : 398.95
+Features        : swp half thumb fastmult vfp edsp thumbee neon vfpv3 tls
+CPU implementer : 0x41
+CPU architecture: 7
+CPU variant     : 0x4
+CPU part        : 0xc09
+CPU revision    : 1
+
+processor       : 1
+model name      : ARMv7 Processor rev 1 (v7l)
+BogoMIPS        : 398.95
+Features        : swp half thumb fastmult vfp edsp thumbee neon vfpv3 tls
+CPU implementer : 0x41
+CPU architecture: 7
+CPU variant     : 0x4
+CPU part        : 0xc09
+CPU revision    : 1
+
+processor       : 2
+model name      : ARMv7 Processor rev 1 (v7l)
+BogoMIPS        : 398.95
+Features        : swp half thumb fastmult vfp edsp thumbee neon vfpv3 tls
+CPU implementer : 0x41
+CPU architecture: 7
+CPU variant     : 0x4
+CPU part        : 0xc09
+CPU revision    : 1
+
+processor       : 3
+model name      : ARMv7 Processor rev 1 (v7l)
+BogoMIPS        : 398.95
+Features        : swp half thumb fastmult vfp edsp thumbee neon vfpv3 tls
+CPU implementer : 0x41
+CPU architecture: 7
+CPU variant     : 0x4
+CPU part        : 0xc09
+CPU revision    : 1
+
+Hardware        : gs705a
+Revision        : 0000
+Serial          : [REDACTED]
+o
+cat /proc/partitions
+cat /proc/modulesroot@q88_hd:/ # cat /proc/meminfo
+MemTotal:         237624 kB
+MemFree:           68988 kB
+CmaFree:           20980 kB
+Buffers:           52664 kB
+Cached:            40960 kB
+SwapCached:            0 kB
+Active:            50284 kB
+Inactive:          58768 kB
+Active(anon):      15440 kB
+Inactive(anon):      108 kB
+Active(file):      34844 kB
+Inactive(file):    58660 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:             0 kB
+HighFree:              0 kB
+LowTotal:         237624 kB
+LowFree:           68988 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             4 kB
+AnonPages:         15448 kB
+Mapped:             3012 kB
+Shmem:               128 kB
+Slab:              28268 kB
+SReclaimable:      23160 kB
+SUnreclaim:         5108 kB
+KernelStack:         792 kB
+PageTables:          216 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      118812 kB
+Committed_AS:      28484 kB
+VmallocTotal:     761856 kB
+VmallocUsed:        7376 kB
+VmallocChunk:     645028 kB
+root@q88_hd:/ # cat /proc/partitions
+major minor  #blocks  name
+
+   7        0     204800 loop0
+   7        7     204800 loop7
+ 179        0   30931968 mmcblk1
+ 179        1   30929920 mmcblk1p1
+ 179       16   60324864 mmcblk0
+ 179       17      10240 mmcblk0p1
+ 179       18     524288 mmcblk0p2
+ 179       19      52224 mmcblk0p3
+ 179       20   59728896 mmcblk0p4
+root@q88_hd:/ # cat /proc/modules
+atc260x_cap_gauge 26067 0 - Live 0xbf005000
+gpio_keys_polled 6924 0 - Live 0xbf000000
+root@q88_hd:/ # cat /sys/block/loop7/loop/backing_file
+/mnt/mmc/CFW/rootfs.img
+root@q88_hd:/ # /system/bin/busybox
+BusyBox v1.14.3 (2013-09-30 14:44:01 CST) multi-call binary
+Copyright (C) 1998-2008 Erik Andersen, Rob Landley, Denys Vlasenko
+and others. Licensed under GPLv2.
+See source distribution for full notice.
+
+Usage: busybox [function] [arguments]...
+   or: function [arguments]...
+
+        BusyBox is a multi-call binary that combines many common Unix
+        utilities into a single executable.  Most people will create a
+        link to busybox for each function they wish to use and BusyBox
+        will act like whatever it was invoked as!
+
+Currently defined functions:
+        [, [[, acpid, addgroup, adduser, adjtimex, ar, arp, arping,
+        ash, awk, basename, blkid, brctl, bunzip2, bzcat, bzip2,
+        cal, cat, catv, chat, chattr, chgrp, chmod, chown, chpasswd,
+        chpst, chroot, chrt, chvt, ck2recovery, cksum, clear, cmp,
+        comm, cp, cpio, crond, crontab, cryptpw, cttyhack, cut,
+        date, dc, dd, deallocvt, delgroup, deluser, depmod, devmem,
+        df, dhcprelay, diff, dirname, dmesg, dnsd, dos2unix, du,
+        dumpkmap, dumpleases, echo, ed, egrep, eject, env, envdir,
+        envuidgid, ether-wake, expand, expr, fakeidentd, false,
+        fbset, fbsplash, fdflush, fdformat, fdisk, fgrep, find,
+        findfs, flush_flash, fold, free, freeramdisk, fsck, fsck.minix,
+        ftpd, ftpget, ftpput, fuser, getopt, getty, grep, gunzip,
+        gzip, halt, hd, hdparm, head, hexdump, hostid, hostname,
+        httpd, hush, hwclock, id, ifconfig, ifdown, ifenslave, ifup,
+        inetd, init, insmod, install, ionice, ip, ipaddr, ipcalc,
+        ipcrm, ipcs, iplink, iproute, iprule, iptunnel, kbd_mode,
+        kill, killall, killall5, klogd, last, length, less, linux32,
+        linux64, linuxrc, ln, loadfont, loadkmap, logger, login,
+        logname, logread, losetup, lpd, lpq, lpr, ls, lsattr, lsmod,
+        lzmacat, makedevs, makemime, man, md5sum, mdev, mesg, microcom,
+        mkdir, mkdosfs, mkfifo, mkfs.minix, mkfs.vfat, mknod, mkpasswd,
+        mkswap, mktemp, modprobe, more, mount, mountpoint, msh,
+        mt, mv, nameif, nc, netstat, nice, nmeter, nohup, nslookup,
+        od, openvt, passwd, patch, pgrep, pidof, ping, ping6, pipe_progress,
+        pivot_root, pkill, popmaildir, poweroff, printenv, printf,
+        ps, pscan, pwd, raidautorun, rdate, rdev, readahead, readlink,
+        readprofile, realpath, reboot, reformime, renice, reset,
+        resize, rm, rmdir, rmmod, route, rtcwake, run-parts, runlevel,
+        runsv, runsvdir, rx, script, sed, sendmail, seq, setarch,
+        setconsole, setfont, setkeycodes, setlogcons, setsid, setuidgid,
+        sh, sha1sum, sha256sum, sha512sum, showkey, slattach, sleep,
+        softlimit, sort, split, start-stop-daemon, stat, strings,
+        stty, su, sulogin, sum, sv, svlogd, swapoff, swapon, switch_root,
+        sync, sysctl, syslogd, tac, tail, tar, tcpsvd, tee, telnet,
+        telnetd, test, tftp, tftpd, time, timeout, top, touch, tr,
+        traceroute, true, tty, ttysize, tunctl, udhcpc, udhcpd,
+        udpsvd, umount, uname, uncompress, unexpand, uniq, unix2dos,
+        unlzma, unzip, uptime, usleep, uudecode, uuencode, vconfig,
+        vi, vlock, watch, watchdog, wc, wget, which, who, whoami,
+        xargs, yes, zcat, zcip
+
+root@q88_hd:/ # /system/bin/busybox --list | grep chroot
+--list: applet not found
+1|root@q88_hd:/ # /system/bin/busybox df -k /cfw
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/block/loop0        190401    120411     55654  68% /cfw
+root@q88_hd:/ # /system/bin/busybox df -h /cfw
+Filesystem                Size      Used Available Use% Mounted on
+/dev/block/loop0        185.9M    117.6M     54.3M  68% /cfw
+root@q88_hd:/ # /system/bin/busybox chroot /cfw /bin/sh
+/ # export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+/ #
+/ # uname -a
+
+df -h /
+pwdLinux localhost 3.10.37 #116 SMP PREEMPT Thu Apr 6 20:31:58 CEST 2023 armv7l GNU/Linux
+/ # busybox | head -n 5
+BusyBox v1.27.2 (2019-01-15 10:49:04 CST) multi-call binary.
+BusyBox is copyrighted by many authors between 1998-2015.
+Licensed under GPLv2. See source distribution for detailed
+copyright notices.
+
+/ # df -k /
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/block/loop0        190401    120411     55654  68% /
+/ # df -h /
+Filesystem                Size      Used Available Use% Mounted on
+/dev/block/loop0        185.9M    117.6M     54.3M  68% /
+/ # pwd
+/
+/ # exit
+root@q88_hd:/ #

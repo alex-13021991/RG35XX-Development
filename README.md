@@ -1,10 +1,12 @@
 # Разработка для Anbernic RG35XX с GarlicOS 1.4.9
 
-Профиль снят 25 ноября 2026 года с оригинальной RG35XX владельца. Код меню, версии библиотек и состав драйверов относятся к этой установке. В рабочей базе есть два исходных ADB-снимка, архивы оригинальных библиотек, sysroot с заголовками и программы с результатами запусков на железе.
+Профиль объединяет измерения 25 и 26 ноября 2026 года на оригинальной RG35XX владельца. За 25 ноября сохранены два ADB-снимка, библиотеки, sysroot и результаты тестов на железе. За 26 ноября добавлены журналы после ремонта, семь ELF с приставки и их разбор. [Сводный технический профиль](TechnicalProfile/README.md) · [Материалы за 26 ноября](HardwareDump/Published/20261126-research/)
 
-### Две повреждённые записи уже есть в установочном образе microSD
+### 26 ноября рабочая копия `rootfs.img` восстановлена и загружается на RG35XX
 
-В проверенном образе **`RG35XX-MicroSDCardImage/garlic.img`**, предназначенном для записи на карту, уже повреждены метаданные **`/usr/lib/libintl.so` (inode 817)** и **`/usr/lib/libjson-c.so` (inode 818)**. Этот результат получен на ПК до записи образа на карту. Вложенный `CFW/rootfs.img` побайтно совпал с `rootfs.img` из комплекта `CopyPasteOnTopOfStock`. На работающей RG35XX те же записи дают `Input/output error`. Поэтому повторная запись этого образа воспроизведёт дефект.
+25 ноября в двух установщиках GarlicOS 1.4.9 обнаружили один и тот же дефект. Вложенный `CFW/rootfs.img` из **`RG35XX-MicroSDCardImage/garlic.img`** побайтно совпал с образом из комплекта `CopyPasteOnTopOfStock`. В обоих повреждены метаданные `/usr/lib/libintl.so` (inode 817) и `/usr/lib/libjson-c.so` (inode 818). На приставке до замены эти записи давали `Input/output error`. [Проверка установщиков и SHA-256 исходного образа](TechnicalProfile/Stock.md)
+
+26 ноября в рабочей копии исправили метаданные ext4 и счётчик `overhead_blocks`, восстановили ссылки на `libintl.so.8.1.5` и `libjson-c.so.3.0.1`. По выписке оператора, итоговые `e2fsck -fvn` и сравнение `rsync` завершились кодом 0. При сравнении исключили две восстановленные ссылки, единственным оставшимся отличием была дата изменения каталога `usr/lib/`. Владелец загрузил исправленный образ на приставке. Журнал ADB показывает обе цели ссылок и смонтированную `/cfw`. Переданный владельцем исправленный образ включён в Git. [Скачать rootfs.img в ZIP](Firmware/GarlicOS-1.4.9-Repaired/rootfs.img.zip) · [SHA-256 и независимая проверка файла](Firmware/GarlicOS-1.4.9-Repaired/) [История ремонта](HardwareDump/Published/20261126-research/docs/02-rootfs-repair.md) · [Выписка проверок](HardwareDump/Published/20261126-research/evidence/logs/chat-results.txt) · [Журнал ADB](HardwareDump/Published/20261126-research/evidence/logs/adb-chroot.txt)
 
 Обе **версионные библиотеки** читаются и побайтно совпадают с файлами на приставке. GarlicOS успешно загрузила их при проверке. В репозиторий приложены [libintl.so.8.1.5](SystemLibraries/Stock/libintl.so.8.1.5) и [libjson-c.so.3.0.1](SystemLibraries/Stock/libjson-c.so.3.0.1). [Методика, SHA-256 и протокол](TechnicalProfile/Stock.md)
 
@@ -23,12 +25,16 @@
 
 ## Восстановление после переустановки компьютера
 
-Обычный `git clone` скачивает [снимок библиотек GarlicOS](SystemLibraries/20261125T155126Z-garlic.tar.gz) и [готовый sysroot для C и C++](Sysroot/20261125T155126Z-sysroot.tar.gz) вместе с исходниками и историей. В WSL проверить оба архива можно так:
+Обычный `git clone` скачивает исправленный образ, снимок библиотек, готовый sysroot и весь опубликованный комплект от 26 ноября, включая пять обезличенных журналов и ZIP с семью ELF. Исходный ZIP исследования для восстановления этого набора не требуется. [Библиотеки GarlicOS](SystemLibraries/20261125T155126Z-garlic.tar.gz) · [Sysroot для C и C++](Sysroot/20261125T155126Z-sysroot.tar.gz) · [Состав private/](HardwareDump/Published/20261126-research/private/)
+
+Проверка в Linux или WSL после клонирования
 
 ```sh
 git clone https://github.com/alex-13021991/RG35XX-Development.git
 cd RG35XX-Development
 sha256sum -c SHA256SUMS
+(cd HardwareDump/Published/20261126-research && sha256sum -c SHA256SUMS.txt)
+(cd Firmware/GarlicOS-1.4.9-Repaired && unzip rootfs.img.zip && sha256sum -c SHA256SUMS)
 ```
 
 На чистом компьютере установите инструменты WSL и выбранный кросс-компилятор. Для первой сборки используйте архив sysroot из клона. Подключение приставки потребуется для запуска теста на железе. [Инструкция по сборке](Documentation/SDK.md) · [Журналы и реестр ELF](HardwareDump/Published/)

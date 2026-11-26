@@ -1,0 +1,478 @@
+user@host:~/temp$ cd ~/temp/rootfs_mount/usr/lib
+user@host:~/temp/rootfs_mount/usr/lib$
+user@host:~/temp/rootfs_mount/usr/lib$ ls -li libintl.so* libjson-c.so* libao.so*
+ 859 lrwxrwxrwx 1 root root    14 дек 16  2022 libao.so -> libao.so.4.1.0
+1106 lrwxrwxrwx 1 root root    14 дек 16  2022 libao.so.4 -> libao.so.4.1.0
+ 815 -rwxr-xr-x 1 root root 26408 дек 16  2022 libao.so.4.1.0
+ 807 lrwxrwxrwx 1 root root    16 ноя 26 09:38 libintl.so -> libintl.so.8.1.5
+1371 lrwxrwxrwx 1 root root    16 дек 16  2022 libintl.so.8 -> libintl.so.8.1.5
+1288 -rw-r--r-- 1 root root 30164 дек 16  2022 libintl.so.8.1.5
+ 817 lrwxrwxrwx 1 root root    18 ноя 26 09:38 libjson-c.so -> libjson-c.so.3.0.1
+ 881 lrwxrwxrwx 1 root root    18 дек 16  2022 libjson-c.so.3 -> libjson-c.so.3.0.1
+1179 -rwxr-xr-x 1 root root 46632 дек 16  2022 libjson-c.so.3.0.1
+user@host:~/temp/rootfs_mount/usr/lib$ sha256sum libintl.so libintl.so.8 libintl.so.8.1.5
+8b2558b10b9de8432d8c9c1c61ee7badea1ce90b90ab65bd900af7b7a89dbb46  libintl.so
+8b2558b10b9de8432d8c9c1c61ee7badea1ce90b90ab65bd900af7b7a89dbb46  libintl.so.8
+8b2558b10b9de8432d8c9c1c61ee7badea1ce90b90ab65bd900af7b7a89dbb46  libintl.so.8.1.5
+user@host:~/temp/rootfs_mount/usr/lib$ sha256sum libjson-c.so libjson-c.so.3 libjson-c.so.3.0.1
+36d9cc8ea699e02e1b9a51100a36c699d0b8493c5a3fae2a861b58cda9f676d2  libjson-c.so
+36d9cc8ea699e02e1b9a51100a36c699d0b8493c5a3fae2a861b58cda9f676d2  libjson-c.so.3
+36d9cc8ea699e02e1b9a51100a36c699d0b8493c5a3fae2a861b58cda9f676d2  libjson-c.so.3.0.1
+user@host:~/temp/rootfs_mount/usr/lib$ sha256sum libao.so libao.so.4 libao.so.4.1.0
+a69ddf7068e1b89ab1c6efe44f45b53225df3796b7cc6bcf1144d6b0af78d1ea  libao.so
+a69ddf7068e1b89ab1c6efe44f45b53225df3796b7cc6bcf1144d6b0af78d1ea  libao.so.4
+a69ddf7068e1b89ab1c6efe44f45b53225df3796b7cc6bcf1144d6b0af78d1ea  libao.so.4.1.0
+user@host:~/temp/rootfs_mount/usr/lib$ for f in libintl.so libjson-c.so libao.so; do
+>     echo "========== $f =========="
+>     LC_ALL=C readelf -d "$f" | grep SONAME
+> done
+========== libintl.so ==========
+ 0x0000000e (SONAME)                     Library soname: [libintl.so.8]
+========== libjson-c.so ==========
+ 0x0000000e (SONAME)                     Library soname: [libjson-c.so.3]
+========== libao.so ==========
+ 0x0000000e (SONAME)                     Library soname: [libao.so.4]
+user@host:~/temp/rootfs_mount/usr/lib$ cd ~/temp
+user@host:~/temp$ sync
+udo umount ~/temp/rootfs_mountuser@host:~/temp$ sudo umount ~/temp/rootfs_mount
+user@host:~/temp$ sudo env LC_ALL=C e2fsck -fvn rootfs_fixed.img
+e2fsck 1.45.5 (07-Jan-2020)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+
+        2715 inodes used (5.30%, out of 51200)
+           1 non-contiguous file (0.0%)
+           3 non-contiguous directories (0.1%)
+             # of inodes with ind/dind/tind blocks: 0/0/0
+             Extent depth histogram: 1982/1
+      134810 blocks used (65.83%, out of 204800)
+           0 bad blocks
+           0 large files
+
+        1747 regular files
+         236 directories
+           1 character device file
+           0 block device files
+           0 fifos
+           0 links
+         722 symbolic links (722 fast symbolic links)
+           0 sockets
+------------
+        2706 files
+user@host:~/temp$ echo "Exit code: $?"
+Exit code: 0
+user@host:~/temp$ sudo env LC_ALL=C dumpe2fs -h rootfs_fixed.img
+dumpe2fs 1.45.5 (07-Jan-2020)
+Filesystem volume name:   <none>
+Last mounted on:          /home/user/temp/rootfs_mount
+Filesystem UUID:          3a13c064-c5e7-49ad-a7b9-0883b2a28ac0
+Filesystem magic number:  0xEF53
+Filesystem revision #:    1 (dynamic)
+Filesystem features:      ext_attr resize_inode dir_index filetype extent flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+Filesystem flags:         signed_directory_hash
+Default mount options:    user_xattr acl
+Filesystem state:         clean
+Errors behavior:          Continue
+Filesystem OS type:       Linux
+Inode count:              51200
+Block count:              204800
+Reserved block count:     10240
+Overhead blocks:          4294963200
+Free blocks:              69990
+Free inodes:              48485
+First block:              1
+Block size:               1024
+Fragment size:            1024
+Reserved GDT blocks:      256
+Blocks per group:         8192
+Fragments per group:      8192
+Inodes per group:         2048
+Inode blocks per group:   512
+Flex block group size:    16
+Filesystem created:       Fri Dec 16 18:06:01 2022
+Last mount time:          Thu Nov 26 09:38:28 2026
+Last write time:          Thu Nov 26 09:39:18 2026
+Mount count:              1
+Maximum mount count:      -1
+Last checked:             Thu Nov 26 09:34:17 2026
+Check interval:           0 (<none>)
+Lifetime writes:          126 MB
+Reserved blocks uid:      0 (user root)
+Reserved blocks gid:      0 (group root)
+First inode:              11
+Inode size:               256
+Required extra isize:     32
+Desired extra isize:      32
+Default directory hash:   half_md4
+Directory Hash Seed:      6672a545-0284-4b31-954e-ac4db5b735e7
+Journal backup:           inode blocks
+Checksum type:            crc32c
+Checksum:                 0xfe99f888
+
+user@host:~/temp$ cd ~/temp
+user@host:~/temp$ cp rootfs_fixed.img rootfs_libs_fixed.img
+user@host:~/temp$ sudo mount -o loop,ro,noload rootfs_fixed.img rootfs_mount
+emp/rootfs_mount
+df -i ~/temp/rootfs_mount
+
+stat -f ~/temp/rootfs_mountuser@host:~/temp$
+user@host:~/temp$ df -hT ~/temp/rootfs_mount
+Файл.система   Тип  Размер Использовано  Дост Использовано% Cмонтировано в
+/dev/loop8     ext4   186M         118M   55M           69% /home/user/temp/rootfs_mount
+user@host:~/temp$ df -k ~/temp/rootfs_mount
+Файл.система   1K-блоков Использовано Доступно Использовано% Cмонтировано в
+/dev/loop8        190401       120411    55654           69% /home/user/temp/rootfs_mount
+user@host:~/temp$ df -i ~/temp/rootfs_mount
+Файл.система   Iнодов IИспользовано IСвободно IИспользовано% Cмонтировано в
+/dev/loop8      51200          2715     48485             6% /home/user/temp/rootfs_mount
+user@host:~/temp$
+user@host:~/temp$ stat -f ~/temp/rootfs_mount
+  Файл: «/home/user/temp/rootfs_mount»
+    ID: e7c8aa9d6dc34577 Длина имени: 255     Тип: ext2/ext3
+Размер блока: 1024       Базисный размер блока: 1024
+Блоки: Всего: 190401     Свободно: 69990      Доступно: 55654
+Иноды: Всего: 51200      Свободно: 48485
+user@host:~/temp$ sudo python3 - <<'PY'
+> import os
+> from collections import deque
+>
+home/user/temp/rootfs_mount"
+))
+
+def resolve(path):
+    pending = deque(path.split("/"))
+    res> root = os.path.abspath(os.path.expanduser(
+>     "/home/user/temp/rootfs_mount"
+> ))
+>
+> def resolve(path):
+>     pending = deque(path.split("/"))
+>     resolved = []
+>     hops = 0
+
+
+        if os.path.islink(candidate):
+            hops += 1
+            if hops > 40:
+        >
+>     while pending:
+>         part = pending.popleft()
+>
+>         if part in ("", "."):
+>             continue
+>
+>         if part == "..":
+>             if resolved:
+NG"
+            resolved.append(part)
+
+    return "OK"
+
+total = 0
+bad = 0
+
+for directory, dirs, >                 resolved.pop()
+>             continue
+>
+>         candidate = os.path.join(root, *resolved, part)
+>
+>         if os.path.islink(candidate):
+>             hops += 1
+>             if hops > 40:
+>                 return "LOOP"
+>
+>             target = os.readlink(candidate)
+>
+>             if target.startswith("/"):
+>                 resolved = []
+>
+>             pending.extendleft(reversed(target.split("/")))
+>         else:
+>             if not os.path.lexists(candidate):
+>                 return "MISSING"
+>             resolved.append(part)
+>
+>     return "OK"
+>
+> total = 0
+> bad = 0
+>
+> for directory, dirs, files in os.walk(root, followlinks=False):
+>     for name in dirs + files:
+>         path = os.path.join(directory, name)
+>
+>         if not os.path.islink(path):
+>             continue
+>
+>         total += 1
+>         rel = "/" + os.path.relpath(path, root)
+>         result = resolve(rel)
+>
+>         if result != "OK":
+>             bad += 1
+>             print(f"[{result}] {rel} -> {os.readlink(path)}")
+>
+> print()
+> print("Total symlinks:", total)
+> print("Valid symlinks:", total - bad)
+> print("Unresolved symlinks:", bad)
+> PY
+[MISSING] /dev/log -> ../tmp/log
+[MISSING] /lib/modules/4.14.0-miyoo/source -> /home/steward/Github/f1c500s_kernel
+[MISSING] /lib/modules/4.14.0-miyoo/build -> /home/steward/Github/f1c500s_kernel
+[MISSING] /lib/modules/4.14.0-miyoo/kernel/drivers/video/fbdev/r61520fb.ko -> /mnt/kernel/r61520fb.ko
+[MISSING] /var/lib/dbus -> /tmp/dbus
+[MISSING] /etc/resolv.conf -> ../tmp/resolv.conf
+[MISSING] /etc/mtab -> ../proc/self/mounts
+
+Total symlinks: 722
+Valid symlinks: 715
+Unresolved symlinks: 7
+user@host:~/temp$ cd ~/temp
+user@host:~/temp$ sudo umount rootfs_mount
+user@host:~/temp$ cd ~/temp
+user@host:~/temp$
+user@host:~/temp$ cp rootfs_fixed.img rootfs_overhead_test.img
+user@host:~/temp$ sudo env LC_ALL=C PAGER=cat debugfs \
+> -R "set_super_value -l" rootfs_overhead_test.img
+debugfs 1.45.5 (07-Jan-2020)
+Superblock fields supported by the set_super_value command:
+        inodes_count                    unsigned integer
+        blocks_count[_hi|_lo]           unsigned integer
+        r_blocks_count[_hi|_lo]         unsigned integer
+        free_blocks_count[_hi|_lo]      unsigned integer
+        free_inodes_count               unsigned integer
+        first_data_block                unsigned integer
+        log_block_size                  unsigned integer
+        log_cluster_size                integer
+        blocks_per_group                unsigned integer
+        clusters_per_group              unsigned integer
+        inodes_per_group                unsigned integer
+        mtime                           date/time
+        wtime                           date/time
+        mnt_count                       unsigned integer
+        max_mnt_count                   integer
+        state                           unsigned integer
+        errors                          unsigned integer
+        minor_rev_level                 unsigned integer
+        lastcheck                       date/time
+        checkinterval                   unsigned integer
+        creator_os                      unsigned integer
+        rev_level                       unsigned integer
+        def_resuid                      unsigned integer
+        def_resgid                      unsigned integer
+        first_ino                       unsigned integer
+        inode_size                      unsigned integer
+        block_group_nr                  unsigned integer
+        feature_compat                  unsigned integer
+        feature_incompat                unsigned integer
+        feature_ro_compat               unsigned integer
+        uuid                            UUID
+        volume_name                     string
+        last_mounted                    string
+        algorithm_usage_bitmap          unsigned integer
+        prealloc_blocks                 unsigned integer
+        prealloc_dir_blocks             unsigned integer
+        reserved_gdt_blocks             unsigned integer
+        journal_uuid                    UUID
+        journal_inum                    unsigned integer
+        journal_dev                     unsigned integer
+        last_orphan                     unsigned integer
+        hash_seed                       UUID
+        def_hash_version                hash algorithm
+        jnl_backup_type                 unsigned integer
+        desc_size                       unsigned integer
+        default_mount_opts              unsigned integer
+        first_meta_bg                   unsigned integer
+        mkfs_time                       date/time
+        jnl_blocks[17]                  unsigned integer
+        min_extra_isize                 unsigned integer
+        want_extra_isize                unsigned integer
+        flags                           unsigned integer
+        raid_stride                     unsigned integer
+        mmp_interval                    unsigned integer
+        mmp_block                       unsigned integer
+        raid_stripe_width               unsigned integer
+        log_groups_per_flex             unsigned integer
+        kbytes_written                  unsigned integer
+        snapshot_inum                   unsigned integer
+        snapshot_id                     unsigned integer
+        snapshot_r_blocks_count         unsigned integer
+        snapshot_list                   unsigned integer
+        mount_opts                      string
+        usr_quota_inum                  unsigned integer
+        grp_quota_inum                  unsigned integer
+        prj_quota_inum                  unsigned integer
+        overhead_blocks                 unsigned integer
+        backup_bgs[2]                   unsigned integer
+        checksum                        unsigned integer
+        checksum_type                   unsigned integer
+        encryption_level                unsigned integer
+        error_count                     unsigned integer
+        first_error_time                date/time
+        first_error_ino                 unsigned integer
+        first_error_block               unsigned integer
+        first_error_func                string
+        first_error_line                unsigned integer
+        last_error_time                 date/time
+        last_error_ino                  unsigned integer
+        last_error_block                unsigned integer
+        last_error_func                 string
+        last_error_line                 unsigned integer
+        encrypt_algos[4]                unsigned integer
+        encrypt_pw_salt                 UUID
+        lpf_ino                         unsigned integer
+        checksum_seed                   unsigned integer
+        encoding                        unknown
+user@host:~/temp$ sudo env LC_ALL=C PAGER=cat debugfs \
+> -R "stats" rootfs_overhead_test.img
+debugfs 1.45.5 (07-Jan-2020)
+Filesystem volume name:   <none>
+Last mounted on:          /home/user/temp/rootfs_mount
+Filesystem UUID:          3a13c064-c5e7-49ad-a7b9-0883b2a28ac0
+Filesystem magic number:  0xEF53
+Filesystem revision #:    1 (dynamic)
+Filesystem features:      ext_attr resize_inode dir_index filetype extent flex_bg sparse_super large_file huge_file dir_nlink extra_isize metadata_csum
+Filesystem flags:         signed_directory_hash
+Default mount options:    user_xattr acl
+Filesystem state:         clean
+Errors behavior:          Continue
+Filesystem OS type:       Linux
+Inode count:              51200
+Block count:              204800
+Reserved block count:     10240
+Overhead blocks:          4294963200
+Free blocks:              69990
+Free inodes:              48485
+First block:              1
+Block size:               1024
+Fragment size:            1024
+Reserved GDT blocks:      256
+Blocks per group:         8192
+Fragments per group:      8192
+Inodes per group:         2048
+Inode blocks per group:   512
+Flex block group size:    16
+Filesystem created:       Fri Dec 16 18:06:01 2022
+Last mount time:          Thu Nov 26 09:38:28 2026
+Last write time:          Thu Nov 26 09:39:18 2026
+Mount count:              1
+Maximum mount count:      -1
+Last checked:             Thu Nov 26 09:34:17 2026
+Check interval:           0 (<none>)
+Lifetime writes:          126 MB
+Reserved blocks uid:      0 (user root)
+Reserved blocks gid:      0 (group root)
+First inode:              11
+Inode size:               256
+Required extra isize:     32
+Desired extra isize:      32
+Default directory hash:   half_md4
+Directory Hash Seed:      6672a545-0284-4b31-954e-ac4db5b735e7
+Journal backup:           inode blocks
+Checksum type:            crc32c
+Checksum:                 0xfe99f888
+Directories:              236
+ Group  0: block bitmap at 260, inode bitmap at 276, inode table at 292
+           0 free blocks, 1 free inode, 132 used directories, 0 unused inodes
+           [Checksum 0x8602]
+ Group  1: block bitmap at 261, inode bitmap at 277, inode table at 804
+           0 free blocks, 1386 free inodes, 98 used directories, 1383 unused inodes
+           [Checksum 0x84c6]
+ Group  2: block bitmap at 262, inode bitmap at 278, inode table at 1316
+           0 free blocks, 2045 free inodes, 3 used directories, 2045 unused inodes
+           [Checksum 0x8256]
+ Group  3: block bitmap at 263, inode bitmap at 279, inode table at 1828
+           0 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0xd1d5]
+ Group  4: block bitmap at 264, inode bitmap at 280, inode table at 2340
+           0 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0xa381]
+ Group  5: block bitmap at 265, inode bitmap at 281, inode table at 2852
+           75 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0x2347]
+ Group  6: block bitmap at 266, inode bitmap at 282, inode table at 3364
+           261 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0xc28d]
+ Group  7: block bitmap at 267, inode bitmap at 283, inode table at 3876
+           714 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0x51ff]
+ Group  8: block bitmap at 268, inode bitmap at 284, inode table at 4388
+           200 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0x1b3f]
+ Group  9: block bitmap at 269, inode bitmap at 285, inode table at 4900
+           842 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0xa3bd]
+ Group 10: block bitmap at 270, inode bitmap at 286, inode table at 5412
+           41 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0xef87]
+ Group 11: block bitmap at 271, inode bitmap at 287, inode table at 5924
+           4100 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0x9f94]
+ Group 12: block bitmap at 272, inode bitmap at 288, inode table at 6436
+           73 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0x625b]
+ Group 13: block bitmap at 273, inode bitmap at 289, inode table at 6948
+           3332 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0x8dbc]
+ Group 14: block bitmap at 274, inode bitmap at 290, inode table at 7460
+           7021 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0xfc69]
+ Group 15: block bitmap at 275, inode bitmap at 291, inode table at 8452
+           8192 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Block not init, Checksum 0x1960]
+ Group 16: block bitmap at 131073, inode bitmap at 131082, inode table at 131091
+           3563 free blocks, 2045 free inodes, 3 used directories, 2045 unused inodes
+           [Checksum 0xea6e]
+ Group 17: block bitmap at 131074, inode bitmap at 131083, inode table at 131603
+           8192 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Block not init, Checksum 0x8bee]
+ Group 18: block bitmap at 131075, inode bitmap at 131084, inode table at 132115
+           8192 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Block not init, Checksum 0xbbb3]
+ Group 19: block bitmap at 131076, inode bitmap at 131085, inode table at 132627
+           8192 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Block not init, Checksum 0x593a]
+ Group 20: block bitmap at 131077, inode bitmap at 131086, inode table at 133139
+           8191 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0xccb2]
+ Group 21: block bitmap at 131078, inode bitmap at 131087, inode table at 133651
+           8192 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Block not init, Checksum 0xad7f]
+ Group 22: block bitmap at 131079, inode bitmap at 131088, inode table at 134163
+           6 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0x8dc8]
+ Group 23: block bitmap at 131080, inode bitmap at 131089, inode table at 134675
+           0 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0x9fe2]
+ Group 24: block bitmap at 131081, inode bitmap at 131090, inode table at 135187
+           611 free blocks, 2048 free inodes, 0 used directories, 2048 unused inodes
+           [Inode not init, Checksum 0x3e2b]
+user@host:~/temp$ cd ~/temp
+ -p rootfs_original_mount rootfs_fixed_mount
+
+sudo mount -o loop,ro,noload \
+rootfs_original.imguser@host:~/temp$
+user@host:~/temp$ mkdir -p rootfs_original_mount rootfs_fixed_mount
+user@host:~/temp$
+user@host:~/temp$ sudo mount -o loop,ro,noload \
+> rootfs_original.img rootfs_original_mount
+user@host:~/temp$
+user@host:~/temp$ sudo mount -o loop,ro,noload \
+> rootfs_fixed.img rootfs_fixed_mount
+user@host:~/temp$ sudo rsync -aHAXnci --delete --numeric-ids \
+> rootfs_original_mount/ rootfs_fixed_mount/ \
+> 2>&1 | tee rootfs_compare.log
+rsync: readlink_stat("/home/user/temp/rootfs_original_mount/usr/lib/libjson-c.so") failed: Bad message (74)
+rsync: readlink_stat("/home/user/temp/rootfs_original_mount/usr/lib/libintl.so") failed: Bad message (74)
+IO error encountered -- skipping file deletion
+.d..t...... usr/lib/
+rsync error: some files/attrs were not transferred (see previous errors) (code 23) at main.c(1205) [sender=3.1.3]
+user@host:~/temp$ cd ~/temp
+user@host:~/temp$
+user@host:~/temp$ sudo umount rootfs_original_mount
+user@host:~/temp$ sudo umount rootfs_fixed_mount
+user@host:~/temp$

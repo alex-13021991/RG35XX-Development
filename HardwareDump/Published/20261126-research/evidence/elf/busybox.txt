@@ -1,0 +1,488 @@
+$ file busybox
+busybox: ELF 32-bit LSB executable, ARM, EABI5 version 1 (SYSV), dynamically linked, interpreter /lib/ld-uClibc.so.0, stripped
+
+$ readelf -h busybox
+ELF Header:
+  Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00 
+  Class:                             ELF32
+  Data:                              2's complement, little endian
+  Version:                           1 (current)
+  OS/ABI:                            UNIX - System V
+  ABI Version:                       0
+  Type:                              EXEC (Executable file)
+  Machine:                           ARM
+  Version:                           0x1
+  Entry point address:               0x171d4
+  Start of program headers:          52 (bytes into file)
+  Start of section headers:          718396 (bytes into file)
+  Flags:                             0x5000200, Version5 EABI, soft-float ABI
+  Size of this header:               52 (bytes)
+  Size of program headers:           32 (bytes)
+  Number of program headers:         8
+  Size of section headers:           40 (bytes)
+  Number of section headers:         23
+  Section header string table index: 22
+
+$ readelf -A busybox
+Attribute Section: aeabi
+File Attributes
+  Tag_CPU_name: "ARM926EJ-S"
+  Tag_CPU_arch: v5TEJ
+  Tag_ARM_ISA_use: Yes
+  Tag_THUMB_ISA_use: Thumb-1
+  Tag_ABI_PCS_wchar_t: 4
+  Tag_ABI_FP_denormal: Needed
+  Tag_ABI_FP_exceptions: Needed
+  Tag_ABI_FP_number_model: IEEE 754
+  Tag_ABI_align_needed: 8-byte
+  Tag_ABI_enum_size: int
+
+$ readelf -l busybox
+
+Elf file type is EXEC (Executable file)
+Entry point 0x171d4
+There are 8 program headers, starting at offset 52
+
+Program Headers:
+  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
+  ARM_EXIDX      0x0ae130 0x000be130 0x000be130 0x00008 0x00008 R   0x4
+  PHDR           0x000034 0x00010034 0x00010034 0x00100 0x00100 R   0x4
+  INTERP         0x000134 0x00010134 0x00010134 0x00014 0x00014 R   0x1
+      [Requesting program interpreter: /lib/ld-uClibc.so.0]
+  LOAD           0x000000 0x00010000 0x00010000 0xae13c 0xae13c R E 0x10000
+  LOAD           0x0aef20 0x000cef20 0x000cef20 0x0063d 0x00c80 RW  0x10000
+  DYNAMIC        0x0aef28 0x000cef28 0x000cef28 0x000d8 0x000d8 RW  0x4
+  GNU_STACK      0x000000 0x00000000 0x00000000 0x00000 0x00000 RW  0x10
+  GNU_RELRO      0x0aef20 0x000cef20 0x000cef20 0x000e0 0x000e0 R   0x1
+
+ Section to Segment mapping:
+  Segment Sections...
+   00     .ARM.exidx 
+   01     
+   02     .interp 
+   03     .interp .hash .gnu.hash .dynsym .dynstr .rel.dyn .rel.plt .init .plt .text .fini .rodata .ARM.exidx .eh_frame 
+   04     .init_array .fini_array .dynamic .got .data .bss 
+   05     .dynamic 
+   06     
+   07     .init_array .fini_array .dynamic 
+
+$ readelf -S busybox
+There are 23 section headers, starting at offset 0xaf63c:
+
+Section Headers:
+  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk Inf Al
+  [ 0]                   NULL            00000000 000000 000000 00      0   0  0
+  [ 1] .interp           PROGBITS        00010134 000134 000014 00   A  0   0  1
+  [ 2] .hash             HASH            00010148 000148 000994 04   A  4   0  4
+  [ 3] .gnu.hash         GNU_HASH        00010adc 000adc 000a90 04   A  4   0  4
+  [ 4] .dynsym           DYNSYM          0001156c 00156c 0015c0 10   A  5   1  4
+  [ 5] .dynstr           STRTAB          00012b2c 002b2c 000b3c 00   A  0   0  1
+  [ 6] .rel.dyn          REL             00013668 003668 000050 08   A  4   0  4
+  [ 7] .rel.plt          REL             000136b8 0036b8 000a48 08  AI  4  18  4
+  [ 8] .init             PROGBITS        00014100 004100 000010 00  AX  0   0  4
+  [ 9] .plt              PROGBITS        00014110 004110 000f80 04  AX  0   0  4
+  [10] .text             PROGBITS        00015090 005090 086ed0 00  AX  0   0  8
+  [11] .fini             PROGBITS        0009bf60 08bf60 000010 00  AX  0   0  4
+  [12] .rodata           PROGBITS        0009bf70 08bf70 0221c0 00   A  0   0  8
+  [13] .ARM.exidx        ARM_EXIDX       000be130 0ae130 000008 00  AL 10   0  4
+  [14] .eh_frame         PROGBITS        000be138 0ae138 000004 00   A  0   0  4
+  [15] .init_array       INIT_ARRAY      000cef20 0aef20 000004 04  WA  0   0  4
+  [16] .fini_array       FINI_ARRAY      000cef24 0aef24 000004 04  WA  0   0  4
+  [17] .dynamic          DYNAMIC         000cef28 0aef28 0000d8 08  WA  5   0  4
+  [18] .got              PROGBITS        000cf000 0af000 000534 04  WA  0   0  4
+  [19] .data             PROGBITS        000cf534 0af534 000029 00  WA  0   0  4
+  [20] .bss              NOBITS          000cf560 0af55d 000640 00  WA  0   0  8
+  [21] .ARM.attributes   ARM_ATTRIBUTES  00000000 0af55d 00002e 00      0   0  1
+  [22] .shstrtab         STRTAB          00000000 0af58b 0000af 00      0   0  1
+Key to Flags:
+  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
+  L (link order), O (extra OS processing required), G (group), T (TLS),
+  C (compressed), x (unknown), o (OS specific), E (exclude),
+  D (mbind), y (purecode), p (processor specific)
+
+$ readelf -d busybox
+
+Dynamic section at offset 0xaef28 contains 22 entries:
+  Tag        Type                         Name/Value
+ 0x00000001 (NEEDED)                     Shared library: [libc.so.0]
+ 0x0000000c (INIT)                       0x14100
+ 0x0000000d (FINI)                       0x9bf60
+ 0x00000019 (INIT_ARRAY)                 0xcef20
+ 0x0000001b (INIT_ARRAYSZ)               4 (bytes)
+ 0x0000001a (FINI_ARRAY)                 0xcef24
+ 0x0000001c (FINI_ARRAYSZ)               4 (bytes)
+ 0x00000004 (HASH)                       0x10148
+ 0x6ffffef5 (GNU_HASH)                   0x10adc
+ 0x00000005 (STRTAB)                     0x12b2c
+ 0x00000006 (SYMTAB)                     0x1156c
+ 0x0000000a (STRSZ)                      2876 (bytes)
+ 0x0000000b (SYMENT)                     16 (bytes)
+ 0x00000015 (DEBUG)                      0x0
+ 0x00000003 (PLTGOT)                     0xcf000
+ 0x00000002 (PLTRELSZ)                   2632 (bytes)
+ 0x00000014 (PLTREL)                     REL
+ 0x00000017 (JMPREL)                     0x136b8
+ 0x00000011 (REL)                        0x13668
+ 0x00000012 (RELSZ)                      80 (bytes)
+ 0x00000013 (RELENT)                     8 (bytes)
+ 0x00000000 (NULL)                       0x0
+
+$ readelf -V busybox
+
+No version information found in this file.
+
+$ readelf -p .comment busybox
+readelf: Warning: Section '.comment' was not dumped because it does not exist
+
+$ readelf -Ws busybox
+
+Symbol table '.dynsym' contains 348 entries:
+   Num:    Value  Size Type    Bind   Vis      Ndx Name
+     0: 00000000     0 NOTYPE  LOCAL  DEFAULT  UND 
+     1: 00000000     0 NOTYPE  WEAK   DEFAULT  UND __deregister_frame_info
+     2: 00000000     0 NOTYPE  WEAK   DEFAULT  UND __register_frame_info
+     3: 00000000     0 FUNC    GLOBAL DEFAULT  UND swapon
+     4: 00000000     0 FUNC    GLOBAL DEFAULT  UND usleep
+     5: 00000000     0 FUNC    GLOBAL DEFAULT  UND fchdir
+     6: 00000000     0 FUNC    GLOBAL DEFAULT  UND getutxent
+     7: 00000000     0 FUNC    GLOBAL DEFAULT  UND tcflush
+     8: 00000000     0 FUNC    GLOBAL DEFAULT  UND __h_errno_location
+     9: 00000000     0 FUNC    GLOBAL DEFAULT  UND tzset
+    10: 00000000     0 FUNC    GLOBAL DEFAULT  UND if_nametoindex
+    11: 00000000     0 FUNC    GLOBAL DEFAULT  UND getservbyname
+    12: 00000000     0 FUNC    GLOBAL DEFAULT  UND recv
+    13: 00000000     0 FUNC    GLOBAL DEFAULT  UND strrchr
+    14: 00000000     0 FUNC    GLOBAL DEFAULT  UND reboot
+    15: 00000000     0 FUNC    GLOBAL DEFAULT  UND recvmsg
+    16: 00000000     0 FUNC    GLOBAL DEFAULT  UND execve
+    17: 00000000     0 FUNC    GLOBAL DEFAULT  UND tcsendbreak
+    18: 00000000     0 FUNC    GLOBAL DEFAULT  UND mkdtemp
+    19: 00000000     0 FUNC    GLOBAL DEFAULT  UND gnu_dev_major
+    20: 00000000     0 FUNC    GLOBAL DEFAULT  UND memrchr
+    21: 00000000     0 FUNC    GLOBAL DEFAULT  UND umask
+    22: 00000000     0 FUNC    GLOBAL DEFAULT  UND seteuid
+    23: 00000000     0 FUNC    GLOBAL DEFAULT  UND vfprintf
+    24: 00000000     0 FUNC    GLOBAL DEFAULT  UND sethostname
+    25: 00000000     0 FUNC    GLOBAL DEFAULT  UND time
+    26: 00000000     0 FUNC    GLOBAL DEFAULT  UND initgroups
+    27: 00000000     0 FUNC    GLOBAL DEFAULT  UND localtime_r
+    28: 00014e20     0 FUNC    GLOBAL DEFAULT  UND link
+    29: 00000000     0 FUNC    GLOBAL DEFAULT  UND printf
+    30: 00000000     0 FUNC    GLOBAL DEFAULT  UND strncmp
+    31: 00000000     0 FUNC    GLOBAL DEFAULT  UND __cxa_atexit
+    32: 00000000     0 FUNC    GLOBAL DEFAULT  UND getpwent
+    33: 00000000     0 FUNC    GLOBAL DEFAULT  UND execvp
+    34: 00000000     0 FUNC    GLOBAL DEFAULT  UND setegid
+    35: 00000000     0 FUNC    GLOBAL DEFAULT  UND exit
+    36: 00000000     0 FUNC    GLOBAL DEFAULT  UND munmap
+    37: 00000000     0 FUNC    GLOBAL DEFAULT  UND setmntent
+    38: 00000000     0 FUNC    GLOBAL DEFAULT  UND klogctl
+    39: 00000000     0 FUNC    GLOBAL DEFAULT  UND setutxent
+    40: 00000000     0 FUNC    GLOBAL DEFAULT  UND setsockopt
+    41: 00000000     0 FUNC    GLOBAL DEFAULT  UND shmget
+    42: 00000000     0 FUNC    GLOBAL DEFAULT  UND strchrnul
+    43: 00000000     0 FUNC    GLOBAL DEFAULT  UND puts
+    44: 00000000     0 FUNC    GLOBAL DEFAULT  UND getmntent
+    45: 00000000     0 FUNC    GLOBAL DEFAULT  UND setsid
+    46: 00000000     0 FUNC    GLOBAL DEFAULT  UND sigsuspend
+    47: 000cfba0     0 NOTYPE  GLOBAL DEFAULT   20 _end
+    48: 000cf584     4 OBJECT  GLOBAL DEFAULT   20 stderr
+    49: 00000000     0 FUNC    GLOBAL DEFAULT  UND msgctl
+    50: 00000000     0 FUNC    GLOBAL DEFAULT  UND strsignal
+    51: 00000000     0 FUNC    GLOBAL DEFAULT  UND localtime
+    52: 00000000     0 FUNC    GLOBAL DEFAULT  UND __res_state
+    53: 00000000     0 FUNC    GLOBAL DEFAULT  UND sprintf
+    54: 00000000     0 FUNC    GLOBAL DEFAULT  UND setpgid
+    55: 00000000     0 FUNC    GLOBAL DEFAULT  UND fgets_unlocked
+    56: 00000000     0 FUNC    GLOBAL DEFAULT  UND getaddrinfo
+    57: 00000000     0 FUNC    GLOBAL DEFAULT  UND sscanf
+    58: 00000000     0 FUNC    GLOBAL DEFAULT  UND alarm
+    59: 00000000     0 FUNC    GLOBAL DEFAULT  UND readdir64
+    60: 00000000     0 FUNC    GLOBAL DEFAULT  UND tcsetattr
+    61: 00000000     0 FUNC    GLOBAL DEFAULT  UND getrlimit64
+    62: 00000000     0 FUNC    GLOBAL DEFAULT  UND kill
+    63: 00000000     0 FUNC    GLOBAL DEFAULT  UND strcasecmp
+    64: 00000000     0 FUNC    GLOBAL DEFAULT  UND fopen64
+    65: 00000000     0 FUNC    GLOBAL DEFAULT  UND getopt_long
+    66: 00000000     0 FUNC    GLOBAL DEFAULT  UND sched_getparam
+    67: 00000000     0 FUNC    GLOBAL DEFAULT  UND fdatasync
+    68: 00000000     0 FUNC    GLOBAL DEFAULT  UND srand
+    69: 00000000     0 FUNC    GLOBAL DEFAULT  UND ctime
+    70: 00000000     0 FUNC    GLOBAL DEFAULT  UND sendfile64
+    71: 00000000     0 FUNC    GLOBAL DEFAULT  UND regcomp
+    72: 00000000     0 FUNC    GLOBAL DEFAULT  UND strcmp
+    73: 000cf580     4 OBJECT  GLOBAL DEFAULT   20 timezone
+    74: 00000000     0 FUNC    GLOBAL DEFAULT  UND fileno_unlocked
+    75: 00000000     0 FUNC    GLOBAL DEFAULT  UND fscanf
+    76: 00000000     0 FUNC    GLOBAL DEFAULT  UND gethostid
+    77: 00000000     0 FUNC    GLOBAL DEFAULT  UND getuid
+    78: 00000000     0 FUNC    GLOBAL DEFAULT  UND memmove
+    79: 00000000     0 FUNC    GLOBAL DEFAULT  UND pututxline
+    80: 00000000     0 FUNC    GLOBAL DEFAULT  UND times
+    81: 00000000     0 FUNC    GLOBAL DEFAULT  UND hasmntopt
+    82: 00000000     0 FUNC    GLOBAL DEFAULT  UND vasprintf
+    83: 00000000     0 FUNC    GLOBAL DEFAULT  UND getnameinfo
+    84: 00000000     0 FUNC    GLOBAL DEFAULT  UND poll
+    85: 00000000     0 FUNC    GLOBAL DEFAULT  UND setbuf
+    86: 00000000     0 FUNC    GLOBAL DEFAULT  UND __fgetc_unlocked
+    87: 00000000     0 FUNC    GLOBAL DEFAULT  UND strftime
+    88: 00000000     0 FUNC    GLOBAL DEFAULT  UND cfmakeraw
+    89: 00000000     0 FUNC    GLOBAL DEFAULT  UND getgid
+    90: 00000000     0 FUNC    GLOBAL DEFAULT  UND statfs64
+    91: 00000000     0 FUNC    GLOBAL DEFAULT  UND system
+    92: 00000000     0 FUNC    GLOBAL DEFAULT  UND memcmp
+    93: 00000000     0 FUNC    GLOBAL DEFAULT  UND malloc
+    94: 00000000     0 FUNC    GLOBAL DEFAULT  UND ioctl
+    95: 00000000     0 FUNC    GLOBAL DEFAULT  UND fchown
+    96: 00000000     0 FUNC    GLOBAL DEFAULT  UND mktemp
+    97: 000cfba0     0 NOTYPE  GLOBAL DEFAULT   20 __end__
+    98: 00000000     0 FUNC    GLOBAL DEFAULT  UND flock
+    99: 00000000     0 FUNC    GLOBAL DEFAULT  UND sigtimedwait
+   100: 000cf55d     0 NOTYPE  GLOBAL DEFAULT   19 _edata
+   101: 00000000     0 FUNC    GLOBAL DEFAULT  UND chmod
+   102: 00000000     0 FUNC    GLOBAL DEFAULT  UND access
+   103: 00000000     0 FUNC    GLOBAL DEFAULT  UND vsprintf
+   104: 00000000     0 FUNC    GLOBAL DEFAULT  UND strptime
+   105: 000cf57c     4 OBJECT  GLOBAL DEFAULT   20 stdin
+   106: 00000000     0 FUNC    GLOBAL DEFAULT  UND gettimeofday
+   107: 00000000     0 FUNC    GLOBAL DEFAULT  UND fclose
+   108: 00000000     0 FUNC    GLOBAL DEFAULT  UND _setjmp
+   109: 00000000     0 FUNC    GLOBAL DEFAULT  UND mkdir
+   110: 00000000     0 FUNC    GLOBAL DEFAULT  UND tcgetsid
+   111: 00000000     0 FUNC    GLOBAL DEFAULT  UND hstrerror
+   112: 00000000     0 FUNC    GLOBAL DEFAULT  UND select
+   113: 000cf578     4 OBJECT  GLOBAL DEFAULT   20 __stdin
+   114: 00000000     0 FUNC    GLOBAL DEFAULT  UND strcasestr
+   115: 00000000     0 FUNC    GLOBAL DEFAULT  UND inet_aton
+   116: 00000000     0 FUNC    GLOBAL DEFAULT  UND getopt
+   117: 00000000     0 FUNC    GLOBAL DEFAULT  UND strerror
+   118: 00000000     0 FUNC    GLOBAL DEFAULT  UND clearenv
+   119: 00000000     0 FUNC    GLOBAL DEFAULT  UND sendmsg
+   120: 00000000     0 FUNC    GLOBAL DEFAULT  UND sched_get_priority_min
+   121: 00000000     0 FUNC    GLOBAL DEFAULT  UND chdir
+   122: 00000000     0 FUNC    GLOBAL DEFAULT  UND setpgrp
+   123: 00015048     0 FUNC    GLOBAL DEFAULT  UND free
+   124: 00000000     0 FUNC    GLOBAL DEFAULT  UND strnlen
+   125: 00000000     0 FUNC    GLOBAL DEFAULT  UND stpcpy
+   126: 00000000     0 FUNC    GLOBAL DEFAULT  UND getusershell
+   127: 00000000     0 FUNC    GLOBAL DEFAULT  UND getspnam_r
+   128: 00000000     0 FUNC    GLOBAL DEFAULT  UND posix_fallocate64
+   129: 000cf55d     0 NOTYPE  GLOBAL DEFAULT   20 __bss_start__
+   130: 000148d4     0 FUNC    GLOBAL DEFAULT  UND strstr
+   131: 00000000     0 FUNC    GLOBAL DEFAULT  UND snprintf
+   132: 00000000     0 FUNC    GLOBAL DEFAULT  UND pivot_root
+   133: 00000000     0 FUNC    GLOBAL DEFAULT  UND open64
+   134: 00000000     0 FUNC    GLOBAL DEFAULT  UND sched_get_priority_max
+   135: 00000000     0 FUNC    GLOBAL DEFAULT  UND strdup
+   136: 00000000     0 FUNC    GLOBAL DEFAULT  UND sigdelset
+   137: 00000000     0 FUNC    GLOBAL DEFAULT  UND siglongjmp
+   138: 00000000     0 FUNC    GLOBAL DEFAULT  UND syslog
+   139: 00000000     0 FUNC    GLOBAL DEFAULT  UND sigprocmask
+   140: 00000000     0 FUNC    GLOBAL DEFAULT  UND endmntent
+   141: 00000000     0 FUNC    GLOBAL DEFAULT  UND getpriority
+   142: 00000000     0 FUNC    GLOBAL DEFAULT  UND endutxent
+   143: 00000000     0 FUNC    GLOBAL DEFAULT  UND fstat64
+   144: 00000000     0 FUNC    GLOBAL DEFAULT  UND execl
+   145: 00000000     0 FUNC    GLOBAL DEFAULT  UND ether_aton_r
+   146: 00000000     0 FUNC    GLOBAL DEFAULT  UND utimes
+   147: 00000000     0 FUNC    GLOBAL DEFAULT  UND tcdrain
+   148: 000cf570     4 OBJECT  GLOBAL DEFAULT   20 __environ
+   149: 00000000     0 FUNC    GLOBAL DEFAULT  UND shmctl
+   150: 00000000     0 FUNC    GLOBAL DEFAULT  UND tcgetattr
+   151: 00000000     0 FUNC    GLOBAL DEFAULT  UND _exit
+   152: 00000000     0 FUNC    GLOBAL DEFAULT  UND setuid
+   153: 00000000     0 FUNC    GLOBAL DEFAULT  UND geteuid
+   154: 00000000     0 FUNC    GLOBAL DEFAULT  UND cfgetospeed
+   155: 00000000     0 FUNC    GLOBAL DEFAULT  UND mknod
+   156: 00000000     0 FUNC    GLOBAL DEFAULT  UND strncasecmp
+   157: 00000000     0 FUNC    GLOBAL DEFAULT  UND chroot
+   158: 00000000     0 FUNC    GLOBAL DEFAULT  UND wait
+   159: 00000000     0 FUNC    GLOBAL DEFAULT  UND execv
+   160: 00000000     0 FUNC    GLOBAL DEFAULT  UND setgid
+   161: 000cfba0     0 NOTYPE  GLOBAL DEFAULT   20 _bss_end__
+   162: 00000000     0 FUNC    GLOBAL DEFAULT  UND getegid
+   163: 00000000     0 FUNC    GLOBAL DEFAULT  UND updwtmpx
+   164: 00000000     0 FUNC    GLOBAL DEFAULT  UND __cmsg_nxthdr
+   165: 00000000     0 FUNC    GLOBAL DEFAULT  UND getcwd
+   166: 00000000     0 FUNC    GLOBAL DEFAULT  UND fread
+   167: 00000000     0 FUNC    GLOBAL DEFAULT  UND strsep
+   168: 00000000     0 FUNC    GLOBAL DEFAULT  UND rename
+   169: 00000000     0 FUNC    GLOBAL DEFAULT  UND strlen
+   170: 00000000     0 FUNC    GLOBAL DEFAULT  UND closelog
+   171: 00000000     0 FUNC    GLOBAL DEFAULT  UND strtoll
+   172: 00000000     0 FUNC    GLOBAL DEFAULT  UND stime
+   173: 000cf56c     4 OBJECT  GLOBAL DEFAULT   20 opterr
+   174: 00000000     0 FUNC    GLOBAL DEFAULT  UND strncpy
+   175: 00000000     0 FUNC    GLOBAL DEFAULT  UND semget
+   176: 00000000     0 FUNC    GLOBAL DEFAULT  UND getlogin_r
+   177: 000cf588     4 OBJECT  GLOBAL DEFAULT   20 __stdout
+   178: 000cf574     4 OBJECT  GLOBAL DEFAULT   20 optind
+   179: 00000000     0 FUNC    GLOBAL DEFAULT  UND strtoull
+   180: 00000000     0 FUNC    GLOBAL DEFAULT  UND killpg
+   181: 00000000     0 FUNC    GLOBAL DEFAULT  UND sched_setscheduler
+   182: 00000000     0 FUNC    GLOBAL DEFAULT  UND regfree
+   183: 00000000     0 FUNC    GLOBAL DEFAULT  UND ftruncate64
+   184: 00000000     0 FUNC    GLOBAL DEFAULT  UND connect
+   185: 00000000     0 FUNC    GLOBAL DEFAULT  UND getpid
+   186: 00000000     0 FUNC    GLOBAL DEFAULT  UND memset
+   187: 00000000     0 FUNC    GLOBAL DEFAULT  UND openlog
+   188: 00000000     0 FUNC    GLOBAL DEFAULT  UND atoll
+   189: 00000000     0 FUNC    GLOBAL DEFAULT  UND cfsetospeed
+   190: 00000000     0 FUNC    GLOBAL DEFAULT  UND realloc
+   191: 00000000     0 FUNC    GLOBAL DEFAULT  UND fsync
+   192: 000cf570     4 OBJECT  WEAK   DEFAULT   20 environ
+   193: 00000000     0 FUNC    GLOBAL DEFAULT  UND listen
+   194: 00014268     0 FUNC    GLOBAL DEFAULT  UND stat64
+   195: 00000000     0 FUNC    GLOBAL DEFAULT  UND setgroups
+   196: 00000000     0 FUNC    GLOBAL DEFAULT  UND fwrite
+   197: 00000000     0 FUNC    GLOBAL DEFAULT  UND __errno_location
+   198: 00000000     0 FUNC    GLOBAL DEFAULT  UND fork
+   199: 00000000     0 FUNC    GLOBAL DEFAULT  UND scanf
+   200: 00000000     0 FUNC    GLOBAL DEFAULT  UND getgroups
+   201: 00000000     0 FUNC    GLOBAL DEFAULT  UND ungetc
+   202: 00000000     0 FUNC    GLOBAL DEFAULT  UND getopt_long_only
+   203: 00000000     0 FUNC    GLOBAL DEFAULT  UND sendto
+   204: 00000000     0 FUNC    GLOBAL DEFAULT  UND mallopt
+   205: 00000000     0 FUNC    GLOBAL DEFAULT  UND sched_yield
+   206: 00000000     0 FUNC    GLOBAL DEFAULT  UND sigaction
+   207: 00000000     0 FUNC    GLOBAL DEFAULT  UND ftello64
+   208: 00000000     0 FUNC    GLOBAL DEFAULT  UND getpagesize
+   209: 00000000     0 FUNC    GLOBAL DEFAULT  UND ttyname_r
+   210: 00000000     0 FUNC    GLOBAL DEFAULT  UND strchr
+   211: 00014b2c     0 FUNC    GLOBAL DEFAULT  UND symlink
+   212: 00000000     0 FUNC    GLOBAL DEFAULT  UND vfork
+   213: 00000000     0 FUNC    GLOBAL DEFAULT  UND bsearch
+   214: 00000000     0 FUNC    GLOBAL DEFAULT  UND cfsetspeed
+   215: 00000000     0 FUNC    GLOBAL DEFAULT  UND getgrgid
+   216: 00000000     0 FUNC    GLOBAL DEFAULT  UND strtoul
+   217: 00000000     0 FUNC    GLOBAL DEFAULT  UND sysinfo
+   218: 00014628     0 FUNC    GLOBAL DEFAULT  UND chown
+   219: 00000000     0 FUNC    GLOBAL DEFAULT  UND bind
+   220: 00000000     0 FUNC    GLOBAL DEFAULT  UND strcpy
+   221: 00000000     0 FUNC    GLOBAL DEFAULT  UND rmdir
+   222: 00000000     0 FUNC    GLOBAL DEFAULT  UND inet_ntoa
+   223: 00000000     0 FUNC    GLOBAL DEFAULT  UND unlink
+   224: 00000000     0 FUNC    GLOBAL DEFAULT  UND getgrnam
+   225: 00000000     0 FUNC    GLOBAL DEFAULT  UND isatty
+   226: 00000000     0 FUNC    GLOBAL DEFAULT  UND strcspn
+   227: 00000000     0 FUNC    GLOBAL DEFAULT  UND nanosleep
+   228: 00000000     0 FUNC    GLOBAL DEFAULT  UND closedir
+   229: 00000000     0 FUNC    GLOBAL DEFAULT  UND prctl
+   230: 00000000     0 FUNC    GLOBAL DEFAULT  UND getpwuid
+   231: 00000000     0 FUNC    GLOBAL DEFAULT  UND strverscmp
+   232: 00000000     0 FUNC    GLOBAL DEFAULT  UND memchr
+   233: 00000000     0 FUNC    GLOBAL DEFAULT  UND getgrouplist
+   234: 00000000     0 FUNC    GLOBAL DEFAULT  UND dup2
+   235: 00000000     0 FUNC    GLOBAL DEFAULT  UND close
+   236: 00000000     0 FUNC    GLOBAL DEFAULT  UND atof
+   237: 00000000     0 FUNC    GLOBAL DEFAULT  UND popen
+   238: 00000000     0 FUNC    GLOBAL DEFAULT  UND getenv
+   239: 000cf55d     0 NOTYPE  GLOBAL DEFAULT   20 __bss_start
+   240: 00000000     0 FUNC    GLOBAL DEFAULT  UND atoi
+   241: 00000000     0 FUNC    GLOBAL DEFAULT  UND syscall
+   242: 00000000     0 FUNC    GLOBAL DEFAULT  UND memcpy
+   243: 00000000     0 FUNC    GLOBAL DEFAULT  UND inet_ntop
+   244: 00000000     0 FUNC    GLOBAL DEFAULT  UND setlinebuf
+   245: 00000000     0 FUNC    GLOBAL DEFAULT  UND socket
+   246: 00000000     0 FUNC    GLOBAL DEFAULT  UND sigaddset
+   247: 00000000     0 FUNC    GLOBAL DEFAULT  UND getpgrp
+   248: 00000000     0 FUNC    GLOBAL DEFAULT  UND __res_init
+   249: 00000000     0 FUNC    GLOBAL DEFAULT  UND getpwnam
+   250: 00000000     0 FUNC    GLOBAL DEFAULT  UND utmpxname
+   251: 00000000     0 FUNC    GLOBAL DEFAULT  UND getmntent_r
+   252: 00000000     0 FUNC    GLOBAL DEFAULT  UND opendir
+   253: 00000000     0 FUNC    GLOBAL DEFAULT  UND gnu_dev_makedev
+   254: 00000000     0 FUNC    GLOBAL DEFAULT  UND inet_addr
+   255: 00014a84     0 FUNC    GLOBAL DEFAULT  UND lstat64
+   256: 00000000     0 FUNC    GLOBAL DEFAULT  UND read
+   257: 00000000     0 FUNC    GLOBAL DEFAULT  UND regexec
+   258: 00000000     0 FUNC    GLOBAL DEFAULT  UND sched_getaffinity
+   259: 00000000     0 FUNC    GLOBAL DEFAULT  UND gmtime_r
+   260: 00000000     0 FUNC    GLOBAL DEFAULT  UND dprintf
+   261: 00000000     0 FUNC    GLOBAL DEFAULT  UND settimeofday
+   262: 00000000     0 FUNC    GLOBAL DEFAULT  UND mlock
+   263: 00000000     0 FUNC    GLOBAL DEFAULT  UND strcat
+   264: 00000000     0 FUNC    GLOBAL DEFAULT  UND fputs_unlocked
+   265: 00000000     0 FUNC    GLOBAL DEFAULT  UND freeaddrinfo
+   266: 00000000     0 FUNC    GLOBAL DEFAULT  UND freopen64
+   267: 00000000     0 FUNC    GLOBAL DEFAULT  UND tcsetpgrp
+   268: 00000000     0 FUNC    GLOBAL DEFAULT  UND recvfrom
+   269: 00000000     0 FUNC    GLOBAL DEFAULT  UND gnu_dev_minor
+   270: 00000000     0 FUNC    GLOBAL DEFAULT  UND abort
+   271: 00000000     0 FUNC    GLOBAL DEFAULT  UND cfgetispeed
+   272: 00000000     0 FUNC    GLOBAL DEFAULT  UND __uClibc_main
+   273: 00000000     0 FUNC    GLOBAL DEFAULT  UND realpath
+   274: 00000000     0 FUNC    GLOBAL DEFAULT  UND setrlimit64
+   275: 00000000     0 FUNC    GLOBAL DEFAULT  UND rand
+   276: 00000000     0 FUNC    GLOBAL DEFAULT  UND getppid
+   277: 00000000     0 FUNC    GLOBAL DEFAULT  UND endgrent
+   278: 00000000     0 FUNC    GLOBAL DEFAULT  UND execle
+   279: 00000000     0 FUNC    GLOBAL DEFAULT  UND semctl
+   280: 00000000     0 FUNC    GLOBAL DEFAULT  UND fflush
+   281: 00000000     0 FUNC    GLOBAL DEFAULT  UND wait3
+   282: 00000000     0 FUNC    GLOBAL DEFAULT  UND dirname
+   283: 00000000     0 FUNC    GLOBAL DEFAULT  UND umount2
+   284: 00000000     0 FUNC    GLOBAL DEFAULT  UND mempcpy
+   285: 00000000     0 FUNC    GLOBAL DEFAULT  UND sync
+   286: 00000000     0 FUNC    GLOBAL DEFAULT  UND mktime
+   287: 000145bc     0 FUNC    GLOBAL DEFAULT  UND lchown
+   288: 00000000     0 FUNC    GLOBAL DEFAULT  UND putenv
+   289: 00000000     0 FUNC    GLOBAL DEFAULT  UND strtod
+   290: 00000000     0 FUNC    GLOBAL DEFAULT  UND clearerr
+   291: 00000000     0 FUNC    GLOBAL DEFAULT  UND vprintf
+   292: 00000000     0 FUNC    GLOBAL DEFAULT  UND gethostbyname
+   293: 00000000     0 FUNC    GLOBAL DEFAULT  UND getsockname
+   294: 00000000     0 FUNC    GLOBAL DEFAULT  UND sleep
+   295: 00000000     0 FUNC    GLOBAL DEFAULT  UND ether_hostton
+   296: 00000000     0 FUNC    GLOBAL DEFAULT  UND fcntl64
+   297: 00000000     0 FUNC    GLOBAL DEFAULT  UND raise
+   298: 00000000     0 FUNC    GLOBAL DEFAULT  UND execlp
+   299: 00000000     0 FUNC    GLOBAL DEFAULT  UND strspn
+   300: 00000000     0 FUNC    GLOBAL DEFAULT  UND strpbrk
+   301: 00000000     0 FUNC    GLOBAL DEFAULT  UND strtok
+   302: 00000000     0 FUNC    GLOBAL DEFAULT  UND strtol
+   303: 00000000     0 FUNC    GLOBAL DEFAULT  UND munlock
+   304: 00000000     0 FUNC    GLOBAL DEFAULT  UND setenv
+   305: 00000000     0 FUNC    GLOBAL DEFAULT  UND getline
+   306: 00000000     0 FUNC    GLOBAL DEFAULT  UND pread64
+   307: 00000000     0 FUNC    GLOBAL DEFAULT  UND msgget
+   308: 00000000     0 FUNC    GLOBAL DEFAULT  UND fdopen
+   309: 00000000     0 FUNC    GLOBAL DEFAULT  UND fputs
+   310: 00000000     0 FUNC    GLOBAL DEFAULT  UND sysconf
+   311: 00000000     0 FUNC    GLOBAL DEFAULT  UND pipe
+   312: 00000000     0 FUNC    GLOBAL DEFAULT  UND cfsetispeed
+   313: 000cf568     4 OBJECT  GLOBAL DEFAULT   20 optarg
+   314: 00000000     0 FUNC    GLOBAL DEFAULT  UND __sigsetjmp
+   315: 00000000     0 FUNC    GLOBAL DEFAULT  UND waitpid
+   316: 00000000     0 FUNC    GLOBAL DEFAULT  UND write
+   317: 000cfba0     0 NOTYPE  GLOBAL DEFAULT   20 __bss_end__
+   318: 00000000     0 FUNC    GLOBAL DEFAULT  UND mmap64
+   319: 00000000     0 FUNC    GLOBAL DEFAULT  UND dup
+   320: 00000000     0 FUNC    GLOBAL DEFAULT  UND fprintf
+   321: 00000000     0 FUNC    GLOBAL DEFAULT  UND fnmatch
+   322: 00000000     0 FUNC    GLOBAL DEFAULT  UND mount
+   323: 00000000     0 FUNC    GLOBAL DEFAULT  UND uname
+   324: 00000000     0 FUNC    GLOBAL DEFAULT  UND signal
+   325: 00000000     0 FUNC    GLOBAL DEFAULT  UND fseeko64
+   326: 000cf560     4 OBJECT  GLOBAL DEFAULT   20 stdout
+   327: 00000000     0 FUNC    GLOBAL DEFAULT  UND accept
+   328: 00000000     0 FUNC    GLOBAL DEFAULT  UND lseek64
+   329: 00000000     0 FUNC    GLOBAL DEFAULT  UND unsetenv
+   330: 00000000     0 FUNC    GLOBAL DEFAULT  UND pclose
+   331: 00000000     0 FUNC    GLOBAL DEFAULT  UND mkstemp64
+   332: 00000000     0 FUNC    GLOBAL DEFAULT  UND readlink
+   333: 00000000     0 FUNC    GLOBAL DEFAULT  UND getsid
+   334: 00000000     0 FUNC    GLOBAL DEFAULT  UND longjmp
+   335: 00000000     0 FUNC    GLOBAL DEFAULT  UND regerror
+   336: 00000000     0 FUNC    GLOBAL DEFAULT  UND __fputc_unlocked
+   337: 00000000     0 FUNC    GLOBAL DEFAULT  UND fchmod
+   338: 00000000     0 FUNC    GLOBAL DEFAULT  UND tcgetpgrp
+   339: 00000000     0 FUNC    GLOBAL DEFAULT  UND inet_pton
+   340: 00000000     0 FUNC    GLOBAL DEFAULT  UND qsort
+   341: 00000000     0 FUNC    GLOBAL DEFAULT  UND getservbyport
+   342: 00000000     0 FUNC    GLOBAL DEFAULT  UND vsnprintf
+   343: 00000000     0 FUNC    GLOBAL DEFAULT  UND mkfifo
+   344: 00000000     0 FUNC    GLOBAL DEFAULT  UND personality
+   345: 00000000     0 FUNC    GLOBAL DEFAULT  UND setpriority
+   346: 00000000     0 FUNC    GLOBAL DEFAULT  UND sched_getscheduler
+   347: 00000000     0 FUNC    GLOBAL DEFAULT  UND swapoff
