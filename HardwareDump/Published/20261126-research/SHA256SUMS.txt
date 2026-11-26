@@ -1,10 +1,10 @@
-5b7ab5175e33b25ce838f68a1651b45415c2d6e1cb1d57db728fe2db4462b702  ./README.md
+686bcab076c647deac6c7458c08f430e6ee7f96e3dc978a4ef506055bc027563  ./README.md
 bd7a31894b436301def8b31e86380c60551c34cb253b76d8b39387e37cbcb7ee  ./docs/01-technical-profile.md
-c1dd00c996a7bbe03a2a35433f8b85ff3c3d491fa6a2eab746a27a5002465965  ./docs/02-rootfs-repair.md
+aaa46cc1b16c161199138f5ddae35c7087ac6cdc3d3758cdf97f3989aa64de27  ./docs/02-rootfs-repair.md
 2764da29f1d881c5ba05fb26afaa2c9d7ece6fb559e9a9634fcae5491cbf90cf  ./docs/03-elf-abi-and-sdl.md
 64d8a710a53a0e0a6d42651c97d1500356b345bdbb0df4c35f9c9c3c621595e5  ./docs/04-development-guide.md
 deb845b93d7bee89020834eedce0a19cfdce4f0b6deee1a15536945beaced9a5  ./docs/05-adb-reference.md
-2421e0375631e8c88fd616a460ea2ef430326294bdb2a8d552fad4f56bb25b6c  ./docs/06-evidence-and-limitations.md
+03b84ab5fbe8b651b649a677e7dbc8154bbdccbf96ca3928968c6b1723af954d  ./docs/06-evidence-and-limitations.md
 8e327de63afd4ef8daff99fe68f2dc79604413d5abf2b46e9c13c70d19c7e925  ./evidence/elf/SDL1-version-proof.txt
 a5447e3d6126ad2f3fcfc0e27a7bab38caf8b92666dc805a013e83056819216f  ./evidence/elf/busybox.txt
 a5221334288a5d66ea42b729d36922d5c3e37fb268296ccd08226a00bedf4d6c  ./evidence/elf/ld-uClibc-1.0.28.so.txt

@@ -6,4 +6,4 @@ HardwareDump/Published/20261126-research/** text eol=lf !diff !merge
 HardwareDump/Published/20261126-research/**/*.csv -text !eol
 HardwareDump/Published/20261126-research/private/profile.zip binary !eol
 Firmware/GarlicOS-1.4.9-Repaired/*.zip binary
-Firmware/GarlicOS-1.4.9-Repaired/verification.txt text eol=lf
+Firmware/GarlicOS-1.4.9-Repaired/verification*.txt text eol=lf

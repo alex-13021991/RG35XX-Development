@@ -1,0 +1,48 @@
+23ef20aa8c43f66436b5210171982b7e3563741d6258f014f020933ff70f7635  rootfs.img
+e2fsck 1.47.0 (5-Feb-2023)
+Superblock last mount time is in the future.
+	(by less than a day, probably due to the hardware clock being incorrectly set)
+Superblock last write time is in the future.
+	(by less than a day, probably due to the hardware clock being incorrectly set)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+
+        2715 inodes used (5.30%, out of 51200)
+           1 non-contiguous file (0.0%)
+           3 non-contiguous directories (0.1%)
+             # of inodes with ind/dind/tind blocks: 0/0/0
+             Extent depth histogram: 1982/1
+      134810 blocks used (65.83%, out of 204800)
+           0 bad blocks
+           0 large files
+
+        1747 regular files
+         236 directories
+           1 character device file
+           0 block device files
+           0 fifos
+           0 links
+         722 symbolic links (722 fast symbolic links)
+           0 sockets
+------------
+        2706 files
+e2fsck exit: 0
+Filesystem state:         not clean
+Block count:              204800
+Overhead clusters:        14399
+Free blocks:              69990
+Free inodes:              48485
+Block size:               1024
+Checksum:                 0x084e138f
+/usr/lib/libintl.so
+Inode: 807   Type: symlink    Mode:  0777   Flags: 0x0
+Fast link dest: "libintl.so.8.1.5"
+/usr/lib/libjson-c.so
+Inode: 817   Type: symlink    Mode:  0777   Flags: 0x0
+Fast link dest: "libjson-c.so.3.0.1"
+8b2558b10b9de8432d8c9c1c61ee7badea1ce90b90ab65bd900af7b7a89dbb46  /usr/lib/libintl.so.8.1.5
+36d9cc8ea699e02e1b9a51100a36c699d0b8493c5a3fae2a861b58cda9f676d2  /usr/lib/libjson-c.so.3.0.1
+a69ddf7068e1b89ab1c6efe44f45b53225df3796b7cc6bcf1144d6b0af78d1ea  /usr/lib/libao.so.4.1.0

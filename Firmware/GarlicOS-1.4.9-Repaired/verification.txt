@@ -1,9 +1,6 @@
-23ef20aa8c43f66436b5210171982b7e3563741d6258f014f020933ff70f7635  rootfs.img
+rootfs.img: OK
+da21e57c813c5db3a0901f867066978bcfc4ab6f5da9aca8c64f3f2587cd4feb  rootfs.img
 e2fsck 1.47.0 (5-Feb-2023)
-Superblock last mount time is in the future.
-	(by less than a day, probably due to the hardware clock being incorrectly set)
-Superblock last write time is in the future.
-	(by less than a day, probably due to the hardware clock being incorrectly set)
 Pass 1: Checking inodes, blocks, and sizes
 Pass 2: Checking directory structure
 Pass 3: Checking directory connectivity
@@ -30,13 +27,13 @@ Pass 5: Checking group summary information
 ------------
         2706 files
 e2fsck exit: 0
-Filesystem state:         not clean
+Filesystem state:         clean
 Block count:              204800
 Overhead clusters:        14399
 Free blocks:              69990
 Free inodes:              48485
 Block size:               1024
-Checksum:                 0x084e138f
+Checksum:                 0x96448b19
 /usr/lib/libintl.so
 Inode: 807   Type: symlink    Mode:  0777   Flags: 0x0
 Fast link dest: "libintl.so.8.1.5"
