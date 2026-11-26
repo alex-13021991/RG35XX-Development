@@ -1,7 +1,9 @@
 HardwareDump/*/
 !HardwareDump/Published/
 SystemLibraries/*.tar.gz
+!SystemLibraries/*-garlic.tar.gz
 Sysroot/*.tar.gz
+!Sysroot/*-sysroot.tar.gz
 Toolchains/cache/
 build/
 __pycache__/
