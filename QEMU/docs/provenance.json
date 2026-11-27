@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0",
+  "date": "2026-11-27",
+  "platform": "original RG35XX / GarlicOS 1.4.9",
+  "sysroot": "20261125T155126Z-sysroot.tar.gz",
+  "sysroot_sha256": "570e643da495f3131af254051a73a8d5225ea3e1811288a4e27acfdee77f215e",
+  "technical_profile_commit": "ebee305a26c08b77ca55a621fd77cf243ffade46",
+  "projects_commit": "dccc57f7d4eb7d5656a9a3d7c7da361f438ab2ed",
+  "sources": [
+    "https://github.com/alex-13021991/RG35XX-Development",
+    "https://github.com/alex-13021991/Anbernic-RG35XX"
+  ],
+  "qemu": "qemu-arm version 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.18)",
+  "ubuntu": "Ubuntu 24.04.5 LTS",
+  "backup_contains_vm": false,
+  "ubuntu_20_04_registered": false,
+  "game_zip_sha256": "c3f8fc1dfdcf11136a436fd7c7c5e386771106d49f0492016363ef7326f379ef"
+}

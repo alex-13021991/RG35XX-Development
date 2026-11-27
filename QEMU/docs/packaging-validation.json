@@ -1,0 +1,16 @@
+{
+  "clean_source_restore_setup": "PASS",
+  "clean_source_restore_selftest": "PASS",
+  "original_repositories_unchanged": {
+    "RG35XX-Development": true,
+    "Anbernic-RG35XX": true
+  },
+  "game_elf_unchanged_from_input_zip": true,
+  "github_archive_excludes_game_runtime_build_state": "PASS",
+  "local_archive_excludes_game_state": "PASS",
+  "github_publish_performed": false,
+  "ready_archive_relocated_without_rebuild_probe": "PASS",
+  "ready_archive_relocated_without_rebuild_demo": "PASS",
+  "optional_root_readme_patch_check": "PASS",
+  "validation_phase": "pre-publication archive validation"
+}
